@@ -1,7 +1,7 @@
 {
   "title": "OEIF B1 Speaking Exam Prep",
   "description": "Real dialogues, examiner questions, and vocabulary for the OEIF B1 speaking exam",
-  "url": "https://vj-ph.github.io/website-repo",
+  "url": "https://vj-ph.github.io/deutsch-pruefung-vorbereitung",
   "language": "en",
   "author": {
     "name": "Voice Journey",
@@ -18,8 +18,9 @@
   },
   "analytics": {
     "ga4": {
-      "measurementId": "G-XXXXXXXXXX",
-      "enabled": false
+      "measurementId": "G-ZX5DZYK4J4",
+      "enabled": true,
+      "_setup_instructions": "Create GA4 property at analytics.google.com, get real Measurement ID (G-XXXXXXXXXX format), replace empty string above, then set enabled: true"
     }
   }
 }

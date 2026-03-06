@@ -50,7 +50,7 @@ Each page follows the same exam structure. You see the real language, not simpli
 
 Ready to work through complete scenarios? The **free sample** includes 5 full dialogues with all vocab and examiner questions. No email required—just practical, exam-ready content.
 
-**[Get 5 Free Dialogues](https://voicejourneyapp.gumroad.com/l/lsdrkx)**
+**[Get 5 Free Dialogues]({{ site.gumroad.freeSample }}?utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }})**
 
 ---
 
@@ -58,7 +58,7 @@ Ready to work through complete scenarios? The **free sample** includes 5 full di
 
 See all 33 planning scenarios, 20 opinion topics, and picture guides. Covers every exam situation with tested dialogues, vocabulary lists, and examiner follow-ups.
 
-**[See Full Book (33 Scenarios + Topics)](https://voicejourneyapp.gumroad.com/l/ovhkog)**
+**[See Full Book (33 Scenarios + Topics)]({{ site.gumroad.fullBook }}?utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }})**
 
 ---
 
