@@ -2,7 +2,6 @@
 layout: base
 title: "Picture Description Technique – B1 Examples (Family, Supermarket, Medical)"
 description: "Master German B1 picture description with 3 real exam examples: family dinner, supermarket shopping, doctor's office. Learn the pattern, vocabulary, and examiner questions."
-permalink: /picture-description-technique
 ---
 
 # Picture Description Technique – B1 Examples (Family, Supermarket, Medical)
@@ -152,9 +151,9 @@ Several people sitting in chairs, waiting. Maybe someone is reading a magazine o
 
 Once you've practiced these three pictures:
 
-- **[Planning a Doctor Appointment]({{ '/planning-dialogue-doctor-appointment' | url }})** – Medical dialogue: symptoms, insurance, appointment
-- **[Booking a Hotel]({{ '/planning-dialogue-hotel-booking' | url }})** – Related scenario: describing a hotel room image
-- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | url }})** – Discuss the picture themes: health, shopping, travel
+- **[Planning a Doctor Appointment]({{ '/planning-dialogue-doctor-appointment' | pageUrl }})** – Medical dialogue: symptoms, insurance, appointment
+- **[Booking a Hotel]({{ '/planning-dialogue-hotel-booking' | pageUrl }})** – Related scenario: describing a hotel room image
+- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | pageUrl }})** – Discuss the picture themes: health, shopping, travel
 
 ---
 
@@ -168,7 +167,7 @@ The **full book** includes:
 
 **[Get 5 Free Dialogues (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See how picture descriptions fit into the full practice flow.
 
-**[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 33 dialogues + 20 discussion topics + 25 picture examples.
+**[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 30 planning dialogues + 30 discussion topics + 25 picture examples.
 
 ---
 

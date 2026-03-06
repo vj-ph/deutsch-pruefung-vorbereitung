@@ -2,7 +2,6 @@
 layout: base
 title: "Booking a Hotel – German B1 Dialogue & Reservation Phrases"
 description: "German B1 speaking exam: hotel booking dialogue. Learn check-in conditions, cancellation policy, breakfast options, and examiner follow-up questions."
-permalink: /planning-dialogue-hotel-booking
 ---
 
 # Booking a Hotel – German B1 Dialogue & Reservation Phrases
@@ -132,22 +131,22 @@ This shows **problem-solving** – what examiners love. You don't just accept th
 
 Once you've practiced this scenario:
 
-- **[Picture Description Technique]({{ '/picture-description-technique' | url }})** – Describe a hotel lobby or bedroom image
-- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | url }})** – Discuss travel preferences, budgets, nearby destinations
+- **[Picture Description Technique]({{ '/picture-description-technique' | pageUrl }})** – Describe a hotel lobby or bedroom image
+- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | pageUrl }})** – Discuss travel preferences, budgets, nearby destinations
 
 ---
 
 ## Ready for More?
 
 This page covers one scenario. The **full book** includes:
-- All 33 planning dialogues (doctor, hotel, apartment, moving, handyman, etc.)
-- 20+ opinion/discussion topics with full mini-dialogues
+- All 30 planning dialogues (doctor, hotel, apartment, moving, handyman, etc.)
+- 30 discussion topics with full mini-dialogues
 - Picture description examples with examiner follow-ups
 - Complete vocabulary for every scenario
 
 **[Get 5 Free Dialogues (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See the structure with complete examples.
 
-**[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 33 scenarios + 20 topics.
+**[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 30 planning dialogues + 30 discussion topics.
 
 ---
 

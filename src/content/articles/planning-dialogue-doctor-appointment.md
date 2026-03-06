@@ -2,7 +2,6 @@
 layout: base
 title: "Planning a Doctor Appointment – German B1 Dialogue, Vocab & Examiner Questions"
 description: "German B1 exam dialogue: scheduling a doctor's appointment by phone. Learn symptoms vocabulary, examiner questions, and insurance card phrases."
-permalink: /planning-dialogue-doctor-appointment
 ---
 
 # Planning a Doctor Appointment – German B1 Dialogue
@@ -102,22 +101,22 @@ After the dialogue, your examiner will ask you directly:
 
 Once you've mastered this scenario, move to these related topics:
 
-- **[Picture Description Technique]({{ '/picture-description-technique' | url }})** – Practice describing medical images (doctor's office waiting room)
-- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | url }})** – Health-related discussion: insurance, preventive care
+- **[Picture Description Technique]({{ '/picture-description-technique' | pageUrl }})** – Practice describing medical images (doctor's office waiting room)
+- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | pageUrl }})** – Health-related discussion: insurance, preventive care
 
 ---
 
 ## Ready to Go Deeper?
 
 This page covers one scenario. The **full book** includes:
-- All 33 planning dialogues (doctor, hotel, apartment, moving, etc.)
-- 20+ opinion/discussion topics with practice dialogues
+- All 30 planning dialogues (doctor, hotel, apartment, moving, etc.)
+- 30 discussion topics with practice dialogues
 - Picture description examples with examiner follow-ups
 - Complete vocabulary lists and examiner Q&A for every scenario
 
 **[Get 5 Free Dialogues (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See how the book is structured with full examples.
 
-**[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 33 scenarios + 20 topics + picture guides.
+**[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 30 planning dialogues + 30 discussion topics + picture guides.
 
 ---
 

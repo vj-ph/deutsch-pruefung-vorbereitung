@@ -44,8 +44,6 @@ Thumbs.db
 .copilot/
 .github/*
 !.github/workflows/
-.github/workflows/*
-!.github/workflows/deploy-pages.yml
 .squad/
 .playwright-cli/
 .venv/

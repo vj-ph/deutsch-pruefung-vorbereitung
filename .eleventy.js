@@ -1,6 +1,30 @@
 const site = require("./src/_data/site.json");
 
 const pathPrefix = site.pathPrefix || "/";
+const absoluteUrlPattern = /^(?:[a-zA-Z][a-zA-Z\d+\-.]*:)?\/\//;
+const fileExtensionPattern = /\/[^/]+\.[^/]+$/;
+
+function withPathPrefix(pathname) {
+  const normalizedPrefix = pathPrefix === "/" ? "" : pathPrefix.replace(/\/$/, "");
+  return `${normalizedPrefix}${pathname}`.replace(/\/{2,}/g, "/");
+}
+
+function pageUrl(pathname) {
+  if (!pathname || absoluteUrlPattern.test(pathname) || pathname.startsWith("#")) {
+    return pathname;
+  }
+
+  const normalizedPath = pathname.startsWith("/") ? pathname : `/${pathname}`;
+  if (normalizedPath === "/") {
+    return withPathPrefix("/");
+  }
+
+  if (fileExtensionPattern.test(normalizedPath)) {
+    return withPathPrefix(normalizedPath);
+  }
+
+  return withPathPrefix(`${normalizedPath.replace(/\/+$/, "")}/`);
+}
 
 module.exports = function(eleventyConfig) {
   // Add environment variable to global data
@@ -65,6 +89,8 @@ module.exports = function(eleventyConfig) {
       return url;
     }
   });
+
+  eleventyConfig.addFilter("pageUrl", pageUrl);
 
   // Current year for footer
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);

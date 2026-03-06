@@ -2,7 +2,6 @@
 layout: base
 title: "Opinion & Discussion Phrases – German B1 Real-World Topics"
 description: "German B1 opinion discussion topics with phrases and mini-dialogues: money, work, environment, learning, tech. Real exam-prep language."
-permalink: /opinion-discussion-phrases
 ---
 
 # Opinion & Discussion Phrases – German B1 Real-World Topics
@@ -294,23 +293,23 @@ The examiner might ask:
 
 Once you've practiced these five topics:
 
-- **[Planning a Doctor Appointment]({{ '/planning-dialogue-doctor-appointment' | url }})** – Medical scenario
-- **[Picture Description Technique]({{ '/picture-description-technique' | url }})** – Describe situations related to these themes
-- **[Booking a Hotel]({{ '/planning-dialogue-hotel-booking' | url }})** – Another dialogue scenario
+- **[Planning a Doctor Appointment]({{ '/planning-dialogue-doctor-appointment' | pageUrl }})** – Medical scenario
+- **[Picture Description Technique]({{ '/picture-description-technique' | pageUrl }})** – Describe situations related to these themes
+- **[Booking a Hotel]({{ '/planning-dialogue-hotel-booking' | pageUrl }})** – Another dialogue scenario
 
 ---
 
 ## Ready for the Full Set?
 
 The **full book** includes:
-- All 20+ opinion/discussion topics with mini-dialogues
+- All 30 discussion topics with mini-dialogues
 - Complete vocabulary for each theme
 - Sample answers and how examiners follow up
-- 33 planning dialogues to balance your practice
+- 30 planning dialogues to balance your practice
 
 **[Get 5 Free Dialogues (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See opinion topics in context.
 
-**[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 20 discussion topics + 33 dialogues.
+**[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 30 discussion topics + 30 planning dialogues.
 
 ---
 

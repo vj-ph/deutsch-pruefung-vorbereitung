@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "SEO-focused website for OEIF B1 speaking exam prep book",
   "scripts": {
-    "build": "cross-env ELEVENTY_ENV=production eleventy",
+    "build": "npm run clean && cross-env ELEVENTY_ENV=production eleventy",
     "start": "eleventy --serve",
     "dev": "eleventy --serve",
     "clean": "rimraf _site"
