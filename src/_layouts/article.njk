@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+
+<article class="article-page">
+  <div class="container">
+    <header class="article-header">
+      <h1>{{ title }}</h1>
+      {% if subtitle %}
+      <p class="subtitle">{{ subtitle }}</p>
+      {% endif %}
+    </header>
+
+    <div class="article-content">
+      {{ content | safe }}
+    </div>
+
+    {% if nextArticle %}
+    <aside class="next-article">
+      <h3>Continue Learning</h3>
+      <a href="{{ nextArticle.url }}" class="next-link">{{ nextArticle.title }}</a>
+    </aside>
+    {% endif %}
+  </div>
+</article>

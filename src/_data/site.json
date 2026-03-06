@@ -1,0 +1,25 @@
+{
+  "title": "OEIF B1 Speaking Exam Prep",
+  "description": "Real dialogues, examiner questions, and vocabulary for the OEIF B1 speaking exam",
+  "url": "https://vj-ph.github.io/website-repo",
+  "language": "en",
+  "author": {
+    "name": "Voice Journey",
+    "url": "https://voicejourneyapp.gumroad.com"
+  },
+  "gumroad": {
+    "freeSample": "https://voicejourneyapp.gumroad.com/l/lsdrkx",
+    "fullBook": "https://voicejourneyapp.gumroad.com/l/ovhkog"
+  },
+  "utm": {
+    "source": "website",
+    "medium": "organic",
+    "campaign": "oeif-b1"
+  },
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX",
+      "enabled": false
+    }
+  }
+}
