@@ -6,8 +6,8 @@
   <title>{{ title or "OEIF B1 Speaking Exam Prep" }}</title>
   <meta name="description" content="{{ description or 'B1 Speaking Exam Prep – Real Dialogues, Exam-Focused' }}">
   <link rel="stylesheet" href="/css/main.css">
-  {% if site.analytics.ga4.enabled and site.analytics.ga4.measurementId %}
-  <!-- Google Analytics 4 -->
+  {% if env == "production" and site.analytics.ga4.enabled and site.analytics.ga4.measurementId %}
+  <!-- Google Analytics 4 (Production Only) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4.measurementId }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];

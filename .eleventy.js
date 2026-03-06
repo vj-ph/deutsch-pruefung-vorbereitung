@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+  // Add environment variable to global data
+  eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV || process.env.NODE_ENV || "development");
+  
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/assets");

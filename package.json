@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "SEO-focused website for OEIF B1 speaking exam prep book",
   "scripts": {
-    "build": "eleventy",
+    "build": "cross-env ELEVENTY_ENV=production eleventy",
     "start": "eleventy --serve",
     "dev": "eleventy --serve",
     "clean": "rimraf _site"
@@ -11,6 +11,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@bradygaster/squad-cli": "^0.8.20",
+    "cross-env": "^10.1.0",
     "rimraf": "^6.0.1"
   },
   "keywords": [

@@ -41,3 +41,12 @@ Thumbs.db
 .env
 .env.local
 
+.copilot/
+.github/
+.squad/
+.playwright-cli/
+
+ANALYTICS.md
+CONTENT-MAPPING.md
+DEPLOYMENT.md
+KEYWORD-VALIDATION.md
