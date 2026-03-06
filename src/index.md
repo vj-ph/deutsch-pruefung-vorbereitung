@@ -24,16 +24,16 @@ Every scenario includes a tested vocab table. No fluff—just phrases you'll use
 
 ## Quick Links to Key Topics
 
-**[Planning a Doctor Appointment – German B1 Dialogue, Vocab & Examiner Questions](/planning-dialogue-doctor-appointment)**  
+**[Planning a Doctor Appointment – German B1 Dialogue, Vocab & Examiner Questions]({{ '/planning-dialogue-doctor-appointment' | url }})**  
 High-intent medical dialogue for exam prep. Phone call, symptoms, insurance card, follow-up questions included.
 
-**[Booking a Hotel – German B1 Dialogue & Reservation Phrases](/planning-dialogue-hotel-booking)**  
+**[Booking a Hotel – German B1 Dialogue & Reservation Phrases]({{ '/planning-dialogue-hotel-booking' | url }})**  
 Hotel reservation scenario. Check-in conditions, cancellation policy, breakfast options. Includes examiner Q&A.
 
-**[Picture Description Technique – B1 Examples (Family, Supermarket, Medical)](/picture-description-technique)**  
+**[Picture Description Technique – B1 Examples (Family, Supermarket, Medical)]({{ '/picture-description-technique' | url }})**  
 Master the pattern with 3 real examples. Vocab, structure tips, and what examiners ask next.
 
-**[Opinion & Discussion Phrases – German B1 Real-World Topics](/opinion-discussion-phrases)**  
+**[Opinion & Discussion Phrases – German B1 Real-World Topics]({{ '/opinion-discussion-phrases' | url }})**  
 5 high-frequency discussion starters: money, work, environment, tech, culture. Mini-dialogues + vocab tables.
 
 ---

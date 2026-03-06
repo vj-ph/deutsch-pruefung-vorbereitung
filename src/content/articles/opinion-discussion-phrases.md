@@ -294,9 +294,9 @@ The examiner might ask:
 
 Once you've practiced these five topics:
 
-- **[Planning a Doctor Appointment](/planning-dialogue-doctor-appointment)** – Medical scenario
-- **[Picture Description Technique](/picture-description-technique)** – Describe situations related to these themes
-- **[Booking a Hotel](/planning-dialogue-hotel-booking)** – Another dialogue scenario
+- **[Planning a Doctor Appointment]({{ '/planning-dialogue-doctor-appointment' | url }})** – Medical scenario
+- **[Picture Description Technique]({{ '/picture-description-technique' | url }})** – Describe situations related to these themes
+- **[Booking a Hotel]({{ '/planning-dialogue-hotel-booking' | url }})** – Another dialogue scenario
 
 ---
 

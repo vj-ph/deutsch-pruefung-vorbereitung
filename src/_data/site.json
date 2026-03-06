@@ -1,7 +1,8 @@
 {
   "title": "OEIF B1 Speaking Exam Prep",
   "description": "Real dialogues, examiner questions, and vocabulary for the OEIF B1 speaking exam",
-  "url": "https://vj-ph.github.io/deutsch-pruefung-vorbereitung",
+  "url": "https://vj-ph.github.io",
+  "pathPrefix": "/deutsch-pruefung-vorbereitung/",
   "language": "en",
   "author": {
     "name": "Voice Journey",

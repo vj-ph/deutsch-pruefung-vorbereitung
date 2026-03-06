@@ -132,8 +132,8 @@ This shows **problem-solving** – what examiners love. You don't just accept th
 
 Once you've practiced this scenario:
 
-- **[Picture Description Technique](/picture-description-technique)** – Describe a hotel lobby or bedroom image
-- **[Opinion & Discussion Phrases](/opinion-discussion-phrases)** – Discuss travel preferences, budgets, nearby destinations
+- **[Picture Description Technique]({{ '/picture-description-technique' | url }})** – Describe a hotel lobby or bedroom image
+- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | url }})** – Discuss travel preferences, budgets, nearby destinations
 
 ---
 

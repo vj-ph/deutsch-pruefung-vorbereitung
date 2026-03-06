@@ -102,8 +102,8 @@ After the dialogue, your examiner will ask you directly:
 
 Once you've mastered this scenario, move to these related topics:
 
-- **[Picture Description Technique](/picture-description-technique)** – Practice describing medical images (doctor's office waiting room)
-- **[Opinion & Discussion Phrases](/opinion-discussion-phrases)** – Health-related discussion: insurance, preventive care
+- **[Picture Description Technique]({{ '/picture-description-technique' | url }})** – Practice describing medical images (doctor's office waiting room)
+- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | url }})** – Health-related discussion: insurance, preventive care
 
 ---
 

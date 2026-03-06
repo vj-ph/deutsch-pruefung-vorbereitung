@@ -1,3 +1,7 @@
+const site = require("./src/_data/site.json");
+
+const pathPrefix = site.pathPrefix || "/";
+
 module.exports = function(eleventyConfig) {
   // Add environment variable to global data
   eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV || process.env.NODE_ENV || "development");
@@ -41,7 +45,25 @@ module.exports = function(eleventyConfig) {
   
   // HTML to absolute URLs filter
   eleventyConfig.addFilter("htmlToAbsoluteUrls", (htmlContent, base) => {
-    return htmlContent;
+    if (!htmlContent || !base) {
+      return htmlContent;
+    }
+
+    return htmlContent.replace(/(href|src)=(["'])(\/(?!\/)[^"']*)\2/g, (match, attribute, quote, url) => {
+      try {
+        return `${attribute}=${quote}${new URL(url, base).href}${quote}`;
+      } catch {
+        return match;
+      }
+    });
+  });
+
+  eleventyConfig.addFilter("absoluteUrl", (url, base) => {
+    try {
+      return new URL(url, base).href;
+    } catch {
+      return url;
+    }
   });
 
   // Current year for footer
@@ -61,6 +83,7 @@ module.exports = function(eleventyConfig) {
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
+    dataTemplateEngine: "njk",
+    pathPrefix
   };
 };

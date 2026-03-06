@@ -152,9 +152,9 @@ Several people sitting in chairs, waiting. Maybe someone is reading a magazine o
 
 Once you've practiced these three pictures:
 
-- **[Planning a Doctor Appointment](/planning-dialogue-doctor-appointment)** – Medical dialogue: symptoms, insurance, appointment
-- **[Booking a Hotel](/planning-dialogue-hotel-booking)** – Related scenario: describing a hotel room image
-- **[Opinion & Discussion Phrases](/opinion-discussion-phrases)** – Discuss the picture themes: health, shopping, travel
+- **[Planning a Doctor Appointment]({{ '/planning-dialogue-doctor-appointment' | url }})** – Medical dialogue: symptoms, insurance, appointment
+- **[Booking a Hotel]({{ '/planning-dialogue-hotel-booking' | url }})** – Related scenario: describing a hotel room image
+- **[Opinion & Discussion Phrases]({{ '/opinion-discussion-phrases' | url }})** – Discuss the picture themes: health, shopping, travel
 
 ---
 

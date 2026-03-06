@@ -6,10 +6,10 @@ eleventyExcludeFromCollections: true
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
   <subtitle>{{ site.description }}</subtitle>
-  <link href="{{ site.url }}/feed.xml" rel="self"/>
-  <link href="{{ site.url }}/"/>
+  <link href="{{ '/feed.xml' | url | absoluteUrl(site.url) }}" rel="self"/>
+  <link href="{{ '/' | url | absoluteUrl(site.url) }}"/>
   <updated>{{ collections.all | max('date') | isoDate }}</updated>
-  <id>{{ site.url }}/</id>
+  <id>{{ '/' | url | absoluteUrl(site.url) }}</id>
   <author>
     <name>{{ site.author.name }}</name>
   </author>
@@ -17,9 +17,9 @@ eleventyExcludeFromCollections: true
   {%- if not post.data.eleventyExcludeFromCollections %}
   <entry>
     <title>{{ post.data.title or post.fileSlug }}</title>
-    <link href="{{ site.url }}{{ post.url | url }}"/>
+    <link href="{{ post.url | url | absoluteUrl(site.url) }}"/>
     <updated>{{ post.date | isoDate }}</updated>
-    <id>{{ site.url }}{{ post.url | url }}</id>
+    <id>{{ post.url | url | absoluteUrl(site.url) }}</id>
     <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(site.url) }}</content>
   </entry>
   {%- endif %}
