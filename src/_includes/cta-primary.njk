@@ -1,5 +1,6 @@
+{% from "cta-helpers.njk" import ctaLink %}
 <div class="cta-block cta-primary">
   <h3>{{ ctaTitle or "Get 5 Free Dialogues" }}</h3>
   <p>{{ ctaText or "Real exam scenarios with vocabulary tables and examiner questions." }}</p>
-  <a href="https://voicejourneyapp.gumroad.com/l/lsdrkx?utm_source=website&utm_medium=organic&utm_campaign=oeif-b1" class="btn btn-primary" target="_blank" rel="noopener">Get Free Sample</a>
+  <a href="{{ ctaLink(site.gumroad.freeSample, { content: ctaContent or 'primary-cta' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Get Free Sample</a>
 </div>

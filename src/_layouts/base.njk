@@ -6,14 +6,14 @@
   <title>{{ title or "OEIF B1 Speaking Exam Prep" }}</title>
   <meta name="description" content="{{ description or 'B1 Speaking Exam Prep – Real Dialogues, Exam-Focused' }}">
   <link rel="stylesheet" href="/css/main.css">
-  {% if ga_id %}
+  {% if site.analytics.ga4.enabled and site.analytics.ga4.measurementId %}
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4.measurementId }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '{{ ga_id }}');
+    gtag('config', '{{ site.analytics.ga4.measurementId }}');
   </script>
   {% endif %}
 </head>

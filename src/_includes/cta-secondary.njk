@@ -1,5 +1,6 @@
+{% from "cta-helpers.njk" import ctaLink %}
 <div class="cta-block cta-secondary">
   <h3>{{ ctaTitle or "Ready for All 33 Scenarios?" }}</h3>
   <p>{{ ctaText or "Get the full book with all planning dialogues, opinion topics, and picture guides." }}</p>
-  <a href="https://voicejourneyapp.gumroad.com/l/ovhkog?utm_source=website&utm_medium=organic&utm_campaign=oeif-b1" class="btn btn-secondary" target="_blank" rel="noopener">Buy Full Book</a>
+  <a href="{{ ctaLink(site.gumroad.fullBook, { content: ctaContent or 'secondary-cta' }) }}" class="btn btn-secondary" target="_blank" rel="noopener">Buy Full Book</a>
 </div>
