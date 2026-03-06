@@ -45,6 +45,7 @@ Thumbs.db
 .github/
 .squad/
 .playwright-cli/
+.venv/
 
 ANALYTICS.md
 CONTENT-MAPPING.md
