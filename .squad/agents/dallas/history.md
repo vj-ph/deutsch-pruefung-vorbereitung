@@ -25,3 +25,12 @@
 - **Ash:** Deployment workflow documentation and squad automation recommendation filed.
 
 **Status:** Ready for production deployment.
+
+## 2026-03-07 Speaking Sample CTA Update
+
+**Session:** Post-launch messaging alignment.
+
+- **Dallas:** Updated homepage speaking sample CTA from "Get 5 free dialogues" to "Get 3 speaking tasks"
+- **Dallas:** Aligned sample card heading to match revised count
+- **Decision 10** created and merged into decisions registry
+- **Status:** Build verified, ready for deployment
