@@ -1,5 +1,6 @@
 {# Helper to generate UTM-tagged Gumroad links #}
 {%- macro ctaLink(productUrl, customParams = {}) -%}
-{{ productUrl }}?utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }}
+{%- set separator = '&' if '?' in productUrl else '?' -%}
+{{ productUrl }}{{ separator }}utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }}
 {%- if customParams.content -%}&utm_content={{ customParams.content }}{%- endif -%}
 {%- endmacro -%}

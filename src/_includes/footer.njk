@@ -1,20 +1,37 @@
+{% from "cta-helpers.njk" import ctaLink with context %}
 <footer class="site-footer">
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>OEIF B1 Speaking Prep</h3>
-        <p>Real dialogues, exam-focused vocabulary, and examiner questions.</p>
+        <h3>{{ site.brand.name }}</h3>
+        <p>Speaking and writing practice books for the ÖIF B1 integration exam, plus free speaking practice articles on the site.</p>
       </div>
       <div class="footer-section">
-        <h3>Resources</h3>
+        <h3>Books</h3>
         <ul>
-          <li><a href="https://voicejourneyapp.gumroad.com/l/lsdrkx?utm_source=website&utm_medium=organic&utm_campaign=oeif-b1" target="_blank" rel="noopener">Get Free Sample</a></li>
-          <li><a href="https://voicejourneyapp.gumroad.com/l/ovhkog?utm_source=website&utm_medium=organic&utm_campaign=oeif-b1" target="_blank" rel="noopener">Buy Full Book</a></li>
+          {% for bookKey in site.bookOrder %}
+            {% set book = site.books[bookKey] %}
+            <li>
+              <strong>{{ book.shortTitle }}</strong>:
+              <a href="{{ ctaLink(book.gumroad.freeSample, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">Free Sample</a>
+              ·
+              <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener">Full Book</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Speaking Practice</h3>
+        <ul>
+          <li><a href="{{ '/planning-dialogue-doctor-appointment' | pageUrl }}">Doctor Appointment</a></li>
+          <li><a href="{{ '/planning-dialogue-hotel-booking' | pageUrl }}">Hotel Booking</a></li>
+          <li><a href="{{ '/picture-description-technique' | pageUrl }}">Picture Description</a></li>
+          <li><a href="{{ '/opinion-discussion-phrases' | pageUrl }}">Opinion & Discussion</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 OEIF B1 Speaking. All rights reserved.</p>
+      <p>&copy; 2026 {{ site.brand.name }}. All rights reserved.</p>
     </div>
   </div>
 </footer>

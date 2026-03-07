@@ -1,6 +1,8 @@
-{% from "cta-helpers.njk" import ctaLink %}
+{% from "cta-helpers.njk" import ctaLink with context %}
+{% set bookKey = ctaBookKey or 'speaking' %}
+{% set book = site.books[bookKey] or site.books.speaking %}
 <div class="cta-block cta-secondary">
-  <h3>{{ ctaTitle or "Ready for 30 Dialogues + 30 Topics?" }}</h3>
-  <p>{{ ctaText or "Get the full book with all 30 planning dialogues, 30 discussion topics, and picture guides." }}</p>
-  <a href="{{ ctaLink(site.gumroad.fullBook, { content: ctaContent or 'secondary-cta' }) }}" class="btn btn-secondary" target="_blank" rel="noopener">Buy Full Book</a>
+  <h3>{{ ctaTitle or book.cta.fullBook.title }}</h3>
+  <p>{{ ctaText or book.cta.fullBook.text }}</p>
+  <a href="{{ ctaLink(book.gumroad.fullBook, { content: ctaContent or (book.key ~ '-full-cta') }) }}" class="btn btn-secondary" target="_blank" rel="noopener">{{ ctaLabel or book.cta.fullBook.label }}</a>
 </div>

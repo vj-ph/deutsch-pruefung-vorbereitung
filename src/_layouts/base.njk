@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="{{ site.language }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title or "OEIF B1 Speaking Exam Prep" }}</title>
-  <meta name="description" content="{{ description or 'B1 Speaking Exam Prep – Real Dialogues, Exam-Focused' }}">
+  <title>{{ title or site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
   <link rel="icon" href="{{ '/favicon.ico' | url }}">
   <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+  {% if site.bookOrder and site.books %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "{{ site.author.name }}",
+          "url": "{{ site.author.url }}"
+        }{% for bookKey in site.bookOrder %}{% set book = site.books[bookKey] %},
+        {
+          "@type": "Book",
+          "name": "{{ book.title }}",
+          {% if book.subtitle %}"alternateName": "{{ book.subtitle }}",{% endif %}
+          "description": "{{ book.description }}",
+          "inLanguage": "{{ book.language or site.language }}",
+          "author": {
+            "@type": "Organization",
+            "name": "{{ site.author.name }}",
+            "url": "{{ site.author.url }}"
+          },
+          "url": "{{ book.gumroad.fullBook }}",
+          "workExample": {
+            "@type": "CreativeWork",
+            "name": "{{ book.sample.title }}",
+            "description": "{{ book.sample.description }}",
+            "url": "{{ book.gumroad.freeSample }}"
+          }
+        }{% endfor %}
+      ]
+    }
+  </script>
+  {% endif %}
   {% if env == "production" and site.analytics.ga4.enabled and site.analytics.ga4.measurementId %}
   <!-- Google Analytics 4 (Production Only) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4.measurementId }}"></script>

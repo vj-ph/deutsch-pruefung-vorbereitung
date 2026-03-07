@@ -1,6 +1,8 @@
-{% from "cta-helpers.njk" import ctaLink %}
+{% from "cta-helpers.njk" import ctaLink with context %}
+{% set bookKey = ctaBookKey or 'speaking' %}
+{% set book = site.books[bookKey] or site.books.speaking %}
 <div class="cta-block cta-primary">
-  <h3>{{ ctaTitle or "Get 5 Free Dialogues" }}</h3>
-  <p>{{ ctaText or "Real exam scenarios with vocabulary tables and examiner questions." }}</p>
-  <a href="{{ ctaLink(site.gumroad.freeSample, { content: ctaContent or 'primary-cta' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Get Free Sample</a>
+  <h3>{{ ctaTitle or book.cta.freeSample.title }}</h3>
+  <p>{{ ctaText or book.cta.freeSample.text }}</p>
+  <a href="{{ ctaLink(book.gumroad.freeSample, { content: ctaContent or (book.key ~ '-sample-cta') }) }}" class="btn btn-primary" target="_blank" rel="noopener">{{ ctaLabel or book.cta.freeSample.label }}</a>
 </div>

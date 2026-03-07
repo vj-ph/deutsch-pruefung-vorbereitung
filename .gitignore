@@ -45,11 +45,6 @@ Thumbs.db
 .github/*
 !.github/workflows/
 .squad/*
-!.squad/decisions.md
-!.squad/agents/*/history.md
-!.squad/team.md
-!.squad/ceremonies.md
-!.squad/routing.md
 .playwright-cli/
 .venv/
 
