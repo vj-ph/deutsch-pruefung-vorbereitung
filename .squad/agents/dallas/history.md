@@ -26,11 +26,12 @@
 
 **Status:** Ready for production deployment.
 
-## 2026-03-07 Speaking Sample CTA Update
+## 2026-03-07 Speaking Sample CTA Update → Subpage Alignment
 
 **Session:** Post-launch messaging alignment.
 
-- **Dallas:** Updated homepage speaking sample CTA from "Get 5 free dialogues" to "Get 3 speaking tasks"
-- **Dallas:** Aligned sample card heading to match revised count
-- **Decision 10** created and merged into decisions registry
+- **Dallas (2026-03-07):** Updated homepage speaking sample CTA from "Get 5 free dialogues" to "Get 3 speaking tasks"
+- **Dallas (2026-03-07):** Aligned sample card heading to match revised count
+- **Dallas (2026-03-11):** Updated remaining subpage free-sample mentions to 3 speaking tasks. Aligned shared speaking sample copy across site data. Decisions merged.
+- **Decision records** created and merged into decisions registry
 - **Status:** Build verified, ready for deployment

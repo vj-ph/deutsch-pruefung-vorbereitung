@@ -54,5 +54,11 @@ For 1-owner, 1-developer project at this scale, Squad automation workflows are o
 
 ## 2026-03-07
 
+### Dallas — Subpage Speaking Sample Copy Alignment (Approved)
+
+Remaining subpage free-sample mentions updated from 5 dialogues to 3 speaking tasks. Aligned shared speaking sample copy across site data. The free speaking sample is no longer dialogue-only, so "tasks" is the accurate shared term across subpages and site data. Keeps picture description, planning, and opinion pages consistent with homepage sample language.
+
+---
+
 - Squad initialized for this repository with a persistent cast-based roster.
 - The immediate product goal is to evolve the site from a speaking-book landing page into a dual-book marketing site for ÖIF B1 speaking and writing preparation.
