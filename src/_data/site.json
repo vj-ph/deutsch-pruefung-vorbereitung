@@ -27,8 +27,8 @@
       "description": "Real dialogues, examiner questions, and vocabulary for the ÖIF B1 speaking exam.",
       "summary": "30 planning dialogues, 30 discussion topics, picture-description practice, vocabulary support, and examiner follow-up questions.",
       "sample": {
-        "title": "Free sample with 5 speaking dialogues",
-        "description": "Five complete speaking dialogues with vocabulary tables and examiner questions."
+        "title": "Free sample with 3 speaking tasks",
+        "description": "Three complete speaking tasks with vocabulary tables and examiner questions."
       },
       "gumroad": {
         "freeSample": "https://voicejourneyapp.gumroad.com/l/lsdrkx",
@@ -36,8 +36,8 @@
       },
       "cta": {
         "freeSample": {
-          "title": "Get 5 Free Speaking Dialogues",
-          "text": "Real exam scenarios with vocabulary tables and examiner questions.",
+          "title": "Get 3 Free Speaking Tasks",
+          "text": "Real exam-style tasks with vocabulary tables and examiner questions.",
           "label": "Get Speaking Sample"
         },
         "fullBook": {

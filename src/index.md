@@ -21,7 +21,7 @@ permalink: /
           <li>Vocabulary tables you can reuse immediately</li>
         </ul>
         <div class="button-row">
-          <a href="{{ site.gumroad.freeSample }}?utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }}&utm_content=speaking-sample-hero" class="btn btn-primary" target="_blank" rel="noopener">Get 5 free speaking dialogues</a>
+          <a href="{{ site.gumroad.freeSample }}?utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }}&utm_content=speaking-sample-hero" class="btn btn-primary" target="_blank" rel="noopener">Get 3 speaking tasks</a>
           <a href="{{ site.gumroad.fullBook }}?utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }}&utm_content=speaking-book-hero" class="btn btn-outline" target="_blank" rel="noopener">See the full speaking book</a>
         </div>
       </article>
@@ -100,13 +100,40 @@ permalink: /
 <section class="home-section">
   <div class="container">
     <div class="section-heading">
+      <h2>What is inside the speaking workbook?</h2>
+      <p>The workbook is built around 85 focused speaking units: 30 planning dialogues, 30 opinion-and-discussion topics, and 25 picture-description prompts.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>30 planning dialogues</h3>
+        <p>Practice realistic pair tasks such as making appointments, organizing childcare, booking hotels, solving neighbour problems, handling contracts, and planning trips. Each unit includes the situation, the task points, possible examiner follow-up questions, a model dialogue, a short agreed plan, and useful vocabulary.</p>
+      </article>
+      <article class="feature-card">
+        <h3>30 opinion and discussion topics</h3>
+        <p>Train the part of the exam where you give an opinion and react to another person on topics like social media, online shopping, home office, public transport, recycling, cultural differences, and future goals. The book gives you positions, example arguments, practical solutions, a sample 60–90 second answer, mini discussions, and follow-up questions.</p>
+      </article>
+      <article class="feature-card">
+        <h3>25 picture-description prompts</h3>
+        <p>Work through everyday scenes such as a family meal, supermarket, doctor’s office, workplace, moving day, parent evening, train station, police emergency, recycling, and a flea market. Each prompt comes with likely examiner questions, a model description, and topic vocabulary you can reuse in your own answer.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Everyday B1 language you can actually use</h3>
+        <p>The content stays close to real B1 life in Austria-style situations: appointments, housing, school, work, shopping, health, travel, and neighbourhood life. Across all three chapters, the workbook repeats speaking-friendly redemittel and bilingual vocabulary tables so you can build answers faster under exam pressure.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="section-heading">
       <h2>Start with free samples before you buy.</h2>
       <p>Both samples are direct downloads with real exam-style material, so you can see which book helps most right now.</p>
     </div>
     <div class="sample-grid">
       <article class="sample-card">
         <p class="sample-card__label">Free speaking sample</p>
-        <h3>5 speaking dialogues</h3>
+        <h3>3 speaking tasks</h3>
         <p>See the dialogue format, tested vocabulary, and examiner questions before committing to the full workbook.</p>
         <a href="{{ site.gumroad.freeSample }}?utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }}&utm_content=speaking-sample-section" class="btn btn-primary" target="_blank" rel="noopener">Get the speaking sample</a>
       </article>

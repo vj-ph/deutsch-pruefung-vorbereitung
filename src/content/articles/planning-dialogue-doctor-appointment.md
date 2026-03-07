@@ -114,7 +114,7 @@ This page covers one scenario. The **full book** includes:
 - Picture description examples with examiner follow-ups
 - Complete vocabulary lists and examiner Q&A for every scenario
 
-**[Get 5 Free Dialogues (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See how the book is structured with full examples.
+**[Get 3 Free Speaking Tasks (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See how the book is structured with full examples.
 
 **[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 30 planning dialogues + 30 discussion topics + picture guides.
 

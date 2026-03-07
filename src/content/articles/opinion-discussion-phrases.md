@@ -307,7 +307,7 @@ The **full book** includes:
 - Sample answers and how examiners follow up
 - 30 planning dialogues to balance your practice
 
-**[Get 5 Free Dialogues (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See opinion topics in context.
+**[Get 3 Free Speaking Tasks (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See opinion topics in context.
 
 **[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 30 discussion topics + 30 planning dialogues.
 

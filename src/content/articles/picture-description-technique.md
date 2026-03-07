@@ -165,7 +165,7 @@ The **full book** includes:
 - Vocabulary for each context
 - Examiner follow-up questions and sample answers
 
-**[Get 5 Free Dialogues (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See how picture descriptions fit into the full practice flow.
+**[Get 3 Free Speaking Tasks (Sample)](https://voicejourneyapp.gumroad.com/l/lsdrkx)** – See how picture descriptions fit into the full practice flow.
 
 **[See Full Book](https://voicejourneyapp.gumroad.com/l/ovhkog)** – All 30 planning dialogues + 30 discussion topics + 25 picture examples.
 
