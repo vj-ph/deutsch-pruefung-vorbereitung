@@ -23,7 +23,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Squad: ignore generated logs
+# Squad: ignore generated logs (but keep decisions and histories)
 .squad/orchestration-log/
 .squad/log/
 
@@ -44,7 +44,12 @@ Thumbs.db
 .copilot/
 .github/*
 !.github/workflows/
-.squad/
+.squad/*
+!.squad/decisions.md
+!.squad/agents/*/history.md
+!.squad/team.md
+!.squad/ceremonies.md
+!.squad/routing.md
 .playwright-cli/
 .venv/
 
