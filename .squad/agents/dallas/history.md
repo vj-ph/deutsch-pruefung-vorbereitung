@@ -14,6 +14,9 @@
 - For dual-book promotion, a balanced hero with one speaking card and one writing card works well, followed by separate proof/feature sections and repeated sample/full-book CTAs for each product.
 - The writing workbook copy should stay anchored to `..\b1\writing\book.md`: 30 units, 4 chapters, Austria-based situations, a 4-week study plan, 4 mock tasks, and the 5-sentence rescue pattern.
 - Key files for homepage product marketing are `src\index.md`, `src\css\main.css`, and `src\_data\site.json`, but page-local links can be used when scope does not allow a broader shared-data refactor.
+- Speaking-workbook homepage copy should stay anchored to `..\b1\speaking\book.md`: 30 planning dialogues, 30 opinion/discussion topics, and 25 picture-description prompts (85 units total).
+- The speaking book repeatedly uses a strong conversion pattern for homepage feature cards: name the exam part, then summarize the built-in support layers such as examiner follow-up questions, model answers/dialogues, short-plan outputs, and bilingual vocabulary tables.
+- Key source path for future speaking marketing updates is `..\b1\speaking\book.md`; the homepage section lives in `src\index.md` and reused existing `feature-grid` styles without needing CSS changes.
 
 ## 2026-03-11 Cross-Agent Update
 
@@ -35,3 +38,12 @@
 - **Dallas (2026-03-11):** Updated remaining subpage free-sample mentions to 3 speaking tasks. Aligned shared speaking sample copy across site data. Decisions merged.
 - **Decision records** created and merged into decisions registry
 - **Status:** Build verified, ready for deployment
+
+## 2026-03-07 Speaking Workbook Feature Section (Follow-Up)
+
+**Session:** Homepage content expansion.
+
+- **Dallas:** Added feature-grid section describing speaking workbook structure (30 dialogues, 30 topics, 25 picture prompts)
+- Reused existing CSS patterns; no style additions needed
+- Build passed
+- Orchestration and session logs filed
