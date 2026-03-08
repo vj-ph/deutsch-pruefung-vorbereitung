@@ -1,15 +1,15 @@
 ---
 layout: base
-title: "ÖIF B1 Exam Prep Workbooks – Speaking & Writing"
-description: "Prepare for the ÖIF B1 exam with speaking and writing workbooks: real dialogues, examiner questions, Austria-based writing tasks, mock tasks, and free samples."
+title: "ÖIF B1 Integrationprüfung Prep Workbooks – Speaking & Writing"
+description: "Prepare for the ÖIF B1 Integrationprüfung with speaking and writing workbooks: real dialogues, examiner questions, Austria-based writing tasks, mock tasks, and free samples."
 permalink: /
 ---
 
 <section class="hero hero-dual">
   <div class="container">
-    <p class="eyebrow">ÖIF B1 exam prep</p>
+    <p class="eyebrow">ÖIF B1 Integrationprüfung prep</p>
     <h1>Prepare for both parts of the exam: speaking and writing.</h1>
-    <p class="hero-intro">This site now supports two focused workbooks. Use the speaking book for realistic dialogues and examiner follow-ups. Use the new writing book for short-text tasks, Austria-based situations, and a clear system for writing under exam pressure.</p>
+    <p class="hero-intro">This site is built for the ÖIF B1 Integrationprüfung in Austria. Use the speaking book for realistic dialogues and examiner follow-ups. Use the writing book for short-text tasks, Austria-based situations, and a clear system for writing under exam pressure.</p>
     <div class="hero-book-grid">
       <article class="book-panel">
         <p class="book-panel__label">Speaking workbook</p>
@@ -46,8 +46,35 @@ permalink: /
 <section class="home-section">
   <div class="container">
     <div class="section-heading">
+      <h2>What is the ÖIF B1 Integrationprüfung?</h2>
+      <p>The ÖIF B1 Integrationprüfung is an official Austrian integration exam. It is used as recognized proof of B1 German skills and integration knowledge, and these books help you train two of the parts learners often find hardest: speaking and writing.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>What the exam is for</h3>
+        <p>It is part of Austria's integration system for third-country nationals and serves as an official language-and-integration certificate connected to the Integrationsvereinbarung.</p>
+      </article>
+      <article class="feature-card">
+        <h3>What passing can help with</h3>
+        <p>Passing the B1 Integrationprüfung can be used as evidence for Modul 2 of the Integration Agreement. That matters in particular for applications such as Daueraufenthalt – EU and, in many cases, Austrian citizenship.</p>
+      </article>
+      <article class="feature-card">
+        <h3>What the certificate shows</h3>
+        <p>Your certificate shows that you reached B1-level German in an officially recognized ÖIF exam format. It can also be useful when you need a formal proof of German skills for institutions, training, or employers.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Important note</h3>
+        <p>Exact legal requirements can depend on your residence status and current authority rules, so always check the latest official ÖIF or Austrian government guidance for your case.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="section-heading">
       <h2>Choose the practice path that closes your biggest exam gap.</h2>
-      <p>If speaking feels unpredictable, start with dialogues. If writing feels stressful, start with short text patterns and model answers. Many learners will want both.</p>
+      <p>If speaking feels unpredictable, start with dialogues. If writing feels stressful, start with short text patterns and model answers. Many learners preparing for the Integrationprüfung will want both.</p>
     </div>
     <div class="path-grid">
       <article class="path-card">
