@@ -4,35 +4,35 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3>{{ site.brand.name }}</h3>
-        <p>Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria.</p>
+        <p>{{ ui.footerIntro or 'Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria.' }}</p>
       </div>
       <div class="footer-section">
-        <h3>Exam Sections</h3>
+        <h3>{{ ui.examSectionsLabel or 'Exam Sections' }}</h3>
         <ul>
-          <li><a href="{{ '/' | pageUrl }}">Home</a></li>
+          <li><a href="{{ (homeUrl or '/') | pageUrl }}">{{ ui.homeLabel or 'Home' }}</a></li>
           {% for examKey in site.examOrder %}
             {% set exam = site.exams[examKey] %}
-            <li><a href="{{ '/' | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a></li>
+            <li><a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a></li>
           {% endfor %}
         </ul>
       </div>
       <div class="footer-section">
-        <h3>Books</h3>
+        <h3>{{ ui.booksLabel or 'Books' }}</h3>
         <ul>
           {% for bookKey in site.bookOrder %}
             {% set book = site.books[bookKey] %}
             <li>
               <strong>{{ book.shortTitle }}</strong>:
-              <a href="{{ ctaLink(book.gumroad.freeSample, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">Sample</a>
+              <a href="{{ ctaLink(book.gumroad.freeSample, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">{{ ui.sampleLabel or 'Sample' }}</a>
               ·
-              <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener">Full Book</a>
+              <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener">{{ ui.fullBookLabel or 'Full Book' }}</a>
             </li>
           {% endfor %}
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 {{ site.brand.name }}. All rights reserved.</p>
+      <p>&copy; 2026 {{ site.brand.name }}. {{ ui.rightsReserved or 'All rights reserved.' }}</p>
     </div>
   </div>
 </footer>

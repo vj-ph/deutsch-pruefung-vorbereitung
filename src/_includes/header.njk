@@ -1,13 +1,15 @@
-{% from "cta-helpers.njk" import ctaLink with context %}
 <header class="site-header">
   <div class="container">
-    <a href="{{ '/' | pageUrl }}" class="logo">{{ site.brand.shortName }}</a>
-    <nav class="main-nav">
-      <a href="{{ '/' | pageUrl }}">Home</a>
-      {% for examKey in site.examOrder %}
-        {% set exam = site.exams[examKey] %}
-        <a href="{{ '/' | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a>
-      {% endfor %}
-    </nav>
+    <a href="{{ (homeUrl or '/') | pageUrl }}" class="logo">{{ site.brand.shortName }}</a>
+    <div class="header-right">
+      <nav class="main-nav">
+        <a href="{{ (homeUrl or '/') | pageUrl }}">{{ ui.homeLabel or 'Home' }}</a>
+        {% for examKey in site.examOrder %}
+          {% set exam = site.exams[examKey] %}
+          <a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a>
+        {% endfor %}
+      </nav>
+      {% include "language-switcher.njk" %}
+    </div>
   </div>
 </header>

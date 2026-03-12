@@ -1,0 +1,13 @@
+{% set switcherClass = switcherClass or '' %}
+{% if languageLinks %}
+  <div class="language-switcher {{ switcherClass }}">
+    {% if languageSwitcherLabel %}
+      <span class="language-switcher__label">{{ languageSwitcherLabel }}</span>
+    {% endif %}
+    <div class="language-switcher__links">
+      {% for languageLink in languageLinks %}
+        <a href="{{ languageLink.url | pageUrl }}" class="language-switcher__link{% if currentLang == languageLink.code %} is-active{% endif %}" {% if currentLang == languageLink.code %}aria-current="page"{% endif %}>{{ languageLink.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

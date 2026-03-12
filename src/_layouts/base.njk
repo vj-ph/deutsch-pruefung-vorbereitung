@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ site.language }}">
+{% set pageLang = lang or site.language %}
+{% set pageDir = dir or 'ltr' %}
+<html lang="{{ pageLang }}" dir="{{ pageDir }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,6 +42,11 @@
     }
   </script>
   {% endif %}
+  {% if languageLinks %}
+    {% for languageLink in languageLinks %}
+  <link rel="alternate" hreflang="{{ languageLink.code }}" href="{{ languageLink.url | pageUrl }}">
+    {% endfor %}
+  {% endif %}
   {% if env == "production" and site.analytics.ga4.enabled and site.analytics.ga4.measurementId %}
   <!-- Google Analytics 4 (Production Only) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4.measurementId }}"></script>
@@ -51,7 +58,7 @@
   </script>
   {% endif %}
 </head>
-<body>
+<body class="{% if pageDir == 'rtl' %}page-rtl{% endif %}">
   {% include "header.njk" %}
   
   <main>

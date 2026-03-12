@@ -3,6 +3,26 @@ layout: base
 title: "DTZ B1 & ÖIF B1 Exam Prep Books - Speaking, Writing & Free Samples"
 description: "Prepare for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria with speaking books, writing books, and free sample books for both exams."
 permalink: /
+lang: en
+dir: ltr
+currentLang: en
+homeUrl: /
+languageSwitcherLabel: "Language"
+languageLinks:
+  - code: en
+    label: English
+    url: /
+  - code: ar
+    label: العربية
+    url: /ar/
+ui:
+  homeLabel: Home
+  footerIntro: "Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria."
+  examSectionsLabel: Exam Sections
+  booksLabel: Books
+  sampleLabel: Sample
+  fullBookLabel: Full Book
+  rightsReserved: All rights reserved.
 ---
 
 {% from "cta-helpers.njk" import ctaLink with context %}
@@ -12,6 +32,8 @@ permalink: /
     <p class="eyebrow">DTZ B1 and ÖIF B1 exam preparation</p>
     <h1>Choose the right DTZ or ÖIF book and start preparing with real exam-style practice.</h1>
     <p class="hero-intro">If you are preparing for DTZ B1 in Germany or the ÖIF B1 Integrationprüfung in Austria, start here. This page helps you choose the right speaking book or writing book, compare both exam tracks, and download a free sample before you buy.</p>
+    {% set switcherClass = 'language-switcher--hero' %}
+    {% include "language-switcher.njk" %}
     <div class="hero-book-grid">
       {% for examKey in site.examOrder %}
         {% set exam = site.exams[examKey] %}
