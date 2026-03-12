@@ -5,12 +5,12 @@
   "pathPrefix": "/deutsch-pruefung-vorbereitung/",
   "language": "en",
   "author": {
-    "name": "Voice Journey",
+    "name": "DTZ & ÖIF B1 Prep",
     "url": "https://voicejourneyapp.gumroad.com"
   },
   "brand": {
-    "name": "Voice Journey B1 Exam Prep",
-    "shortName": "Voice Journey B1"
+    "name": "DTZ & ÖIF B1 Prep",
+    "shortName": "DTZ & ÖIF"
   },
   "defaultBookKey": "dtz-speaking",
   "bookOrder": [
@@ -30,8 +30,8 @@
       "navLabel": "DTZ B1",
       "anchor": "dtz-b1",
       "heroLabel": "Germany-focused DTZ B1 prep",
-      "heroTitle": "Prepare for DTZ B1 speaking and writing with targeted exam-practice books.",
-      "heroText": "Use this section if you are preparing for the Deutsch-Test für Zuwanderer in Germany and want practical B1 material for the speaking exam and the writing task.",
+      "heroTitle": "Pass DTZ B1 with focused speaking and writing practice books.",
+      "heroText": "Use this section if you are preparing for the Deutsch-Test für Zuwanderer in Germany and want practical B1 material that matches the speaking exam and the writing task.",
       "heroPoints": [
         "Speaking book with 60 exercises across all 3 oral exam parts",
         "Writing book with 30 practical units plus 5 full mock tasks",
@@ -56,7 +56,7 @@
           "text": "They are suitable for self-study, classroom teaching, or study groups that want exam-fit B1 practice instead of generic drill material."
         }
       ],
-      "booksIntro": "Choose the DTZ B1 skill you want to improve first, or combine both books for a more complete exam-prep plan.",
+      "booksIntro": "Start with the DTZ skill that feels weakest now, or use both books if you want a more complete speaking-and-writing prep plan.",
       "books": [
         "dtz-speaking",
         "dtz-writing"
@@ -68,7 +68,7 @@
       "navLabel": "ÖIF B1",
       "anchor": "oeif-b1",
       "heroLabel": "Austria-focused ÖIF B1 prep",
-      "heroTitle": "Prepare for the ÖIF B1 Integrationprüfung with dedicated speaking and writing books.",
+      "heroTitle": "Pass the ÖIF B1 Integrationprüfung with dedicated speaking and writing books.",
       "heroText": "Use this section if you need Austria-focused preparation for the ÖIF B1 Integrationprüfung, with realistic speaking practice and writing support built around everyday Austrian contexts.",
       "heroPoints": [
         "Speaking workbook with dialogues, discussion prompts, and picture tasks",
@@ -94,7 +94,7 @@
           "text": "Exact legal requirements can depend on residence status and current authority rules, so always check the latest official ÖIF or Austrian government guidance for your own case."
         }
       ],
-      "booksIntro": "These ÖIF books focus on Austria-style speaking and writing tasks, so you can practice with realistic situations, reusable exam language, and clear sample-book entry points.",
+      "booksIntro": "These ÖIF books help you practice the Austria-style tasks that cause the most pressure, with sample books available before you commit to the full version.",
       "books": [
         "oeif-speaking",
         "oeif-writing"
@@ -129,12 +129,12 @@
         "freeSample": {
           "title": "Get the free DTZ B1 speaking sample",
           "text": "Preview 3 DTZ B1 speaking tasks before you buy the full speaking book.",
-          "label": "Preview DTZ Speaking Sample"
+          "label": "Get DTZ Speaking Sample"
         },
         "fullBook": {
           "title": "Need the full DTZ B1 speaking book?",
           "text": "Train all 3 oral parts with 60 exercises, model answers, and speaking drills.",
-          "label": "See Full DTZ Speaking Book"
+          "label": "Buy DTZ Speaking Book"
         }
       }
     },
@@ -165,12 +165,12 @@
         "freeSample": {
           "title": "Get the free DTZ B1 writing sample",
           "text": "Preview 4 DTZ writing tasks before buying the full practice book.",
-          "label": "Preview DTZ Writing Sample"
+          "label": "Get DTZ Writing Sample"
         },
         "fullBook": {
           "title": "Need the full DTZ B1 writing book?",
           "text": "Train with 30 guided units, practical phrase support, and 5 DTZ mock tasks.",
-          "label": "See Full DTZ Writing Book"
+          "label": "Buy DTZ Writing Book"
         }
       }
     },
@@ -201,12 +201,12 @@
         "freeSample": {
           "title": "Get the free ÖIF B1 speaking sample",
           "text": "Preview the speaking book with real exam-style tasks and support.",
-          "label": "Preview ÖIF Speaking Sample"
+          "label": "Get ÖIF Speaking Sample"
         },
         "fullBook": {
           "title": "Need the full ÖIF B1 speaking workbook?",
           "text": "Train dialogues, discussions, and picture-description tasks in one book.",
-          "label": "See Full ÖIF Speaking Book"
+          "label": "Buy ÖIF Speaking Book"
         }
       }
     },
@@ -237,12 +237,12 @@
         "freeSample": {
           "title": "Get the free ÖIF B1 writing sample",
           "text": "See how the writing workbook teaches structure, register, and practical exam-ready phrasing.",
-          "label": "Preview ÖIF Writing Sample"
+          "label": "Get ÖIF Writing Sample"
         },
         "fullBook": {
           "title": "Need the full ÖIF B1 writing book?",
           "text": "Train with 30 writing units, reusable redemittel, checklists, and mock tasks.",
-          "label": "See Full ÖIF Writing Book"
+          "label": "Buy ÖIF Writing Book"
         }
       }
     }
