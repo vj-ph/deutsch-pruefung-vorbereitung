@@ -15,6 +15,18 @@ languageLinks:
   - code: ar
     label: العربية
     url: /ar/
+  - code: uk
+    label: Українська
+    url: /uk/
+  - code: tr
+    label: Türkçe
+    url: /tr/
+  - code: sr
+    label: BCS / Srpski
+    url: /sr/
+  - code: ru
+    label: Русский
+    url: /ru/
 ui:
   homeLabel: الرئيسية
   footerIntro: "كتب تحضير للتحدث والكتابة لامتحان DTZ B1 في ألمانيا وامتحان ÖIF B1 Integrationprüfung في النمسا."

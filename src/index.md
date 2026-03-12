@@ -15,6 +15,18 @@ languageLinks:
   - code: ar
     label: العربية
     url: /ar/
+  - code: uk
+    label: Українська
+    url: /uk/
+  - code: tr
+    label: Türkçe
+    url: /tr/
+  - code: sr
+    label: BCS / Srpski
+    url: /sr/
+  - code: ru
+    label: Русский
+    url: /ru/
 ui:
   homeLabel: Home
   footerIntro: "Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria."
