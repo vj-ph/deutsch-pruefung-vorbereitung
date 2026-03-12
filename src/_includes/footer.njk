@@ -4,7 +4,17 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3>{{ site.brand.name }}</h3>
-        <p>Speaking and writing practice books for the ÖIF B1 integration exam, plus free speaking practice articles on the site.</p>
+        <p>Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Exam Sections</h3>
+        <ul>
+          <li><a href="{{ '/' | pageUrl }}">Home</a></li>
+          {% for examKey in site.examOrder %}
+            {% set exam = site.exams[examKey] %}
+            <li><a href="{{ '/' | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
       <div class="footer-section">
         <h3>Books</h3>
@@ -13,20 +23,11 @@
             {% set book = site.books[bookKey] %}
             <li>
               <strong>{{ book.shortTitle }}</strong>:
-              <a href="{{ ctaLink(book.gumroad.freeSample, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">Free Sample</a>
+              <a href="{{ ctaLink(book.gumroad.freeSample, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">Sample</a>
               ·
               <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener">Full Book</a>
             </li>
           {% endfor %}
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Speaking Practice</h3>
-        <ul>
-          <li><a href="{{ '/planning-dialogue-doctor-appointment' | pageUrl }}">Doctor Appointment</a></li>
-          <li><a href="{{ '/planning-dialogue-hotel-booking' | pageUrl }}">Hotel Booking</a></li>
-          <li><a href="{{ '/picture-description-technique' | pageUrl }}">Picture Description</a></li>
-          <li><a href="{{ '/opinion-discussion-phrases' | pageUrl }}">Opinion & Discussion</a></li>
         </ul>
       </div>
     </div>

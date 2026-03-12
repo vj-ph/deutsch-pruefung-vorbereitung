@@ -1,6 +1,6 @@
 {% from "cta-helpers.njk" import ctaLink with context %}
-{% set bookKey = ctaBookKey or 'speaking' %}
-{% set book = site.books[bookKey] or site.books.speaking %}
+{% set bookKey = ctaBookKey or site.defaultBookKey %}
+{% set book = site.books[bookKey] or site.books[site.defaultBookKey] %}
 <div class="cta-block cta-primary">
   <h3>{{ ctaTitle or book.cta.freeSample.title }}</h3>
   <p>{{ ctaText or book.cta.freeSample.text }}</p>

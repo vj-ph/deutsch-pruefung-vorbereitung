@@ -1,6 +1,6 @@
 {
-  "title": "ÖIF B1 Integrationprüfung Prep Books",
-  "description": "Exam-focused speaking and writing prep books for the ÖIF B1 Integrationprüfung in Austria",
+  "title": "DTZ B1 & ÖIF B1 Exam Prep Books",
+  "description": "Speaking books, writing books, and free sample books for DTZ B1 in Germany and ÖIF B1 Integrationprüfung in Austria",
   "url": "https://vj-ph.github.io",
   "pathPrefix": "/deutsch-pruefung-vorbereitung/",
   "language": "en",
@@ -9,26 +9,189 @@
     "url": "https://voicejourneyapp.gumroad.com"
   },
   "brand": {
-    "name": "Voice Journey ÖIF B1 Prep",
-    "shortName": "ÖIF B1 Prep"
+    "name": "Voice Journey B1 Exam Prep",
+    "shortName": "Voice Journey B1"
   },
+  "defaultBookKey": "dtz-speaking",
   "bookOrder": [
-    "speaking",
-    "writing"
+    "dtz-speaking",
+    "dtz-writing",
+    "oeif-speaking",
+    "oeif-writing"
   ],
+  "examOrder": [
+    "dtz",
+    "oeif"
+  ],
+  "exams": {
+    "dtz": {
+      "key": "dtz",
+      "title": "DTZ B1",
+      "navLabel": "DTZ B1",
+      "anchor": "dtz-b1",
+      "heroLabel": "Germany-focused DTZ B1 prep",
+      "heroTitle": "Prepare for DTZ B1 speaking and writing with targeted exam-practice books.",
+      "heroText": "Use this section if you are preparing for the Deutsch-Test für Zuwanderer in Germany and want practical B1 material for the speaking exam and the writing task.",
+      "heroPoints": [
+        "Speaking book with 60 exercises across all 3 oral exam parts",
+        "Writing book with 30 practical units plus 5 full mock tasks",
+        "Direct sample-book downloads before you buy"
+      ],
+      "description": "The Deutsch-Test für Zuwanderer (DTZ) is a practical German exam used in Germany. This section helps learners understand the format and choose the right DTZ B1 speaking book or DTZ B1 writing book.",
+      "facts": [
+        {
+          "title": "Speaking format",
+          "text": "The DTZ speaking exam includes 3 task types: introduce yourself, speak about a picture and your own experience, and plan something together with a partner."
+        },
+        {
+          "title": "Writing format",
+          "text": "The DTZ writing task centers on a short practical message of around 80 to 100 words with four content points."
+        },
+        {
+          "title": "Everyday focus",
+          "text": "The DTZ books stay close to real Germany-based situations such as appointments, housing, institutions, work, and everyday integration topics."
+        },
+        {
+          "title": "Who the books are for",
+          "text": "They are suitable for self-study, classroom teaching, or study groups that want exam-fit B1 practice instead of generic drill material."
+        }
+      ],
+      "booksIntro": "Choose the DTZ B1 skill you want to improve first, or combine both books for a more complete exam-prep plan.",
+      "books": [
+        "dtz-speaking",
+        "dtz-writing"
+      ]
+    },
+    "oeif": {
+      "key": "oeif",
+      "title": "ÖIF B1",
+      "navLabel": "ÖIF B1",
+      "anchor": "oeif-b1",
+      "heroLabel": "Austria-focused ÖIF B1 prep",
+      "heroTitle": "Prepare for the ÖIF B1 Integrationprüfung with dedicated speaking and writing books.",
+      "heroText": "Use this section if you need Austria-focused preparation for the ÖIF B1 Integrationprüfung, with realistic speaking practice and writing support built around everyday Austrian contexts.",
+      "heroPoints": [
+        "Speaking workbook with dialogues, discussion prompts, and picture tasks",
+        "Writing workbook with Austria-based tasks, model texts, and mock writing",
+        "Free samples for both books"
+      ],
+      "description": "The ÖIF B1 Integrationprüfung is an official Austrian integration exam. This section explains the exam and helps learners choose the right ÖIF B1 speaking book or ÖIF B1 writing book.",
+      "facts": [
+        {
+          "title": "What the exam is for",
+          "text": "It is part of Austria's integration system for third-country nationals and serves as an official language-and-integration certificate connected to the Integrationsvereinbarung."
+        },
+        {
+          "title": "What passing can help with",
+          "text": "Passing the B1 Integrationprüfung can be used as evidence for Modul 2 of the Integration Agreement. That can matter for paths such as Daueraufenthalt - EU and, in many cases, Austrian citizenship."
+        },
+        {
+          "title": "What the certificate shows",
+          "text": "Your certificate shows that you reached B1-level German in an officially recognized ÖIF exam format. It can also help when institutions, training providers, or employers ask for formal proof of German skills."
+        },
+        {
+          "title": "Important note",
+          "text": "Exact legal requirements can depend on residence status and current authority rules, so always check the latest official ÖIF or Austrian government guidance for your own case."
+        }
+      ],
+      "booksIntro": "These ÖIF books focus on Austria-style speaking and writing tasks, so you can practice with realistic situations, reusable exam language, and clear sample-book entry points.",
+      "books": [
+        "oeif-speaking",
+        "oeif-writing"
+      ]
+    }
+  },
   "books": {
-    "speaking": {
-      "key": "speaking",
+    "dtz-speaking": {
+      "key": "dtz-speaking",
+      "examKey": "dtz",
+      "title": "DTZ B1 Speaking - Practice and Pass",
+      "shortTitle": "DTZ Speaking",
+      "subtitle": "60 real exam tasks with model answers",
+      "language": "de",
+      "examSection": "Speaking",
+      "description": "Practical DTZ B1 speaking prep with 60 exercises across all 3 oral exam parts.",
+      "summary": "A Germany-focused DTZ B1 speaking book with 60 exercises for self-introduction, picture-and-experience tasks, and partner planning, plus model answers, useful phrases, follow-up questions, and German-to-English vocabulary.",
+      "features": [
+        "60 exercises across all 3 oral exam parts",
+        "Model answers or dialogues plus possible examiner questions",
+        "Useful phrases, German-to-English vocabulary, and quick speaking drills"
+      ],
+      "sample": {
+        "title": "Free sample with 3 DTZ speaking tasks",
+        "description": "A free sample that shows the speaking task format, model support, and the kind of language training used in the full book."
+      },
+      "gumroad": {
+        "freeSample": "https://voicejourneyapp.gumroad.com/l/bvtlrc",
+        "fullBook": "https://voicejourneyapp.gumroad.com/l/tgwgiv"
+      },
+      "cta": {
+        "freeSample": {
+          "title": "Get the free DTZ B1 speaking sample",
+          "text": "Preview 3 DTZ B1 speaking tasks before you buy the full speaking book.",
+          "label": "Preview DTZ Speaking Sample"
+        },
+        "fullBook": {
+          "title": "Need the full DTZ B1 speaking book?",
+          "text": "Train all 3 oral parts with 60 exercises, model answers, and speaking drills.",
+          "label": "See Full DTZ Speaking Book"
+        }
+      }
+    },
+    "dtz-writing": {
+      "key": "dtz-writing",
+      "examKey": "dtz",
+      "title": "DTZ Schreiben B1 - Practice Book",
+      "shortTitle": "DTZ Writing",
+      "subtitle": "30 practical writing tasks for everyday life and integration",
+      "language": "de",
+      "examSection": "Writing",
+      "description": "Practical DTZ B1 writing prep with 30 units focused on short everyday messages and 5 full mock writing tasks.",
+      "summary": "A practical DTZ B1 writing book built around the core exam task: short messages with four content points. It includes 30 units across personal messages, formal requests, complaints and apologies, plus transfer practice and 5 full DTZ mock tasks.",
+      "features": [
+        "30 practical writing units across the main DTZ text types",
+        "Model texts, useful phrases, common mistakes, and quick checklists",
+        "5 full DTZ mock writing tasks with model solutions"
+      ],
+      "sample": {
+        "title": "Free sample with 4 DTZ writing tasks",
+        "description": "A free sample book that lets learners preview the writing task style, structure, and support used in the full DTZ writing book."
+      },
+      "gumroad": {
+        "freeSample": "https://voicejourneyapp.gumroad.com/l/rbhwgd",
+        "fullBook": "https://voicejourneyapp.gumroad.com/l/esonzq"
+      },
+      "cta": {
+        "freeSample": {
+          "title": "Get the free DTZ B1 writing sample",
+          "text": "Preview 4 DTZ writing tasks before buying the full practice book.",
+          "label": "Preview DTZ Writing Sample"
+        },
+        "fullBook": {
+          "title": "Need the full DTZ B1 writing book?",
+          "text": "Train with 30 guided units, practical phrase support, and 5 DTZ mock tasks.",
+          "label": "See Full DTZ Writing Book"
+        }
+      }
+    },
+    "oeif-speaking": {
+      "key": "oeif-speaking",
+      "examKey": "oeif",
       "title": "ÖIF B1 Speaking Exam Prep",
-      "shortTitle": "Speaking Book",
+      "shortTitle": "ÖIF Speaking",
       "subtitle": "Real dialogues, examiner questions, and vocabulary",
       "language": "en",
       "examSection": "Speaking",
       "description": "Real dialogues, examiner questions, and vocabulary for the ÖIF B1 speaking exam.",
-      "summary": "30 planning dialogues, 30 discussion topics, picture-description practice, vocabulary support, and examiner follow-up questions.",
+      "summary": "An ÖIF B1 speaking workbook with 85 focused units: 30 planning dialogues, 30 opinion-and-discussion topics, and 25 picture-description prompts, all supported with vocabulary and examiner follow-up questions.",
+      "features": [
+        "30 planning dialogues, 30 discussion topics, and 25 picture-description prompts",
+        "Model responses, examiner follow-up questions, and reusable speaking phrases",
+        "Austria-style everyday topics such as appointments, housing, work, shopping, and neighborhood life"
+      ],
       "sample": {
-        "title": "Free sample with 3 speaking tasks",
-        "description": "Three complete speaking tasks with vocabulary tables and examiner questions."
+        "title": "Free sample with 3 ÖIF speaking tasks",
+        "description": "Three speaking tasks that show the dialogue style, vocabulary support, and follow-up-question format."
       },
       "gumroad": {
         "freeSample": "https://voicejourneyapp.gumroad.com/l/lsdrkx",
@@ -36,29 +199,35 @@
       },
       "cta": {
         "freeSample": {
-          "title": "Get 3 Free Speaking Tasks",
-          "text": "Real exam-style tasks with vocabulary tables and examiner questions.",
-          "label": "Get Speaking Sample"
+          "title": "Get the free ÖIF B1 speaking sample",
+          "text": "Preview the speaking book with real exam-style tasks and support.",
+          "label": "Preview ÖIF Speaking Sample"
         },
         "fullBook": {
-          "title": "Ready for the full speaking workbook?",
-          "text": "Get all 30 planning dialogues, 30 discussion topics, and picture-description guides.",
-          "label": "Buy Speaking Book"
+          "title": "Need the full ÖIF B1 speaking workbook?",
+          "text": "Train dialogues, discussions, and picture-description tasks in one book.",
+          "label": "See Full ÖIF Speaking Book"
         }
       }
     },
-    "writing": {
-      "key": "writing",
-      "title": "ÖIF B1 Schreiben – Übungsbuch",
-      "shortTitle": "Writing Book",
+    "oeif-writing": {
+      "key": "oeif-writing",
+      "examKey": "oeif",
+      "title": "ÖIF B1 Schreiben - Übungsbuch",
+      "shortTitle": "ÖIF Writing",
       "subtitle": "Vorbereitung auf die ÖIF B1 Integrationsprüfung",
       "language": "de-AT",
       "examSection": "Writing",
       "description": "Thirty writing units, practical phrase support, checklists, and mock tasks for the ÖIF B1 writing exam.",
-      "summary": "Informal and formal messages, complaints, short opinions, Austria-based situations, and four complete mock writing tasks.",
+      "summary": "An ÖIF B1 writing workbook with 30 guided units across informal and formal messages, complaints, and short opinions, plus Austria-based scenarios, clear phrase banks, checklists, and complete mock writing tasks.",
+      "features": [
+        "30 guided writing units across four practical chapters",
+        "Austria-based situations with phrase banks, checklists, and model texts",
+        "Built-in exam support including mock tasks and a simple rescue structure for nervous moments"
+      ],
       "sample": {
-        "title": "Free sample with 4 writing tasks",
-        "description": "Four sample writing tasks that show the structure, tone, and support used in the full workbook."
+        "title": "Free sample with 4 ÖIF writing tasks",
+        "description": "Four sample tasks that show the structure, tone, and support used in the full ÖIF writing workbook."
       },
       "gumroad": {
         "freeSample": "https://voicejourneyapp.gumroad.com/l/idrkyq",
@@ -66,27 +235,22 @@
       },
       "cta": {
         "freeSample": {
-          "title": "Try 4 Free Writing Tasks",
+          "title": "Get the free ÖIF B1 writing sample",
           "text": "See how the writing workbook teaches structure, register, and practical exam-ready phrasing.",
-          "label": "Get Writing Sample"
+          "label": "Preview ÖIF Writing Sample"
         },
         "fullBook": {
-          "title": "Need full ÖIF B1 writing practice?",
-          "text": "Train with 30 writing units, reusable redemittel, checklists, and four complete mock tasks.",
-          "label": "Buy Writing Book"
+          "title": "Need the full ÖIF B1 writing book?",
+          "text": "Train with 30 writing units, reusable redemittel, checklists, and mock tasks.",
+          "label": "See Full ÖIF Writing Book"
         }
       }
     }
   },
-  "gumroad": {
-    "_note": "Legacy speaking-book aliases kept for existing page content that still reads site.gumroad.* directly.",
-    "freeSample": "https://voicejourneyapp.gumroad.com/l/lsdrkx",
-    "fullBook": "https://voicejourneyapp.gumroad.com/l/ovhkog"
-  },
   "utm": {
     "source": "website",
     "medium": "organic",
-    "campaign": "oeif-b1"
+    "campaign": "dtz-oeif-b1"
   },
   "analytics": {
     "ga4": {

@@ -4,14 +4,10 @@
     <a href="{{ '/' | pageUrl }}" class="logo">{{ site.brand.shortName }}</a>
     <nav class="main-nav">
       <a href="{{ '/' | pageUrl }}">Home</a>
-      {% for bookKey in site.bookOrder %}
-        {% set book = site.books[bookKey] %}
-        <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'header-' ~ book.key }) }}" target="_blank" rel="noopener">{{ book.shortTitle }}</a>
+      {% for examKey in site.examOrder %}
+        {% set exam = site.exams[examKey] %}
+        <a href="{{ '/' | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a>
       {% endfor %}
-      <a href="{{ '/planning-dialogue-doctor-appointment' | pageUrl }}">Doctor Appointment</a>
-      <a href="{{ '/planning-dialogue-hotel-booking' | pageUrl }}">Hotel Booking</a>
-      <a href="{{ '/picture-description-technique' | pageUrl }}">Picture Description</a>
-      <a href="{{ '/opinion-discussion-phrases' | pageUrl }}">Opinion & Discussion</a>
     </nav>
   </div>
 </header>
