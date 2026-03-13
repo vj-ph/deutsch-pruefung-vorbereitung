@@ -1,5 +1,6 @@
 ---
 layout: base
+templateEngineOverride: njk
 title: "Книги для підготовки до DTZ B1 та ÖIF B1 - говоріння, письмо та безкоштовні зразки"
 description: "Готуйтеся до іспиту DTZ B1 у Німеччині та іспиту ÖIF B1 Integrationprüfung в Австрії за допомогою книжок для говоріння й письма та безкоштовних зразків перед покупкою."
 permalink: /uk/

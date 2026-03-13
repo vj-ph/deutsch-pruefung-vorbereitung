@@ -1,5 +1,6 @@
 ---
 layout: base
+templateEngineOverride: njk
 title: "DTZ B1 ve ÖIF B1 hazırlık kitapları - konuşma, yazma ve ücretsiz örnekler"
 description: "Almanya'daki DTZ B1 sınavı ve Avusturya'daki ÖIF B1 Integrationprüfung için konuşma ve yazma kitaplarıyla hazırlanın, satın almadan önce ücretsiz örnekleri inceleyin."
 permalink: /tr/

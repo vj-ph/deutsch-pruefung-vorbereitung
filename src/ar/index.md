@@ -1,5 +1,6 @@
 ---
 layout: base
+templateEngineOverride: njk
 title: "كتب التحضير لامتحاني DTZ B1 وÖIF B1 - التحدث والكتابة والعينات المجانية"
 description: "استعد لامتحان DTZ B1 في ألمانيا وامتحان ÖIF B1 Integrationprüfung في النمسا من خلال كتب التحدث والكتابة مع عينات مجانية قبل الشراء."
 permalink: /ar/
