@@ -36,6 +36,7 @@ module.exports = function(eleventyConfig) {
   
   // Copy favicon if present
   eleventyConfig.addPassthroughCopy({"src/favicon.ico": "favicon.ico"});
+  eleventyConfig.addPassthroughCopy({"src/CNAME": "CNAME"});
   
   // Watch CSS files for changes
   eleventyConfig.addWatchTarget("src/css/");
