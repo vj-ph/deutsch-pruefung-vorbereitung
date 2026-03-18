@@ -1,7 +1,7 @@
 ---
 layout: base
 templateEngineOverride: njk
-title: "Книги для подготовки к DTZ B1 и ÖIF B1 - говорение, письмо и бесплатные образцы"
+title: "Deutsch Kompass DTZ & ÖIF"
 description: "Подготовьтесь к экзамену DTZ B1 в Германии и к ÖIF B1 Integrationprüfung в Австрии с помощью книг по говорению и письму и бесплатных образцов перед покупкой."
 permalink: /ru/
 lang: ru

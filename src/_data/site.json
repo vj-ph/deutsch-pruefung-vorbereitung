@@ -1,15 +1,15 @@
 {
-  "title": "DTZ B1 & ÖIF B1 Exam Prep Books",
+  "title": "Deutsch Kompass DTZ & ÖIF",
   "description": "Speaking books, writing books, and free sample books for DTZ B1 in Germany and ÖIF B1 Integrationprüfung in Austria",
   "url": "https://deutschkompass.com",
   "language": "en",
   "author": {
-    "name": "DTZ & ÖIF B1 Prep",
+    "name": "Deutsch Kompass",
     "url": "https://voicejourneyapp.gumroad.com"
   },
   "brand": {
-    "name": "DTZ & ÖIF B1 Prep",
-    "shortName": "DTZ & ÖIF"
+    "name": "Deutsch Kompass",
+    "shortName": "Deutsch Kompass"
   },
   "defaultBookKey": "dtz-speaking",
   "bookOrder": [
