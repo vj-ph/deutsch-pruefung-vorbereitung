@@ -1,0 +1,21 @@
+{% set book = site.books[bookKey] %}
+<div class="book-facts">
+  <div class="book-fact">
+    <span class="book-fact__label">{{ productUi.fullBook }}</span>
+    <strong>{{ site.sales.fullBookPriceDisplay }}</strong>
+  </div>
+  <div class="book-fact">
+    <span class="book-fact__label">{{ productUi.freeSample }}</span>
+    <strong>{{ productUi.free }}</strong>
+  </div>
+  <div class="book-fact">
+    <span class="book-fact__label">{{ productUi.format }}</span>
+    <strong>{{ book.format or site.sales.format }}</strong>
+  </div>
+  <div class="book-fact">
+    <span class="book-fact__label">{{ productUi.pages }}</span>
+    <strong>{{ book.pageCount }}</strong>
+  </div>
+</div>
+<p class="book-note">{{ productUi.clickNote }}</p>
+<p class="book-note book-note--accent">{{ productUi.discountPrefix }}{{ book.discountCode }}{{ productUi.discountSuffix }}</p>

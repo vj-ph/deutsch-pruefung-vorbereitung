@@ -22,6 +22,10 @@
     "dtz",
     "oeif"
   ],
+  "sales": {
+    "fullBookPriceDisplay": "€6.99",
+    "format": "PDF"
+  },
   "exams": {
     "dtz": {
       "key": "dtz",
@@ -113,6 +117,9 @@
       "subtitle": "60 real exam tasks with model answers",
       "language": "de",
       "examSection": "Speaking",
+      "format": "PDF",
+      "pageCount": 137,
+      "discountCode": "DKWGCF2",
       "description": "Practical DTZ B1 speaking prep with 60 exercises across all 3 oral exam parts.",
       "summary": "A Germany-focused DTZ B1 speaking book with 60 exercises for self-introduction, picture-and-experience tasks, and partner planning, plus model answers, useful phrases, follow-up questions, and German-to-English vocabulary.",
       "features": [
@@ -149,6 +156,9 @@
       "subtitle": "30 practical writing tasks for everyday life and integration",
       "language": "de",
       "examSection": "Writing",
+      "format": "PDF",
+      "pageCount": 91,
+      "discountCode": "7MGV39W",
       "description": "Practical DTZ B1 writing prep with 30 units focused on short everyday messages and 5 full mock writing tasks.",
       "summary": "A practical DTZ B1 writing book built around the core exam task: short messages with four content points. It includes 30 units across personal messages, formal requests, complaints and apologies, plus transfer practice and 5 full DTZ mock tasks.",
       "features": [
@@ -185,6 +195,9 @@
       "subtitle": "Real dialogues, examiner questions, and vocabulary",
       "language": "en",
       "examSection": "Speaking",
+      "format": "PDF",
+      "pageCount": 173,
+      "discountCode": "DKWGCF2",
       "description": "Real dialogues, examiner questions, and vocabulary for the ÖIF B1 speaking exam.",
       "summary": "An ÖIF B1 speaking workbook with 85 focused units: 30 planning dialogues, 30 opinion-and-discussion topics, and 25 picture-description prompts, all supported with vocabulary and examiner follow-up questions.",
       "features": [
@@ -221,6 +234,9 @@
       "subtitle": "Vorbereitung auf die ÖIF B1 Integrationsprüfung",
       "language": "de-AT",
       "examSection": "Writing",
+      "format": "PDF",
+      "pageCount": 83,
+      "discountCode": "7MGV39W",
       "description": "Thirty writing units, practical phrase support, checklists, and mock tasks for the ÖIF B1 writing exam.",
       "summary": "An ÖIF B1 writing workbook with 30 guided units across informal and formal messages, complaints, and short opinions, plus Austria-based scenarios, clear phrase banks, checklists, and complete mock writing tasks.",
       "features": [

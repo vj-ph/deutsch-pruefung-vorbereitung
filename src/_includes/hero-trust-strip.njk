@@ -1,0 +1,7 @@
+{% if heroTrustBullets %}
+<div class="trust-strip" role="list">
+  {% for bullet in heroTrustBullets %}
+    <p class="trust-pill" role="listitem">{{ bullet }}</p>
+  {% endfor %}
+</div>
+{% endif %}

@@ -369,6 +369,24 @@ th {
   margin: 1.25rem 0 2rem;
 }
 
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 2rem;
+}
+
+.trust-pill {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0, 102, 204, 0.18);
+  border-radius: 999px;
+  background: white;
+  color: var(--secondary-color);
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
 .hero-book-grid,
 .path-grid,
 .feature-grid,
@@ -448,6 +466,43 @@ th {
   margin-top: 0;
 }
 
+.book-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.book-fact {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+}
+
+.book-fact__label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--text-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.book-note {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.book-note--accent {
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(0, 102, 204, 0.08);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
 .home-section {
   padding: 4rem 0;
 }
@@ -477,7 +532,8 @@ html[dir="rtl"] .header-right {
 html[dir="rtl"] .main-nav,
 html[dir="rtl"] .language-switcher,
 html[dir="rtl"] .language-switcher__links,
-html[dir="rtl"] .button-row {
+html[dir="rtl"] .button-row,
+html[dir="rtl"] .trust-strip {
   flex-direction: row-reverse;
 }
 
@@ -545,6 +601,27 @@ html[dir="rtl"] .hero.hero-dual {
 
 .final-cta-section {
   padding-top: 0;
+}
+
+.purchase-flow-section {
+  padding-top: 0;
+}
+
+.purchase-flow-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.purchase-step__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-bottom: 0.85rem;
+  border-radius: 999px;
+  background: rgba(0, 102, 204, 0.12);
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 .final-cta {

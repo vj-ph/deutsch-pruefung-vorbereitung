@@ -39,6 +39,44 @@ ui:
 ---
 
 {% from "cta-helpers.njk" import ctaLink with context %}
+{% set heroTrustBullets = [
+  "Sve kompletne knjige koštaju " ~ site.sales.fullBookPriceDisplay,
+  "Besplatni PDF uzorci na Gumroad-u",
+  "Kupite na Gumroad-u i preuzmite PDF tamo"
+] %}
+{% set purchaseFlow = {
+  eyebrow: "Pre nego što kliknete",
+  title: "Šta se dešava posle klika?",
+  intro: "Svaka kompletna knjiga košta " ~ site.sales.fullBookPriceDisplay ~ ", svaki uzorak je besplatan, a svaka knjiga se isporučuje kao PDF.",
+  steps: [
+    {
+      title: "Otvorite stranicu proizvoda",
+      text: "Klik na dugme otvara Gumroad stranicu za tu knjigu, gde možete da pročitate ceo opis pre nego što odlučite."
+    },
+    {
+      title: "Prvo pogledajte besplatan uzorak",
+      text: "Ako želite pregled, otvorite stranicu besplatnog uzorka na Gumroad-u i tamo pogledajte PDF uzorak."
+    },
+    {
+      title: "Kupite i preuzmite",
+      text: "Kada budete spremni, kupite kompletnu knjigu na Gumroad-u i preuzmite PDF tamo."
+    }
+  ]
+} %}
+{% set productUi = {
+  fullBook: "Kompletna knjiga",
+  freeSample: "Besplatan uzorak",
+  format: "Format",
+  pages: "Stranice",
+  free: "Besplatno",
+  discountPrefix: "Koristite kod za popust ",
+  discountSuffix: " za 20% popusta pri plaćanju.",
+  clickNote: "Klik na bilo koje dugme otvara Gumroad stranicu za ovu knjigu, gde možete da pročitate opis, proverite uzorak i kupite ili preuzmete PDF."
+} %}
+{% set heroButtonLabels = {
+  dtz: "Pogledajte DTZ B1 knjige, uzorke i cene",
+  oeif: "Pogledajte ÖIF B1 knjige, uzorke i cene"
+} %}
 
 <section class="hero hero-dual">
   <div class="container">
@@ -47,6 +85,7 @@ ui:
     <p class="hero-intro">Ako se pripremate za DTZ B1 u Nemačkoj ili za ÖIF B1 Integrationprüfung u Austriji, ova stranica vam pomaže da izaberete pravu knjigu za govor ili pisanje, uporedite oba ispita i preuzmete besplatan uzorak pre kupovine.</p>
     {% set switcherClass = 'language-switcher--hero' %}
     {% include "language-switcher.njk" %}
+    {% include "hero-trust-strip.njk" %}
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">DTZ B1 priprema za Nemačku</p>
@@ -58,7 +97,7 @@ ui:
           <li>Možete prvo preuzeti besplatan uzorak pa zatim kupiti odgovarajuću knjigu</li>
         </ul>
         <div class="button-row">
-          <a href="#dtz-b1" class="btn btn-primary">Pogledaj DTZ B1 knjige</a>
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtz }}</a>
         </div>
       </article>
       <article class="book-panel">
@@ -71,12 +110,14 @@ ui:
           <li>Za obe knjige postoje besplatni uzorci</li>
         </ul>
         <div class="button-row">
-          <a href="#oeif-b1" class="btn btn-primary">Pogledaj ÖIF B1 knjige</a>
+          <a href="#oeif-b1-books" class="btn btn-primary">{{ heroButtonLabels.oeif }}</a>
         </div>
       </article>
     </div>
   </div>
 </section>
+
+{% include "purchase-flow.njk" %}
 
 <section id="dtz-b1" class="home-section">
   <div class="container">
@@ -106,7 +147,7 @@ ui:
   </div>
 </section>
 
-<section class="home-section home-section-alt">
+<section id="dtz-b1-books" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
       <h2>DTZ B1 knjige i besplatni uzorci</h2>
@@ -123,6 +164,8 @@ ui:
           <li>Korisne fraze, nemačko-engleski rečnik i kratke govorne vežbe</li>
         </ul>
         <p><strong>Besplatan uzorak sa 3 zadatka:</strong> pokazuje format zadataka i vrstu podrške koju dobijate u celoj knjizi.</p>
+        {% set bookKey = 'dtz-speaking' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.freeSample, { content: 'dtz-speaking-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi DTZ govor uzorak</a>
           <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.fullBook, { content: 'dtz-speaking-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi DTZ govor knjigu</a>
@@ -138,6 +181,8 @@ ui:
           <li>5 kompletnih probnih zadataka sa model rešenjima</li>
         </ul>
         <p><strong>Besplatan uzorak sa 4 zadatka:</strong> pokazuje tipove pitanja, strukturu i podršku iz cele knjige.</p>
+        {% set bookKey = 'dtz-writing' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.freeSample, { content: 'dtz-writing-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi DTZ pisanje uzorak</a>
           <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.fullBook, { content: 'dtz-writing-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi DTZ pisanje knjigu</a>
@@ -175,7 +220,7 @@ ui:
   </div>
 </section>
 
-<section class="home-section">
+<section id="oeif-b1-books" class="home-section">
   <div class="container">
     <div class="section-heading">
       <h2>ÖIF B1 knjige i besplatni uzorci</h2>
@@ -192,6 +237,8 @@ ui:
           <li>Svakodnevne teme u austrijskom stilu kao što su termini, stanovanje, posao i kupovina</li>
         </ul>
         <p><strong>Besplatan uzorak sa 3 zadatka:</strong> pokazuje stil dijaloga, rečnik i tip pitanja koja se koriste u knjizi.</p>
+        {% set bookKey = 'oeif-speaking' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.freeSample, { content: 'oeif-speaking-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi ÖIF govor uzorak</a>
           <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.fullBook, { content: 'oeif-speaking-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi ÖIF govor knjigu</a>
@@ -207,6 +254,8 @@ ui:
           <li>Ugrađena podrška za ispit, uključujući probne zadatke i sigurnu strukturu za stresne trenutke</li>
         </ul>
         <p><strong>Besplatan uzorak sa 4 zadatka:</strong> pokazuje stil pisanja, strukturu i podršku iz cele knjige.</p>
+        {% set bookKey = 'oeif-writing' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.freeSample, { content: 'oeif-writing-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi ÖIF pisanje uzorak</a>
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi ÖIF pisanje knjigu</a>
@@ -225,8 +274,8 @@ ui:
         <p>Ako vam treba priprema za DTZ B1 u Nemačkoj, krenite na DTZ deo. Ako vam treba priprema za ÖIF B1 u Austriji, koristite ÖIF deo. U oba slučaja možete početi sa besplatnim uzorkom pa zatim nastaviti sa celom knjigom za govor ili pisanje.</p>
       </div>
       <div class="button-row">
-        <a href="#dtz-b1" class="btn btn-secondary">DTZ B1 knjige</a>
-        <a href="#oeif-b1" class="btn btn-secondary">ÖIF B1 knjige</a>
+        <a href="#dtz-b1-books" class="btn btn-secondary">DTZ B1 knjige</a>
+        <a href="#oeif-b1-books" class="btn btn-secondary">ÖIF B1 knjige</a>
       </div>
     </div>
   </div>

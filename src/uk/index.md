@@ -39,6 +39,44 @@ ui:
 ---
 
 {% from "cta-helpers.njk" import ctaLink with context %}
+{% set heroTrustBullets = [
+  "Усі повні книги коштують " ~ site.sales.fullBookPriceDisplay,
+  "Безкоштовні PDF-зразки на Gumroad",
+  "Купуйте на Gumroad і завантажуйте PDF там"
+] %}
+{% set purchaseFlow = {
+  eyebrow: "Перед тим як натиснути",
+  title: "Що буде після натискання?",
+  intro: "Кожна повна книга коштує " ~ site.sales.fullBookPriceDisplay ~ ", кожен зразок безкоштовний, і кожна книга доступна у форматі PDF.",
+  steps: [
+    {
+      title: "Відкрийте сторінку товару",
+      text: "Натискання кнопки відкриває сторінку Gumroad для цієї книги, де ви можете прочитати повний опис перед рішенням."
+    },
+    {
+      title: "Спочатку перегляньте безкоштовний зразок",
+      text: "Якщо хочете перегляд, відкрийте сторінку безкоштовного зразка на Gumroad і перегляньте PDF там."
+    },
+    {
+      title: "Купіть і завантажте",
+      text: "Коли будете готові, купіть повну книгу на Gumroad і завантажте PDF там."
+    }
+  ]
+} %}
+{% set productUi = {
+  fullBook: "Повна книга",
+  freeSample: "Безкоштовний зразок",
+  format: "Формат",
+  pages: "Сторінки",
+  free: "Безкоштовно",
+  discountPrefix: "Використайте код знижки ",
+  discountSuffix: " для знижки 20% під час оформлення замовлення.",
+  clickNote: "Натискання на будь-яку кнопку відкриває сторінку Gumroad для цієї книги, де можна прочитати опис, переглянути зразок і купити або завантажити PDF."
+} %}
+{% set heroButtonLabels = {
+  dtz: "Переглянути книги, зразки й ціни DTZ B1",
+  oeif: "Переглянути книги, зразки й ціни ÖIF B1"
+} %}
 
 <section class="hero hero-dual">
   <div class="container">
@@ -47,6 +85,7 @@ ui:
     <p class="hero-intro">Якщо ви готуєтеся до DTZ B1 у Німеччині або до ÖIF B1 Integrationprüfung в Австрії, ця сторінка допоможе вам вибрати правильну книгу для говоріння чи письма, порівняти обидва формати іспитів і завантажити безкоштовний зразок перед покупкою.</p>
     {% set switcherClass = 'language-switcher--hero' %}
     {% include "language-switcher.njk" %}
+    {% include "hero-trust-strip.njk" %}
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Підготовка до DTZ B1 у Німеччині</p>
@@ -58,7 +97,7 @@ ui:
           <li>Спочатку можна завантажити безкоштовний зразок, а потім купити повну книгу</li>
         </ul>
         <div class="button-row">
-          <a href="#dtz-b1" class="btn btn-primary">Переглянути книги DTZ B1</a>
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtz }}</a>
         </div>
       </article>
       <article class="book-panel">
@@ -71,12 +110,14 @@ ui:
           <li>Для обох книг доступні безкоштовні зразки</li>
         </ul>
         <div class="button-row">
-          <a href="#oeif-b1" class="btn btn-primary">Переглянути книги ÖIF B1</a>
+          <a href="#oeif-b1-books" class="btn btn-primary">{{ heroButtonLabels.oeif }}</a>
         </div>
       </article>
     </div>
   </div>
 </section>
+
+{% include "purchase-flow.njk" %}
 
 <section id="dtz-b1" class="home-section">
   <div class="container">
@@ -106,7 +147,7 @@ ui:
   </div>
 </section>
 
-<section class="home-section home-section-alt">
+<section id="dtz-b1-books" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
       <h2>Книги DTZ B1 і безкоштовні зразки</h2>
@@ -123,6 +164,8 @@ ui:
           <li>Корисні фрази, словник німецька-англійська та короткі speaking drills</li>
         </ul>
         <p><strong>Безкоштовний зразок із 3 завданнями:</strong> допомагає побачити формат завдань і тип підтримки, який є у повній книзі.</p>
+        {% set bookKey = 'dtz-speaking' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.freeSample, { content: 'dtz-speaking-sample-uk' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Отримати зразок DTZ Speaking</a>
           <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.fullBook, { content: 'dtz-speaking-full-uk' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Купити книгу DTZ Speaking</a>
@@ -138,6 +181,8 @@ ui:
           <li>5 повних письмових mock-завдань із модельними відповідями</li>
         </ul>
         <p><strong>Безкоштовний зразок із 4 завданнями:</strong> показує тип письмових завдань, структуру та підтримку, що є у повній книзі.</p>
+        {% set bookKey = 'dtz-writing' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.freeSample, { content: 'dtz-writing-sample-uk' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Отримати зразок DTZ Writing</a>
           <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.fullBook, { content: 'dtz-writing-full-uk' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Купити книгу DTZ Writing</a>
@@ -175,7 +220,7 @@ ui:
   </div>
 </section>
 
-<section class="home-section">
+<section id="oeif-b1-books" class="home-section">
   <div class="container">
     <div class="section-heading">
       <h2>Книги ÖIF B1 і безкоштовні зразки</h2>
@@ -192,6 +237,8 @@ ui:
           <li>Повсякденні теми в австрійському стилі: записи, житло, робота, покупки</li>
         </ul>
         <p><strong>Безкоштовний зразок із 3 завданнями:</strong> показує стиль діалогів, словник і тип follow-up questions у книзі.</p>
+        {% set bookKey = 'oeif-speaking' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.freeSample, { content: 'oeif-speaking-sample-uk' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Отримати зразок ÖIF Speaking</a>
           <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.fullBook, { content: 'oeif-speaking-full-uk' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Купити книгу ÖIF Speaking</a>
@@ -207,6 +254,8 @@ ui:
           <li>Вбудована підтримка для іспиту, включно з mock-завданнями і структурою на випадок стресу</li>
         </ul>
         <p><strong>Безкоштовний зразок із 4 завданнями:</strong> показує стиль письма, структуру й підтримку у повній книзі.</p>
+        {% set bookKey = 'oeif-writing' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.freeSample, { content: 'oeif-writing-sample-uk' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Отримати зразок ÖIF Writing</a>
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-uk' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Купити книгу ÖIF Writing</a>
@@ -225,8 +274,8 @@ ui:
         <p>Якщо вам потрібна підготовка до DTZ B1 у Німеччині, почніть із розділу DTZ. Якщо вам потрібна підготовка до ÖIF B1 в Австрії, скористайтеся розділом ÖIF. В обох випадках можна почати з безкоштовного зразка, а потім перейти до повної книги з говоріння або письма.</p>
       </div>
       <div class="button-row">
-        <a href="#dtz-b1" class="btn btn-secondary">Книги DTZ B1</a>
-        <a href="#oeif-b1" class="btn btn-secondary">Книги ÖIF B1</a>
+        <a href="#dtz-b1-books" class="btn btn-secondary">Книги DTZ B1</a>
+        <a href="#oeif-b1-books" class="btn btn-secondary">Книги ÖIF B1</a>
       </div>
     </div>
   </div>

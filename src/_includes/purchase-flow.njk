@@ -1,0 +1,18 @@
+<section class="home-section purchase-flow-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">{{ purchaseFlow.eyebrow }}</p>
+      <h2>{{ purchaseFlow.title }}</h2>
+      <p>{{ purchaseFlow.intro }}</p>
+    </div>
+    <div class="feature-grid purchase-flow-grid">
+      {% for step in purchaseFlow.steps %}
+        <article class="feature-card purchase-step">
+          <p class="purchase-step__number">0{{ loop.index }}</p>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

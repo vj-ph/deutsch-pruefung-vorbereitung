@@ -39,6 +39,44 @@ ui:
 ---
 
 {% from "cta-helpers.njk" import ctaLink with context %}
+{% set heroTrustBullets = [
+  "Tüm tam kitaplar " ~ site.sales.fullBookPriceDisplay,
+  "Gumroad'da ücretsiz örnek PDF'ler",
+  "Gumroad'dan satın alın ve PDF'yi oradan indirin"
+] %}
+{% set purchaseFlow = {
+  eyebrow: "Tıklamadan önce",
+  title: "Tıkladıktan sonra ne olur?",
+  intro: "Her tam kitap " ~ site.sales.fullBookPriceDisplay ~ ", her örnek ücretsiz ve her kitap PDF olarak sunulur.",
+  steps: [
+    {
+      title: "Ürün sayfasını açın",
+      text: "Bir düğmeye tıklayınca o kitaba ait Gumroad sayfası açılır; karar vermeden önce tam açıklamayı okuyabilirsiniz."
+    },
+    {
+      title: "Önce ücretsiz örneğe bakın",
+      text: "Bir önizleme istiyorsanız, Gumroad'daki ücretsiz örnek sayfasını açın ve örnek PDF'yi orada inceleyin."
+    },
+    {
+      title: "Satın alın ve indirin",
+      text: "Hazır olduğunuzda, tam kitabı Gumroad'dan satın alın ve PDF'yi oradan indirin."
+    }
+  ]
+} %}
+{% set productUi = {
+  fullBook: "Tam kitap",
+  freeSample: "Ücretsiz örnek",
+  format: "Format",
+  pages: "Sayfa",
+  free: "Ücretsiz",
+  discountPrefix: "Ödeme sırasında %20 indirim için ",
+  discountSuffix: " indirim kodunu kullanın.",
+  clickNote: "Her iki düğmeye tıklamak da bu kitaba ait Gumroad sayfasını açar; açıklamayı okuyabilir, örneği kontrol edebilir ve PDF'yi satın alabilir ya da indirebilirsiniz."
+} %}
+{% set heroButtonLabels = {
+  dtz: "DTZ B1 kitaplarını, örneklerini ve fiyatlarını gör",
+  oeif: "ÖIF B1 kitaplarını, örneklerini ve fiyatlarını gör"
+} %}
 
 <section class="hero hero-dual">
   <div class="container">
@@ -47,6 +85,7 @@ ui:
     <p class="hero-intro">Almanya'daki DTZ B1 sınavına ya da Avusturya'daki ÖIF B1 Integrationprüfung sınavına hazırlanıyorsanız, bu sayfa size doğru konuşma veya yazma kitabını seçmede, iki sınav yolunu karşılaştırmada ve satın almadan önce ücretsiz örnek indirmede yardımcı olur.</p>
     {% set switcherClass = 'language-switcher--hero' %}
     {% include "language-switcher.njk" %}
+    {% include "hero-trust-strip.njk" %}
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Almanya için DTZ B1 hazırlığı</p>
@@ -58,7 +97,7 @@ ui:
           <li>Önce ücretsiz örneği indirip sonra uygun kitabı satın alabilirsiniz</li>
         </ul>
         <div class="button-row">
-          <a href="#dtz-b1" class="btn btn-primary">DTZ B1 kitaplarını gör</a>
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtz }}</a>
         </div>
       </article>
       <article class="book-panel">
@@ -71,12 +110,14 @@ ui:
           <li>Her iki kitap için de ücretsiz örnek mevcuttur</li>
         </ul>
         <div class="button-row">
-          <a href="#oeif-b1" class="btn btn-primary">ÖIF B1 kitaplarını gör</a>
+          <a href="#oeif-b1-books" class="btn btn-primary">{{ heroButtonLabels.oeif }}</a>
         </div>
       </article>
     </div>
   </div>
 </section>
+
+{% include "purchase-flow.njk" %}
 
 <section id="dtz-b1" class="home-section">
   <div class="container">
@@ -106,7 +147,7 @@ ui:
   </div>
 </section>
 
-<section class="home-section home-section-alt">
+<section id="dtz-b1-books" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
       <h2>DTZ B1 kitapları ve ücretsiz örnekler</h2>
@@ -123,6 +164,8 @@ ui:
           <li>Yararlı ifadeler, Almanca-İngilizce kelime desteği ve kısa konuşma çalışmaları</li>
         </ul>
         <p><strong>3 görevlik ücretsiz örnek:</strong> tam kitapta kullanılan görev biçimini ve destek türünü görmenizi sağlar.</p>
+        {% set bookKey = 'dtz-speaking' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.freeSample, { content: 'dtz-speaking-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">DTZ konuşma örneğini al</a>
           <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.fullBook, { content: 'dtz-speaking-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">DTZ konuşma kitabını satın al</a>
@@ -138,6 +181,8 @@ ui:
           <li>Model çözümlü 5 tam deneme yazma görevi</li>
         </ul>
         <p><strong>4 görevlik ücretsiz örnek:</strong> soru tiplerini, yapılandırmayı ve tam kitaptaki desteği gösterir.</p>
+        {% set bookKey = 'dtz-writing' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.freeSample, { content: 'dtz-writing-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">DTZ yazma örneğini al</a>
           <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.fullBook, { content: 'dtz-writing-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">DTZ yazma kitabını satın al</a>
@@ -175,7 +220,7 @@ ui:
   </div>
 </section>
 
-<section class="home-section">
+<section id="oeif-b1-books" class="home-section">
   <div class="container">
     <div class="section-heading">
       <h2>ÖIF B1 kitapları ve ücretsiz örnekler</h2>
@@ -192,6 +237,8 @@ ui:
           <li>Randevu, konut, iş ve alışveriş gibi Avusturya tarzı günlük konular</li>
         </ul>
         <p><strong>3 görevlik ücretsiz örnek:</strong> kitaptaki diyalog tarzını, kelime desteğini ve takip sorularını gösterir.</p>
+        {% set bookKey = 'oeif-speaking' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.freeSample, { content: 'oeif-speaking-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">ÖIF konuşma örneğini al</a>
           <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.fullBook, { content: 'oeif-speaking-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">ÖIF konuşma kitabını satın al</a>
@@ -207,6 +254,8 @@ ui:
           <li>Deneme görevleri ve stres anları için güvenli yapı desteği</li>
         </ul>
         <p><strong>4 görevlik ücretsiz örnek:</strong> tam kitaptaki yazma tarzını, yapıyı ve desteği gösterir.</p>
+        {% set bookKey = 'oeif-writing' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.freeSample, { content: 'oeif-writing-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">ÖIF yazma örneğini al</a>
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">ÖIF yazma kitabını satın al</a>
@@ -225,8 +274,8 @@ ui:
         <p>Almanya için DTZ B1 hazırlığına ihtiyacınız varsa DTZ bölümüne gidin. Avusturya için ÖIF B1 hazırlığına ihtiyacınız varsa ÖIF bölümünü kullanın. Her iki durumda da ücretsiz örnekle başlayıp sonra tam konuşma veya yazma kitabına geçebilirsiniz.</p>
       </div>
       <div class="button-row">
-        <a href="#dtz-b1" class="btn btn-secondary">DTZ B1 kitapları</a>
-        <a href="#oeif-b1" class="btn btn-secondary">ÖIF B1 kitapları</a>
+        <a href="#dtz-b1-books" class="btn btn-secondary">DTZ B1 kitapları</a>
+        <a href="#oeif-b1-books" class="btn btn-secondary">ÖIF B1 kitapları</a>
       </div>
     </div>
   </div>

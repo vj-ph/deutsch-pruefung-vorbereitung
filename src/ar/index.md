@@ -39,6 +39,44 @@ ui:
 ---
 
 {% from "cta-helpers.njk" import ctaLink with context %}
+{% set heroTrustBullets = [
+  "كل الكتب الكاملة بسعر " ~ site.sales.fullBookPriceDisplay,
+  "عينات PDF مجانية على Gumroad",
+  "اشترِ على Gumroad وحمّل PDF هناك"
+] %}
+{% set purchaseFlow = {
+  eyebrow: "قبل أن تنقر",
+  title: "ماذا يحدث بعد أن تنقر؟",
+  intro: "كل كتاب كامل بسعر " ~ site.sales.fullBookPriceDisplay ~ "، وكل عينة مجانية، وكل كتاب يُسلَّم بصيغة PDF.",
+  steps: [
+    {
+      title: "افتح صفحة المنتج",
+      text: "النقر على الزر يفتح صفحة Gumroad الخاصة بهذا الكتاب، حيث يمكنك قراءة الوصف الكامل قبل أن تقرر."
+    },
+    {
+      title: "تحقق من العينة المجانية أولًا",
+      text: "إذا أردت معاينة، افتح صفحة العينة المجانية على Gumroad وراجع ملف PDF هناك."
+    },
+    {
+      title: "اشترِ وحمّل",
+      text: "عندما تكون جاهزًا، اشترِ الكتاب الكامل على Gumroad وحمّل PDF هناك."
+    }
+  ]
+} %}
+{% set productUi = {
+  fullBook: "الكتاب الكامل",
+  freeSample: "عينة مجانية",
+  format: "الصيغة",
+  pages: "الصفحات",
+  free: "مجاني",
+  discountPrefix: "استخدم رمز الخصم ",
+  discountSuffix: " للحصول على خصم 20% عند الدفع.",
+  clickNote: "النقر على أي من الزرين يفتح صفحة Gumroad الخاصة بهذا الكتاب، حيث يمكنك قراءة الوصف، ومراجعة العينة، وشراء PDF أو تنزيله."
+} %}
+{% set heroButtonLabels = {
+  dtz: "اطلع على كتب DTZ B1 والعينات والأسعار",
+  oeif: "اطلع على كتب ÖIF B1 والعينات والأسعار"
+} %}
 
 <section class="hero hero-dual">
   <div class="container">
@@ -47,6 +85,7 @@ ui:
     <p class="hero-intro">إذا كنت تستعد لامتحان DTZ B1 في ألمانيا أو لامتحان ÖIF B1 Integrationprüfung في النمسا، فهذه الصفحة تساعدك على اختيار كتاب التحدث أو الكتابة المناسب، ومقارنة مساري الامتحان، وتحميل عينة مجانية قبل الشراء.</p>
     {% set switcherClass = 'language-switcher--hero' %}
     {% include "language-switcher.njk" %}
+    {% include "hero-trust-strip.njk" %}
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">تحضير DTZ B1 في ألمانيا</p>
@@ -58,7 +97,7 @@ ui:
           <li>يمكنك تحميل العينة المجانية أولًا ثم شراء الكتاب المناسب</li>
         </ul>
         <div class="button-row">
-          <a href="#dtz-b1" class="btn btn-primary">عرض كتب DTZ B1</a>
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtz }}</a>
         </div>
       </article>
       <article class="book-panel">
@@ -71,12 +110,14 @@ ui:
           <li>توجد عينات مجانية للكتابين قبل اتخاذ قرار الشراء</li>
         </ul>
         <div class="button-row">
-          <a href="#oeif-b1" class="btn btn-primary">عرض كتب ÖIF B1</a>
+          <a href="#oeif-b1-books" class="btn btn-primary">{{ heroButtonLabels.oeif }}</a>
         </div>
       </article>
     </div>
   </div>
 </section>
+
+{% include "purchase-flow.njk" %}
 
 <section id="dtz-b1" class="home-section">
   <div class="container">
@@ -106,7 +147,7 @@ ui:
   </div>
 </section>
 
-<section class="home-section home-section-alt">
+<section id="dtz-b1-books" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
       <h2>كتب DTZ B1 والعينات المجانية</h2>
@@ -123,6 +164,8 @@ ui:
           <li>عبارات مفيدة ومفردات ألماني-إنجليزي وتمارين كلام قصيرة</li>
         </ul>
         <p><strong>عينة مجانية من 3 مهام:</strong> عينة تساعدك على رؤية شكل المهمة وطريقة الشرح والدعم اللغوي في الكتاب الكامل.</p>
+        {% set bookKey = 'dtz-speaking' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.freeSample, { content: 'dtz-speaking-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener">احصل على عينة DTZ للتحدث</a>
           <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.fullBook, { content: 'dtz-speaking-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener">اشترِ كتاب DTZ للتحدث</a>
@@ -138,6 +181,8 @@ ui:
           <li>5 مهام محاكاة كاملة مع حلول نموذجية</li>
         </ul>
         <p><strong>عينة مجانية من 4 مهام:</strong> عينة مجانية تعرض نوع الأسئلة وبنية النص والدعم الموجود في الكتاب الكامل.</p>
+        {% set bookKey = 'dtz-writing' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.freeSample, { content: 'dtz-writing-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener">احصل على عينة DTZ للكتابة</a>
           <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.fullBook, { content: 'dtz-writing-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener">اشترِ كتاب DTZ للكتابة</a>
@@ -175,7 +220,7 @@ ui:
   </div>
 </section>
 
-<section class="home-section">
+<section id="oeif-b1-books" class="home-section">
   <div class="container">
     <div class="section-heading">
       <h2>كتب ÖIF B1 والعينات المجانية</h2>
@@ -192,6 +237,8 @@ ui:
           <li>موضوعات يومية على الطريقة النمساوية مثل المواعيد والسكن والعمل والتسوق</li>
         </ul>
         <p><strong>عينة مجانية من 3 مهام:</strong> تعرض أسلوب الحوار والمفردات وطبيعة أسئلة المتابعة الموجودة في الكتاب.</p>
+        {% set bookKey = 'oeif-speaking' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.freeSample, { content: 'oeif-speaking-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener">احصل على عينة ÖIF للتحدث</a>
           <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.fullBook, { content: 'oeif-speaking-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener">اشترِ كتاب ÖIF للتحدث</a>
@@ -207,6 +254,8 @@ ui:
           <li>دعم مدمج للامتحان يشمل مهام محاكاة وبنية مساعدة عند التوتر</li>
         </ul>
         <p><strong>عينة مجانية من 4 مهام:</strong> توضح أسلوب الكتابة المطلوب والبنية والدعم المستخدم في الكتاب الكامل.</p>
+        {% set bookKey = 'oeif-writing' %}
+        {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.freeSample, { content: 'oeif-writing-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener">احصل على عينة ÖIF للكتابة</a>
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener">اشترِ كتاب ÖIF للكتابة</a>
@@ -225,8 +274,8 @@ ui:
         <p>إذا كنت تحتاج إلى تحضير DTZ B1 في ألمانيا فابدأ بقسم DTZ. وإذا كنت تحتاج إلى تحضير ÖIF B1 في النمسا فابدأ بقسم ÖIF. في كلتا الحالتين يمكنك تنزيل العينة المجانية أولًا ثم متابعة التحضير بالكتاب الكامل.</p>
       </div>
       <div class="button-row">
-        <a href="#dtz-b1" class="btn btn-secondary">كتب DTZ B1</a>
-        <a href="#oeif-b1" class="btn btn-secondary">كتب ÖIF B1</a>
+        <a href="#dtz-b1-books" class="btn btn-secondary">كتب DTZ B1</a>
+        <a href="#oeif-b1-books" class="btn btn-secondary">كتب ÖIF B1</a>
       </div>
     </div>
   </div>
