@@ -38,11 +38,11 @@ ui:
   rightsReserved: All rights reserved.
 ---
 
-{% from "cta-helpers.njk" import ctaLink with context %}
+{% from "cta-helpers.njk" import ctaLink, samplePagePath with context %}
 {% set heroTrustBullets = [
   'All full books cost ' ~ site.sales.fullBookPriceDisplay,
-  'Free ' ~ site.sales.format ~ ' samples on Gumroad',
-  'Buy on Gumroad and download the ' ~ site.sales.format ~ ' there'
+  'Free on-site ' ~ site.sales.format ~ ' sample pages',
+  'Buy full books on Gumroad and download the ' ~ site.sales.format ~ ' there'
 ] %}
 {% set purchaseFlow = {
   eyebrow: 'Before you click',
@@ -51,11 +51,11 @@ ui:
   steps: [
     {
       title: 'Open the product page',
-      text: 'Clicking a button opens the Gumroad page for that book, where you can read the full description before you decide.'
+      text: 'The sample button opens a short on-site sample page. The full-book button opens Gumroad for the paid book.'
     },
     {
       title: 'Check the free sample first',
-      text: 'If you want a preview, open the free sample page on Gumroad and review the sample ' ~ site.sales.format ~ ' there.'
+      text: 'On the sample page, open the free ' ~ site.sales.format ~ ' directly from this site and decide if the book fits you.'
     },
     {
       title: 'Buy and download',
@@ -71,7 +71,7 @@ ui:
   free: 'Free',
   discountPrefix: 'Use discount code ',
   discountSuffix: ' for 20% off at checkout.',
-  clickNote: 'Clicking either button opens the Gumroad page for this book, where you can read the description, check the sample, and buy or download the PDF.'
+  clickNote: 'The sample button opens an on-site sample page with a direct PDF link. The full-book button opens Gumroad for checkout and download.'
 } %}
 {% set heroButtonLabels = {
   dtz: 'See DTZ B1 books, samples, and prices',
@@ -152,7 +152,7 @@ ui:
             <p><strong>{{ book.sample.title }}:</strong> {{ book.sample.description }}</p>
             {% include "book-facts.njk" %}
             <div class="button-row">
-              <a href="{{ ctaLink(book.gumroad.freeSample, { content: book.key ~ '-sample-section' }) }}" class="btn btn-primary" target="_blank" rel="noopener">{{ book.cta.freeSample.label }}</a>
+              <a href="{{ ctaLink(samplePagePath(book.key, currentLang or 'en'), { content: book.key ~ '-sample-section' }) }}" class="btn btn-primary">{{ book.cta.freeSample.label }}</a>
               <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-section' }) }}" class="btn btn-outline" target="_blank" rel="noopener">{{ book.cta.fullBook.label }}</a>
             </div>
           </article>

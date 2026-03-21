@@ -1,0 +1,52 @@
+{% from "cta-helpers.njk" import ctaLink with context %}
+{% set bookKey = samplePage.bookKey %}
+{% set book = site.books[bookKey] %}
+{% set heroTrustBullets = samplePage.trustBullets %}
+
+<section class="hero hero-dual">
+  <div class="container">
+    <p class="eyebrow">{{ samplePage.eyebrow }}</p>
+    <h1>{{ samplePage.heroTitle }}</h1>
+    <p class="hero-intro">{{ samplePage.heroIntro }}</p>
+    {% set switcherClass = 'language-switcher--hero' %}
+    {% include "language-switcher.njk" %}
+    {% include "hero-trust-strip.njk" %}
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="hero-book-grid">
+      <article class="book-panel book-panel-accent">
+        <p class="book-panel__label">{{ samplePage.sampleCardLabel }}</p>
+        <h2>{{ samplePage.sampleCardTitle }}</h2>
+        <p>{{ samplePage.sampleIntro }}</p>
+        <ul class="check-list">
+          {% for check in samplePage.sampleChecks %}
+            <li>{{ check }}</li>
+          {% endfor %}
+        </ul>
+        <div class="button-row">
+          <a href="{{ ctaLink(book.sample.pdfPath, { content: book.key ~ '-sample-pdf-' ~ currentLang }) }}" class="btn btn-primary" target="_blank" rel="noopener">{{ samplePage.downloadLabel }}</a>
+        </div>
+        <p class="book-note">{{ samplePage.downloadHint }}</p>
+      </article>
+
+      <article class="book-panel">
+        <p class="book-panel__label">{{ samplePage.fullCardLabel }}</p>
+        <h2>{{ book.title }}</h2>
+        <p>{{ samplePage.fullCardIntro }}</p>
+        <ul class="check-list">
+          {% for check in samplePage.fullBookChecks %}
+            <li>{{ check }}</li>
+          {% endfor %}
+        </ul>
+        {% include "book-facts.njk" %}
+        <div class="button-row">
+          <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-from-sample-' ~ currentLang }) }}" class="btn btn-secondary" target="_blank" rel="noopener">{{ samplePage.fullBookLabel }}</a>
+          <a href="{{ (homeUrl or '/') | pageUrl }}#{{ samplePage.backAnchor }}" class="btn btn-outline">{{ samplePage.backLabel }}</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

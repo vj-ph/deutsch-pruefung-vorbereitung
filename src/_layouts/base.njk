@@ -1,3 +1,4 @@
+{% from "cta-helpers.njk" import samplePagePath with context %}
 <!DOCTYPE html>
 {% set pageLang = lang or site.language %}
 {% set pageDir = dir or 'ltr' %}
@@ -35,7 +36,7 @@
             "@type": "CreativeWork",
             "name": "{{ book.sample.title }}",
             "description": "{{ book.sample.description }}",
-            "url": "{{ book.gumroad.freeSample }}"
+            "url": "{{ samplePagePath(book.key, pageLang or 'en') | pageUrl | absoluteUrl(site.url) }}"
           }
         }{% endfor %}
       ]

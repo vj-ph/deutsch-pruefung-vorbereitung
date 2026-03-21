@@ -54,7 +54,7 @@ Edit `src/_data/site.json`:
 
 ### UTM Parameters
 
-All Gumroad links are auto-tagged. Configure in `src/_data/site.json`:
+All CTA links are auto-tagged. Sample-page links stay on-site, and full-book links still go to Gumroad. Configure the shared tracking values in `src/_data/site.json`:
 
 ```json
 {
@@ -100,7 +100,7 @@ See **[.squad/decisions.md](.squad/decisions.md)** for approved product, UX, and
 
 - [ ] Update `site.url` in `src/_data/site.json`
 - [ ] Add GA4 Measurement ID and enable tracking
-- [ ] Verify Gumroad links are live
+- [ ] Verify on-site sample pages and Gumroad full-book links are live
 - [ ] Test GA4 firing (use Google Analytics Debugger)
 - [ ] Run Lighthouse audit (target >85)
 - [ ] Verify sitemap generates (`/sitemap.xml`)

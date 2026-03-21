@@ -129,7 +129,10 @@
       ],
       "sample": {
         "title": "Free sample with 3 DTZ speaking tasks",
-        "description": "A free sample that shows the speaking task format, model support, and the kind of language training used in the full book."
+        "description": "A free sample that shows the speaking task format, model support, and the kind of language training used in the full book.",
+        "taskCount": 3,
+        "pageSlug": "dtz-speaking",
+        "pdfPath": "/assets/sample-books/dtz-b1-speaking-sample.pdf"
       },
       "gumroad": {
         "freeSample": "https://voicejourneyapp.gumroad.com/l/bvtlrc",
@@ -168,7 +171,10 @@
       ],
       "sample": {
         "title": "Free sample with 4 DTZ writing tasks",
-        "description": "A free sample book that lets learners preview the writing task style, structure, and support used in the full DTZ writing book."
+        "description": "A free sample book that lets learners preview the writing task style, structure, and support used in the full DTZ writing book.",
+        "taskCount": 4,
+        "pageSlug": "dtz-writing",
+        "pdfPath": "/assets/sample-books/dtz-b1-writing-sample.pdf"
       },
       "gumroad": {
         "freeSample": "https://voicejourneyapp.gumroad.com/l/rbhwgd",
@@ -207,7 +213,11 @@
       ],
       "sample": {
         "title": "Free sample with 3 ÖIF speaking tasks",
-        "description": "Three speaking tasks that show the dialogue style, vocabulary support, and follow-up-question format."
+        "description": "Three speaking tasks that show the dialogue style, vocabulary support, and follow-up-question format.",
+        "taskCount": 3,
+        "bonusKey": "study-plan",
+        "pageSlug": "oeif-speaking",
+        "pdfPath": "/assets/sample-books/oeif-b1-speaking-sample.pdf"
       },
       "gumroad": {
         "freeSample": "https://voicejourneyapp.gumroad.com/l/lsdrkx",
@@ -246,7 +256,10 @@
       ],
       "sample": {
         "title": "Free sample with 4 ÖIF writing tasks",
-        "description": "Four sample tasks that show the structure, tone, and support used in the full ÖIF writing workbook."
+        "description": "Four sample tasks that show the structure, tone, and support used in the full ÖIF writing workbook.",
+        "taskCount": 4,
+        "pageSlug": "oeif-writing",
+        "pdfPath": "/assets/sample-books/oeif-b1-writing-sample.pdf"
       },
       "gumroad": {
         "freeSample": "https://voicejourneyapp.gumroad.com/l/idrkyq",

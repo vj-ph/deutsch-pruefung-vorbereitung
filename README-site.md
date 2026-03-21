@@ -68,7 +68,7 @@ Each article follows the book structure:
 
 - **Free sample** (ungated, positioned in-article after value demonstration)
 - **Full book** (positioned as depth upgrade after trust-building)
-- All Gumroad links include UTM parameters for tracking
+- On-site sample pages and Gumroad full-book links include UTM parameters for tracking
 
 ## Analytics Setup
 
@@ -109,7 +109,7 @@ Visit `http://localhost:8080` to preview locally.
 - [ ] Configure GA4 in `src/_data/analytics.json`
 - [ ] Test all internal links
 - [ ] Verify mobile responsiveness (Lighthouse >85)
-- [ ] Ensure all CTAs link to correct Gumroad products
+- [ ] Ensure sample CTAs open on-site sample pages and full-book CTAs open the correct Gumroad products
 - [ ] Generate and submit sitemap to Google Search Console
 
 ## Deployment

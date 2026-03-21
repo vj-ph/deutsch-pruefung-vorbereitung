@@ -1,8 +1,8 @@
-{% from "cta-helpers.njk" import ctaLink with context %}
+{% from "cta-helpers.njk" import ctaLink, samplePagePath with context %}
 {% set bookKey = ctaBookKey or site.defaultBookKey %}
 {% set book = site.books[bookKey] or site.books[site.defaultBookKey] %}
 <div class="cta-block cta-primary">
   <h3>{{ ctaTitle or book.cta.freeSample.title }}</h3>
   <p>{{ ctaText or book.cta.freeSample.text }}</p>
-  <a href="{{ ctaLink(book.gumroad.freeSample, { content: ctaContent or (book.key ~ '-sample-cta') }) }}" class="btn btn-primary" target="_blank" rel="noopener">{{ ctaLabel or book.cta.freeSample.label }}</a>
+  <a href="{{ ctaLink(samplePagePath(book.key, currentLang or 'en'), { content: ctaContent or (book.key ~ '-sample-cta') }) }}" class="btn btn-primary">{{ ctaLabel or book.cta.freeSample.label }}</a>
 </div>

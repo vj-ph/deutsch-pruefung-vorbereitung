@@ -1,6 +1,12 @@
-{# Helper to generate UTM-tagged Gumroad links #}
-{%- macro ctaLink(productUrl, customParams = {}) -%}
-{%- set separator = '&' if '?' in productUrl else '?' -%}
-{{ productUrl }}{{ separator }}utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }}
+{# Helpers to generate tracked CTA links for internal or external destinations #}
+{%- macro ctaLink(destinationUrl, customParams = {}) -%}
+{%- set resolvedUrl = destinationUrl | pageUrl -%}
+{%- set separator = '&' if '?' in resolvedUrl else '?' -%}
+{{ resolvedUrl }}{{ separator }}utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ site.utm.campaign }}
 {%- if customParams.content -%}&utm_content={{ customParams.content }}{%- endif -%}
+{%- endmacro -%}
+
+{%- macro samplePagePath(bookKey, locale = 'en') -%}
+{%- set localePrefix = '' if locale == 'en' else '/' ~ locale -%}
+{{ localePrefix ~ '/samples/' ~ bookKey ~ '/' }}
 {%- endmacro -%}

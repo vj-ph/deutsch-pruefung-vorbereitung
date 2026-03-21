@@ -1,4 +1,4 @@
-{% from "cta-helpers.njk" import ctaLink with context %}
+{% from "cta-helpers.njk" import ctaLink, samplePagePath with context %}
 <footer class="site-footer">
   <div class="container">
     <div class="footer-content">
@@ -23,7 +23,7 @@
             {% set book = site.books[bookKey] %}
             <li>
               <strong>{{ book.shortTitle }}</strong>:
-              <a href="{{ ctaLink(book.gumroad.freeSample, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">{{ ui.sampleLabel or 'Sample' }}</a>
+              <a href="{{ ctaLink(samplePagePath(book.key, currentLang or 'en'), { content: 'footer-' ~ book.key ~ '-sample' }) }}">{{ ui.sampleLabel or 'Sample' }}</a>
               ·
               <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener">{{ ui.fullBookLabel or 'Full Book' }}</a>
             </li>
