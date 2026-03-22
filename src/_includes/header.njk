@@ -1,6 +1,15 @@
 <header class="site-header">
   <div class="container">
-    <a href="{{ (homeUrl or '/') | pageUrl }}" class="logo">{{ site.brand.shortName }}</a>
+    <a href="{{ (homeUrl or '/') | pageUrl }}" class="logo">
+      <img
+        src="{{ '/assets/logo.png' | url }}"
+        alt=""
+        class="logo-image"
+        width="500"
+        height="500"
+      >
+      <span class="logo-text">{{ site.brand.shortName }}</span>
+    </a>
     <div class="header-right">
       <nav class="main-nav">
         <a href="{{ (homeUrl or '/') | pageUrl }}">{{ ui.homeLabel or 'Home' }}</a>
