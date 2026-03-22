@@ -1,4 +1,23 @@
 {% set book = site.books[bookKey] %}
+{% if book.thumbnailPath %}
+<a
+  href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-thumbnail-' ~ (currentLang or 'en') }) }}"
+  class="book-thumbnail"
+  target="_blank"
+  rel="noopener"
+  aria-label="{{ book.title }}"
+>
+  <img
+    src="{{ book.thumbnailPath | url }}"
+    alt="{{ book.title }} cover"
+    class="book-thumbnail__image"
+    width="1024"
+    height="1024"
+    loading="lazy"
+    decoding="async"
+  >
+</a>
+{% endif %}
 <div class="book-facts">
   <div class="book-fact">
     <span class="book-fact__label">{{ productUi.fullBook }}</span>
