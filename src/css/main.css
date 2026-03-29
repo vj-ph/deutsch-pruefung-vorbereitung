@@ -680,6 +680,16 @@ html[dir="rtl"] .hero.hero-dual {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.exam-overview-stack {
+  display: grid;
+  gap: 3rem;
+}
+
+.exam-overview-block + .exam-overview-block {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
 .purchase-step__number {
   display: inline-flex;
   align-items: center;

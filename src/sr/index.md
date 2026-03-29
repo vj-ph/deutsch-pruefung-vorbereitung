@@ -81,7 +81,7 @@ ui:
 <section class="hero hero-dual">
   <div class="container">
     <p class="eyebrow">Priprema za DTZ B1 i ÖIF B1</p>
-    <h1>Izaberite pravu DTZ ili ÖIF knjigu i počnite pripremu uz materijale koji liče na pravi ispit.</h1>
+    <h1>Položite DTZ B1 ili ÖIF B1 uz praktične knjige za govor i pisanje koje vam jasno pokazuju kako da se pripremite.</h1>
     <p class="hero-intro">Ako se pripremate za DTZ B1 u Nemačkoj ili za ÖIF B1 Integrationprüfung u Austriji, ova stranica vam pomaže da izaberete pravu knjigu za govor ili pisanje, uporedite oba ispita i preuzmete besplatan uzorak pre kupovine.</p>
     {% set switcherClass = 'language-switcher--hero' %}
     {% include "language-switcher.njk" %}
@@ -90,7 +90,6 @@ ui:
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">DTZ B1 priprema za Nemačku</p>
         <h2>Uspeh na DTZ B1 počinje jasnom knjigom za govor i jasnom knjigom za pisanje.</h2>
-        <p>Ovaj deo je za one koji polažu Deutsch-Test für Zuwanderer u Nemačkoj i žele praktičan materijal za usmeni deo i zadatak pisanja.</p>
         <ul class="check-list">
           <li>Knjiga za govor sadrži 60 vežbi za sva 3 dela usmenog ispita</li>
           <li>Knjiga za pisanje sadrži 30 praktičnih jedinica i 5 kompletnih probnih zadataka</li>
@@ -103,7 +102,6 @@ ui:
       <article class="book-panel">
         <p class="book-panel__label">ÖIF B1 priprema za Austriju</p>
         <h2>Uspeh na ÖIF B1 je lakši uz posebne knjige za govor i pisanje.</h2>
-        <p>Ovaj deo je za one kojima treba priprema za Austriju za ÖIF B1 Integrationprüfung, sa realističnim vežbama govora i jasnom podrškom za pisanje.</p>
         <ul class="check-list">
           <li>Knjiga za govor sadrži dijaloge, teme za diskusiju i zadatke sa slikama</li>
           <li>Knjiga za pisanje je fokusirana na austrijske situacije, model tekstove i probne zadatke</li>
@@ -117,37 +115,7 @@ ui:
   </div>
 </section>
 
-{% include "purchase-flow.njk" %}
-
-<section id="dtz-b1" class="home-section">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">DTZ B1</p>
-      <h2>Kratak pregled DTZ B1 ispita</h2>
-      <p>Deutsch-Test für Zuwanderer (DTZ) je praktičan ispit nemačkog jezika u Nemačkoj. Ovaj deo objašnjava format ispita i pomaže vam da izaberete pravu DTZ B1 knjigu za govor ili pisanje.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>Format govora</h3>
-        <p>DTZ usmeni ispit ima 3 vrste zadataka: kratko predstavljanje, govor o slici i sopstvenom iskustvu i zajedničko planiranje sa partnerom.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Format pisanja</h3>
-        <p>DTZ zadatak pisanja je obično kratka praktična poruka od oko 80 do 100 reči sa četiri sadržajne tačke.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Zašto je dokaz B1 važan</h3>
-        <p>DTZ sertifikat na nivou B1 može se koristiti kao prihvaćen dokaz znanja nemačkog za prijave kao što su stalni boravak u Nemačkoj ili naturalizacija. Konačna podobnost ipak zavisi i od ostalih zakonskih uslova u vašem slučaju.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Za koga su ove knjige</h3>
-        <p>Pogodne su za samostalno učenje, nastavu i grupe koje žele praktičnu pripremu tačno prema formatu ispita.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="dtz-b1-books" class="home-section home-section-alt">
+<section id="dtz-b1-books" class="home-section">
   <div class="container">
     <div class="section-heading">
       <h2>DTZ B1 knjige i besplatni uzorci</h2>
@@ -192,35 +160,7 @@ ui:
   </div>
 </section>
 
-<section id="oeif-b1" class="home-section home-section-alt">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">ÖIF B1</p>
-      <h2>Kratak pregled ÖIF B1 ispita</h2>
-      <p>ÖIF B1 Integrationprüfung je zvanični integracioni ispit u Austriji. Ovaj deo objašnjava ispit i pomaže vam da izaberete pravu ÖIF B1 knjigu za govor ili pisanje.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>Čemu služi ispit</h3>
-        <p>To je deo sistema integracije u Austriji i koristi se kao zvaničan dokaz jezika i integracije.</p>
-      </article>
-      <article class="feature-card">
-        <h3>U čemu polaganje može pomoći</h3>
-        <p>Uspešan rezultat može pomoći kod zahteva kao što je Modul 2 u okviru sporazuma o integraciji i u nekim slučajevima za stalni boravak ili državljanstvo.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Šta potvrđuje sertifikat</h3>
-        <p>Sertifikat potvrđuje da ste dostigli nemački nivo B1 u zvanično priznatom ÖIF formatu ispita.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Važna napomena</h3>
-        <p>Zakonski uslovi zavise od statusa boravka i lične situacije, zato uvek proverite najnovija pravila ÖIF-a i zvaničnih austrijskih institucija.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="oeif-b1-books" class="home-section">
+<section id="oeif-b1-books" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
       <h2>ÖIF B1 knjige i besplatni uzorci</h2>
@@ -261,6 +201,70 @@ ui:
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi ÖIF pisanje knjigu</a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+{% include "purchase-flow.njk" %}
+
+<section class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Pregled ispita</p>
+      <h2>Uporedite DTZ B1 i ÖIF B1 ispite</h2>
+      <p>Ako posle pregleda knjiga želite i kratak pregled oba formata ispita, ovde su okupljene ključne informacije za DTZ B1 i ÖIF B1.</p>
+    </div>
+    <div class="exam-overview-stack">
+      <div id="dtz-b1" class="exam-overview-block">
+<div class="section-heading">
+      <p class="eyebrow">DTZ B1</p>
+      <h2>Kratak pregled DTZ B1 ispita</h2>
+      <p>Deutsch-Test für Zuwanderer (DTZ) je praktičan ispit nemačkog jezika u Nemačkoj. Ovaj deo objašnjava format ispita i pomaže vam da izaberete pravu DTZ B1 knjigu za govor ili pisanje.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Format govora</h3>
+        <p>DTZ usmeni ispit ima 3 vrste zadataka: kratko predstavljanje, govor o slici i sopstvenom iskustvu i zajedničko planiranje sa partnerom.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Format pisanja</h3>
+        <p>DTZ zadatak pisanja je obično kratka praktična poruka od oko 80 do 100 reči sa četiri sadržajne tačke.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Zašto je dokaz B1 važan</h3>
+        <p>DTZ sertifikat na nivou B1 može se koristiti kao prihvaćen dokaz znanja nemačkog za prijave kao što su stalni boravak u Nemačkoj ili naturalizacija. Konačna podobnost ipak zavisi i od ostalih zakonskih uslova u vašem slučaju.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Za koga su ove knjige</h3>
+        <p>Pogodne su za samostalno učenje, nastavu i grupe koje žele praktičnu pripremu tačno prema formatu ispita.</p>
+      </article>
+    </div>
+      </div>
+      <div id="oeif-b1" class="exam-overview-block">
+<div class="section-heading">
+      <p class="eyebrow">ÖIF B1</p>
+      <h2>Kratak pregled ÖIF B1 ispita</h2>
+      <p>ÖIF B1 Integrationprüfung je zvanični integracioni ispit u Austriji. Ovaj deo objašnjava ispit i pomaže vam da izaberete pravu ÖIF B1 knjigu za govor ili pisanje.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Čemu služi ispit</h3>
+        <p>To je deo sistema integracije u Austriji i koristi se kao zvaničan dokaz jezika i integracije.</p>
+      </article>
+      <article class="feature-card">
+        <h3>U čemu polaganje može pomoći</h3>
+        <p>Uspešan rezultat može pomoći kod zahteva kao što je Modul 2 u okviru sporazuma o integraciji i u nekim slučajevima za stalni boravak ili državljanstvo.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Šta potvrđuje sertifikat</h3>
+        <p>Sertifikat potvrđuje da ste dostigli nemački nivo B1 u zvanično priznatom ÖIF formatu ispita.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Važna napomena</h3>
+        <p>Zakonski uslovi zavise od statusa boravka i lične situacije, zato uvek proverite najnovija pravila ÖIF-a i zvaničnih austrijskih institucija.</p>
+      </article>
+    </div>
+      </div>
     </div>
   </div>
 </section>

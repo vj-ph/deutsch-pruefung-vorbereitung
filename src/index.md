@@ -83,7 +83,7 @@ ui:
 <section class="hero hero-dual">
   <div class="container">
     <p class="eyebrow">DTZ B1 and ÖIF B1 exam preparation</p>
-    <h1>Choose the right DTZ or ÖIF book and start preparing with real exam-style practice.</h1>
+    <h1>Pass DTZ B1 or ÖIF B1 with practical speaking and writing books that show you exactly how to prepare.</h1>
     <p class="hero-intro">If you are preparing for DTZ B1 in Germany or the ÖIF B1 Integrationprüfung in Austria, start here. This page helps you choose the right speaking book or writing book, compare both exam tracks, and download a free sample before you buy.</p>
     {% set switcherClass = 'language-switcher--hero' %}
     {% include "language-switcher.njk" %}
@@ -94,7 +94,6 @@ ui:
         <article class="book-panel{% if loop.first %} book-panel-accent{% endif %}">
           <p class="book-panel__label">{{ exam.heroLabel }}</p>
           <h2>{{ exam.heroTitle }}</h2>
-          <p>{{ exam.heroText }}</p>
           <ul class="check-list">
             {% for point in exam.heroPoints %}
               <li>{{ point }}</li>
@@ -109,29 +108,9 @@ ui:
   </div>
 </section>
 
-{% include "purchase-flow.njk" %}
-
 {% for examKey in site.examOrder %}
   {% set exam = site.exams[examKey] %}
-  <section id="{{ exam.anchor }}" class="home-section{% if loop.index % 2 == 0 %} home-section-alt{% endif %}">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">{{ exam.navLabel }}</p>
-        <h2>{{ exam.title }} exam overview</h2>
-        <p>{{ exam.description }}</p>
-      </div>
-      <div class="feature-grid">
-        {% for fact in exam.facts %}
-          <article class="feature-card">
-            <h3>{{ fact.title }}</h3>
-            <p>{{ fact.text }}</p>
-          </article>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section id="{{ exam.anchor }}-books" class="home-section{% if loop.index % 2 == 0 %}{% else %} home-section-alt{% endif %}">
+  <section id="{{ exam.anchor }}-books" class="home-section{% if loop.index % 2 == 0 %} home-section-alt{% endif %}">
     <div class="container">
       <div class="section-heading">
         <h2>{{ exam.title }} books and free sample books</h2>
@@ -161,6 +140,38 @@ ui:
     </div>
   </section>
 {% endfor %}
+
+{% include "purchase-flow.njk" %}
+
+<section class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Exam overview</p>
+      <h2>Compare the DTZ B1 and ÖIF B1 exams</h2>
+      <p>If you want the exam details after reviewing the books, this section brings together the key format, purpose, and certificate context for both exam tracks.</p>
+    </div>
+    <div class="exam-overview-stack">
+      {% for examKey in site.examOrder %}
+        {% set exam = site.exams[examKey] %}
+        <div id="{{ exam.anchor }}" class="exam-overview-block">
+          <div class="section-heading">
+            <p class="eyebrow">{{ exam.navLabel }}</p>
+            <h2>{{ exam.title }} exam overview</h2>
+            <p>{{ exam.description }}</p>
+          </div>
+          <div class="feature-grid">
+            {% for fact in exam.facts %}
+              <article class="feature-card">
+                <h3>{{ fact.title }}</h3>
+                <p>{{ fact.text }}</p>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
 <section class="home-section final-cta-section">
   <div class="container">

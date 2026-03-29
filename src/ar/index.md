@@ -81,7 +81,7 @@ ui:
 <section class="hero hero-dual">
   <div class="container">
     <p class="eyebrow">التحضير لامتحاني DTZ B1 وÖIF B1</p>
-    <h1>اختر كتاب DTZ أو ÖIF المناسب وابدأ التحضير بمواد تشبه الامتحان الحقيقي.</h1>
+    <h1>اجتز DTZ B1 أو ÖIF B1 بمساعدة كتب عملية للتحدث والكتابة توضح لك بالضبط كيف تستعد.</h1>
     <p class="hero-intro">إذا كنت تستعد لامتحان DTZ B1 في ألمانيا أو لامتحان ÖIF B1 Integrationprüfung في النمسا، فهذه الصفحة تساعدك على اختيار كتاب التحدث أو الكتابة المناسب، ومقارنة مساري الامتحان، وتحميل عينة مجانية قبل الشراء.</p>
     {% set switcherClass = 'language-switcher--hero' %}
     {% include "language-switcher.njk" %}
@@ -90,7 +90,6 @@ ui:
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">تحضير DTZ B1 في ألمانيا</p>
         <h2>نجاحك في DTZ B1 يبدأ بكتاب واضح للتحدث وكتاب واضح للكتابة.</h2>
-        <p>هذا القسم مناسب لمن يستعد لامتحان Deutsch-Test für Zuwanderer في ألمانيا ويحتاج إلى تدريب عملي على جزء التحدث ومهمة الكتابة.</p>
         <ul class="check-list">
           <li>كتاب التحدث يحتوي على 60 تدريبًا تغطي أجزاء الامتحان الشفهي الثلاثة</li>
           <li>كتاب الكتابة يحتوي على 30 وحدة عملية مع 5 مهام محاكاة كاملة</li>
@@ -103,7 +102,6 @@ ui:
       <article class="book-panel">
         <p class="book-panel__label">تحضير ÖIF B1 في النمسا</p>
         <h2>نجاحك في ÖIF B1 يصبح أسهل مع كتب مخصصة للتحدث والكتابة.</h2>
-        <p>هذا القسم مناسب لمن يحتاج إلى تحضير موجه للنمسا لامتحان ÖIF B1 Integrationprüfung، مع تدريب واقعي على التحدث ودعم واضح للكتابة.</p>
         <ul class="check-list">
           <li>كتاب التحدث يضم حوارات وتمارين مناقشة ووصف صور</li>
           <li>كتاب الكتابة يركز على مواقف نمساوية ونصوص نموذجية وتمارين محاكاة</li>
@@ -117,37 +115,7 @@ ui:
   </div>
 </section>
 
-{% include "purchase-flow.njk" %}
-
-<section id="dtz-b1" class="home-section">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">DTZ B1</p>
-      <h2>نظرة سريعة على امتحان DTZ B1</h2>
-      <p>امتحان Deutsch-Test für Zuwanderer (DTZ) هو امتحان عملي للغة الألمانية في ألمانيا. هذا القسم يشرح شكل الامتحان ويساعدك على اختيار كتاب DTZ B1 للتحدث أو كتاب DTZ B1 للكتابة.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>صيغة التحدث</h3>
-        <p>يشمل امتحان التحدث في DTZ ثلاث مهام: التعريف بالنفس، التحدث عن صورة وربطها بتجربة شخصية، والتخطيط مع شريك.</p>
-      </article>
-      <article class="feature-card">
-        <h3>صيغة الكتابة</h3>
-        <p>تركز مهمة الكتابة في DTZ على رسالة أو نص عملي قصير من حوالي 80 إلى 100 كلمة مع أربع نقاط محتوى.</p>
-      </article>
-      <article class="feature-card">
-        <h3>لماذا يهم إثبات مستوى B1</h3>
-        <p>شهادة DTZ بمستوى B1 يمكن أن تُستخدم كإثبات معتمد للغة الألمانية في طلبات مثل الإقامة الدائمة في ألمانيا أو التجنيس. لكن القبول النهائي يعتمد أيضًا على بقية الشروط القانونية في حالتك، لذلك يجب دائمًا مراجعة قواعد BAMF والجهات المحلية.</p>
-      </article>
-      <article class="feature-card">
-        <h3>لمن هذه الكتب</h3>
-        <p>هذه الكتب مناسبة للتعلم الذاتي، والدروس، والمجموعات الدراسية التي تريد تدريبًا عمليًا دقيقًا بدل المواد العامة.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="dtz-b1-books" class="home-section home-section-alt">
+<section id="dtz-b1-books" class="home-section">
   <div class="container">
     <div class="section-heading">
       <h2>كتب DTZ B1 والعينات المجانية</h2>
@@ -192,35 +160,7 @@ ui:
   </div>
 </section>
 
-<section id="oeif-b1" class="home-section home-section-alt">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">ÖIF B1</p>
-      <h2>نظرة سريعة على امتحان ÖIF B1</h2>
-      <p>امتحان ÖIF B1 Integrationprüfung هو امتحان اندماج رسمي في النمسا. هذا القسم يشرح الامتحان ويساعدك على اختيار كتاب ÖIF B1 المناسب للتحدث أو الكتابة.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>ما الهدف من الامتحان</h3>
-        <p>هو جزء من نظام الاندماج في النمسا ويُستخدم كإثبات رسمي للغة والاندماج ضمن إطار الاتفاقية المعمول بها.</p>
-      </article>
-      <article class="feature-card">
-        <h3>في ماذا قد يساعد النجاح</h3>
-        <p>اجتياز الامتحان قد يساعد في متطلبات مثل Modul 2 ضمن اتفاق الاندماج، وقد يكون مهمًا في بعض ملفات الإقامة الدائمة أو الجنسية بحسب حالتك.</p>
-      </article>
-      <article class="feature-card">
-        <h3>ماذا تثبت الشهادة</h3>
-        <p>تثبت الشهادة أنك وصلت إلى مستوى B1 في الألمانية ضمن صيغة امتحان ÖIF المعترف بها رسميًا.</p>
-      </article>
-      <article class="feature-card">
-        <h3>ملاحظة مهمة</h3>
-        <p>تختلف المتطلبات القانونية حسب وضع الإقامة والحالة الفردية، لذلك يجب دائمًا التحقق من أحدث تعليمات ÖIF والجهات الرسمية في النمسا.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="oeif-b1-books" class="home-section">
+<section id="oeif-b1-books" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
       <h2>كتب ÖIF B1 والعينات المجانية</h2>
@@ -261,6 +201,70 @@ ui:
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener">اشترِ كتاب ÖIF للكتابة</a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+{% include "purchase-flow.njk" %}
+
+<section class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">نظرة عامة على الامتحان</p>
+      <h2>قارن بين امتحاني DTZ B1 وÖIF B1</h2>
+      <p>إذا أردت بعد الاطلاع على الكتب أن ترى صورة سريعة لكل امتحان، فهنا ستجد النقاط الأساسية لكل من DTZ B1 وÖIF B1.</p>
+    </div>
+    <div class="exam-overview-stack">
+      <div id="dtz-b1" class="exam-overview-block">
+<div class="section-heading">
+      <p class="eyebrow">DTZ B1</p>
+      <h2>نظرة سريعة على امتحان DTZ B1</h2>
+      <p>امتحان Deutsch-Test für Zuwanderer (DTZ) هو امتحان عملي للغة الألمانية في ألمانيا. هذا القسم يشرح شكل الامتحان ويساعدك على اختيار كتاب DTZ B1 للتحدث أو كتاب DTZ B1 للكتابة.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>صيغة التحدث</h3>
+        <p>يشمل امتحان التحدث في DTZ ثلاث مهام: التعريف بالنفس، التحدث عن صورة وربطها بتجربة شخصية، والتخطيط مع شريك.</p>
+      </article>
+      <article class="feature-card">
+        <h3>صيغة الكتابة</h3>
+        <p>تركز مهمة الكتابة في DTZ على رسالة أو نص عملي قصير من حوالي 80 إلى 100 كلمة مع أربع نقاط محتوى.</p>
+      </article>
+      <article class="feature-card">
+        <h3>لماذا يهم إثبات مستوى B1</h3>
+        <p>شهادة DTZ بمستوى B1 يمكن أن تُستخدم كإثبات معتمد للغة الألمانية في طلبات مثل الإقامة الدائمة في ألمانيا أو التجنيس. لكن القبول النهائي يعتمد أيضًا على بقية الشروط القانونية في حالتك، لذلك يجب دائمًا مراجعة قواعد BAMF والجهات المحلية.</p>
+      </article>
+      <article class="feature-card">
+        <h3>لمن هذه الكتب</h3>
+        <p>هذه الكتب مناسبة للتعلم الذاتي، والدروس، والمجموعات الدراسية التي تريد تدريبًا عمليًا دقيقًا بدل المواد العامة.</p>
+      </article>
+    </div>
+      </div>
+      <div id="oeif-b1" class="exam-overview-block">
+<div class="section-heading">
+      <p class="eyebrow">ÖIF B1</p>
+      <h2>نظرة سريعة على امتحان ÖIF B1</h2>
+      <p>امتحان ÖIF B1 Integrationprüfung هو امتحان اندماج رسمي في النمسا. هذا القسم يشرح الامتحان ويساعدك على اختيار كتاب ÖIF B1 المناسب للتحدث أو الكتابة.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>ما الهدف من الامتحان</h3>
+        <p>هو جزء من نظام الاندماج في النمسا ويُستخدم كإثبات رسمي للغة والاندماج ضمن إطار الاتفاقية المعمول بها.</p>
+      </article>
+      <article class="feature-card">
+        <h3>في ماذا قد يساعد النجاح</h3>
+        <p>اجتياز الامتحان قد يساعد في متطلبات مثل Modul 2 ضمن اتفاق الاندماج، وقد يكون مهمًا في بعض ملفات الإقامة الدائمة أو الجنسية بحسب حالتك.</p>
+      </article>
+      <article class="feature-card">
+        <h3>ماذا تثبت الشهادة</h3>
+        <p>تثبت الشهادة أنك وصلت إلى مستوى B1 في الألمانية ضمن صيغة امتحان ÖIF المعترف بها رسميًا.</p>
+      </article>
+      <article class="feature-card">
+        <h3>ملاحظة مهمة</h3>
+        <p>تختلف المتطلبات القانونية حسب وضع الإقامة والحالة الفردية، لذلك يجب دائمًا التحقق من أحدث تعليمات ÖIF والجهات الرسمية في النمسا.</p>
+      </article>
+    </div>
+      </div>
     </div>
   </div>
 </section>

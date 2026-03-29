@@ -36,8 +36,7 @@ const languages = [
         "This short page gives you direct access to the sample so you can check the task style, level, and support before moving to the full book.",
       trustBullets: [
         "Direct on-site PDF access",
-        "Free sample before you buy",
-        "Full book still on Gumroad"
+        "Free sample before you buy"
       ],
       sampleCardLabel: "Sample PDF",
       sampleCardTitle: "What you can check before you buy",
@@ -95,8 +94,7 @@ const languages = [
         "تمنحك هذه الصفحة وصولًا مباشرًا إلى العينة حتى ترى أسلوب المهام والمستوى ونوع الدعم قبل الانتقال إلى الكتاب الكامل.",
       trustBullets: [
         "وصول مباشر إلى PDF من الموقع",
-        "عينة مجانية قبل الشراء",
-        "الكتاب الكامل ما زال على Gumroad"
+        "عينة مجانية قبل الشراء"
       ],
       sampleCardLabel: "عينة PDF",
       sampleCardTitle: "ما الذي يمكنك مراجعته قبل الشراء",
@@ -154,8 +152,7 @@ const languages = [
         "Ця коротка сторінка дає прямий доступ до зразка, щоб ви могли перевірити стиль завдань, рівень і підтримку перед переходом до повної книги.",
       trustBullets: [
         "Прямий доступ до PDF на сайті",
-        "Безкоштовний зразок до покупки",
-        "Повна книга все ще на Gumroad"
+        "Безкоштовний зразок до покупки"
       ],
       sampleCardLabel: "Зразок PDF",
       sampleCardTitle: "Що ви можете перевірити перед покупкою",
@@ -213,8 +210,7 @@ const languages = [
         "Bu kısa sayfa, tam kitaba geçmeden önce görev tarzını, seviyeyi ve desteği görmeniz için örneğe doğrudan erişim sağlar.",
       trustBullets: [
         "Siteden doğrudan PDF erişimi",
-        "Satın almadan önce ücretsiz örnek",
-        "Tam kitap hâlâ Gumroad'da"
+        "Satın almadan önce ücretsiz örnek"
       ],
       sampleCardLabel: "Örnek PDF",
       sampleCardTitle: "Satın almadan önce neleri kontrol edebilirsiniz",
@@ -272,8 +268,7 @@ const languages = [
         "Ova kratka stranica vam daje direktan pristup uzorku kako biste proverili stil zadataka, nivo i podršku pre prelaska na kompletnu knjigu.",
       trustBullets: [
         "Direktan pristup PDF-u sa sajta",
-        "Besplatan uzorak pre kupovine",
-        "Cela knjiga je i dalje na Gumroad-u"
+        "Besplatan uzorak pre kupovine"
       ],
       sampleCardLabel: "PDF uzorak",
       sampleCardTitle: "Šta možete proveriti pre kupovine",
@@ -331,8 +326,7 @@ const languages = [
         "Эта короткая страница дает прямой доступ к образцу, чтобы вы могли проверить стиль заданий, уровень и поддержку перед переходом к полной книге.",
       trustBullets: [
         "Прямой доступ к PDF на сайте",
-        "Бесплатный образец до покупки",
-        "Полная книга по-прежнему на Gumroad"
+        "Бесплатный образец до покупки"
       ],
       sampleCardLabel: "PDF-образец",
       sampleCardTitle: "Что можно проверить перед покупкой",

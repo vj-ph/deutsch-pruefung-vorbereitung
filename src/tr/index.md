@@ -81,7 +81,7 @@ ui:
 <section class="hero hero-dual">
   <div class="container">
     <p class="eyebrow">DTZ B1 ve ÖIF B1 sınav hazırlığı</p>
-    <h1>Doğru DTZ veya ÖIF kitabını seçin ve gerçek sınav tarzı materyallerle hazırlanmaya başlayın.</h1>
+    <h1>DTZ B1 veya ÖIF B1'i, size tam olarak nasıl hazırlanacağınızı gösteren pratik konuşma ve yazma kitaplarıyla geçin.</h1>
     <p class="hero-intro">Almanya'daki DTZ B1 sınavına ya da Avusturya'daki ÖIF B1 Integrationprüfung sınavına hazırlanıyorsanız, bu sayfa size doğru konuşma veya yazma kitabını seçmede, iki sınav yolunu karşılaştırmada ve satın almadan önce ücretsiz örnek indirmede yardımcı olur.</p>
     {% set switcherClass = 'language-switcher--hero' %}
     {% include "language-switcher.njk" %}
@@ -90,7 +90,6 @@ ui:
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Almanya için DTZ B1 hazırlığı</p>
         <h2>DTZ B1 başarısı, net bir konuşma kitabı ve net bir yazma kitabıyla başlar.</h2>
-        <p>Bu bölüm, Almanya'da Deutsch-Test für Zuwanderer sınavına hazırlanan ve konuşma bölümü ile yazma görevi için pratik materyal isteyenler içindir.</p>
         <ul class="check-list">
           <li>Konuşma kitabı, sözlü sınavın 3 bölümünü kapsayan 60 alıştırma içerir</li>
           <li>Yazma kitabı, 30 pratik ünite ve 5 tam deneme görevi içerir</li>
@@ -103,7 +102,6 @@ ui:
       <article class="book-panel">
         <p class="book-panel__label">Avusturya için ÖIF B1 hazırlığı</p>
         <h2>ÖIF B1 başarısı, konuşma ve yazma için ayrı kitaplarla daha kolay olur.</h2>
-        <p>Bu bölüm, ÖIF B1 Integrationprüfung için Avusturya odaklı hazırlık isteyenler içindir; gerçekçi konuşma çalışması ve yazma desteği sunar.</p>
         <ul class="check-list">
           <li>Konuşma kitabında diyaloglar, tartışma konuları ve resim görevleri vardır</li>
           <li>Yazma kitabı Avusturya temelli durumlara, model metinlere ve deneme görevlerine odaklanır</li>
@@ -117,37 +115,7 @@ ui:
   </div>
 </section>
 
-{% include "purchase-flow.njk" %}
-
-<section id="dtz-b1" class="home-section">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">DTZ B1</p>
-      <h2>DTZ B1 sınavına kısa bakış</h2>
-      <p>Deutsch-Test für Zuwanderer (DTZ), Almanya'da kullanılan pratik bir Almanca sınavıdır. Bu bölüm sınav formatını açıklar ve doğru DTZ B1 konuşma ya da yazma kitabını seçmenize yardımcı olur.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>Konuşma formatı</h3>
-        <p>DTZ konuşma sınavında 3 görev türü vardır: kendinizi tanıtma, bir resim ve kendi deneyiminiz hakkında konuşma, ayrıca bir partnerle birlikte plan yapma.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Yazma formatı</h3>
-        <p>DTZ yazma görevi genellikle 80-100 kelimelik kısa pratik bir mesajdan oluşur ve dört içerik noktasını kapsar.</p>
-      </article>
-      <article class="feature-card">
-        <h3>B1 kanıtı neden önemlidir</h3>
-        <p>B1 düzeyindeki DTZ sertifikası, Almanya'da kalıcı oturum veya vatandaşlık gibi başvurularda Almanca dil kanıtı olarak kabul edilebilir. Ancak nihai uygunluk her zaman diğer yasal şartlara da bağlıdır.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Bu kitaplar kimler için</h3>
-        <p>Bu kitaplar kendi kendine çalışanlar, ders alanlar ve sınav formatına uygun pratik isteyen çalışma grupları için uygundur.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="dtz-b1-books" class="home-section home-section-alt">
+<section id="dtz-b1-books" class="home-section">
   <div class="container">
     <div class="section-heading">
       <h2>DTZ B1 kitapları ve ücretsiz örnekler</h2>
@@ -192,35 +160,7 @@ ui:
   </div>
 </section>
 
-<section id="oeif-b1" class="home-section home-section-alt">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">ÖIF B1</p>
-      <h2>ÖIF B1 sınavına kısa bakış</h2>
-      <p>ÖIF B1 Integrationprüfung, Avusturya'da resmi bir entegrasyon sınavıdır. Bu bölüm sınavı açıklar ve doğru ÖIF B1 konuşma ya da yazma kitabını seçmenize yardımcı olur.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>Sınavın amacı</h3>
-        <p>Bu sınav, Avusturya'daki entegrasyon sisteminin bir parçasıdır ve resmi dil ile entegrasyon kanıtı olarak kullanılır.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Başarının neye yardımcı olabileceği</h3>
-        <p>Başarılı sonuç, entegrasyon anlaşmasındaki Modul 2 gibi gerekliliklerde ve bazı durumlarda kalıcı oturum veya vatandaşlık süreçlerinde önemli olabilir.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Sertifika neyi gösterir</h3>
-        <p>Sertifika, resmi olarak tanınan ÖIF formatında Almanca B1 düzeyine ulaştığınızı gösterir.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Önemli not</h3>
-        <p>Yasal gereklilikler oturum durumuna ve kişisel koşullara göre değişir; bu yüzden her zaman en güncel ÖIF ve resmi Avusturya kaynaklarını kontrol edin.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="oeif-b1-books" class="home-section">
+<section id="oeif-b1-books" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
       <h2>ÖIF B1 kitapları ve ücretsiz örnekler</h2>
@@ -261,6 +201,70 @@ ui:
           <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">ÖIF yazma kitabını satın al</a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+{% include "purchase-flow.njk" %}
+
+<section class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Sınav genel bakışı</p>
+      <h2>DTZ B1 ve ÖIF B1 sınavlarını karşılaştırın</h2>
+      <p>Kitaplara baktıktan sonra iki sınav formatını da hızlıca görmek isterseniz, bu bölüm her iki yol için temel noktaları bir araya getirir.</p>
+    </div>
+    <div class="exam-overview-stack">
+      <div id="dtz-b1" class="exam-overview-block">
+<div class="section-heading">
+      <p class="eyebrow">DTZ B1</p>
+      <h2>DTZ B1 sınavına kısa bakış</h2>
+      <p>Deutsch-Test für Zuwanderer (DTZ), Almanya'da kullanılan pratik bir Almanca sınavıdır. Bu bölüm sınav formatını açıklar ve doğru DTZ B1 konuşma ya da yazma kitabını seçmenize yardımcı olur.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Konuşma formatı</h3>
+        <p>DTZ konuşma sınavında 3 görev türü vardır: kendinizi tanıtma, bir resim ve kendi deneyiminiz hakkında konuşma, ayrıca bir partnerle birlikte plan yapma.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Yazma formatı</h3>
+        <p>DTZ yazma görevi genellikle 80-100 kelimelik kısa pratik bir mesajdan oluşur ve dört içerik noktasını kapsar.</p>
+      </article>
+      <article class="feature-card">
+        <h3>B1 kanıtı neden önemlidir</h3>
+        <p>B1 düzeyindeki DTZ sertifikası, Almanya'da kalıcı oturum veya vatandaşlık gibi başvurularda Almanca dil kanıtı olarak kabul edilebilir. Ancak nihai uygunluk her zaman diğer yasal şartlara da bağlıdır.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Bu kitaplar kimler için</h3>
+        <p>Bu kitaplar kendi kendine çalışanlar, ders alanlar ve sınav formatına uygun pratik isteyen çalışma grupları için uygundur.</p>
+      </article>
+    </div>
+      </div>
+      <div id="oeif-b1" class="exam-overview-block">
+<div class="section-heading">
+      <p class="eyebrow">ÖIF B1</p>
+      <h2>ÖIF B1 sınavına kısa bakış</h2>
+      <p>ÖIF B1 Integrationprüfung, Avusturya'da resmi bir entegrasyon sınavıdır. Bu bölüm sınavı açıklar ve doğru ÖIF B1 konuşma ya da yazma kitabını seçmenize yardımcı olur.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Sınavın amacı</h3>
+        <p>Bu sınav, Avusturya'daki entegrasyon sisteminin bir parçasıdır ve resmi dil ile entegrasyon kanıtı olarak kullanılır.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Başarının neye yardımcı olabileceği</h3>
+        <p>Başarılı sonuç, entegrasyon anlaşmasındaki Modul 2 gibi gerekliliklerde ve bazı durumlarda kalıcı oturum veya vatandaşlık süreçlerinde önemli olabilir.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Sertifika neyi gösterir</h3>
+        <p>Sertifika, resmi olarak tanınan ÖIF formatında Almanca B1 düzeyine ulaştığınızı gösterir.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Önemli not</h3>
+        <p>Yasal gereklilikler oturum durumuna ve kişisel koşullara göre değişir; bu yüzden her zaman en güncel ÖIF ve resmi Avusturya kaynaklarını kontrol edin.</p>
+      </article>
+    </div>
+      </div>
     </div>
   </div>
 </section>
