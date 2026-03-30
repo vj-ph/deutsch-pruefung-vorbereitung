@@ -5,7 +5,7 @@
   "language": "en",
   "author": {
     "name": "Deutsch Kompass",
-    "url": "https://deutschkompass.gumroad.com"
+    "url": "https://store.deutschkompass.com"
   },
   "brand": {
     "name": "Deutsch Kompass",
@@ -134,8 +134,8 @@
         "pdfPath": "/assets/sample-books/dtz-b1-speaking-sample.pdf"
       },
       "gumroad": {
-        "freeSample": "https://deutschkompass.gumroad.com/l/bvtlrc",
-        "fullBook": "https://deutschkompass.gumroad.com/l/tgwgiv"
+        "freeSample": "https://store.deutschkompass.com/l/bvtlrc",
+        "fullBook": "https://store.deutschkompass.com/l/tgwgiv"
       },
       "cta": {
         "freeSample": {
@@ -177,8 +177,8 @@
         "pdfPath": "/assets/sample-books/dtz-b1-writing-sample.pdf"
       },
       "gumroad": {
-        "freeSample": "https://deutschkompass.gumroad.com/l/rbhwgd",
-        "fullBook": "https://deutschkompass.gumroad.com/l/esonzq"
+        "freeSample": "https://store.deutschkompass.com/l/rbhwgd",
+        "fullBook": "https://store.deutschkompass.com/l/esonzq"
       },
       "cta": {
         "freeSample": {
@@ -221,8 +221,8 @@
         "pdfPath": "/assets/sample-books/oeif-b1-speaking-sample.pdf"
       },
       "gumroad": {
-        "freeSample": "https://deutschkompass.gumroad.com/l/lsdrkx",
-        "fullBook": "https://deutschkompass.gumroad.com/l/ovhkog"
+        "freeSample": "https://store.deutschkompass.com/l/lsdrkx",
+        "fullBook": "https://store.deutschkompass.com/l/ovhkog"
       },
       "cta": {
         "freeSample": {
@@ -264,8 +264,8 @@
         "pdfPath": "/assets/sample-books/oeif-b1-writing-sample.pdf"
       },
       "gumroad": {
-        "freeSample": "https://deutschkompass.gumroad.com/l/idrkyq",
-        "fullBook": "https://deutschkompass.gumroad.com/l/tphgs"
+        "freeSample": "https://store.deutschkompass.com/l/idrkyq",
+        "fullBook": "https://store.deutschkompass.com/l/tphgs"
       },
       "cta": {
         "freeSample": {
