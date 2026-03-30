@@ -79,6 +79,25 @@ ui:
   dtzShort: 'See DTZ B1 books',
   oeifShort: 'See ÖIF B1 books'
 } %}
+{% set reviewsSection = {
+  eyebrow: 'Book reviews',
+  title: 'What learners say about these books',
+  intro: 'These short reviews come from learners who used the books for DTZ B1 or ÖIF B1 preparation.',
+  items: [
+    {
+      quote: "Daily conversation isn't a problem for me, and I communicate well with my colleagues in the logistics industry. However, the DTZ exam covers topics I rarely encounter in my everyday life. These books provided a wide variety of speaking and writing prompts along with example answers, which were essential for my B1 preparation and helped me succeed!",
+      author: 'Ahmed'
+    },
+    {
+      quote: "While the official DTZ preparation book only provides a few practice tests, this DTZ B1 speaking book offers 60 different exercises! It's a much more comprehensive resource for anyone serious about passing.",
+      author: 'Mehmet'
+    },
+    {
+      quote: 'I failed the ÖIF B1 exam twice because of the speaking and writing sections, even though I found reading quite easy. These books were a lifesaver for my third attempt; they covered all the exam topics thoroughly and finally helped me pass.',
+      author: 'Oleksandr'
+    }
+  ]
+} %}
 
 <section class="hero hero-dual">
   <div class="container">
@@ -107,6 +126,8 @@ ui:
     </div>
   </div>
 </section>
+
+{% include "book-reviews.njk" %}
 
 {% for examKey in site.examOrder %}
   {% set exam = site.exams[examKey] %}

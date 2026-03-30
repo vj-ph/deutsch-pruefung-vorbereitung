@@ -77,6 +77,25 @@ ui:
   dtz: "DTZ B1 kitaplarını, örneklerini ve fiyatlarını gör",
   oeif: "ÖIF B1 kitaplarını, örneklerini ve fiyatlarını gör"
 } %}
+{% set reviewsSection = {
+  eyebrow: "Kitap yorumları",
+  title: "Öğrenciler bu kitaplar hakkında ne diyor?",
+  intro: "Bu kısa yorumlar, DTZ B1 veya ÖIF B1 hazırlığında bu kitapları kullanan öğrencilerden geliyor.",
+  items: [
+    {
+      quote: "Günlük konuşmalar benim için sorun değil ve lojistik sektöründeki iş arkadaşlarımla iyi iletişim kuruyorum. Ancak DTZ sınavı, günlük hayatımda nadiren karşılaştığım konuları kapsıyor. Bu kitaplar, örnek cevaplarla birlikte çok çeşitli konuşma ve yazma görevleri sundu; bunlar B1 hazırlığım için çok önemliydi ve başarılı olmama yardımcı oldu!",
+      author: "Ahmed"
+    },
+    {
+      quote: "Resmî DTZ hazırlık kitabı yalnızca birkaç deneme sınavı sunarken, bu DTZ B1 konuşma kitabı 60 farklı alıştırma sunuyor! Gerçekten geçmek isteyen herkes için çok daha kapsamlı bir kaynak.",
+      author: "Mehmet"
+    },
+    {
+      quote: "Okuma bölümünü oldukça kolay bulmama rağmen, konuşma ve yazma bölümleri yüzünden ÖIF B1 sınavında iki kez kaldım. Bu kitaplar üçüncü denememde adeta hayat kurtardı; tüm sınav konularını ayrıntılı şekilde kapsıyordu ve sonunda geçmemi sağladı.",
+      author: "Oleksandr"
+    }
+  ]
+} %}
 
 <section class="hero hero-dual">
   <div class="container">
@@ -114,6 +133,8 @@ ui:
     </div>
   </div>
 </section>
+
+{% include "book-reviews.njk" %}
 
 <section id="dtz-b1-books" class="home-section">
   <div class="container">

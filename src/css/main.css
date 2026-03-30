@@ -411,6 +411,12 @@ th {
   gap: 1.5rem;
 }
 
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
 .hero-book-grid {
   margin-top: 2rem;
 }
@@ -418,6 +424,7 @@ th {
 .book-panel,
 .path-card,
 .feature-card,
+.review-card,
 .sample-card,
 .final-cta {
   background: white;
@@ -432,9 +439,20 @@ th {
   background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
 }
 
+.review-card-accent {
+  border-color: rgba(0, 102, 204, 0.25);
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
 .book-panel {
   display: flex;
   flex-direction: column;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .book-panel > .book-panel__label {
@@ -587,6 +605,18 @@ th {
 
 .section-heading p {
   color: var(--text-light);
+}
+
+.review-card__quote {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  color: var(--text-color);
+}
+
+.review-card__author {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--secondary-color);
 }
 
 html[dir="rtl"] body {
@@ -755,6 +785,7 @@ html[dir="rtl"] .hero.hero-dual {
   .hero-book-grid,
   .path-grid,
   .feature-grid,
+  .review-grid,
   .sample-grid,
   .final-cta {
     grid-template-columns: 1fr;
@@ -771,6 +802,7 @@ html[dir="rtl"] .hero.hero-dual {
   .book-panel,
   .path-card,
   .feature-card,
+  .review-card,
   .sample-card,
   .final-cta {
     padding: 1.5rem 1rem;

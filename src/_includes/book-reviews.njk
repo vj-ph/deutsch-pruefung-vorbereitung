@@ -1,0 +1,19 @@
+<section class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      {% if reviewsSection.eyebrow %}
+        <p class="eyebrow">{{ reviewsSection.eyebrow }}</p>
+      {% endif %}
+      <h2>{{ reviewsSection.title }}</h2>
+      <p>{{ reviewsSection.intro }}</p>
+    </div>
+    <div class="review-grid">
+      {% for review in reviewsSection.items %}
+        <article class="review-card{% if loop.first %} review-card-accent{% endif %}">
+          <p class="review-card__quote">"{{ review.quote }}"</p>
+          <p class="review-card__author">- {{ review.author }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

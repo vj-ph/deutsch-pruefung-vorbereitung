@@ -77,6 +77,25 @@ ui:
   dtz: "Pogledajte DTZ B1 knjige, uzorke i cene",
   oeif: "Pogledajte ÖIF B1 knjige, uzorke i cene"
 } %}
+{% set reviewsSection = {
+  eyebrow: "Utisci o knjigama",
+  title: "Šta polaznici kažu o ovim knjigama?",
+  intro: "Ovi kratki utisci dolaze od polaznika koji su koristili knjige za pripremu za DTZ B1 ili ÖIF B1.",
+  items: [
+    {
+      quote: "Svakodnevna komunikacija mi ne predstavlja problem i dobro komuniciram sa kolegama u logistici. Međutim, DTZ ispit obuhvata teme sa kojima se retko susrećem u svakodnevnom životu. Ove knjige su ponudile veliki izbor zadataka za govor i pisanje, zajedno sa primerima odgovora, što je bilo presudno za moju B1 pripremu i pomoglo mi je da uspem!",
+      author: "Ahmed"
+    },
+    {
+      quote: "Dok zvanična DTZ knjiga za pripremu nudi samo nekoliko probnih testova, ova DTZ B1 knjiga za govor nudi 60 različitih vežbi! To je mnogo potpuniji resurs za svakoga ko ozbiljno želi da položi.",
+      author: "Mehmet"
+    },
+    {
+      quote: "Dva puta nisam uspeo da položim ÖIF B1 zbog govornog i pisanog dela, iako mi je čitanje bilo prilično lako. Ove knjige su mi spasile treći izlazak; detaljno su obradile sve teme sa ispita i konačno mi pomogle da položim.",
+      author: "Oleksandr"
+    }
+  ]
+} %}
 
 <section class="hero hero-dual">
   <div class="container">
@@ -114,6 +133,8 @@ ui:
     </div>
   </div>
 </section>
+
+{% include "book-reviews.njk" %}
 
 <section id="dtz-b1-books" class="home-section">
   <div class="container">
