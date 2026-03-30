@@ -38,7 +38,7 @@ ui:
   rightsReserved: All rights reserved.
 ---
 
-{% from "cta-helpers.njk" import ctaLink, samplePagePath with context %}
+{% from "cta-helpers.njk" import ctaLink with context %}
 {% set heroTrustBullets = [
   'All full books cost ' ~ site.sales.fullBookPriceDisplay,
   'Free on-site ' ~ site.sales.format ~ ' sample pages',
@@ -51,11 +51,11 @@ ui:
   steps: [
     {
       title: 'Open the product page',
-      text: 'The sample button opens a short on-site sample page. The full-book button opens Gumroad for the paid book.'
+      text: 'The sample button opens the free PDF directly from this site. The full-book button opens Gumroad for the paid book.'
     },
     {
       title: 'Check the free sample first',
-      text: 'On the sample page, open the free ' ~ site.sales.format ~ ' directly from this site and decide if the book fits you.'
+      text: 'Open the free ' ~ site.sales.format ~ ' sample directly from this site and decide if the book fits you.'
     },
     {
       title: 'Buy and download',
@@ -71,7 +71,7 @@ ui:
   free: 'Free',
   discountPrefix: 'Use discount code ',
   discountSuffix: ' for 20% off at checkout.',
-  clickNote: 'The sample button opens an on-site sample page with a direct PDF link. The full-book button opens Gumroad for checkout and download.'
+  clickNote: 'The sample button opens the PDF directly from this site. The full-book button opens Gumroad for checkout and download.'
 } %}
 {% set heroButtonLabels = {
   dtz: 'See DTZ B1 books, samples, and prices',
@@ -152,7 +152,7 @@ ui:
             <p><strong>{{ book.sample.title }}:</strong> {{ book.sample.description }}</p>
             {% include "book-facts.njk" %}
             <div class="button-row">
-              <a href="{{ ctaLink(samplePagePath(book.key, currentLang or 'en'), { content: book.key ~ '-sample-section' }) }}" class="btn btn-primary">{{ book.cta.freeSample.label }}</a>
+              <a href="{{ ctaLink(book.sample.pdfPath, { content: book.key ~ '-sample-section' }) }}" class="btn btn-primary" target="_blank" rel="noopener">{{ book.cta.freeSample.label }}</a>
               <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-section' }) }}" class="btn btn-outline" target="_blank" rel="noopener">{{ book.cta.fullBook.label }}</a>
             </div>
           </article>
