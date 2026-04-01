@@ -363,9 +363,14 @@ function buildLanguageLinks(pageSlug) {
   }));
 }
 
+function getLocalizedBookTitle(book, localeCode) {
+  return (book.localizedTitles && book.localizedTitles[localeCode]) || book.title;
+}
+
 function buildPage(language, book) {
   const pageSlug = book.sample.pageSlug || book.key;
   const hasStudyPlan = book.sample.bonusKey === "study-plan";
+  const localizedBookTitle = getLocalizedBookTitle(book, language.code);
   const sampleChecks = [
     language.copy.sampleTaskCount(book.sample.taskCount),
     hasStudyPlan ? language.copy.sampleBonusStudyPlan : language.copy.sampleDirectAccess,
@@ -375,8 +380,8 @@ function buildPage(language, book) {
   return {
     bookKey: book.key,
     permalink: samplePermalink(language.code, pageSlug),
-    title: language.copy.pageTitle(book.title),
-    description: language.copy.pageDescription(book.title, book.sample.taskCount),
+    title: language.copy.pageTitle(localizedBookTitle),
+    description: language.copy.pageDescription(localizedBookTitle, book.sample.taskCount),
     lang: language.code,
     dir: language.dir,
     currentLang: language.code,
@@ -385,8 +390,9 @@ function buildPage(language, book) {
     languageLinks: buildLanguageLinks(pageSlug),
     ui: language.ui,
     productUi: language.productUi,
+    bookTitle: localizedBookTitle,
     eyebrow: language.copy.eyebrow,
-    heroTitle: language.copy.heroTitle(book.title),
+    heroTitle: language.copy.heroTitle(localizedBookTitle),
     heroIntro: language.copy.heroIntro,
     trustBullets: language.copy.trustBullets,
     sampleCardLabel: language.copy.sampleCardLabel,

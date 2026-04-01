@@ -128,7 +128,7 @@ ui:
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">كتاب التحدث</p>
-        <h2>DTZ B1 Speaking - Practice and Pass</h2>
+        <h2>{{ site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title }}</h2>
         <p>كتاب DTZ B1 للتحدث يضم 60 تدريبًا على التعريف بالنفس، والتحدث عن الصور والتجارب، والتخطيط مع شريك، مع إجابات نموذجية وعبارات مفيدة وأسئلة متابعة ومفردات ألماني-إنجليزي.</p>
         <ul class="check-list">
           <li>60 تدريبًا تغطي جميع أجزاء الامتحان الشفهي الثلاثة</li>
@@ -137,6 +137,7 @@ ui:
         </ul>
         <p><strong>عينة مجانية من 3 مهام:</strong> عينة تساعدك على رؤية شكل المهمة وطريقة الشرح والدعم اللغوي في الكتاب الكامل.</p>
         {% set bookKey = 'dtz-speaking' %}
+        {% set bookDisplayTitle = site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'].sample.pdfPath, { content: 'dtz-speaking-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener">احصل على عينة DTZ للتحدث</a>
@@ -145,7 +146,7 @@ ui:
       </article>
       <article class="book-panel">
         <p class="book-panel__label">كتاب الكتابة</p>
-        <h2>DTZ Schreiben B1 - Practice Book</h2>
+        <h2>{{ site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title }}</h2>
         <p>كتاب DTZ B1 للكتابة يركز على المهمة الأساسية في الامتحان: كتابة رسائل ونصوص قصيرة مع أربع نقاط محتوى. يتضمن 30 وحدة تدريبية و5 مهام محاكاة كاملة.</p>
         <ul class="check-list">
           <li>30 وحدة عملية تغطي أهم أنواع نصوص DTZ</li>
@@ -154,6 +155,7 @@ ui:
         </ul>
         <p><strong>عينة مجانية من 4 مهام:</strong> عينة مجانية تعرض نوع الأسئلة وبنية النص والدعم الموجود في الكتاب الكامل.</p>
         {% set bookKey = 'dtz-writing' %}
+        {% set bookDisplayTitle = site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'].sample.pdfPath, { content: 'dtz-writing-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener">احصل على عينة DTZ للكتابة</a>
@@ -173,7 +175,7 @@ ui:
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">كتاب التحدث</p>
-        <h2>ÖIF B1 Speaking Exam Prep</h2>
+        <h2>{{ site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title }}</h2>
         <p>كتاب ÖIF B1 للتحدث يضم 85 وحدة مركزة: 30 حوار تخطيط، و30 موضوعًا للرأي والمناقشة، و25 مهمة لوصف الصور، مع دعم بالمفردات وأسئلة متابعة.</p>
         <ul class="check-list">
           <li>30 حوار تخطيط و30 موضوع مناقشة و25 مهمة وصف صورة</li>
@@ -182,6 +184,7 @@ ui:
         </ul>
         <p><strong>عينة مجانية من 3 مهام:</strong> تعرض أسلوب الحوار والمفردات وطبيعة أسئلة المتابعة الموجودة في الكتاب.</p>
         {% set bookKey = 'oeif-speaking' %}
+        {% set bookDisplayTitle = site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'].sample.pdfPath, { content: 'oeif-speaking-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener">احصل على عينة ÖIF للتحدث</a>
@@ -190,7 +193,7 @@ ui:
       </article>
       <article class="book-panel">
         <p class="book-panel__label">كتاب الكتابة</p>
-        <h2>ÖIF B1 Schreiben - Übungsbuch</h2>
+        <h2>{{ site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title }}</h2>
         <p>كتاب ÖIF B1 للكتابة يحتوي على 30 وحدة موجهة تشمل الرسائل الشخصية والرسمية والشكاوى والآراء القصيرة، مع مواقف من الحياة في النمسا وقوائم مراجعة ومهام محاكاة.</p>
         <ul class="check-list">
           <li>30 وحدة كتابة موجهة موزعة على أربعة فصول عملية</li>
@@ -199,6 +202,7 @@ ui:
         </ul>
         <p><strong>عينة مجانية من 4 مهام:</strong> توضح أسلوب الكتابة المطلوب والبنية والدعم المستخدم في الكتاب الكامل.</p>
         {% set bookKey = 'oeif-writing' %}
+        {% set bookDisplayTitle = site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'].sample.pdfPath, { content: 'oeif-writing-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener">احصل على عينة ÖIF للكتابة</a>

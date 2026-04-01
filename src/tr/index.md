@@ -128,7 +128,7 @@ ui:
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Konuşma kitabı</p>
-        <h2>DTZ B1 Speaking - Practice and Pass</h2>
+        <h2>{{ site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title }}</h2>
         <p>DTZ B1 konuşma kitabı; kendini tanıtma, resim ve deneyim hakkında konuşma ve partnerle plan yapma için 60 alıştırma içerir. Model cevaplar, yararlı kalıplar, takip soruları ve Almanca-İngilizce kelime desteği sunar.</p>
         <ul class="check-list">
           <li>Sözlü sınavın 3 bölümünü kapsayan 60 alıştırma</li>
@@ -137,6 +137,7 @@ ui:
         </ul>
         <p><strong>3 görevlik ücretsiz örnek:</strong> tam kitapta kullanılan görev biçimini ve destek türünü görmenizi sağlar.</p>
         {% set bookKey = 'dtz-speaking' %}
+        {% set bookDisplayTitle = site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'].sample.pdfPath, { content: 'dtz-speaking-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">DTZ konuşma örneğini al</a>
@@ -145,7 +146,7 @@ ui:
       </article>
       <article class="book-panel">
         <p class="book-panel__label">Yazma kitabı</p>
-        <h2>DTZ Schreiben B1 - Practice Book</h2>
+        <h2>{{ site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title }}</h2>
         <p>DTZ B1 yazma kitabı, sınavın temel görevine odaklanır: dört içerik noktası içeren kısa mesajlar. Kitapta 30 pratik ünite ve 5 tam deneme yazma görevi vardır.</p>
         <ul class="check-list">
           <li>DTZ'deki temel metin türleri için 30 pratik ünite</li>
@@ -154,6 +155,7 @@ ui:
         </ul>
         <p><strong>4 görevlik ücretsiz örnek:</strong> soru tiplerini, yapılandırmayı ve tam kitaptaki desteği gösterir.</p>
         {% set bookKey = 'dtz-writing' %}
+        {% set bookDisplayTitle = site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'].sample.pdfPath, { content: 'dtz-writing-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">DTZ yazma örneğini al</a>
@@ -173,7 +175,7 @@ ui:
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Konuşma kitabı</p>
-        <h2>ÖIF B1 Speaking Exam Prep</h2>
+        <h2>{{ site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title }}</h2>
         <p>ÖIF B1 konuşma kitabı 85 odaklı bölüm içerir: 30 planlama diyaloğu, 30 görüş ve tartışma konusu ve 25 resim açıklama görevi; kelime desteği ve takip soruları da vardır.</p>
         <ul class="check-list">
           <li>30 planlama diyaloğu, 30 tartışma konusu ve 25 resim görevi</li>
@@ -182,6 +184,7 @@ ui:
         </ul>
         <p><strong>3 görevlik ücretsiz örnek:</strong> kitaptaki diyalog tarzını, kelime desteğini ve takip sorularını gösterir.</p>
         {% set bookKey = 'oeif-speaking' %}
+        {% set bookDisplayTitle = site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'].sample.pdfPath, { content: 'oeif-speaking-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">ÖIF konuşma örneğini al</a>
@@ -190,7 +193,7 @@ ui:
       </article>
       <article class="book-panel">
         <p class="book-panel__label">Yazma kitabı</p>
-        <h2>ÖIF B1 Schreiben - Übungsbuch</h2>
+        <h2>{{ site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title }}</h2>
         <p>ÖIF B1 yazma kitabı; kişisel ve resmi mesajlar, şikayetler ve kısa görüş metinleri için 30 yönlendirmeli ünite içerir. Ayrıca Avusturya odaklı senaryolar, kontrol listeleri ve deneme görevleri sunar.</p>
         <ul class="check-list">
           <li>Dört pratik bölümde 30 yönlendirmeli yazma ünitesi</li>
@@ -199,6 +202,7 @@ ui:
         </ul>
         <p><strong>4 görevlik ücretsiz örnek:</strong> tam kitaptaki yazma tarzını, yapıyı ve desteği gösterir.</p>
         {% set bookKey = 'oeif-writing' %}
+        {% set bookDisplayTitle = site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'].sample.pdfPath, { content: 'oeif-writing-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">ÖIF yazma örneğini al</a>

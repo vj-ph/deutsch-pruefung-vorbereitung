@@ -11,6 +11,11 @@
     "name": "Deutsch Kompass",
     "shortName": "Deutsch Kompass"
   },
+  "social": {
+    "youtube": "https://www.youtube.com/channel/UC6WmmVATkopP_HJTBiTA7nw",
+    "instagram": "https://www.instagram.com/deutschkompass_deutschlernen/",
+    "tiktok": "https://www.tiktok.com/@deutschlernenkompass"
+  },
   "defaultBookKey": "dtz-speaking",
   "bookOrder": [
     "dtz-speaking",
@@ -110,8 +115,24 @@
     "dtz-speaking": {
       "key": "dtz-speaking",
       "examKey": "dtz",
-      "title": "DTZ B1 Speaking - Practice and Pass",
+      "title": "DTZ B1 Speaking",
       "shortTitle": "DTZ Speaking",
+      "localizedTitles": {
+        "en": "DTZ B1 Speaking",
+        "ar": "DTZ B1 التحدث",
+        "ru": "DTZ B1 Говорение",
+        "uk": "DTZ B1 Говоріння",
+        "tr": "DTZ B1 Konuşma",
+        "sr": "DTZ B1 Govor"
+      },
+      "localizedShortTitles": {
+        "en": "DTZ Speaking",
+        "ar": "DTZ التحدث",
+        "ru": "DTZ Говорение",
+        "uk": "DTZ Говоріння",
+        "tr": "DTZ Konuşma",
+        "sr": "DTZ Govor"
+      },
       "subtitle": "60 real exam tasks with model answers",
       "language": "de",
       "examSection": "Speaking",
@@ -153,8 +174,24 @@
     "dtz-writing": {
       "key": "dtz-writing",
       "examKey": "dtz",
-      "title": "DTZ Schreiben B1 - Practice Book",
+      "title": "DTZ B1 Writing",
       "shortTitle": "DTZ Writing",
+      "localizedTitles": {
+        "en": "DTZ B1 Writing",
+        "ar": "DTZ B1 الكتابة",
+        "ru": "DTZ B1 Письмо",
+        "uk": "DTZ B1 Письмо",
+        "tr": "DTZ B1 Yazma",
+        "sr": "DTZ B1 Pisanje"
+      },
+      "localizedShortTitles": {
+        "en": "DTZ Writing",
+        "ar": "DTZ الكتابة",
+        "ru": "DTZ Письмо",
+        "uk": "DTZ Письмо",
+        "tr": "DTZ Yazma",
+        "sr": "DTZ Pisanje"
+      },
       "subtitle": "30 practical writing tasks for everyday life and integration",
       "language": "de",
       "examSection": "Writing",
@@ -196,8 +233,24 @@
     "oeif-speaking": {
       "key": "oeif-speaking",
       "examKey": "oeif",
-      "title": "ÖIF B1 Speaking Exam Prep",
+      "title": "ÖIF B1 Speaking",
       "shortTitle": "ÖIF Speaking",
+      "localizedTitles": {
+        "en": "ÖIF B1 Speaking",
+        "ar": "ÖIF B1 التحدث",
+        "ru": "ÖIF B1 Говорение",
+        "uk": "ÖIF B1 Говоріння",
+        "tr": "ÖIF B1 Konuşma",
+        "sr": "ÖIF B1 Govor"
+      },
+      "localizedShortTitles": {
+        "en": "ÖIF Speaking",
+        "ar": "ÖIF التحدث",
+        "ru": "ÖIF Говорение",
+        "uk": "ÖIF Говоріння",
+        "tr": "ÖIF Konuşma",
+        "sr": "ÖIF Govor"
+      },
       "subtitle": "Real dialogues, examiner questions, and vocabulary",
       "language": "en",
       "examSection": "Speaking",
@@ -240,8 +293,24 @@
     "oeif-writing": {
       "key": "oeif-writing",
       "examKey": "oeif",
-      "title": "ÖIF B1 Schreiben - Übungsbuch",
+      "title": "ÖIF B1 Writing",
       "shortTitle": "ÖIF Writing",
+      "localizedTitles": {
+        "en": "ÖIF B1 Writing",
+        "ar": "ÖIF B1 الكتابة",
+        "ru": "ÖIF B1 Письмо",
+        "uk": "ÖIF B1 Письмо",
+        "tr": "ÖIF B1 Yazma",
+        "sr": "ÖIF B1 Pisanje"
+      },
+      "localizedShortTitles": {
+        "en": "ÖIF Writing",
+        "ar": "ÖIF الكتابة",
+        "ru": "ÖIF Письмо",
+        "uk": "ÖIF Письмо",
+        "tr": "ÖIF Yazma",
+        "sr": "ÖIF Pisanje"
+      },
       "subtitle": "Vorbereitung auf die ÖIF B1 Integrationsprüfung",
       "language": "de-AT",
       "examSection": "Writing",

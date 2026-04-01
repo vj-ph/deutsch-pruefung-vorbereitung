@@ -128,7 +128,7 @@ ui:
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Книга по говорению</p>
-        <h2>DTZ B1 Speaking - Practice and Pass</h2>
+        <h2>{{ site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title }}</h2>
         <p>Книга DTZ B1 по говорению содержит 60 упражнений на самопрезентацию, описание картинки и опыта, а также совместное планирование с партнером, с модельными ответами, полезными фразами, follow-up questions и словарем немецкий-английский.</p>
         <ul class="check-list">
           <li>60 упражнений для всех 3 частей устного экзамена</li>
@@ -137,6 +137,7 @@ ui:
         </ul>
         <p><strong>Бесплатный образец с 3 заданиями:</strong> показывает формат заданий и тип поддержки, который есть в полной книге.</p>
         {% set bookKey = 'dtz-speaking' %}
+        {% set bookDisplayTitle = site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'].sample.pdfPath, { content: 'dtz-speaking-sample-ru' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Получить образец DTZ Speaking</a>
@@ -145,7 +146,7 @@ ui:
       </article>
       <article class="book-panel">
         <p class="book-panel__label">Книга по письму</p>
-        <h2>DTZ Schreiben B1 - Practice Book</h2>
+        <h2>{{ site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title }}</h2>
         <p>Книга DTZ B1 по письму сосредоточена на главном письменном задании экзамена: коротких сообщениях с четырьмя смысловыми пунктами. В книге 30 практических модулей и 5 полных пробных заданий.</p>
         <ul class="check-list">
           <li>30 практических модулей по основным типам текстов DTZ</li>
@@ -154,6 +155,7 @@ ui:
         </ul>
         <p><strong>Бесплатный образец с 4 заданиями:</strong> показывает типы вопросов, структуру и поддержку из полной книги.</p>
         {% set bookKey = 'dtz-writing' %}
+        {% set bookDisplayTitle = site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'].sample.pdfPath, { content: 'dtz-writing-sample-ru' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Получить образец DTZ Writing</a>
@@ -173,7 +175,7 @@ ui:
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Книга по говорению</p>
-        <h2>ÖIF B1 Speaking Exam Prep</h2>
+        <h2>{{ site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title }}</h2>
         <p>Книга ÖIF B1 по говорению содержит 85 сфокусированных модулей: 30 диалогов планирования, 30 тем для мнения и обсуждения и 25 заданий на описание картинки, с поддержкой словаря и follow-up questions.</p>
         <ul class="check-list">
           <li>30 диалогов планирования, 30 тем для обсуждения и 25 заданий с картинками</li>
@@ -182,6 +184,7 @@ ui:
         </ul>
         <p><strong>Бесплатный образец с 3 заданиями:</strong> показывает стиль диалогов, словарь и тип follow-up questions в книге.</p>
         {% set bookKey = 'oeif-speaking' %}
+        {% set bookDisplayTitle = site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'].sample.pdfPath, { content: 'oeif-speaking-sample-ru' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Получить образец ÖIF Speaking</a>
@@ -190,7 +193,7 @@ ui:
       </article>
       <article class="book-panel">
         <p class="book-panel__label">Книга по письму</p>
-        <h2>ÖIF B1 Schreiben - Übungsbuch</h2>
+        <h2>{{ site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title }}</h2>
         <p>Книга ÖIF B1 по письму содержит 30 направляемых модулей для личных и официальных сообщений, жалоб и коротких мнений, а также австрийские жизненные ситуации, checklists и пробные задания.</p>
         <ul class="check-list">
           <li>30 направляемых модулей письма в четырех практических разделах</li>
@@ -199,6 +202,7 @@ ui:
         </ul>
         <p><strong>Бесплатный образец с 4 заданиями:</strong> показывает стиль письма, структуру и поддержку из полной книги.</p>
         {% set bookKey = 'oeif-writing' %}
+        {% set bookDisplayTitle = site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'].sample.pdfPath, { content: 'oeif-writing-sample-ru' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Получить образец ÖIF Writing</a>

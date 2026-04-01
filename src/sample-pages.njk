@@ -34,13 +34,14 @@
 
       <article class="book-panel">
         <p class="book-panel__label">{{ samplePage.fullCardLabel }}</p>
-        <h2>{{ book.title }}</h2>
+        <h2>{{ samplePage.bookTitle }}</h2>
         <p>{{ samplePage.fullCardIntro }}</p>
         <ul class="check-list">
           {% for check in samplePage.fullBookChecks %}
             <li>{{ check }}</li>
           {% endfor %}
         </ul>
+        {% set bookDisplayTitle = samplePage.bookTitle %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-from-sample-' ~ currentLang }) }}" class="btn btn-secondary" target="_blank" rel="noopener">{{ samplePage.fullBookLabel }}</a>

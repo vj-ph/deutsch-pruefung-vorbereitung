@@ -112,6 +112,8 @@ ui:
   </div>
 </section>
 
+{% include "book-reviews.njk" %}
+
 <section class="home-section comparison-section">
   <div class="container">
     <div class="section-heading section-heading-centered">
@@ -154,9 +156,10 @@ ui:
       <div class="hero-book-grid">
         {% for bookKey in exam.books %}
           {% set book = site.books[bookKey] %}
+          {% set bookDisplayTitle = (book.localizedTitles and book.localizedTitles[currentLang]) or book.title %}
           <article class="book-panel{% if loop.first %} book-panel-accent{% endif %}">
             <p class="book-panel__label">{{ book.examSection }} workbook</p>
-            <h2>{{ book.title }}</h2>
+        <h2>{{ bookDisplayTitle }}</h2>
             <p>{{ book.summary }}</p>
             <ul class="check-list">
               {% for feature in book.features %}
@@ -175,8 +178,6 @@ ui:
     </div>
   </section>
 {% endfor %}
-
-{% include "book-reviews.njk" %}
 
 {% include "purchase-flow.njk" %}
 

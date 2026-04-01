@@ -5,6 +5,25 @@
       <div class="footer-brand-card">
         <h3>{{ site.brand.name }}</h3>
         <p>{{ ui.footerIntro or 'Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria.' }}</p>
+        {% if site.social %}
+          <div class="footer-social" aria-label="Social media links">
+            <a href="{{ site.social.youtube }}" class="footer-social__link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.9 31.9 0 0 0 0 12a31.9 31.9 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.9 31.9 0 0 0 24 12a31.9 31.9 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.4 3.7-6.4 3.7Z" fill="currentColor"></path>
+              </svg>
+            </a>
+            <a href="{{ site.social.instagram }}" class="footer-social__link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm10.6 1.6a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2ZM12 7a5 5 0 1 1-5 5 5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Z" fill="currentColor"></path>
+              </svg>
+            </a>
+            <a href="{{ site.social.tiktok }}" class="footer-social__link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M14.6 2h2.8a4.8 4.8 0 0 0 4.2 4.2V9a7.4 7.4 0 0 1-4.2-1.3v7.2a6.4 6.4 0 1 1-6.4-6.4 6.7 6.7 0 0 1 1 .1v2.9a3.9 3.9 0 0 0-1-.1 3.6 3.6 0 1 0 3.6 3.6Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+        {% endif %}
         <div class="footer-quick-actions">
           {% for examKey in site.examOrder %}
             {% set exam = site.exams[examKey] %}
@@ -14,22 +33,13 @@
       </div>
       <div class="footer-content">
         <div class="footer-section">
-          <h3>{{ ui.examSectionsLabel or 'Exam Sections' }}</h3>
-          <ul class="footer-link-list">
-            <li><a href="{{ (homeUrl or '/') | pageUrl }}">{{ ui.homeLabel or 'Home' }}</a></li>
-            {% for examKey in site.examOrder %}
-              {% set exam = site.exams[examKey] %}
-              <li><a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="footer-section">
           <h3>{{ ui.booksLabel or 'Books' }}</h3>
           <ul class="footer-book-list">
             {% for bookKey in site.bookOrder %}
               {% set book = site.books[bookKey] %}
+              {% set localizedShortTitle = (book.localizedShortTitles and book.localizedShortTitles[currentLang]) or book.shortTitle %}
               <li>
-                <strong class="footer-book-title">{{ book.shortTitle }}</strong>
+                <strong class="footer-book-title">{{ localizedShortTitle }}</strong>
                 <a href="{{ ctaLink(book.sample.pdfPath, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">{{ ui.sampleLabel or 'Sample' }}</a>
                 <span class="footer-book-divider">·</span>
                 <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener">{{ ui.fullBookLabel or 'Full Book' }}</a>

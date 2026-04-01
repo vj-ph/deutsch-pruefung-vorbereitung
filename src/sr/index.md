@@ -128,7 +128,7 @@ ui:
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Knjiga za govor</p>
-        <h2>DTZ B1 Speaking - Practice and Pass</h2>
+        <h2>{{ site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title }}</h2>
         <p>DTZ B1 knjiga za govor sadrži 60 vežbi za predstavljanje, govor o slici i iskustvu i planiranje sa partnerom, uz model odgovore, korisne fraze, follow-up pitanja i nemačko-engleski rečnik.</p>
         <ul class="check-list">
           <li>60 vežbi za sva 3 dela usmenog ispita</li>
@@ -137,6 +137,7 @@ ui:
         </ul>
         <p><strong>Besplatan uzorak sa 3 zadatka:</strong> pokazuje format zadataka i vrstu podrške koju dobijate u celoj knjizi.</p>
         {% set bookKey = 'dtz-speaking' %}
+        {% set bookDisplayTitle = site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'].sample.pdfPath, { content: 'dtz-speaking-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi DTZ govor uzorak</a>
@@ -145,7 +146,7 @@ ui:
       </article>
       <article class="book-panel">
         <p class="book-panel__label">Knjiga za pisanje</p>
-        <h2>DTZ Schreiben B1 - Practice Book</h2>
+        <h2>{{ site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title }}</h2>
         <p>DTZ B1 knjiga za pisanje fokusira se na glavni pisani zadatak ispita: kratke poruke sa četiri sadržajne tačke. Sadrži 30 praktičnih jedinica i 5 kompletnih probnih zadataka.</p>
         <ul class="check-list">
           <li>30 praktičnih jedinica za glavne tipove DTZ tekstova</li>
@@ -154,6 +155,7 @@ ui:
         </ul>
         <p><strong>Besplatan uzorak sa 4 zadatka:</strong> pokazuje tipove pitanja, strukturu i podršku iz cele knjige.</p>
         {% set bookKey = 'dtz-writing' %}
+        {% set bookDisplayTitle = site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'].sample.pdfPath, { content: 'dtz-writing-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi DTZ pisanje uzorak</a>
@@ -173,7 +175,7 @@ ui:
     <div class="hero-book-grid">
       <article class="book-panel book-panel-accent">
         <p class="book-panel__label">Knjiga za govor</p>
-        <h2>ÖIF B1 Speaking Exam Prep</h2>
+        <h2>{{ site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title }}</h2>
         <p>ÖIF B1 knjiga za govor sadrži 85 fokusiranih jedinica: 30 dijaloga za planiranje, 30 tema za mišljenje i diskusiju i 25 zadataka za opis slike, uz rečnik i follow-up pitanja.</p>
         <ul class="check-list">
           <li>30 dijaloga za planiranje, 30 diskusionih tema i 25 zadataka sa slikama</li>
@@ -182,6 +184,7 @@ ui:
         </ul>
         <p><strong>Besplatan uzorak sa 3 zadatka:</strong> pokazuje stil dijaloga, rečnik i tip pitanja koja se koriste u knjizi.</p>
         {% set bookKey = 'oeif-speaking' %}
+        {% set bookDisplayTitle = site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'].sample.pdfPath, { content: 'oeif-speaking-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi ÖIF govor uzorak</a>
@@ -190,7 +193,7 @@ ui:
       </article>
       <article class="book-panel">
         <p class="book-panel__label">Knjiga za pisanje</p>
-        <h2>ÖIF B1 Schreiben - Übungsbuch</h2>
+        <h2>{{ site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title }}</h2>
         <p>ÖIF B1 knjiga za pisanje sadrži 30 vođenih jedinica za lične i formalne poruke, žalbe i kratka mišljenja, kao i austrijske životne situacije, checkliste i probne zadatke.</p>
         <ul class="check-list">
           <li>30 vođenih jedinica pisanja kroz četiri praktična poglavlja</li>
@@ -199,6 +202,7 @@ ui:
         </ul>
         <p><strong>Besplatan uzorak sa 4 zadatka:</strong> pokazuje stil pisanja, strukturu i podršku iz cele knjige.</p>
         {% set bookKey = 'oeif-writing' %}
+        {% set bookDisplayTitle = site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'].sample.pdfPath, { content: 'oeif-writing-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi ÖIF pisanje uzorak</a>

@@ -1,15 +1,16 @@
 {% set book = site.books[bookKey] %}
+{% set displayBookTitle = bookDisplayTitle or book.title %}
 {% if book.thumbnailPath %}
 <a
   href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-thumbnail-' ~ (currentLang or 'en') }) }}"
   class="book-thumbnail"
   target="_blank"
   rel="noopener"
-  aria-label="{{ book.title }}"
+  aria-label="{{ displayBookTitle }}"
 >
   <img
     src="{{ book.thumbnailPath | url }}"
-    alt="{{ book.title }} cover"
+    alt="{{ displayBookTitle }} cover"
     class="book-thumbnail__image"
     width="1024"
     height="1024"
