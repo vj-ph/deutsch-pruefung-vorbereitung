@@ -75,7 +75,9 @@ ui:
 } %}
 {% set heroButtonLabels = {
   dtz: "اطلع على كتب DTZ B1 والعينات والأسعار",
-  oeif: "اطلع على كتب ÖIF B1 والعينات والأسعار"
+  oeif: "اطلع على كتب ÖIF B1 والعينات والأسعار",
+  dtzShort: "اطلع على كتب DTZ B1",
+  oeifShort: "اطلع على كتب ÖIF B1"
 } %}
 {% set reviewsSection = {
   eyebrow: "آراء حول الكتب",
@@ -99,37 +101,18 @@ ui:
 
 <section class="hero hero-dual">
   <div class="container">
-    <p class="eyebrow">التحضير لامتحاني DTZ B1 وÖIF B1</p>
-    <h1>اجتز DTZ B1 أو ÖIF B1 بمساعدة كتب عملية للتحدث والكتابة توضح لك بالضبط كيف تستعد.</h1>
-    <p class="hero-intro">إذا كنت تستعد لامتحان DTZ B1 في ألمانيا أو لامتحان ÖIF B1 Integrationprüfung في النمسا، فهذه الصفحة تساعدك على اختيار كتاب التحدث أو الكتابة المناسب، ومقارنة مساري الامتحان، وتحميل عينة مجانية قبل الشراء.</p>
-    {% set switcherClass = 'language-switcher--hero' %}
-    {% include "language-switcher.njk" %}
-    {% include "hero-trust-strip.njk" %}
-    <div class="hero-book-grid">
-      <article class="book-panel book-panel-accent">
-        <p class="book-panel__label">تحضير DTZ B1 في ألمانيا</p>
-        <h2>نجاحك في DTZ B1 يبدأ بكتاب واضح للتحدث وكتاب واضح للكتابة.</h2>
-        <ul class="check-list">
-          <li>كتاب التحدث يحتوي على 60 تدريبًا تغطي أجزاء الامتحان الشفهي الثلاثة</li>
-          <li>كتاب الكتابة يحتوي على 30 وحدة عملية مع 5 مهام محاكاة كاملة</li>
-          <li>يمكنك تحميل العينة المجانية أولًا ثم شراء الكتاب المناسب</li>
-        </ul>
-        <div class="button-row">
-          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtz }}</a>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">التحضير لامتحاني DTZ B1 وÖIF B1</p>
+        <h1>اجتز DTZ B1 أو ÖIF B1 بمساعدة كتب عملية للتحدث والكتابة.</h1>
+        <p class="hero-intro">إذا كنت تستعد لامتحان DTZ B1 في ألمانيا أو لامتحان ÖIF B1 Integrationprüfung في النمسا، فابدأ من هنا. تساعدك هذه الصفحة على اختيار كتاب التحدث أو الكتابة المناسب، ومقارنة مساري الامتحان، وتحميل عينة مجانية قبل الشراء.</p>
+        {% set switcherClass = 'language-switcher--hero' %}
+        {% include "language-switcher.njk" %}
+        <div class="button-row hero-actions">
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtzShort }}</a>
+          <a href="#oeif-b1-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.oeifShort }}</a>
         </div>
-      </article>
-      <article class="book-panel">
-        <p class="book-panel__label">تحضير ÖIF B1 في النمسا</p>
-        <h2>نجاحك في ÖIF B1 يصبح أسهل مع كتب مخصصة للتحدث والكتابة.</h2>
-        <ul class="check-list">
-          <li>كتاب التحدث يضم حوارات وتمارين مناقشة ووصف صور</li>
-          <li>كتاب الكتابة يركز على مواقف نمساوية ونصوص نموذجية وتمارين محاكاة</li>
-          <li>توجد عينات مجانية للكتابين قبل اتخاذ قرار الشراء</li>
-        </ul>
-        <div class="button-row">
-          <a href="#oeif-b1-books" class="btn btn-primary">{{ heroButtonLabels.oeif }}</a>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>

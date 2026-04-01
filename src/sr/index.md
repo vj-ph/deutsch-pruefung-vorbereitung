@@ -75,7 +75,9 @@ ui:
 } %}
 {% set heroButtonLabels = {
   dtz: "Pogledajte DTZ B1 knjige, uzorke i cene",
-  oeif: "Pogledajte ÖIF B1 knjige, uzorke i cene"
+  oeif: "Pogledajte ÖIF B1 knjige, uzorke i cene",
+  dtzShort: "Pogledajte DTZ B1 knjige",
+  oeifShort: "Pogledajte ÖIF B1 knjige"
 } %}
 {% set reviewsSection = {
   eyebrow: "Utisci o knjigama",
@@ -99,37 +101,18 @@ ui:
 
 <section class="hero hero-dual">
   <div class="container">
-    <p class="eyebrow">Priprema za DTZ B1 i ÖIF B1</p>
-    <h1>Položite DTZ B1 ili ÖIF B1 uz praktične knjige za govor i pisanje koje vam jasno pokazuju kako da se pripremite.</h1>
-    <p class="hero-intro">Ako se pripremate za DTZ B1 u Nemačkoj ili za ÖIF B1 Integrationprüfung u Austriji, ova stranica vam pomaže da izaberete pravu knjigu za govor ili pisanje, uporedite oba ispita i preuzmete besplatan uzorak pre kupovine.</p>
-    {% set switcherClass = 'language-switcher--hero' %}
-    {% include "language-switcher.njk" %}
-    {% include "hero-trust-strip.njk" %}
-    <div class="hero-book-grid">
-      <article class="book-panel book-panel-accent">
-        <p class="book-panel__label">DTZ B1 priprema za Nemačku</p>
-        <h2>Uspeh na DTZ B1 počinje jasnom knjigom za govor i jasnom knjigom za pisanje.</h2>
-        <ul class="check-list">
-          <li>Knjiga za govor sadrži 60 vežbi za sva 3 dela usmenog ispita</li>
-          <li>Knjiga za pisanje sadrži 30 praktičnih jedinica i 5 kompletnih probnih zadataka</li>
-          <li>Možete prvo preuzeti besplatan uzorak pa zatim kupiti odgovarajuću knjigu</li>
-        </ul>
-        <div class="button-row">
-          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtz }}</a>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">Priprema za DTZ B1 i ÖIF B1</p>
+        <h1>Položite DTZ B1 ili ÖIF B1 uz praktične knjige za govor i pisanje.</h1>
+        <p class="hero-intro">Ako se pripremate za DTZ B1 u Nemačkoj ili za ÖIF B1 Integrationprüfung u Austriji, počnite ovde. Ova stranica vam pomaže da izaberete pravu knjigu za govor ili pisanje, uporedite oba ispita i preuzmete besplatan uzorak pre kupovine.</p>
+        {% set switcherClass = 'language-switcher--hero' %}
+        {% include "language-switcher.njk" %}
+        <div class="button-row hero-actions">
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtzShort }}</a>
+          <a href="#oeif-b1-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.oeifShort }}</a>
         </div>
-      </article>
-      <article class="book-panel">
-        <p class="book-panel__label">ÖIF B1 priprema za Austriju</p>
-        <h2>Uspeh na ÖIF B1 je lakši uz posebne knjige za govor i pisanje.</h2>
-        <ul class="check-list">
-          <li>Knjiga za govor sadrži dijaloge, teme za diskusiju i zadatke sa slikama</li>
-          <li>Knjiga za pisanje je fokusirana na austrijske situacije, model tekstove i probne zadatke</li>
-          <li>Za obe knjige postoje besplatni uzorci</li>
-        </ul>
-        <div class="button-row">
-          <a href="#oeif-b1-books" class="btn btn-primary">{{ heroButtonLabels.oeif }}</a>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>

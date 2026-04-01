@@ -1,34 +1,42 @@
 {% from "cta-helpers.njk" import ctaLink with context %}
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-content">
-      <div class="footer-section">
+    <div class="footer-shell">
+      <div class="footer-brand-card">
         <h3>{{ site.brand.name }}</h3>
         <p>{{ ui.footerIntro or 'Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria.' }}</p>
-      </div>
-      <div class="footer-section">
-        <h3>{{ ui.examSectionsLabel or 'Exam Sections' }}</h3>
-        <ul>
-          <li><a href="{{ (homeUrl or '/') | pageUrl }}">{{ ui.homeLabel or 'Home' }}</a></li>
+        <div class="footer-quick-actions">
           {% for examKey in site.examOrder %}
             {% set exam = site.exams[examKey] %}
-            <li><a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a></li>
+            <a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}-books" class="btn{% if loop.first %} btn-primary{% else %} btn-outline-light{% endif %}">{{ exam.navLabel }}</a>
           {% endfor %}
-        </ul>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3>{{ ui.booksLabel or 'Books' }}</h3>
-        <ul>
-          {% for bookKey in site.bookOrder %}
-            {% set book = site.books[bookKey] %}
-            <li>
-              <strong>{{ book.shortTitle }}</strong>:
-              <a href="{{ ctaLink(book.sample.pdfPath, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">{{ ui.sampleLabel or 'Sample' }}</a>
-              ·
-              <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener">{{ ui.fullBookLabel or 'Full Book' }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>{{ ui.examSectionsLabel or 'Exam Sections' }}</h3>
+          <ul class="footer-link-list">
+            <li><a href="{{ (homeUrl or '/') | pageUrl }}">{{ ui.homeLabel or 'Home' }}</a></li>
+            {% for examKey in site.examOrder %}
+              {% set exam = site.exams[examKey] %}
+              <li><a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>{{ ui.booksLabel or 'Books' }}</h3>
+          <ul class="footer-book-list">
+            {% for bookKey in site.bookOrder %}
+              {% set book = site.books[bookKey] %}
+              <li>
+                <strong class="footer-book-title">{{ book.shortTitle }}</strong>
+                <a href="{{ ctaLink(book.sample.pdfPath, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener">{{ ui.sampleLabel or 'Sample' }}</a>
+                <span class="footer-book-divider">·</span>
+                <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener">{{ ui.fullBookLabel or 'Full Book' }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">

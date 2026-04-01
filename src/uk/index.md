@@ -75,7 +75,9 @@ ui:
 } %}
 {% set heroButtonLabels = {
   dtz: "Переглянути книги, зразки й ціни DTZ B1",
-  oeif: "Переглянути книги, зразки й ціни ÖIF B1"
+  oeif: "Переглянути книги, зразки й ціни ÖIF B1",
+  dtzShort: "Переглянути книги DTZ B1",
+  oeifShort: "Переглянути книги ÖIF B1"
 } %}
 {% set reviewsSection = {
   eyebrow: "Відгуки про книжки",
@@ -99,37 +101,18 @@ ui:
 
 <section class="hero hero-dual">
   <div class="container">
-    <p class="eyebrow">Підготовка до DTZ B1 та ÖIF B1</p>
-    <h1>Складіть DTZ B1 або ÖIF B1 з практичними книгами з говоріння та письма, які чітко показують, як готуватися.</h1>
-    <p class="hero-intro">Якщо ви готуєтеся до DTZ B1 у Німеччині або до ÖIF B1 Integrationprüfung в Австрії, ця сторінка допоможе вам вибрати правильну книгу для говоріння чи письма, порівняти обидва формати іспитів і завантажити безкоштовний зразок перед покупкою.</p>
-    {% set switcherClass = 'language-switcher--hero' %}
-    {% include "language-switcher.njk" %}
-    {% include "hero-trust-strip.njk" %}
-    <div class="hero-book-grid">
-      <article class="book-panel book-panel-accent">
-        <p class="book-panel__label">Підготовка до DTZ B1 у Німеччині</p>
-        <h2>Успіх у DTZ B1 починається з чіткої книги для говоріння та книги для письма.</h2>
-        <ul class="check-list">
-          <li>Книга з говоріння містить 60 вправ для всіх 3 частин усного іспиту</li>
-          <li>Книга з письма містить 30 практичних модулів і 5 повних письмових mock-завдань</li>
-          <li>Спочатку можна завантажити безкоштовний зразок, а потім купити повну книгу</li>
-        </ul>
-        <div class="button-row">
-          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtz }}</a>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">Підготовка до DTZ B1 та ÖIF B1</p>
+        <h1>Складіть DTZ B1 або ÖIF B1 з практичними книгами з говоріння та письма.</h1>
+        <p class="hero-intro">Якщо ви готуєтеся до DTZ B1 у Німеччині або до ÖIF B1 Integrationprüfung в Австрії, почніть тут. Ця сторінка допоможе вам вибрати правильну книгу для говоріння чи письма, порівняти обидва формати іспитів і завантажити безкоштовний зразок перед покупкою.</p>
+        {% set switcherClass = 'language-switcher--hero' %}
+        {% include "language-switcher.njk" %}
+        <div class="button-row hero-actions">
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtzShort }}</a>
+          <a href="#oeif-b1-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.oeifShort }}</a>
         </div>
-      </article>
-      <article class="book-panel">
-        <p class="book-panel__label">Підготовка до ÖIF B1 в Австрії</p>
-        <h2>Успіх в ÖIF B1 стає простішим із окремими книгами для говоріння та письма.</h2>
-        <ul class="check-list">
-          <li>Книга з говоріння містить діалоги, теми для обговорення та опис картинок</li>
-          <li>Книга з письма зосереджується на австрійських ситуаціях, моделях текстів і mock-завданнях</li>
-          <li>Для обох книг доступні безкоштовні зразки</li>
-        </ul>
-        <div class="button-row">
-          <a href="#oeif-b1-books" class="btn btn-primary">{{ heroButtonLabels.oeif }}</a>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>

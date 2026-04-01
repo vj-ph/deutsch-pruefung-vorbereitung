@@ -75,7 +75,9 @@ ui:
 } %}
 {% set heroButtonLabels = {
   dtz: "DTZ B1 kitaplarını, örneklerini ve fiyatlarını gör",
-  oeif: "ÖIF B1 kitaplarını, örneklerini ve fiyatlarını gör"
+  oeif: "ÖIF B1 kitaplarını, örneklerini ve fiyatlarını gör",
+  dtzShort: "DTZ B1 kitaplarını gör",
+  oeifShort: "ÖIF B1 kitaplarını gör"
 } %}
 {% set reviewsSection = {
   eyebrow: "Kitap yorumları",
@@ -99,37 +101,18 @@ ui:
 
 <section class="hero hero-dual">
   <div class="container">
-    <p class="eyebrow">DTZ B1 ve ÖIF B1 sınav hazırlığı</p>
-    <h1>DTZ B1 veya ÖIF B1'i, size tam olarak nasıl hazırlanacağınızı gösteren pratik konuşma ve yazma kitaplarıyla geçin.</h1>
-    <p class="hero-intro">Almanya'daki DTZ B1 sınavına ya da Avusturya'daki ÖIF B1 Integrationprüfung sınavına hazırlanıyorsanız, bu sayfa size doğru konuşma veya yazma kitabını seçmede, iki sınav yolunu karşılaştırmada ve satın almadan önce ücretsiz örnek indirmede yardımcı olur.</p>
-    {% set switcherClass = 'language-switcher--hero' %}
-    {% include "language-switcher.njk" %}
-    {% include "hero-trust-strip.njk" %}
-    <div class="hero-book-grid">
-      <article class="book-panel book-panel-accent">
-        <p class="book-panel__label">Almanya için DTZ B1 hazırlığı</p>
-        <h2>DTZ B1 başarısı, net bir konuşma kitabı ve net bir yazma kitabıyla başlar.</h2>
-        <ul class="check-list">
-          <li>Konuşma kitabı, sözlü sınavın 3 bölümünü kapsayan 60 alıştırma içerir</li>
-          <li>Yazma kitabı, 30 pratik ünite ve 5 tam deneme görevi içerir</li>
-          <li>Önce ücretsiz örneği indirip sonra uygun kitabı satın alabilirsiniz</li>
-        </ul>
-        <div class="button-row">
-          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtz }}</a>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">DTZ B1 ve ÖIF B1 sınav hazırlığı</p>
+        <h1>DTZ B1 veya ÖIF B1'i pratik konuşma ve yazma kitaplarıyla geçin.</h1>
+        <p class="hero-intro">Almanya'daki DTZ B1 sınavına ya da Avusturya'daki ÖIF B1 Integrationprüfung sınavına hazırlanıyorsanız, buradan başlayın. Bu sayfa doğru konuşma veya yazma kitabını seçmenize, iki sınav yolunu karşılaştırmanıza ve satın almadan önce ücretsiz örnek indirmenize yardımcı olur.</p>
+        {% set switcherClass = 'language-switcher--hero' %}
+        {% include "language-switcher.njk" %}
+        <div class="button-row hero-actions">
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtzShort }}</a>
+          <a href="#oeif-b1-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.oeifShort }}</a>
         </div>
-      </article>
-      <article class="book-panel">
-        <p class="book-panel__label">Avusturya için ÖIF B1 hazırlığı</p>
-        <h2>ÖIF B1 başarısı, konuşma ve yazma için ayrı kitaplarla daha kolay olur.</h2>
-        <ul class="check-list">
-          <li>Konuşma kitabında diyaloglar, tartışma konuları ve resim görevleri vardır</li>
-          <li>Yazma kitabı Avusturya temelli durumlara, model metinlere ve deneme görevlerine odaklanır</li>
-          <li>Her iki kitap için de ücretsiz örnek mevcuttur</li>
-        </ul>
-        <div class="button-row">
-          <a href="#oeif-b1-books" class="btn btn-primary">{{ heroButtonLabels.oeif }}</a>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>

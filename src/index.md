@@ -39,11 +39,6 @@ ui:
 ---
 
 {% from "cta-helpers.njk" import ctaLink with context %}
-{% set heroTrustBullets = [
-  'All full books cost ' ~ site.sales.fullBookPriceDisplay,
-  'Free on-site ' ~ site.sales.format ~ ' sample pages',
-  'Buy full books on Gumroad and download the ' ~ site.sales.format ~ ' there'
-] %}
 {% set purchaseFlow = {
   eyebrow: 'Before you click',
   title: 'What happens after you click?',
@@ -101,33 +96,52 @@ ui:
 
 <section class="hero hero-dual">
   <div class="container">
-    <p class="eyebrow">DTZ B1 and ÖIF B1 exam preparation</p>
-    <h1>Pass DTZ B1 or ÖIF B1 with practical speaking and writing books that show you exactly how to prepare.</h1>
-    <p class="hero-intro">If you are preparing for DTZ B1 in Germany or the ÖIF B1 Integrationprüfung in Austria, start here. This page helps you choose the right speaking book or writing book, compare both exam tracks, and download a free sample before you buy.</p>
-    {% set switcherClass = 'language-switcher--hero' %}
-    {% include "language-switcher.njk" %}
-    {% include "hero-trust-strip.njk" %}
-    <div class="hero-book-grid">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">DTZ B1 and ÖIF B1 exam preparation</p>
+        <h1>Pass DTZ B1 or ÖIF B1 with practical speaking and writing books.</h1>
+        <p class="hero-intro">If you are preparing for DTZ B1 in Germany or the ÖIF B1 Integrationprüfung in Austria, start here. This page helps you choose the right speaking book or writing book, compare both exam tracks, and download a free sample before you buy.</p>
+        {% set switcherClass = 'language-switcher--hero' %}
+        {% include "language-switcher.njk" %}
+        <div class="button-row hero-actions">
+          <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtzShort }}</a>
+          <a href="#oeif-b1-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.oeifShort }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section comparison-section">
+  <div class="container">
+    <div class="section-heading section-heading-centered">
+      <p class="eyebrow">Quick comparison</p>
+      <h2>Choose the right exam track before you choose the book.</h2>
+      <p>Both paths offer focused speaking and writing prep, but the exam context and certificate use are different in Germany and Austria.</p>
+    </div>
+    <div class="comparison-grid">
       {% for examKey in site.examOrder %}
         {% set exam = site.exams[examKey] %}
-        <article class="book-panel{% if loop.first %} book-panel-accent{% endif %}">
-          <p class="book-panel__label">{{ exam.heroLabel }}</p>
-          <h2>{{ exam.heroTitle }}</h2>
-          <ul class="check-list">
-            {% for point in exam.heroPoints %}
-              <li>{{ point }}</li>
+        <article class="comparison-card">
+          <p class="comparison-card__eyebrow">{{ exam.navLabel }}</p>
+          <h3>{{ exam.heroLabel }}</h3>
+          <p class="comparison-card__intro">{{ exam.description }}</p>
+          <ul class="comparison-list">
+            {% for fact in exam.facts %}
+              {% if loop.index <= 3 %}
+                <li>
+                  <strong>{{ fact.title }}:</strong>
+                  {{ fact.text }}
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
-          <div class="button-row">
-            <a href="#{{ exam.anchor }}-books" class="btn btn-primary">{% if exam.key == 'dtz' %}{{ heroButtonLabels.dtz }}{% else %}{{ heroButtonLabels.oeif }}{% endif %}</a>
-          </div>
+          <a href="#{{ exam.anchor }}-books" class="text-link">See {{ exam.title }} books</a>
         </article>
       {% endfor %}
     </div>
   </div>
 </section>
-
-{% include "book-reviews.njk" %}
 
 {% for examKey in site.examOrder %}
   {% set exam = site.exams[examKey] %}
@@ -161,6 +175,8 @@ ui:
     </div>
   </section>
 {% endfor %}
+
+{% include "book-reviews.njk" %}
 
 {% include "purchase-flow.njk" %}
 
