@@ -138,7 +138,7 @@ ui:
             <p><strong>{{ book.sample.title }}:</strong> {{ book.sample.description }}</p>
             {% include "book-facts.njk" %}
             <div class="button-row">
-              <a href="{{ ctaLink(book.sample.pdfPath, { content: book.key ~ '-sample-section' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'books-section') }}>{{ book.cta.freeSample.label }}</a>
+              <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: book.key ~ '-sample-section' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'books-section') }}>{{ book.cta.freeSample.label }}</a>
               <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-section' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', book.key, 'books-section') }}>{{ book.cta.fullBook.label }}</a>
             </div>
           </article>

@@ -3,6 +3,48 @@ const site = require("./src/_data/site.json");
 const pathPrefix = site.pathPrefix || "/";
 const absoluteUrlPattern = /^(?:[a-zA-Z][a-zA-Z\d+\-.]*:)?\/\//;
 const fileExtensionPattern = /\/[^/]+\.[^/]+$/;
+const sampleBookLocaleMap = {
+  en: "english",
+  ar: "arabic",
+  ru: "russian",
+  uk: "ukrainian",
+  tr: "turkish",
+  sr: "bcs"
+};
+const localizedSamplePdfPaths = {
+  "dtz-speaking": {
+    en: "/assets/sample-books/dtz_b1/dtz-speaking-sample-english.pdf",
+    ar: "/assets/sample-books/dtz_b1/dtz-speaking-sample-arabic.pdf",
+    ru: "/assets/sample-books/dtz_b1/dtz-speaking-sample-russian.pdf",
+    uk: "/assets/sample-books/dtz_b1/dtz-speaking-sample-ukranian.pdf",
+    tr: "/assets/sample-books/dtz_b1/dtz-speaking-sample-turkish.pdf",
+    sr: "/assets/sample-books/dtz_b1/dtz-speaking-sample-bcs.pdf"
+  },
+  "dtz-writing": {
+    en: "/assets/sample-books/dtz_b1/dtz-writing-sample-english.pdf",
+    ar: "/assets/sample-books/dtz_b1/dtz-writing-sample-arabic.pdf",
+    ru: "/assets/sample-books/dtz_b1/dtz-writing-sample-russian.pdf",
+    uk: "/assets/sample-books/dtz_b1/dtz-writing-sample-ukrainian.pdf",
+    tr: "/assets/sample-books/dtz_b1/dtz-writing-sample-turkish.pdf",
+    sr: "/assets/sample-books/dtz_b1/dtz-writing-sample-bcs.pdf"
+  },
+  "oeif-speaking": {
+    en: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-english.pdf",
+    ar: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-arabic.pdf",
+    ru: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-russian.pdf",
+    uk: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-ukrainian.pdf",
+    tr: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-turkish.pdf",
+    sr: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-bcs.pdf"
+  },
+  "oeif-writing": {
+    en: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-english.pdf",
+    ar: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-arabic.pdf",
+    ru: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-russian.pdf",
+    uk: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-ukrainian.pdf",
+    tr: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-turkish.pdf",
+    sr: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-bcs.pdf"
+  }
+};
 
 function withPathPrefix(pathname) {
   const normalizedPrefix = pathPrefix === "/" ? "" : pathPrefix.replace(/\/$/, "");
@@ -24,6 +66,17 @@ function pageUrl(pathname) {
   }
 
   return withPathPrefix(`${normalizedPath.replace(/\/+$/, "")}/`);
+}
+
+function getSamplePdfPath(book, localeCode) {
+  if (!book || !book.sample) {
+    return "";
+  }
+
+  const normalizedLocale = sampleBookLocaleMap[localeCode] ? localeCode : "en";
+  const localizedPath = localizedSamplePdfPaths[book.key]?.[normalizedLocale];
+
+  return localizedPath || book.sample.pdfPath;
 }
 
 module.exports = function(eleventyConfig) {
@@ -92,6 +145,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("pageUrl", pageUrl);
+  eleventyConfig.addFilter("samplePdfPath", getSamplePdfPath);
 
   // Current year for footer
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);

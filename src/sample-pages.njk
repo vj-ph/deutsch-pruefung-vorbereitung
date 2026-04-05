@@ -27,7 +27,7 @@
           {% endfor %}
         </ul>
         <div class="button-row">
-          <a href="{{ ctaLink(book.sample.pdfPath, { content: book.key ~ '-sample-pdf-' ~ currentLang }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'sample-page') }}>{{ samplePage.downloadLabel }}</a>
+          <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: book.key ~ '-sample-pdf-' ~ currentLang }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'sample-page') }}>{{ samplePage.downloadLabel }}</a>
         </div>
         <p class="book-note">{{ samplePage.downloadHint }}</p>
       </article>

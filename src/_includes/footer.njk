@@ -40,7 +40,7 @@
               {% set localizedShortTitle = (book.localizedShortTitles and book.localizedShortTitles[currentLang]) or book.shortTitle %}
               <li>
                 <strong class="footer-book-title">{{ localizedShortTitle }}</strong>
-                <a href="{{ ctaLink(book.sample.pdfPath, { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'footer') }}>{{ ui.sampleLabel or 'Sample' }}</a>
+                <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'footer') }}>{{ ui.sampleLabel or 'Sample' }}</a>
                 <span class="footer-book-divider">·</span>
                 <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', book.key, 'footer') }}>{{ ui.fullBookLabel or 'Full Book' }}</a>
               </li>
