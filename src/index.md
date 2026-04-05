@@ -114,37 +114,6 @@ ui:
 
 {% include "book-reviews.njk" %}
 
-<section class="home-section comparison-section">
-  <div class="container">
-    <div class="section-heading section-heading-centered">
-      <p class="eyebrow">Quick comparison</p>
-      <h2>Choose the right exam track before you choose the book.</h2>
-      <p>Both paths offer focused speaking and writing prep, but the exam context and certificate use are different in Germany and Austria.</p>
-    </div>
-    <div class="comparison-grid">
-      {% for examKey in site.examOrder %}
-        {% set exam = site.exams[examKey] %}
-        <article class="comparison-card">
-          <p class="comparison-card__eyebrow">{{ exam.navLabel }}</p>
-          <h3>{{ exam.heroLabel }}</h3>
-          <p class="comparison-card__intro">{{ exam.description }}</p>
-          <ul class="comparison-list">
-            {% for fact in exam.facts %}
-              {% if loop.index <= 3 %}
-                <li>
-                  <strong>{{ fact.title }}:</strong>
-                  {{ fact.text }}
-                </li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-          <a href="#{{ exam.anchor }}-books" class="text-link">See {{ exam.title }} books</a>
-        </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 {% for examKey in site.examOrder %}
   {% set exam = site.exams[examKey] %}
   <section id="{{ exam.anchor }}-books" class="home-section{% if loop.index % 2 == 0 %} home-section-alt{% endif %}">
@@ -178,6 +147,37 @@ ui:
     </div>
   </section>
 {% endfor %}
+
+<section class="home-section comparison-section">
+  <div class="container">
+    <div class="section-heading section-heading-centered">
+      <p class="eyebrow">Quick comparison</p>
+      <h2>Choose the right exam track before you choose the book.</h2>
+      <p>Both paths offer focused speaking and writing prep, but the exam context and certificate use are different in Germany and Austria.</p>
+    </div>
+    <div class="comparison-grid">
+      {% for examKey in site.examOrder %}
+        {% set exam = site.exams[examKey] %}
+        <article class="comparison-card">
+          <p class="comparison-card__eyebrow">{{ exam.navLabel }}</p>
+          <h3>{{ exam.heroLabel }}</h3>
+          <p class="comparison-card__intro">{{ exam.description }}</p>
+          <ul class="comparison-list">
+            {% for fact in exam.facts %}
+              {% if loop.index <= 3 %}
+                <li>
+                  <strong>{{ fact.title }}:</strong>
+                  {{ fact.text }}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          <a href="#{{ exam.anchor }}-books" class="text-link">See {{ exam.title }} books</a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
 {% include "purchase-flow.njk" %}
 
