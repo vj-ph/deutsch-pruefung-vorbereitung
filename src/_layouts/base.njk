@@ -56,6 +56,45 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', '{{ site.analytics.ga4.measurementId }}');
+
+    document.addEventListener('click', function (event) {
+      const trackedLink = event.target.closest('a[data-ga-event]');
+      if (!trackedLink) {
+        return;
+      }
+
+      const eventName = trackedLink.dataset.gaEvent;
+      const eventParams = {
+        cta_type: trackedLink.dataset.gaCtaType,
+        book_key: trackedLink.dataset.gaBook,
+        cta_location: trackedLink.dataset.gaLocation,
+        language: trackedLink.dataset.gaLanguage,
+        link_url: trackedLink.href,
+        link_text: trackedLink.textContent.trim(),
+        transport_type: 'beacon'
+      };
+      const opensInNewTab = trackedLink.target === '_blank' || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+
+      if (opensInNewTab) {
+        gtag('event', eventName, eventParams);
+        return;
+      }
+
+      event.preventDefault();
+      let navigated = false;
+      const navigate = function () {
+        if (navigated) {
+          return;
+        }
+
+        navigated = true;
+        window.location.href = trackedLink.href;
+      };
+
+      eventParams.event_callback = navigate;
+      gtag('event', eventName, eventParams);
+      window.setTimeout(navigate, 250);
+    });
   </script>
   {% endif %}
 </head>

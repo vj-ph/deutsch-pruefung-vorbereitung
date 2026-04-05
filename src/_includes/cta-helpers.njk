@@ -6,6 +6,14 @@
 {%- if customParams.content -%}&utm_content={{ customParams.content }}{%- endif -%}
 {%- endmacro -%}
 
+{%- macro ctaTrackingAttrs(ctaType, bookKey, ctaLocation, locale = currentLang or 'en') -%}
+data-ga-event="cta_click"
+data-ga-cta-type="{{ ctaType }}"
+data-ga-book="{{ bookKey }}"
+data-ga-location="{{ ctaLocation }}"
+data-ga-language="{{ locale }}"
+{%- endmacro -%}
+
 {%- macro samplePagePath(bookKey, locale = 'en') -%}
 {%- set localePrefix = '' if locale == 'en' else '/' ~ locale -%}
 {{ localePrefix ~ '/samples/' ~ bookKey ~ '/' }}

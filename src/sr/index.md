@@ -38,7 +38,7 @@ ui:
   rightsReserved: Sva prava zadržana.
 ---
 
-{% from "cta-helpers.njk" import ctaLink with context %}
+{% from "cta-helpers.njk" import ctaLink, ctaTrackingAttrs with context %}
 {% set heroTrustBullets = [
   "Sve kompletne knjige koštaju " ~ site.sales.fullBookPriceDisplay,
   "Besplatne PDF stranice sa uzorcima na sajtu",
@@ -140,8 +140,8 @@ ui:
         {% set bookDisplayTitle = site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
-          <a href="{{ ctaLink(site.books['dtz-speaking'].sample.pdfPath, { content: 'dtz-speaking-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi DTZ govor uzorak</a>
-          <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.fullBook, { content: 'dtz-speaking-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi DTZ govor knjigu</a>
+          <a href="{{ ctaLink(site.books['dtz-speaking'].sample.pdfPath, { content: 'dtz-speaking-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'dtz-speaking', 'books-section') }}>Uzmi DTZ govor uzorak</a>
+          <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.fullBook, { content: 'dtz-speaking-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'dtz-speaking', 'books-section') }}>Kupi DTZ govor knjigu</a>
         </div>
       </article>
       <article class="book-panel">
@@ -158,8 +158,8 @@ ui:
         {% set bookDisplayTitle = site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
-          <a href="{{ ctaLink(site.books['dtz-writing'].sample.pdfPath, { content: 'dtz-writing-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi DTZ pisanje uzorak</a>
-          <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.fullBook, { content: 'dtz-writing-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi DTZ pisanje knjigu</a>
+          <a href="{{ ctaLink(site.books['dtz-writing'].sample.pdfPath, { content: 'dtz-writing-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'dtz-writing', 'books-section') }}>Uzmi DTZ pisanje uzorak</a>
+          <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.fullBook, { content: 'dtz-writing-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'dtz-writing', 'books-section') }}>Kupi DTZ pisanje knjigu</a>
         </div>
       </article>
     </div>
@@ -187,8 +187,8 @@ ui:
         {% set bookDisplayTitle = site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
-          <a href="{{ ctaLink(site.books['oeif-speaking'].sample.pdfPath, { content: 'oeif-speaking-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi ÖIF govor uzorak</a>
-          <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.fullBook, { content: 'oeif-speaking-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi ÖIF govor knjigu</a>
+          <a href="{{ ctaLink(site.books['oeif-speaking'].sample.pdfPath, { content: 'oeif-speaking-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'oeif-speaking', 'books-section') }}>Uzmi ÖIF govor uzorak</a>
+          <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.fullBook, { content: 'oeif-speaking-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'oeif-speaking', 'books-section') }}>Kupi ÖIF govor knjigu</a>
         </div>
       </article>
       <article class="book-panel">
@@ -205,8 +205,8 @@ ui:
         {% set bookDisplayTitle = site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title %}
         {% include "book-facts.njk" %}
         <div class="button-row">
-          <a href="{{ ctaLink(site.books['oeif-writing'].sample.pdfPath, { content: 'oeif-writing-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener">Uzmi ÖIF pisanje uzorak</a>
-          <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener">Kupi ÖIF pisanje knjigu</a>
+          <a href="{{ ctaLink(site.books['oeif-writing'].sample.pdfPath, { content: 'oeif-writing-sample-sr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'oeif-writing', 'books-section') }}>Uzmi ÖIF pisanje uzorak</a>
+          <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-sr' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'oeif-writing', 'books-section') }}>Kupi ÖIF pisanje knjigu</a>
         </div>
       </article>
     </div>

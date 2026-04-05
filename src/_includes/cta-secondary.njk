@@ -1,8 +1,8 @@
-{% from "cta-helpers.njk" import ctaLink with context %}
+{% from "cta-helpers.njk" import ctaLink, ctaTrackingAttrs with context %}
 {% set bookKey = ctaBookKey or site.defaultBookKey %}
 {% set book = site.books[bookKey] or site.books[site.defaultBookKey] %}
 <div class="cta-block cta-secondary">
   <h3>{{ ctaTitle or book.cta.fullBook.title }}</h3>
   <p>{{ ctaText or book.cta.fullBook.text }}</p>
-  <a href="{{ ctaLink(book.gumroad.fullBook, { content: ctaContent or (book.key ~ '-full-cta') }) }}" class="btn btn-secondary" target="_blank" rel="noopener">{{ ctaLabel or book.cta.fullBook.label }}</a>
+  <a href="{{ ctaLink(book.gumroad.fullBook, { content: ctaContent or (book.key ~ '-full-cta') }) }}" class="btn btn-secondary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', book.key, 'secondary-cta') }}>{{ ctaLabel or book.cta.fullBook.label }}</a>
 </div>

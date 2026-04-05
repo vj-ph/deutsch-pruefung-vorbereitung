@@ -7,6 +7,11 @@
   target="_blank"
   rel="noopener"
   aria-label="{{ displayBookTitle }}"
+  data-ga-event="cta_click"
+  data-ga-cta-type="thumbnail"
+  data-ga-book="{{ book.key }}"
+  data-ga-location="book-facts"
+  data-ga-language="{{ currentLang or 'en' }}"
 >
   <img
     src="{{ book.thumbnailPath | url }}"

@@ -1,3 +1,4 @@
+{% from "cta-helpers.njk" import ctaTrackingAttrs with context %}
 <header class="site-header">
   <div class="container">
     <a href="{{ (homeUrl or '/') | pageUrl }}" class="logo">
@@ -18,7 +19,7 @@
           <a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}">{{ exam.navLabel }}</a>
         {% endfor %}
       </nav>
-      <a href="{{ (homeUrl or '/') | pageUrl }}#dtz-b1-books" class="btn btn-primary header-cta">Sample book</a>
+      <a href="{{ (homeUrl or '/') | pageUrl }}#dtz-b1-books" class="btn btn-primary header-cta" {{ ctaTrackingAttrs('sample_section', 'dtz-speaking', 'header') }}>Sample book</a>
     </div>
   </div>
 </header>

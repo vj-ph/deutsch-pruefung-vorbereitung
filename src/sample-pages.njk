@@ -1,4 +1,4 @@
-{% from "cta-helpers.njk" import ctaLink with context %}
+{% from "cta-helpers.njk" import ctaLink, ctaTrackingAttrs with context %}
 {% set bookKey = samplePage.bookKey %}
 {% set book = site.books[bookKey] %}
 {% set heroTrustBullets = samplePage.trustBullets %}
@@ -27,7 +27,7 @@
           {% endfor %}
         </ul>
         <div class="button-row">
-          <a href="{{ ctaLink(book.sample.pdfPath, { content: book.key ~ '-sample-pdf-' ~ currentLang }) }}" class="btn btn-primary" target="_blank" rel="noopener">{{ samplePage.downloadLabel }}</a>
+          <a href="{{ ctaLink(book.sample.pdfPath, { content: book.key ~ '-sample-pdf-' ~ currentLang }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'sample-page') }}>{{ samplePage.downloadLabel }}</a>
         </div>
         <p class="book-note">{{ samplePage.downloadHint }}</p>
       </article>
@@ -44,7 +44,7 @@
         {% set bookDisplayTitle = samplePage.bookTitle %}
         {% include "book-facts.njk" %}
         <div class="button-row">
-          <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-from-sample-' ~ currentLang }) }}" class="btn btn-secondary" target="_blank" rel="noopener">{{ samplePage.fullBookLabel }}</a>
+          <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-from-sample-' ~ currentLang }) }}" class="btn btn-secondary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', book.key, 'sample-page') }}>{{ samplePage.fullBookLabel }}</a>
           <a href="{{ (homeUrl or '/') | pageUrl }}#{{ samplePage.backAnchor }}" class="btn btn-outline">{{ samplePage.backLabel }}</a>
         </div>
       </article>
