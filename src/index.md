@@ -42,19 +42,19 @@ ui:
 {% set purchaseFlow = {
   eyebrow: 'Before you click',
   title: 'What happens after you click?',
-  intro: 'Every full book costs ' ~ site.sales.fullBookPriceDisplay ~ ', every sample is free, and every book is delivered as a ' ~ site.sales.format ~ '.',
+  intro: 'Every sample is free on this site. Full books are available on Gumroad as PDFs, and the DTZ books also have Amazon Kindle and paperback editions.',
   steps: [
     {
-      title: 'Open the product page',
-      text: 'The sample button opens the free PDF directly from this site. The full-book button opens Gumroad for the paid book.'
+      title: 'Open the sample or store page',
+      text: 'The sample button opens the free PDF directly from this site. The purchase buttons open the selected store in a new tab.'
     },
     {
       title: 'Check the free sample first',
       text: 'Open the free ' ~ site.sales.format ~ ' sample directly from this site and decide if the book fits you.'
     },
     {
-      title: 'Buy and download',
-      text: 'When you are ready, buy the full book on Gumroad and download the ' ~ site.sales.format ~ ' there.'
+      title: 'Buy in the format you want',
+      text: 'When you are ready, choose Gumroad for the discounted PDF or use Amazon for Kindle and paperback editions on the DTZ books.'
     }
   ]
 } %}
@@ -65,8 +65,8 @@ ui:
   pages: 'Pages',
   free: 'Free',
   discountPrefix: 'Use discount code ',
-  discountSuffix: ' for 20% off at checkout.',
-  clickNote: 'The sample button opens the PDF directly from this site. The full-book button opens Gumroad for checkout and download.'
+  discountSuffix: ' for 20% off on Gumroad.',
+  clickNote: 'The sample button opens the PDF directly from this site. The purchase buttons open the selected store in a new tab.'
 } %}
 {% set heroButtonLabels = {
   dtz: 'See DTZ B1 books, samples, and prices',
@@ -139,7 +139,8 @@ ui:
             {% include "book-facts.njk" %}
             <div class="button-row">
               <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: book.key ~ '-sample-section' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'books-section') }}>{{ book.cta.freeSample.label }}</a>
-              <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-section' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', book.key, 'books-section') }}>{{ book.cta.fullBook.label }}</a>
+              {% set purchaseLocation = 'books-section' %}
+              {% include "purchase-links.njk" %}
             </div>
           </article>
         {% endfor %}

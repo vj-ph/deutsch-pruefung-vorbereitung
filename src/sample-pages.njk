@@ -44,7 +44,8 @@
         {% set bookDisplayTitle = samplePage.bookTitle %}
         {% include "book-facts.njk" %}
         <div class="button-row">
-          <a href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-from-sample-' ~ currentLang }) }}" class="btn btn-secondary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', book.key, 'sample-page') }}>{{ samplePage.fullBookLabel }}</a>
+          {% set purchaseLocation = 'sample-page' %}
+          {% include "purchase-links.njk" %}
           <a href="{{ (homeUrl or '/') | pageUrl }}#{{ samplePage.backAnchor }}" class="btn btn-outline">{{ samplePage.backLabel }}</a>
         </div>
       </article>

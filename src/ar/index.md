@@ -47,19 +47,19 @@ ui:
 {% set purchaseFlow = {
   eyebrow: "قبل أن تنقر",
   title: "ماذا يحدث بعد أن تنقر؟",
-  intro: "كل كتاب كامل بسعر " ~ site.sales.fullBookPriceDisplay ~ "، وكل عينة مجانية، وكل كتاب يُسلَّم بصيغة PDF.",
+  intro: "كل عينة مجانية على هذا الموقع. الكتب الكاملة متاحة على Gumroad بصيغة PDF، كما أن كتب DTZ متاحة أيضًا على Amazon بصيغتي Kindle والنسخة الورقية.",
   steps: [
     {
-      title: "افتح صفحة المنتج",
-      text: "زر العينة يفتح ملف PDF المجاني مباشرة من هذا الموقع، وزر الكتاب الكامل يفتح Gumroad للنسخة المدفوعة."
+      title: "افتح صفحة العينة أو المتجر",
+      text: "زر العينة يفتح ملف PDF المجاني مباشرة من هذا الموقع، وأزرار الشراء تفتح المتجر المحدد في علامة تبويب جديدة."
     },
     {
       title: "تحقق من العينة المجانية أولًا",
       text: "افتح ملف PDF المجاني مباشرة من هذا الموقع وتحقق مما إذا كان الكتاب مناسبًا لك."
     },
     {
-      title: "اشترِ وحمّل",
-      text: "عندما تكون جاهزًا، اشترِ الكتاب الكامل على Gumroad وحمّل PDF هناك."
+      title: "اشترِ بالصيغة التي تريدها",
+      text: "عندما تكون جاهزًا، اختر Gumroad لنسخة PDF المخفّضة أو استخدم Amazon لنسختي Kindle والورقية لكتب DTZ."
     }
   ]
 } %}
@@ -70,8 +70,8 @@ ui:
   pages: "الصفحات",
   free: "مجاني",
   discountPrefix: "استخدم رمز الخصم ",
-  discountSuffix: " للحصول على خصم 20% عند الدفع.",
-  clickNote: "زر العينة يفتح ملف PDF مباشرة من هذا الموقع، أما زر الكتاب الكامل فيفتح Gumroad لإتمام الشراء والتنزيل."
+  discountSuffix: " للحصول على خصم 20% على Gumroad.",
+  clickNote: "زر العينة يفتح ملف PDF مباشرة من هذا الموقع، وأزرار الشراء تفتح المتجر المحدد في علامة تبويب جديدة."
 } %}
 {% set heroButtonLabels = {
   dtz: "اطلع على كتب DTZ B1 والعينات والأسعار",
@@ -141,7 +141,9 @@ ui:
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'] | samplePdfPath(currentLang), { content: 'dtz-speaking-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'dtz-speaking', 'books-section') }}>احصل على عينة DTZ للتحدث</a>
-          <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.fullBook, { content: 'dtz-speaking-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'dtz-speaking', 'books-section') }}>اشترِ كتاب DTZ للتحدث</a>
+          {% set book = site.books[bookKey] %}
+          {% set purchaseLocation = 'books-section' %}
+          {% include "purchase-links.njk" %}
         </div>
       </article>
       <article class="book-panel">
@@ -159,7 +161,9 @@ ui:
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'] | samplePdfPath(currentLang), { content: 'dtz-writing-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'dtz-writing', 'books-section') }}>احصل على عينة DTZ للكتابة</a>
-          <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.fullBook, { content: 'dtz-writing-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'dtz-writing', 'books-section') }}>اشترِ كتاب DTZ للكتابة</a>
+          {% set book = site.books[bookKey] %}
+          {% set purchaseLocation = 'books-section' %}
+          {% include "purchase-links.njk" %}
         </div>
       </article>
     </div>
@@ -188,7 +192,9 @@ ui:
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'] | samplePdfPath(currentLang), { content: 'oeif-speaking-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'oeif-speaking', 'books-section') }}>احصل على عينة ÖIF للتحدث</a>
-          <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.fullBook, { content: 'oeif-speaking-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'oeif-speaking', 'books-section') }}>اشترِ كتاب ÖIF للتحدث</a>
+          {% set book = site.books[bookKey] %}
+          {% set purchaseLocation = 'books-section' %}
+          {% include "purchase-links.njk" %}
         </div>
       </article>
       <article class="book-panel">
@@ -206,7 +212,9 @@ ui:
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'] | samplePdfPath(currentLang), { content: 'oeif-writing-sample-ar' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'oeif-writing', 'books-section') }}>احصل على عينة ÖIF للكتابة</a>
-          <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-ar' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'oeif-writing', 'books-section') }}>اشترِ كتاب ÖIF للكتابة</a>
+          {% set book = site.books[bookKey] %}
+          {% set purchaseLocation = 'books-section' %}
+          {% include "purchase-links.njk" %}
         </div>
       </article>
     </div>

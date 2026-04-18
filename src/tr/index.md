@@ -47,19 +47,19 @@ ui:
 {% set purchaseFlow = {
   eyebrow: "Tıklamadan önce",
   title: "Tıkladıktan sonra ne olur?",
-  intro: "Her tam kitap " ~ site.sales.fullBookPriceDisplay ~ ", her örnek ücretsiz ve her kitap PDF olarak sunulur.",
+  intro: "Bu sitedeki her örnek ücretsizdir. Tam kitaplar Gumroad'da PDF olarak sunulur ve DTZ kitaplarının Amazon Kindle ile karton kapak baskıları da vardır.",
   steps: [
     {
-      title: "Ürün sayfasını açın",
-      text: "Örnek düğmesi ücretsiz PDF'yi doğrudan bu siteden açar; tam kitap düğmesi ise ücretli sürüm için Gumroad'u açar."
+      title: "Örnek ya da mağaza sayfasını açın",
+      text: "Örnek düğmesi ücretsiz PDF'yi doğrudan bu siteden açar; satın alma düğmeleri ise seçilen mağazayı yeni sekmede açar."
     },
     {
       title: "Önce ücretsiz örneğe bakın",
       text: "Ücretsiz PDF'yi doğrudan bu siteden açabilir ve kitabın size uygun olup olmadığını görebilirsiniz."
     },
     {
-      title: "Satın alın ve indirin",
-      text: "Hazır olduğunuzda, tam kitabı Gumroad'dan satın alın ve PDF'yi oradan indirin."
+      title: "İstediğiniz formatta satın alın",
+      text: "Hazır olduğunuzda indirimli PDF için Gumroad'u, DTZ kitaplarının Kindle ve karton kapak sürümleri için ise Amazon'u seçin."
     }
   ]
 } %}
@@ -70,8 +70,8 @@ ui:
   pages: "Sayfa",
   free: "Ücretsiz",
   discountPrefix: "Ödeme sırasında %20 indirim için ",
-  discountSuffix: " indirim kodunu kullanın.",
-  clickNote: "Örnek düğmesi PDF'yi doğrudan bu siteden açar; tam kitap düğmesi ise satın alma ve indirme için Gumroad'u açar."
+  discountSuffix: " kodunu Gumroad'da kullanın.",
+  clickNote: "Örnek düğmesi PDF'yi doğrudan bu siteden açar; satın alma düğmeleri ise seçilen mağazayı yeni sekmede açar."
 } %}
 {% set heroButtonLabels = {
   dtz: "DTZ B1 kitaplarını, örneklerini ve fiyatlarını gör",
@@ -141,7 +141,9 @@ ui:
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-speaking'] | samplePdfPath(currentLang), { content: 'dtz-speaking-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'dtz-speaking', 'books-section') }}>DTZ konuşma örneğini al</a>
-          <a href="{{ ctaLink(site.books['dtz-speaking'].gumroad.fullBook, { content: 'dtz-speaking-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'dtz-speaking', 'books-section') }}>DTZ konuşma kitabını satın al</a>
+          {% set book = site.books[bookKey] %}
+          {% set purchaseLocation = 'books-section' %}
+          {% include "purchase-links.njk" %}
         </div>
       </article>
       <article class="book-panel">
@@ -159,7 +161,9 @@ ui:
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['dtz-writing'] | samplePdfPath(currentLang), { content: 'dtz-writing-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'dtz-writing', 'books-section') }}>DTZ yazma örneğini al</a>
-          <a href="{{ ctaLink(site.books['dtz-writing'].gumroad.fullBook, { content: 'dtz-writing-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'dtz-writing', 'books-section') }}>DTZ yazma kitabını satın al</a>
+          {% set book = site.books[bookKey] %}
+          {% set purchaseLocation = 'books-section' %}
+          {% include "purchase-links.njk" %}
         </div>
       </article>
     </div>
@@ -188,7 +192,9 @@ ui:
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-speaking'] | samplePdfPath(currentLang), { content: 'oeif-speaking-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'oeif-speaking', 'books-section') }}>ÖIF konuşma örneğini al</a>
-          <a href="{{ ctaLink(site.books['oeif-speaking'].gumroad.fullBook, { content: 'oeif-speaking-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'oeif-speaking', 'books-section') }}>ÖIF konuşma kitabını satın al</a>
+          {% set book = site.books[bookKey] %}
+          {% set purchaseLocation = 'books-section' %}
+          {% include "purchase-links.njk" %}
         </div>
       </article>
       <article class="book-panel">
@@ -206,7 +212,9 @@ ui:
         {% include "book-facts.njk" %}
         <div class="button-row">
           <a href="{{ ctaLink(site.books['oeif-writing'] | samplePdfPath(currentLang), { content: 'oeif-writing-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'oeif-writing', 'books-section') }}>ÖIF yazma örneğini al</a>
-          <a href="{{ ctaLink(site.books['oeif-writing'].gumroad.fullBook, { content: 'oeif-writing-full-tr' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', 'oeif-writing', 'books-section') }}>ÖIF yazma kitabını satın al</a>
+          {% set book = site.books[bookKey] %}
+          {% set purchaseLocation = 'books-section' %}
+          {% include "purchase-links.njk" %}
         </div>
       </article>
     </div>

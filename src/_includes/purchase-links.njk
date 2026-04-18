@@ -1,0 +1,22 @@
+{% from "cta-helpers.njk" import ctaLink, ctaTrackingAttrs with context %}
+{% set purchaseLocation = purchaseLocation or 'purchase-links' %}
+{% set purchaseButtonClass = purchaseButtonClass or 'btn-outline' %}
+{% if book.purchaseOptions %}
+  {% for option in book.purchaseOptions %}
+  <a
+    href="{{ ctaLink(option.url, { content: book.key ~ '-' ~ option.key ~ '-' ~ purchaseLocation ~ '-' ~ (currentLang or 'en') }) }}"
+    class="btn {{ option.buttonClass or purchaseButtonClass }}"
+    target="_blank"
+    rel="noopener"
+    {{ ctaTrackingAttrs(option.trackingType or 'full_book', book.key, purchaseLocation) }}
+  >{{ option.buttonLabel or option.label }}</a>
+  {% endfor %}
+{% else %}
+  <a
+    href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-full-' ~ purchaseLocation ~ '-' ~ (currentLang or 'en') }) }}"
+    class="btn {{ purchaseButtonClass }}"
+    target="_blank"
+    rel="noopener"
+    {{ ctaTrackingAttrs('full_book', book.key, purchaseLocation) }}
+  >{{ defaultPurchaseLabel or book.cta.fullBook.label }}</a>
+{% endif %}

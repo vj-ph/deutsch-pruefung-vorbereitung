@@ -1,5 +1,71 @@
 const site = require("./site.json");
 
+const localizedFormatTerms = {
+  en: {
+    PDF: "PDF",
+    Kindle: "Kindle",
+    Paperback: "paperback"
+  },
+  ar: {
+    PDF: "PDF",
+    Kindle: "Kindle",
+    Paperback: "نسخة ورقية"
+  },
+  uk: {
+    PDF: "PDF",
+    Kindle: "Kindle",
+    Paperback: "м'яка обкладинка"
+  },
+  tr: {
+    PDF: "PDF",
+    Kindle: "Kindle",
+    Paperback: "karton kapak"
+  },
+  sr: {
+    PDF: "PDF",
+    Kindle: "Kindle",
+    Paperback: "meki povez"
+  },
+  ru: {
+    PDF: "PDF",
+    Kindle: "Kindle",
+    Paperback: "мягкая обложка"
+  }
+};
+
+function joinLocalizedList(items, localeCode) {
+  if (items.length <= 1) {
+    return items[0] || "";
+  }
+
+  const listJoiners = {
+    ar: { pair: " و", separator: "، ", final: "، و" },
+    uk: { pair: " і ", separator: ", ", final: ", і " },
+    tr: { pair: " ve ", separator: ", ", final: " ve " },
+    sr: { pair: " i ", separator: ", ", final: " i " },
+    ru: { pair: " и ", separator: ", ", final: ", и " },
+    en: { pair: " and ", separator: ", ", final: ", and " }
+  };
+
+  const joiner = listJoiners[localeCode] || listJoiners.en;
+
+  return items.length === 2
+    ? `${items[0]}${joiner.pair}${items[1]}`
+    : `${items.slice(0, -1).join(joiner.separator)}${joiner.final}${items[items.length - 1]}`;
+}
+
+function getBookFormatDisplay(localeCode, book) {
+  const formatTerms = localizedFormatTerms[localeCode] || localizedFormatTerms.en;
+  const formats = book.formats && book.formats.length
+    ? book.formats
+    : [book.format || site.sales.format];
+
+  return joinLocalizedList(
+    formats.map((format) => formatTerms[format] || format),
+    localeCode
+  );
+}
+
 const languages = [
   {
     code: "en",
@@ -23,8 +89,8 @@ const languages = [
       pages: "Pages",
       free: "Free",
       discountPrefix: "Use discount code ",
-      discountSuffix: " for 20% off at checkout.",
-      clickNote: "The sample button opens the PDF on this site. The full-book button opens Gumroad for checkout and download."
+      discountSuffix: " for 20% off on Gumroad.",
+      clickNote: "The sample button opens the PDF on this site. The purchase buttons open the selected store in a new tab."
     },
     copy: {
       pageTitle: (bookTitle) => `${bookTitle} free sample | ${site.brand.shortName}`,
@@ -51,10 +117,10 @@ const languages = [
         "The PDF opens in a new tab so you can keep this page open.",
       fullCardLabel: "Full book",
       fullCardIntro: (pageCount, format) =>
-        `If the sample feels right, the full book gives you a much bigger practice set in the same practical style. It is delivered as a ${pageCount}-page ${format}.`,
-      fullCheckFormat: (pageCount, format) => `${pageCount}-page ${format}`,
+        `If the sample feels right, the full book gives you a much bigger practice set in the same practical style. You can get it in ${format}.`,
+      fullCheckFormat: (pageCount, format) => `${pageCount} pages in ${format}`,
       fullCheckPractice: "Much more practice than the free sample",
-      fullCheckDiscount: (discountCode) => `20% off with code ${discountCode}`,
+      fullCheckDiscount: (discountCode) => `20% off on Gumroad with code ${discountCode}`,
       fullBookLabel: "Buy full book",
       backLabel: (examTitle) => `Back to ${examTitle} books`
     }
@@ -81,8 +147,8 @@ const languages = [
       pages: "الصفحات",
       free: "مجاني",
       discountPrefix: "استخدم رمز الخصم ",
-      discountSuffix: " للحصول على خصم 20% عند الدفع.",
-      clickNote: "زر العينة يفتح ملف PDF من هذا الموقع، بينما زر الكتاب الكامل يفتح Gumroad لإتمام الشراء والتنزيل."
+      discountSuffix: " للحصول على خصم 20% على Gumroad.",
+      clickNote: "زر العينة يفتح ملف PDF من هذا الموقع، وأزرار الشراء تفتح المتجر المحدد في علامة تبويب جديدة."
     },
     copy: {
       pageTitle: (bookTitle) => `العينة المجانية لكتاب ${bookTitle} | ${site.brand.shortName}`,
@@ -109,10 +175,10 @@ const languages = [
         "يفتح ملف PDF في علامة تبويب جديدة حتى تبقي هذه الصفحة مفتوحة.",
       fullCardLabel: "الكتاب الكامل",
       fullCardIntro: (pageCount, format) =>
-        `إذا ناسبتك العينة، فالكتاب الكامل يمنحك تدريبًا أكبر بكثير وبنفس الأسلوب العملي. يُسلَّم بصيغة ${format} ويضم ${pageCount} صفحة.`,
+        `إذا ناسبتك العينة، فالكتاب الكامل يمنحك تدريبًا أكبر بكثير وبنفس الأسلوب العملي. يمكنك الحصول عليه بصيغة ${format}.`,
       fullCheckFormat: (pageCount, format) => `${pageCount} صفحة بصيغة ${format}`,
       fullCheckPractice: "تدريب أكثر بكثير من العينة المجانية",
-      fullCheckDiscount: (discountCode) => `خصم 20% باستخدام الرمز ${discountCode}`,
+      fullCheckDiscount: (discountCode) => `خصم 20% على Gumroad باستخدام الرمز ${discountCode}`,
       fullBookLabel: "اشترِ الكتاب الكامل",
       backLabel: (examTitle) => `العودة إلى كتب ${examTitle}`
     }
@@ -139,8 +205,8 @@ const languages = [
       pages: "Сторінки",
       free: "Безкоштовно",
       discountPrefix: "Використайте код знижки ",
-      discountSuffix: " для знижки 20% під час оформлення замовлення.",
-      clickNote: "Кнопка зразка відкриває PDF на цьому сайті, а кнопка повної книги відкриває Gumroad для покупки та завантаження."
+      discountSuffix: " для знижки 20% на Gumroad.",
+      clickNote: "Кнопка зразка відкриває PDF на цьому сайті, а кнопки покупки відкривають вибраний магазин у новій вкладці."
     },
     copy: {
       pageTitle: (bookTitle) => `Безкоштовний зразок ${bookTitle} | ${site.brand.shortName}`,
@@ -167,10 +233,10 @@ const languages = [
         "PDF відкривається в новій вкладці, щоб ця сторінка залишалася відкритою.",
       fullCardLabel: "Повна книга",
       fullCardIntro: (pageCount, format) =>
-        `Якщо зразок вам підходить, повна книга дає значно більше практики в тому самому практичному стилі. Вона доступна як ${format} на ${pageCount} сторінок.`,
-      fullCheckFormat: (pageCount, format) => `${pageCount}-сторінковий ${format}`,
+        `Якщо зразок вам підходить, повна книга дає значно більше практики в тому самому практичному стилі. Ви можете отримати її у форматі ${format}.`,
+      fullCheckFormat: (pageCount, format) => `${pageCount} сторінок у форматі ${format}`,
       fullCheckPractice: "Значно більше практики, ніж у безкоштовному зразку",
-      fullCheckDiscount: (discountCode) => `Знижка 20% з кодом ${discountCode}`,
+      fullCheckDiscount: (discountCode) => `Знижка 20% на Gumroad з кодом ${discountCode}`,
       fullBookLabel: "Купити повну книгу",
       backLabel: (examTitle) => `Назад до книг ${examTitle}`
     }
@@ -197,8 +263,8 @@ const languages = [
       pages: "Sayfa",
       free: "Ücretsiz",
       discountPrefix: "Ödeme sırasında %20 indirim için ",
-      discountSuffix: " indirim kodunu kullanın.",
-      clickNote: "Örnek düğmesi PDF'yi bu sitede açar; tam kitap düğmesi ise satın alma ve indirme için Gumroad'u açar."
+      discountSuffix: " kodunu Gumroad'da kullanın.",
+      clickNote: "Örnek düğmesi PDF'yi bu sitede açar; satın alma düğmeleri ise seçilen mağazayı yeni sekmede açar."
     },
     copy: {
       pageTitle: (bookTitle) => `${bookTitle} ücretsiz örnek | ${site.brand.shortName}`,
@@ -225,10 +291,10 @@ const languages = [
         "PDF yeni sekmede açılır; böylece bu sayfayı açık tutabilirsiniz.",
       fullCardLabel: "Tam kitap",
       fullCardIntro: (pageCount, format) =>
-        `Örnek size uygunsa, tam kitap aynı pratik tarzda çok daha geniş bir çalışma seti sunar. ${pageCount} sayfalık bir ${format} olarak teslim edilir.`,
-      fullCheckFormat: (pageCount, format) => `${pageCount} sayfalık ${format}`,
+        `Örnek size uygunsa, tam kitap aynı pratik tarzda çok daha geniş bir çalışma seti sunar. ${format} olarak alabilirsiniz.`,
+      fullCheckFormat: (pageCount, format) => `${format} olarak ${pageCount} sayfa`,
       fullCheckPractice: "Ücretsiz örnekten çok daha fazla alıştırma",
-      fullCheckDiscount: (discountCode) => `${discountCode} koduyla %20 indirim`,
+      fullCheckDiscount: (discountCode) => `Gumroad'da ${discountCode} koduyla %20 indirim`,
       fullBookLabel: "Tam kitabı satın al",
       backLabel: (examTitle) => `${examTitle} kitaplarına dön`
     }
@@ -255,8 +321,8 @@ const languages = [
       pages: "Stranice",
       free: "Besplatno",
       discountPrefix: "Koristite kod za popust ",
-      discountSuffix: " za 20% popusta pri plaćanju.",
-      clickNote: "Dugme za uzorak otvara PDF na ovom sajtu, a dugme za kompletnu knjigu otvara Gumroad za kupovinu i preuzimanje."
+      discountSuffix: " za 20% popusta na Gumroad-u.",
+      clickNote: "Dugme za uzorak otvara PDF na ovom sajtu, a dugmad za kupovinu otvaraju izabranu prodavnicu u novoj kartici."
     },
     copy: {
       pageTitle: (bookTitle) => `Besplatan uzorak za ${bookTitle} | ${site.brand.shortName}`,
@@ -283,10 +349,10 @@ const languages = [
         "PDF se otvara u novoj kartici kako biste ovu stranicu ostavili otvorenom.",
       fullCardLabel: "Kompletna knjiga",
       fullCardIntro: (pageCount, format) =>
-        `Ako vam uzorak odgovara, kompletna knjiga donosi mnogo više vežbe u istom praktičnom stilu. Isporučuje se kao ${format} sa ${pageCount} stranica.`,
+        `Ako vam uzorak odgovara, kompletna knjiga donosi mnogo više vežbe u istom praktičnom stilu. Možete je dobiti u formatu ${format}.`,
       fullCheckFormat: (pageCount, format) => `${pageCount} strana u formatu ${format}`,
       fullCheckPractice: "Mnogo više vežbe nego u besplatnom uzorku",
-      fullCheckDiscount: (discountCode) => `20% popusta uz kod ${discountCode}`,
+      fullCheckDiscount: (discountCode) => `20% popusta na Gumroad-u uz kod ${discountCode}`,
       fullBookLabel: "Kupi kompletnu knjigu",
       backLabel: (examTitle) => `Nazad na knjige za ${examTitle}`
     }
@@ -313,8 +379,8 @@ const languages = [
       pages: "Страницы",
       free: "Бесплатно",
       discountPrefix: "Используйте код скидки ",
-      discountSuffix: " для скидки 20% при оформлении заказа.",
-      clickNote: "Кнопка образца открывает PDF на этом сайте, а кнопка полной книги открывает Gumroad для покупки и скачивания."
+      discountSuffix: " для скидки 20% на Gumroad.",
+      clickNote: "Кнопка образца открывает PDF на этом сайте, а кнопки покупки открывают выбранный магазин в новой вкладке."
     },
     copy: {
       pageTitle: (bookTitle) => `Бесплатный образец ${bookTitle} | ${site.brand.shortName}`,
@@ -341,10 +407,10 @@ const languages = [
         "PDF открывается в новой вкладке, чтобы вы могли оставить эту страницу открытой.",
       fullCardLabel: "Полная книга",
       fullCardIntro: (pageCount, format) =>
-        `Если образец вам подходит, полная книга дает намного больше практики в том же практическом стиле. Она доступна как ${format} на ${pageCount} страниц.`,
-      fullCheckFormat: (pageCount, format) => `${pageCount}-страничный ${format}`,
+        `Если образец вам подходит, полная книга дает намного больше практики в том же практическом стиле. Вы можете получить ее в формате ${format}.`,
+      fullCheckFormat: (pageCount, format) => `${pageCount} страниц в формате ${format}`,
       fullCheckPractice: "Намного больше практики, чем в бесплатном образце",
-      fullCheckDiscount: (discountCode) => `Скидка 20% с кодом ${discountCode}`,
+      fullCheckDiscount: (discountCode) => `Скидка 20% на Gumroad с кодом ${discountCode}`,
       fullBookLabel: "Купить полную книгу",
       backLabel: (examTitle) => `Назад к книгам ${examTitle}`
     }
@@ -371,6 +437,7 @@ function buildPage(language, book) {
   const pageSlug = book.sample.pageSlug || book.key;
   const hasStudyPlan = book.sample.bonusKey === "study-plan";
   const localizedBookTitle = getLocalizedBookTitle(book, language.code);
+  const formatDisplay = getBookFormatDisplay(language.code, book);
   const sampleChecks = [
     language.copy.sampleTaskCount(book.sample.taskCount),
     hasStudyPlan ? language.copy.sampleBonusStudyPlan : language.copy.sampleDirectAccess,
@@ -402,9 +469,9 @@ function buildPage(language, book) {
     downloadLabel: language.copy.downloadLabel,
     downloadHint: language.copy.downloadHint,
     fullCardLabel: language.copy.fullCardLabel,
-    fullCardIntro: language.copy.fullCardIntro(book.pageCount, book.format || site.sales.format),
+    fullCardIntro: language.copy.fullCardIntro(book.pageCount, formatDisplay),
     fullBookChecks: [
-      language.copy.fullCheckFormat(book.pageCount, book.format || site.sales.format),
+      language.copy.fullCheckFormat(book.pageCount, formatDisplay),
       language.copy.fullCheckPractice,
       language.copy.fullCheckDiscount(book.discountCode)
     ],
