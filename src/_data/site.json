@@ -317,6 +317,11 @@
       "language": "en",
       "examSection": "Speaking",
       "format": "PDF",
+      "formats": [
+        "PDF",
+        "Kindle",
+        "Paperback"
+      ],
       "pageCount": 219,
       "thumbnailPath": "/assets/book_thumbnails/thumbnail_oeif_b1_speaking.jpeg",
       "discountCode": "DKWGCF2",
@@ -339,11 +344,37 @@
         "freeSample": "https://store.deutschkompass.com/l/lsdrkx",
         "fullBook": "https://store.deutschkompass.com/l/ovhkog"
       },
+      "purchaseOptions": [
+        {
+          "key": "gumroad-pdf",
+          "label": "Gumroad PDF",
+          "buttonLabel": "Gumroad PDF",
+          "priceDisplay": "€6.99",
+          "url": "https://store.deutschkompass.com/l/ovhkog",
+          "trackingType": "gumroad_pdf"
+        },
+        {
+          "key": "amazon-kindle",
+          "label": "Amazon Kindle",
+          "buttonLabel": "Amazon Kindle",
+          "priceDisplay": "€6.99",
+          "url": "https://www.amazon.de/dp/B0GX311DY8",
+          "trackingType": "amazon_kindle"
+        },
+        {
+          "key": "amazon-paperback",
+          "label": "Amazon Paperback",
+          "buttonLabel": "Amazon Paperback",
+          "priceDisplay": "€10.99",
+          "url": "https://www.amazon.de/dp/B0GYRW7ZYW",
+          "trackingType": "amazon_paperback"
+        }
+      ],
       "cta": {
         "freeSample": {
           "title": "Get the free ÖIF B1 speaking sample",
           "text": "Preview the speaking book with real exam-style tasks and support.",
-          "label": "Get ÖIF Speaking Sample"
+          "label": "Get Free Sample"
         },
         "fullBook": {
           "title": "Need the full ÖIF B1 speaking workbook?",
@@ -377,6 +408,11 @@
       "language": "de-AT",
       "examSection": "Writing",
       "format": "PDF",
+      "formats": [
+        "PDF",
+        "Kindle",
+        "Paperback"
+      ],
       "pageCount": 127,
       "thumbnailPath": "/assets/book_thumbnails/thumbnail_oeif_b1_writing.jpeg",
       "discountCode": "7MGV39W",
@@ -398,11 +434,37 @@
         "freeSample": "https://store.deutschkompass.com/l/idrkyq",
         "fullBook": "https://store.deutschkompass.com/l/tphgs"
       },
+      "purchaseOptions": [
+        {
+          "key": "gumroad-pdf",
+          "label": "Gumroad PDF",
+          "buttonLabel": "Gumroad PDF",
+          "priceDisplay": "€6.99",
+          "url": "https://store.deutschkompass.com/l/tphgs",
+          "trackingType": "gumroad_pdf"
+        },
+        {
+          "key": "amazon-kindle",
+          "label": "Amazon Kindle",
+          "buttonLabel": "Amazon Kindle",
+          "priceDisplay": "€6.99",
+          "url": "https://www.amazon.de/dp/B0GX2YKRVY",
+          "trackingType": "amazon_kindle"
+        },
+        {
+          "key": "amazon-paperback",
+          "label": "Amazon Paperback",
+          "buttonLabel": "Amazon Paperback",
+          "priceDisplay": "€10.99",
+          "url": "https://www.amazon.de/dp/B0GYRWVVCQ",
+          "trackingType": "amazon_paperback"
+        }
+      ],
       "cta": {
         "freeSample": {
           "title": "Get the free ÖIF B1 writing sample",
           "text": "See how the writing workbook teaches structure, register, and practical exam-ready phrasing.",
-          "label": "Get ÖIF Writing Sample"
+          "label": "Get Free Sample"
         },
         "fullBook": {
           "title": "Need the full ÖIF B1 writing book?",

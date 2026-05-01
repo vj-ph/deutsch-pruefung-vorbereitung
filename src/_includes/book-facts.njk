@@ -36,14 +36,16 @@
 <div class="book-facts">
   {% if book.purchaseOptions %}
     {% for option in book.purchaseOptions %}
+  {% if option.priceDisplay %}
   {% set optionPriceDisplay = option.priceDisplay %}
-  {% if option.key == "amazon-kindle" %}
+  {% if option.key == "amazon-kindle" and option.priceDisplay %}
     {% set optionPriceDisplay = priceUi.kindleUnlimitedPrefix ~ option.priceDisplay %}
   {% endif %}
   <div class="book-fact">
     <span class="book-fact__label">{{ option.label }}</span>
     <strong>{{ optionPriceDisplay }}</strong>
   </div>
+  {% endif %}
     {% endfor %}
   {% else %}
   <div class="book-fact">
