@@ -43,6 +43,22 @@ const localizedSamplePdfPaths = {
     uk: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-ukrainian.pdf",
     tr: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-turkish.pdf",
     sr: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-bcs.pdf"
+  },
+  "fide-speaking": {
+    en: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
+    ar: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
+    ru: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
+    uk: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
+    tr: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
+    sr: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf"
+  },
+  "fide-writing": {
+    en: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
+    ar: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
+    ru: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
+    uk: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
+    tr: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
+    sr: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf"
   }
 };
 

@@ -1,13 +1,24 @@
 ---
 layout: base
 templateEngineOverride: njk
-title: "Deutsch Kompass DTZ & ÖIF"
-description: "Prepare for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria with speaking books, writing books, and free sample books for both exams."
+title: "Deutsch Kompass DTZ, ÖIF & fide"
+description: "Prepare for DTZ B1 in Germany, ÖIF B1 in Austria, and fide A2 in Switzerland with speaking books, writing books, and free sample books."
 permalink: /
 lang: en
 dir: ltr
 currentLang: en
 homeUrl: /
+pageExamOrder:
+  - dtz
+  - oeif
+  - fide
+pageBookOrder:
+  - dtz-speaking
+  - dtz-writing
+  - oeif-speaking
+  - oeif-writing
+  - fide-speaking
+  - fide-writing
 languageSwitcherLabel: "Language"
 languageLinks:
   - code: en
@@ -30,7 +41,7 @@ languageLinks:
     url: /ru/
 ui:
   homeLabel: Home
-  footerIntro: "Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria."
+  footerIntro: "Speaking and writing prep books for DTZ B1 in Germany, ÖIF B1 in Austria, and fide A2 in Switzerland."
   examSectionsLabel: Exam Sections
   booksLabel: Books
   sampleLabel: Sample
@@ -39,10 +50,11 @@ ui:
 ---
 
 {% from "cta-helpers.njk" import ctaLink, ctaTrackingAttrs with context %}
+{% set homeExamOrder = pageExamOrder or site.examOrder %}
 {% set purchaseFlow = {
   eyebrow: 'Before you click',
   title: 'What happens after you click?',
-  intro: 'Every sample is free on this site. Full books are available on Gumroad as PDFs, and the DTZ books also have Amazon Kindle and paperback editions.',
+  intro: 'Every sample is free on this site. DTZ and ÖIF books are available as discounted Gumroad PDFs and also on Amazon. The fide A2 books are currently available on Amazon in Kindle and paperback formats.',
   steps: [
     {
       title: 'Open the sample or store page',
@@ -54,7 +66,7 @@ ui:
     },
     {
       title: 'Buy in the format you want',
-      text: 'When you are ready, choose Gumroad for the discounted PDF or use Amazon for Kindle and paperback editions on the DTZ books.'
+      text: 'When you are ready, choose the store that matches the title: Gumroad for discounted DTZ and ÖIF PDFs, or Amazon for Kindle and paperback editions, including the fide A2 books.'
     }
   ]
 } %}
@@ -71,13 +83,15 @@ ui:
 {% set heroButtonLabels = {
   dtz: 'See DTZ B1 books, samples, and prices',
   oeif: 'See ÖIF B1 books, samples, and prices',
+  fide: 'See fide A2 books, samples, and prices',
   dtzShort: 'See DTZ B1 books',
-  oeifShort: 'See ÖIF B1 books'
+  oeifShort: 'See ÖIF B1 books',
+  fideShort: 'See fide A2 books'
 } %}
 {% set reviewsSection = {
   eyebrow: 'Book reviews',
   title: 'What learners say about these books',
-  intro: 'These short reviews come from learners who used the books for DTZ B1 or ÖIF B1 preparation.',
+  intro: 'These short reviews come from learners who used these books for practical German exam preparation.',
   items: [
     {
       quote: "Daily conversation isn't a problem for me, and I communicate well with my colleagues in the logistics industry. However, the DTZ exam covers topics I rarely encounter in my everyday life. These books provided a wide variety of speaking and writing prompts along with example answers, which were essential for my B1 preparation and helped me succeed!",
@@ -98,14 +112,15 @@ ui:
   <div class="container">
     <div class="hero-layout">
       <div class="hero-copy">
-        <p class="eyebrow">DTZ B1 and ÖIF B1 exam preparation</p>
-        <h1>Pass DTZ B1 or ÖIF B1 with practical speaking and writing books.</h1>
-        <p class="hero-intro">If you are preparing for DTZ B1 in Germany or the ÖIF B1 Integrationprüfung in Austria, start here. This page helps you choose the right speaking book or writing book, compare both exam tracks, and download a free sample before you buy.</p>
+        <p class="eyebrow">DTZ B1, ÖIF B1, and fide A2 exam preparation</p>
+        <h1>Choose practical speaking and writing books for Germany, Austria, or Switzerland.</h1>
+        <p class="hero-intro">If you are preparing for DTZ B1 in Germany, the ÖIF B1 Integrationprüfung in Austria, or fide A2 in Switzerland, start here. This page helps you compare the exam tracks, choose the right speaking or writing book, and open a free sample before you buy.</p>
         {% set switcherClass = 'language-switcher--hero' %}
         {% include "language-switcher.njk" %}
         <div class="button-row hero-actions">
           <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtzShort }}</a>
           <a href="#oeif-b1-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.oeifShort }}</a>
+          <a href="#fide-a2-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.fideShort }}</a>
         </div>
       </div>
     </div>
@@ -114,7 +129,7 @@ ui:
 
 {% include "book-reviews.njk" %}
 
-{% for examKey in site.examOrder %}
+{% for examKey in homeExamOrder %}
   {% set exam = site.exams[examKey] %}
   <section id="{{ exam.anchor }}-books" class="home-section{% if loop.index % 2 == 0 %} home-section-alt{% endif %}">
     <div class="container">
@@ -154,10 +169,10 @@ ui:
     <div class="section-heading section-heading-centered">
       <p class="eyebrow">Quick comparison</p>
       <h2>Choose the right exam track before you choose the book.</h2>
-      <p>Both paths offer focused speaking and writing prep, but the exam context and certificate use are different in Germany and Austria.</p>
+      <p>All three paths offer focused speaking and writing prep, but the exam context, country, and certificate use are different in Germany, Austria, and Switzerland.</p>
     </div>
     <div class="comparison-grid">
-      {% for examKey in site.examOrder %}
+      {% for examKey in homeExamOrder %}
         {% set exam = site.exams[examKey] %}
         <article class="comparison-card">
           <p class="comparison-card__eyebrow">{{ exam.navLabel }}</p>
@@ -186,11 +201,11 @@ ui:
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Exam overview</p>
-      <h2>Compare the DTZ B1 and ÖIF B1 exams</h2>
-      <p>If you want the exam details after reviewing the books, this section brings together the key format, purpose, and certificate context for both exam tracks.</p>
+      <h2>Compare the DTZ B1, ÖIF B1, and fide A2 exams</h2>
+      <p>If you want the exam details after reviewing the books, this section brings together the key format, purpose, and certificate context for all three exam tracks.</p>
     </div>
     <div class="exam-overview-stack">
-      {% for examKey in site.examOrder %}
+      {% for examKey in homeExamOrder %}
         {% set exam = site.exams[examKey] %}
         <div id="{{ exam.anchor }}" class="exam-overview-block">
           <div class="section-heading">
@@ -218,11 +233,12 @@ ui:
       <div>
         <p class="eyebrow">Choose by exam, then by skill</p>
         <h2>Pick your exam, get the sample, and move to the full book when you are ready.</h2>
-        <p>If you need DTZ B1 preparation for Germany, go straight to the DTZ section. If you need ÖIF B1 preparation for Austria, use the ÖIF section. In both cases, you can start with a free sample book and then continue with the full speaking or writing book.</p>
+        <p>If you need DTZ B1 preparation for Germany, go straight to the DTZ section. If you need ÖIF B1 preparation for Austria, use the ÖIF section. If you need fide A2 preparation for Switzerland, use the fide section. In each case, you can start with a free sample book and then continue with the full speaking or writing book.</p>
       </div>
       <div class="button-row">
         <a href="#dtz-b1-books" class="btn btn-secondary">{{ heroButtonLabels.dtzShort }}</a>
         <a href="#oeif-b1-books" class="btn btn-secondary">{{ heroButtonLabels.oeifShort }}</a>
+        <a href="#fide-a2-books" class="btn btn-secondary">{{ heroButtonLabels.fideShort }}</a>
       </div>
     </div>
   </div>

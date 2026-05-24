@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 {% set pageLang = lang or site.language %}
 {% set pageDir = dir or 'ltr' %}
+{% set structuredBookOrder = pageBookOrder or site.bookOrder %}
 <html id="top" lang="{{ pageLang }}" dir="{{ pageDir }}">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +11,7 @@
   <meta name="description" content="{{ description or site.description }}">
   <link rel="icon" href="{{ '/favicon.ico' | url }}">
   <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
-  {% if site.bookOrder and site.books %}
+  {% if structuredBookOrder and site.books %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,7 +20,7 @@
           "@type": "Organization",
           "name": "{{ site.author.name }}",
           "url": "{{ site.author.url }}"
-        }{% for bookKey in site.bookOrder %}{% set book = site.books[bookKey] %}{% set localizedBookTitle = (book.localizedTitles and book.localizedTitles[pageLang]) or book.title %},
+        }{% for bookKey in structuredBookOrder %}{% set book = site.books[bookKey] %}{% set localizedBookTitle = (book.localizedTitles and book.localizedTitles[pageLang]) or book.title %}{% set structuredBookUrl = (book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].url) or (book.gumroad and book.gumroad.fullBook) or '' %},
         {
           "@type": "Book",
           "name": "{{ localizedBookTitle }}",
@@ -31,12 +32,12 @@
             "name": "{{ site.author.name }}",
             "url": "{{ site.author.url }}"
           },
-          "url": "{{ book.gumroad.fullBook }}",
+          "url": "{{ structuredBookUrl }}",
           "workExample": {
             "@type": "CreativeWork",
             "name": "{{ book.sample.title }}",
             "description": "{{ book.sample.description }}",
-            "url": "{{ samplePagePath(book.key, pageLang or 'en') | pageUrl | absoluteUrl(site.url) }}"
+            "url": "{{ book | samplePdfPath(pageLang or 'en') | pageUrl | absoluteUrl(site.url) }}"
           }
         }{% endfor %}
       ]

@@ -1,13 +1,24 @@
 ---
 layout: base
 templateEngineOverride: njk
-title: "Deutsch Kompass DTZ & ÖIF"
-description: "Almanya'daki DTZ B1 sınavı ve Avusturya'daki ÖIF B1 Integrationprüfung için konuşma ve yazma kitaplarıyla hazırlanın, satın almadan önce ücretsiz örnekleri inceleyin."
+title: "Deutsch Kompass DTZ, ÖIF ve fide"
+description: "Almanya'daki DTZ B1, Avusturya'daki ÖIF B1 ve İsviçre'deki fide A2 sınavlarına konuşma ve yazma kitapları ve ücretsiz örnek kitaplarla hazırlanın."
 permalink: /tr/
 lang: tr
 dir: ltr
 currentLang: tr
 homeUrl: /tr/
+pageExamOrder:
+  - dtz
+  - oeif
+  - fide
+pageBookOrder:
+  - dtz-speaking
+  - dtz-writing
+  - oeif-speaking
+  - oeif-writing
+  - fide-speaking
+  - fide-writing
 languageSwitcherLabel: "Dil"
 languageLinks:
   - code: en
@@ -30,7 +41,7 @@ languageLinks:
     url: /ru/
 ui:
   homeLabel: Ana sayfa
-  footerIntro: "Almanya'daki DTZ B1 sınavı ve Avusturya'daki ÖIF B1 Integrationprüfung için konuşma ve yazma hazırlık kitapları."
+  footerIntro: "Almanya'daki DTZ B1, Avusturya'daki ÖIF B1 ve İsviçre'deki fide A2 sınavları için konuşma ve yazma hazırlık kitapları."
   examSectionsLabel: Sınav bölümleri
   booksLabel: Kitaplar
   sampleLabel: Ücretsiz örnek
@@ -39,27 +50,23 @@ ui:
 ---
 
 {% from "cta-helpers.njk" import ctaLink, ctaTrackingAttrs with context %}
-{% set heroTrustBullets = [
-  "Tüm tam kitaplar " ~ site.sales.fullBookPriceDisplay,
-  "Sitede ücretsiz örnek PDF sayfaları",
-  "Tam kitapları Gumroad'dan satın alın ve PDF'yi oradan indirin"
-] %}
+{% set homeExamOrder = pageExamOrder or site.examOrder %}
 {% set purchaseFlow = {
   eyebrow: "Tıklamadan önce",
   title: "Tıkladıktan sonra ne olur?",
-  intro: "Bu sitedeki her örnek ücretsizdir. Tam kitaplar Gumroad'da PDF olarak sunulur ve DTZ kitaplarının Amazon Kindle ile karton kapak baskıları da vardır.",
+  intro: "Bu sitedeki her örnek ücretsizdir. DTZ ve ÖIF kitapları Gumroad'da indirimli PDF olarak ve Amazon'da da bulunur. fide A2 kitapları ise şu anda Amazon'da Kindle ve karton kapak olarak sunuluyor.",
   steps: [
     {
-      title: "Örnek ya da mağaza sayfasını açın",
-      text: "Örnek düğmesi ücretsiz PDF'yi doğrudan bu siteden açar; satın alma düğmeleri ise seçilen mağazayı yeni sekmede açar."
+      title: "Örneği ya da mağaza sayfasını açın",
+      text: "Örnek düğmesi ücretsiz PDF'yi doğrudan bu siteden açar. Satın alma düğmeleri seçilen mağazayı yeni sekmede açar."
     },
     {
       title: "Önce ücretsiz örneğe bakın",
-      text: "Ücretsiz PDF'yi doğrudan bu siteden açabilir ve kitabın size uygun olup olmadığını görebilirsiniz."
+      text: "Ücretsiz PDF'yi doğrudan bu siteden açın ve kitabın size uygun olup olmadığına karar verin."
     },
     {
-      title: "İstediğiniz formatta satın alın",
-      text: "Hazır olduğunuzda indirimli PDF için Gumroad'u, DTZ kitaplarının Kindle ve karton kapak sürümleri için ise Amazon'u seçin."
+      title: "İstediğiniz formatı seçin",
+      text: "Hazır olduğunuzda başlığa göre mağazayı seçin: indirimli DTZ ve ÖIF PDF'leri için Gumroad, Kindle ve karton kapak sürümleri için ise Amazon; buna fide A2 kitapları da dahildir."
     }
   ]
 } %}
@@ -74,15 +81,14 @@ ui:
   clickNote: "Örnek düğmesi PDF'yi doğrudan bu siteden açar; satın alma düğmeleri ise seçilen mağazayı yeni sekmede açar."
 } %}
 {% set heroButtonLabels = {
-  dtz: "DTZ B1 kitaplarını, örneklerini ve fiyatlarını gör",
-  oeif: "ÖIF B1 kitaplarını, örneklerini ve fiyatlarını gör",
   dtzShort: "DTZ B1 kitaplarını gör",
-  oeifShort: "ÖIF B1 kitaplarını gör"
+  oeifShort: "ÖIF B1 kitaplarını gör",
+  fideShort: "fide A2 kitaplarını gör"
 } %}
 {% set reviewsSection = {
   eyebrow: "Kitap yorumları",
   title: "Öğrenciler bu kitaplar hakkında ne diyor?",
-  intro: "Bu kısa yorumlar, DTZ B1 veya ÖIF B1 hazırlığında bu kitapları kullanan öğrencilerden geliyor.",
+  intro: "Bu kısa yorumlar, bu kitapları Almanca sınav hazırlığında kullanan öğrencilerden geliyor.",
   items: [
     {
       quote: "Günlük konuşmalar benim için sorun değil ve lojistik sektöründeki iş arkadaşlarımla iyi iletişim kuruyorum. Ancak DTZ sınavı, günlük hayatımda nadiren karşılaştığım konuları kapsıyor. Bu kitaplar, örnek cevaplarla birlikte çok çeşitli konuşma ve yazma görevleri sundu; bunlar B1 hazırlığım için çok önemliydi ve başarılı olmama yardımcı oldu!",
@@ -98,19 +104,175 @@ ui:
     }
   ]
 } %}
+{% set localizedExamContent = {
+  dtz: {
+    booksHeading: "DTZ B1 kitapları ve ücretsiz örnekler",
+    booksIntro: "Şu anda en zayıf hissettiğiniz beceriyle başlayın ya da daha kapsamlı bir plan istiyorsanız iki kitabı birlikte kullanın.",
+    comparisonEyebrow: "DTZ B1",
+    comparisonTitle: "Almanya için pratik B1 yolu",
+    comparisonIntro: "DTZ B1, Almanya'daki göç ve entegrasyon bağlamında yaygın olan konuşma ve yazma görevlerine odaklanır.",
+    comparisonFacts: [
+      { title: "Ülke", text: "Almanya" },
+      { title: "Seviye", text: "B1 sonucu birçok başvuruda önemlidir" },
+      { title: "Odak", text: "Kendini tanıtma, resim üzerinden konuşma, planlama ve kısa yazılı mesajlar" }
+    ],
+    comparisonLink: "DTZ B1 kitaplarını gör",
+    overviewTitle: "DTZ B1 sınav genel bakışı",
+    overviewDescription: "Deutsch-Test für Zuwanderer (DTZ), Almanya'da kullanılan pratik bir Almanca sınavıdır. Bu bölüm sınav formatını açıklar ve doğru DTZ B1 konuşma ya da yazma kitabını seçmenize yardımcı olur.",
+    overviewFacts: [
+      { title: "Konuşma formatı", text: "DTZ konuşma sınavında 3 görev türü vardır: kendinizi tanıtma, bir resim ve kendi deneyiminiz hakkında konuşma, ayrıca bir partnerle birlikte plan yapma." },
+      { title: "Yazma formatı", text: "DTZ yazma görevi genellikle 80-100 kelimelik kısa pratik bir mesajdan oluşur ve dört içerik noktasını kapsar." },
+      { title: "B1 kanıtı neden önemlidir", text: "B1 düzeyindeki DTZ sertifikası, Almanya'da kalıcı oturum veya vatandaşlık gibi başvurularda Almanca dil kanıtı olarak kabul edilebilir. Ancak nihai uygunluk her zaman diğer yasal şartlara da bağlıdır." },
+      { title: "Bu kitaplar kimler için", text: "Bu kitaplar kendi kendine çalışanlar, ders alanlar ve sınav formatına uygun pratik isteyen çalışma grupları için uygundur." }
+    ]
+  },
+  oeif: {
+    booksHeading: "ÖIF B1 kitapları ve ücretsiz örnekler",
+    booksIntro: "Bu kitaplar Avusturya'daki yaygın konuşma ve yazma görevleri için pratik sunar; tam kitabı almadan önce ücretsiz örneği deneyebilirsiniz.",
+    comparisonEyebrow: "ÖIF B1",
+    comparisonTitle: "Avusturya entegrasyon yolu",
+    comparisonIntro: "ÖIF B1, Avusturya'daki resmi entegrasyon bağlamında kullanılan konuşma ve yazma görevlerine odaklanır.",
+    comparisonFacts: [
+      { title: "Ülke", text: "Avusturya" },
+      { title: "Seviye", text: "B1" },
+      { title: "Odak", text: "Avusturya odaklı konuşma konuları, planlama, resim açıklama ve yönlendirmeli yazma" }
+    ],
+    comparisonLink: "ÖIF B1 kitaplarını gör",
+    overviewTitle: "ÖIF B1 sınav genel bakışı",
+    overviewDescription: "ÖIF B1 Integrationprüfung, Avusturya'da resmi bir entegrasyon sınavıdır. Bu bölüm sınavı açıklar ve doğru ÖIF B1 konuşma ya da yazma kitabını seçmenize yardımcı olur.",
+    overviewFacts: [
+      { title: "Sınavın amacı", text: "Bu sınav, Avusturya'daki entegrasyon sisteminin bir parçasıdır ve resmi dil ile entegrasyon kanıtı olarak kullanılır." },
+      { title: "Başarının neye yardımcı olabileceği", text: "Başarılı sonuç, entegrasyon anlaşmasındaki Modul 2 gibi gerekliliklerde ve bazı durumlarda kalıcı oturum veya vatandaşlık süreçlerinde önemli olabilir." },
+      { title: "Sertifika neyi gösterir", text: "Sertifika, resmi olarak tanınan ÖIF formatında Almanca B1 düzeyine ulaştığınızı gösterir." },
+      { title: "Önemli not", text: "Yasal gereklilikler oturum durumuna ve kişisel koşullara göre değişir; bu yüzden her zaman en güncel ÖIF ve resmi Avusturya kaynaklarını kontrol edin." }
+    ]
+  },
+  fide: {
+    booksHeading: "fide A2 kitapları ve ücretsiz örnekler",
+    booksIntro: "Bu iki kitap, İsviçre'deki fide A2 sınavı için konuşma ve yazma görevlerine odaklanır. Şu anda örnek PDF İngilizce olsa da tüm dillerde aynıdır.",
+    comparisonEyebrow: "fide A2",
+    comparisonTitle: "İsviçre için A2 odaklı hazırlık",
+    comparisonIntro: "fide A2, İsviçre'deki günlük yaşam durumlarına dayalı konuşma ve yazma görevlerine odaklanır.",
+    comparisonFacts: [
+      { title: "Ülke", text: "İsviçre" },
+      { title: "Seviye", text: "A2" },
+      { title: "Odak", text: "Resim açıklama, rol oyunu, konuşma, form doldurma ve kısa e-posta" }
+    ],
+    comparisonLink: "fide A2 kitaplarını gör",
+    overviewTitle: "fide A2 sınav genel bakışı",
+    overviewDescription: "fide sınavı, İsviçre'deki günlük hayata yakın durumlar üzerinden iletişim becerisini ölçer. Bu bölüm, fide A2 konuşma ve yazma kitaplarının hangi görev türlerine hazırlandığını özetler.",
+    overviewFacts: [
+      { title: "Konuşma formatı", text: "Konuşma kısmında resim açıklama, rol oyunu ve kısa konuşma görevleri bulunur. Konular iş, konut, sağlık, okul, ulaşım ve resmi işlemler gibi gündelik İsviçre bağlamlarından gelir." },
+      { title: "Yazma formatı", text: "Yazma kısmı özellikle Formular + Bemerkungen ve Kurze E-Mail görevlerine odaklanır." },
+      { title: "Seviye ve kullanım", text: "Bu kitaplar fide A2 seviyesinde çalışan ve İsviçre'deki günlük durumlar için daha hedefli hazırlık isteyen öğrenciler için uygundur." },
+      { title: "Bu kitaplar ne sağlar", text: "Konuşma kitabı 43 set, yazma kitabı ise 22 set sunar; böylece örnekten sonra tam kitapla düzenli pratik yapabilirsiniz." }
+    ]
+  }
+} %}
+{% set localizedBookContent = {
+  "dtz-speaking": {
+    panelLabel: "Konuşma kitabı",
+    title: site.books["dtz-speaking"].localizedTitles[currentLang] or site.books["dtz-speaking"].title,
+    summary: "DTZ B1 konuşma kitabı; kendini tanıtma, resim ve deneyim hakkında konuşma ve partnerle plan yapma için 60 alıştırma içerir. Model cevaplar, yararlı kalıplar, takip soruları ve Almanca-İngilizce kelime desteği sunar.",
+    features: [
+      "Sözlü sınavın 3 bölümünü kapsayan 60 alıştırma",
+      "Model cevaplar veya diyaloglar ve olası sınav görevlisi soruları",
+      "Yararlı ifadeler, Almanca-İngilizce kelime desteği ve kısa konuşma çalışmaları"
+    ],
+    sampleTitle: "3 görevlik ücretsiz örnek",
+    sampleDescription: "Tam kitapta kullanılan görev biçimini ve destek türünü görmenizi sağlar.",
+    ctaLabel: "DTZ konuşma örneğini al"
+  },
+  "dtz-writing": {
+    panelLabel: "Yazma kitabı",
+    title: site.books["dtz-writing"].localizedTitles[currentLang] or site.books["dtz-writing"].title,
+    summary: "DTZ B1 yazma kitabı, sınavın temel görevine odaklanır: dört içerik noktası içeren kısa mesajlar. Kitapta 30 pratik ünite ve 5 tam deneme yazma görevi vardır.",
+    features: [
+      "DTZ'deki temel metin türleri için 30 pratik ünite",
+      "Model metinler, yararlı kalıplar, sık hatalar ve hızlı kontrol listeleri",
+      "Model çözümlü 5 tam deneme yazma görevi"
+    ],
+    sampleTitle: "4 görevlik ücretsiz örnek",
+    sampleDescription: "Soru tiplerini, yapılandırmayı ve tam kitaptaki desteği gösterir.",
+    ctaLabel: "DTZ yazma örneğini al"
+  },
+  "oeif-speaking": {
+    panelLabel: "Konuşma kitabı",
+    title: site.books["oeif-speaking"].localizedTitles[currentLang] or site.books["oeif-speaking"].title,
+    summary: "ÖIF B1 konuşma kitabı 85 odaklı bölüm içerir: 30 planlama diyaloğu, 30 görüş ve tartışma konusu ve 25 resim açıklama görevi; kelime desteği ve takip soruları da vardır.",
+    features: [
+      "30 planlama diyaloğu, 30 tartışma konusu ve 25 resim görevi",
+      "Model cevaplar, sınav görevlisi soruları ve tekrar kullanılabilir ifadeler",
+      "Randevu, konut, iş ve alışveriş gibi Avusturya tarzı günlük konular"
+    ],
+    sampleTitle: "3 görevlik ücretsiz örnek",
+    sampleDescription: "Kitaptaki diyalog tarzını, kelime desteğini ve takip sorularını gösterir.",
+    ctaLabel: "ÖIF konuşma örneğini al"
+  },
+  "oeif-writing": {
+    panelLabel: "Yazma kitabı",
+    title: site.books["oeif-writing"].localizedTitles[currentLang] or site.books["oeif-writing"].title,
+    summary: "ÖIF B1 yazma kitabı; kişisel ve resmi mesajlar, şikayetler ve kısa görüş metinleri için 30 yönlendirmeli ünite içerir. Ayrıca Avusturya odaklı senaryolar, kontrol listeleri ve deneme görevleri sunar.",
+    features: [
+      "Dört pratik bölümde 30 yönlendirmeli yazma ünitesi",
+      "Hazır ifadeler, kontrol listeleri ve model metinlerle Avusturya temelli durumlar",
+      "Deneme görevleri ve stres anları için güvenli yapı desteği"
+    ],
+    sampleTitle: "4 görevlik ücretsiz örnek",
+    sampleDescription: "Tam kitaptaki yazma tarzını, yapıyı ve desteği gösterir.",
+    ctaLabel: "ÖIF yazma örneğini al"
+  },
+  "fide-speaking": {
+    panelLabel: "Konuşma kitabı",
+    title: "fide A2 Konuşma",
+    summary: "fide A2 konuşma kitabı, resim açıklama, rol oyunu ve konuşma görevleri için İsviçre odaklı 43 alıştırma seti sunar.",
+    features: [
+      "fide A2 konuşma bölümünün üç temel görev türü için 43 çalışma seti",
+      "İş, konut, sağlık, okul, ulaşım ve resmi işlemler gibi İsviçre'deki gündelik konular",
+      "Örnekten sonra düzenli pratik için Kindle ve karton kapak seçenekleri"
+    ],
+    sampleTitle: "1 setlik ücretsiz örnek",
+    sampleDescription: "İngilizce örnek PDF, fide A2 konuşma bölümündeki resim açıklama, rol oyunu ve konuşma akışını gösterir.",
+    ctaLabel: "fide konuşma örneğini aç"
+  },
+  "fide-writing": {
+    panelLabel: "Yazma kitabı",
+    title: "fide A2 Yazma",
+    summary: "fide A2 yazma kitabı, Formular + Bemerkungen ve Kurze E-Mail görevleri için İsviçre odaklı 22 çalışma seti sunar.",
+    features: [
+      "fide A2 yazma bölümünün iki ana formatı için 22 çalışma seti",
+      "İş, resmi makamlar, sağlık, konut, okul ve ulaşım gibi gündelik İsviçre durumları",
+      "Tam kitaba geçmeden önce yapıyı görmek için ücretsiz örnek"
+    ],
+    sampleTitle: "1 setlik ücretsiz örnek",
+    sampleDescription: "İngilizce örnek PDF, bir form görevi ve kısa e-posta göreviyle fide A2 yazma biçimini gösterir.",
+    ctaLabel: "fide yazma örneğini aç"
+  }
+} %}
+{% set comparisonSection = {
+  eyebrow: "Hızlı karşılaştırma",
+  title: "Kitabı seçmeden önce doğru sınav yolunu seçin.",
+  intro: "Üç yolun da konuşma ve yazma hazırlığı var; ancak sınav bağlamı, ülke ve sertifikanın kullanım alanı Almanya, Avusturya ve İsviçre arasında farklıdır."
+} %}
+{% set finalCta = {
+  eyebrow: "Önce sınavı, sonra beceriyi seçin",
+  title: "Önce sınavı seçin, ücretsiz örnekle başlayın, hazır olduğunuzda tam kitaba geçin.",
+  intro: "Almanya için DTZ B1 hazırlığına ihtiyacınız varsa DTZ bölümüne gidin. Avusturya için ÖIF B1 hazırlığına ihtiyacınız varsa ÖIF bölümünü kullanın. İsviçre için fide A2 hazırlığına ihtiyacınız varsa fide bölümüne gidin. Her durumda ücretsiz örnekle başlayıp sonra tam konuşma veya yazma kitabına geçebilirsiniz."
+} %}
 
 <section class="hero hero-dual">
   <div class="container">
     <div class="hero-layout">
       <div class="hero-copy">
-        <p class="eyebrow">DTZ B1 ve ÖIF B1 sınav hazırlığı</p>
-        <h1>DTZ B1 veya ÖIF B1'i pratik konuşma ve yazma kitaplarıyla geçin.</h1>
-        <p class="hero-intro">Almanya'daki DTZ B1 sınavına ya da Avusturya'daki ÖIF B1 Integrationprüfung sınavına hazırlanıyorsanız, buradan başlayın. Bu sayfa doğru konuşma veya yazma kitabını seçmenize, iki sınav yolunu karşılaştırmanıza ve satın almadan önce ücretsiz örnek indirmenize yardımcı olur.</p>
+        <p class="eyebrow">DTZ B1, ÖIF B1 ve fide A2 sınav hazırlığı</p>
+        <h1>Almanya, Avusturya veya İsviçre için pratik konuşma ve yazma kitaplarını seçin.</h1>
+        <p class="hero-intro">Almanya'da DTZ B1, Avusturya'da ÖIF B1 veya İsviçre'de fide A2 sınavına hazırlanıyorsanız buradan başlayın. Bu sayfa sınav yollarını karşılaştırmanıza, doğru konuşma ya da yazma kitabını seçmenize ve satın almadan önce ücretsiz örneği açmanıza yardımcı olur.</p>
         {% set switcherClass = 'language-switcher--hero' %}
         {% include "language-switcher.njk" %}
         <div class="button-row hero-actions">
           <a href="#dtz-b1-books" class="btn btn-primary">{{ heroButtonLabels.dtzShort }}</a>
           <a href="#oeif-b1-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.oeifShort }}</a>
+          <a href="#fide-a2-books" class="btn btn-outline btn-outline-light">{{ heroButtonLabels.fideShort }}</a>
         </div>
       </div>
     </div>
@@ -119,104 +281,69 @@ ui:
 
 {% include "book-reviews.njk" %}
 
-<section id="dtz-b1-books" class="home-section">
-  <div class="container">
-    <div class="section-heading">
-      <h2>DTZ B1 kitapları ve ücretsiz örnekler</h2>
-      <p>Önce en zayıf hissettiğiniz beceriyle başlayın ya da daha kapsamlı bir plan istiyorsanız iki kitabı birlikte kullanın.</p>
-    </div>
-    <div class="hero-book-grid">
-      <article class="book-panel book-panel-accent">
-        <p class="book-panel__label">Konuşma kitabı</p>
-        <h2>{{ site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title }}</h2>
-        <p>DTZ B1 konuşma kitabı; kendini tanıtma, resim ve deneyim hakkında konuşma ve partnerle plan yapma için 60 alıştırma içerir. Model cevaplar, yararlı kalıplar, takip soruları ve Almanca-İngilizce kelime desteği sunar.</p>
-        <ul class="check-list">
-          <li>Sözlü sınavın 3 bölümünü kapsayan 60 alıştırma</li>
-          <li>Model cevaplar veya diyaloglar ve olası sınav görevlisi soruları</li>
-          <li>Yararlı ifadeler, Almanca-İngilizce kelime desteği ve kısa konuşma çalışmaları</li>
-        </ul>
-        <p><strong>3 görevlik ücretsiz örnek:</strong> tam kitapta kullanılan görev biçimini ve destek türünü görmenizi sağlar.</p>
-        {% set bookKey = 'dtz-speaking' %}
-        {% set bookDisplayTitle = site.books['dtz-speaking'].localizedTitles[currentLang] or site.books['dtz-speaking'].title %}
-        {% include "book-facts.njk" %}
-        <div class="button-row">
-          <a href="{{ ctaLink(site.books['dtz-speaking'] | samplePdfPath(currentLang), { content: 'dtz-speaking-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'dtz-speaking', 'books-section') }}>DTZ konuşma örneğini al</a>
+{% for examKey in homeExamOrder %}
+  {% set exam = site.exams[examKey] %}
+  {% set examCopy = localizedExamContent[examKey] %}
+  <section id="{{ exam.anchor }}-books" class="home-section{% if loop.index % 2 == 0 %} home-section-alt{% endif %}">
+    <div class="container">
+      <div class="section-heading">
+        <h2>{{ examCopy.booksHeading }}</h2>
+        <p>{{ examCopy.booksIntro }}</p>
+      </div>
+      <div class="hero-book-grid">
+        {% for bookKey in exam.books %}
           {% set book = site.books[bookKey] %}
-          {% set purchaseLocation = 'books-section' %}
-          {% include "purchase-links.njk" %}
-        </div>
-      </article>
-      <article class="book-panel">
-        <p class="book-panel__label">Yazma kitabı</p>
-        <h2>{{ site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title }}</h2>
-        <p>DTZ B1 yazma kitabı, sınavın temel görevine odaklanır: dört içerik noktası içeren kısa mesajlar. Kitapta 30 pratik ünite ve 5 tam deneme yazma görevi vardır.</p>
-        <ul class="check-list">
-          <li>DTZ'deki temel metin türleri için 30 pratik ünite</li>
-          <li>Model metinler, yararlı kalıplar, sık hatalar ve hızlı kontrol listeleri</li>
-          <li>Model çözümlü 5 tam deneme yazma görevi</li>
-        </ul>
-        <p><strong>4 görevlik ücretsiz örnek:</strong> soru tiplerini, yapılandırmayı ve tam kitaptaki desteği gösterir.</p>
-        {% set bookKey = 'dtz-writing' %}
-        {% set bookDisplayTitle = site.books['dtz-writing'].localizedTitles[currentLang] or site.books['dtz-writing'].title %}
-        {% include "book-facts.njk" %}
-        <div class="button-row">
-          <a href="{{ ctaLink(site.books['dtz-writing'] | samplePdfPath(currentLang), { content: 'dtz-writing-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'dtz-writing', 'books-section') }}>DTZ yazma örneğini al</a>
-          {% set book = site.books[bookKey] %}
-          {% set purchaseLocation = 'books-section' %}
-          {% include "purchase-links.njk" %}
-        </div>
-      </article>
+          {% set copy = localizedBookContent[bookKey] %}
+          {% set bookDisplayTitle = copy.title %}
+          <article class="book-panel{% if loop.first %} book-panel-accent{% endif %}">
+            <p class="book-panel__label">{{ copy.panelLabel }}</p>
+            <h2>{{ copy.title }}</h2>
+            <p>{{ copy.summary }}</p>
+            <ul class="check-list">
+              {% for feature in copy.features %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+            <p><strong>{{ copy.sampleTitle }}:</strong> {{ copy.sampleDescription }}</p>
+            {% include "book-facts.njk" %}
+            <div class="button-row">
+              <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: book.key ~ '-sample-section' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'books-section') }}>{{ copy.ctaLabel }}</a>
+              {% set purchaseLocation = 'books-section' %}
+              {% include "purchase-links.njk" %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+{% endfor %}
 
-<section id="oeif-b1-books" class="home-section home-section-alt">
+<section class="home-section comparison-section">
   <div class="container">
-    <div class="section-heading">
-      <h2>ÖIF B1 kitapları ve ücretsiz örnekler</h2>
-      <p>Bu kitaplar Avusturya'daki yaygın konuşma ve yazma görevleri için pratik sunar; tam kitabı almadan önce ücretsiz örneği deneyebilirsiniz.</p>
+    <div class="section-heading section-heading-centered">
+      <p class="eyebrow">{{ comparisonSection.eyebrow }}</p>
+      <h2>{{ comparisonSection.title }}</h2>
+      <p>{{ comparisonSection.intro }}</p>
     </div>
-    <div class="hero-book-grid">
-      <article class="book-panel book-panel-accent">
-        <p class="book-panel__label">Konuşma kitabı</p>
-        <h2>{{ site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title }}</h2>
-        <p>ÖIF B1 konuşma kitabı 85 odaklı bölüm içerir: 30 planlama diyaloğu, 30 görüş ve tartışma konusu ve 25 resim açıklama görevi; kelime desteği ve takip soruları da vardır.</p>
-        <ul class="check-list">
-          <li>30 planlama diyaloğu, 30 tartışma konusu ve 25 resim görevi</li>
-          <li>Model cevaplar, sınav görevlisi soruları ve tekrar kullanılabilir ifadeler</li>
-          <li>Randevu, konut, iş ve alışveriş gibi Avusturya tarzı günlük konular</li>
-        </ul>
-        <p><strong>3 görevlik ücretsiz örnek:</strong> kitaptaki diyalog tarzını, kelime desteğini ve takip sorularını gösterir.</p>
-        {% set bookKey = 'oeif-speaking' %}
-        {% set bookDisplayTitle = site.books['oeif-speaking'].localizedTitles[currentLang] or site.books['oeif-speaking'].title %}
-        {% include "book-facts.njk" %}
-        <div class="button-row">
-          <a href="{{ ctaLink(site.books['oeif-speaking'] | samplePdfPath(currentLang), { content: 'oeif-speaking-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'oeif-speaking', 'books-section') }}>ÖIF konuşma örneğini al</a>
-          {% set book = site.books[bookKey] %}
-          {% set purchaseLocation = 'books-section' %}
-          {% include "purchase-links.njk" %}
-        </div>
-      </article>
-      <article class="book-panel">
-        <p class="book-panel__label">Yazma kitabı</p>
-        <h2>{{ site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title }}</h2>
-        <p>ÖIF B1 yazma kitabı; kişisel ve resmi mesajlar, şikayetler ve kısa görüş metinleri için 30 yönlendirmeli ünite içerir. Ayrıca Avusturya odaklı senaryolar, kontrol listeleri ve deneme görevleri sunar.</p>
-        <ul class="check-list">
-          <li>Dört pratik bölümde 30 yönlendirmeli yazma ünitesi</li>
-          <li>Hazır ifadeler, kontrol listeleri ve model metinlerle Avusturya temelli durumlar</li>
-          <li>Deneme görevleri ve stres anları için güvenli yapı desteği</li>
-        </ul>
-        <p><strong>4 görevlik ücretsiz örnek:</strong> tam kitaptaki yazma tarzını, yapıyı ve desteği gösterir.</p>
-        {% set bookKey = 'oeif-writing' %}
-        {% set bookDisplayTitle = site.books['oeif-writing'].localizedTitles[currentLang] or site.books['oeif-writing'].title %}
-        {% include "book-facts.njk" %}
-        <div class="button-row">
-          <a href="{{ ctaLink(site.books['oeif-writing'] | samplePdfPath(currentLang), { content: 'oeif-writing-sample-tr' }) }}" class="btn btn-primary" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', 'oeif-writing', 'books-section') }}>ÖIF yazma örneğini al</a>
-          {% set book = site.books[bookKey] %}
-          {% set purchaseLocation = 'books-section' %}
-          {% include "purchase-links.njk" %}
-        </div>
-      </article>
+    <div class="comparison-grid">
+      {% for examKey in homeExamOrder %}
+        {% set examCopy = localizedExamContent[examKey] %}
+        {% set exam = site.exams[examKey] %}
+        <article class="comparison-card">
+          <p class="comparison-card__eyebrow">{{ examCopy.comparisonEyebrow }}</p>
+          <h3>{{ examCopy.comparisonTitle }}</h3>
+          <p class="comparison-card__intro">{{ examCopy.comparisonIntro }}</p>
+          <ul class="comparison-list">
+            {% for fact in examCopy.comparisonFacts %}
+              <li>
+                <strong>{{ fact.title }}:</strong>
+                {{ fact.text }}
+              </li>
+            {% endfor %}
+          </ul>
+          <a href="#{{ exam.anchor }}-books" class="text-link">{{ examCopy.comparisonLink }}</a>
+        </article>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -227,60 +354,29 @@ ui:
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Sınav genel bakışı</p>
-      <h2>DTZ B1 ve ÖIF B1 sınavlarını karşılaştırın</h2>
-      <p>Kitaplara baktıktan sonra iki sınav formatını da hızlıca görmek isterseniz, bu bölüm her iki yol için temel noktaları bir araya getirir.</p>
+      <h2>DTZ B1, ÖIF B1 ve fide A2 sınavlarını karşılaştırın</h2>
+      <p>Kitaplara baktıktan sonra sınav ayrıntılarını görmek isterseniz, bu bölüm üç sınav yolu için temel formatı, amacı ve kullanım bağlamını bir araya getirir.</p>
     </div>
     <div class="exam-overview-stack">
-      <div id="dtz-b1" class="exam-overview-block">
-<div class="section-heading">
-      <p class="eyebrow">DTZ B1</p>
-      <h2>DTZ B1 sınavına kısa bakış</h2>
-      <p>Deutsch-Test für Zuwanderer (DTZ), Almanya'da kullanılan pratik bir Almanca sınavıdır. Bu bölüm sınav formatını açıklar ve doğru DTZ B1 konuşma ya da yazma kitabını seçmenize yardımcı olur.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>Konuşma formatı</h3>
-        <p>DTZ konuşma sınavında 3 görev türü vardır: kendinizi tanıtma, bir resim ve kendi deneyiminiz hakkında konuşma, ayrıca bir partnerle birlikte plan yapma.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Yazma formatı</h3>
-        <p>DTZ yazma görevi genellikle 80-100 kelimelik kısa pratik bir mesajdan oluşur ve dört içerik noktasını kapsar.</p>
-      </article>
-      <article class="feature-card">
-        <h3>B1 kanıtı neden önemlidir</h3>
-        <p>B1 düzeyindeki DTZ sertifikası, Almanya'da kalıcı oturum veya vatandaşlık gibi başvurularda Almanca dil kanıtı olarak kabul edilebilir. Ancak nihai uygunluk her zaman diğer yasal şartlara da bağlıdır.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Bu kitaplar kimler için</h3>
-        <p>Bu kitaplar kendi kendine çalışanlar, ders alanlar ve sınav formatına uygun pratik isteyen çalışma grupları için uygundur.</p>
-      </article>
-    </div>
-      </div>
-      <div id="oeif-b1" class="exam-overview-block">
-<div class="section-heading">
-      <p class="eyebrow">ÖIF B1</p>
-      <h2>ÖIF B1 sınavına kısa bakış</h2>
-      <p>ÖIF B1 Integrationprüfung, Avusturya'da resmi bir entegrasyon sınavıdır. Bu bölüm sınavı açıklar ve doğru ÖIF B1 konuşma ya da yazma kitabını seçmenize yardımcı olur.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>Sınavın amacı</h3>
-        <p>Bu sınav, Avusturya'daki entegrasyon sisteminin bir parçasıdır ve resmi dil ile entegrasyon kanıtı olarak kullanılır.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Başarının neye yardımcı olabileceği</h3>
-        <p>Başarılı sonuç, entegrasyon anlaşmasındaki Modul 2 gibi gerekliliklerde ve bazı durumlarda kalıcı oturum veya vatandaşlık süreçlerinde önemli olabilir.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Sertifika neyi gösterir</h3>
-        <p>Sertifika, resmi olarak tanınan ÖIF formatında Almanca B1 düzeyine ulaştığınızı gösterir.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Önemli not</h3>
-        <p>Yasal gereklilikler oturum durumuna ve kişisel koşullara göre değişir; bu yüzden her zaman en güncel ÖIF ve resmi Avusturya kaynaklarını kontrol edin.</p>
-      </article>
-    </div>
-      </div>
+      {% for examKey in homeExamOrder %}
+        {% set exam = site.exams[examKey] %}
+        {% set examCopy = localizedExamContent[examKey] %}
+        <div id="{{ exam.anchor }}" class="exam-overview-block">
+          <div class="section-heading">
+            <p class="eyebrow">{{ examCopy.comparisonEyebrow }}</p>
+            <h2>{{ examCopy.overviewTitle }}</h2>
+            <p>{{ examCopy.overviewDescription }}</p>
+          </div>
+          <div class="feature-grid">
+            {% for fact in examCopy.overviewFacts %}
+              <article class="feature-card">
+                <h3>{{ fact.title }}</h3>
+                <p>{{ fact.text }}</p>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -289,13 +385,14 @@ ui:
   <div class="container">
     <div class="final-cta">
       <div>
-        <p class="eyebrow">Önce sınavı, sonra beceriyi seçin</p>
-        <h2>Önce sınavı seçin, ücretsiz örnekle başlayın, hazır olduğunuzda tam kitaba geçin.</h2>
-        <p>Almanya için DTZ B1 hazırlığına ihtiyacınız varsa DTZ bölümüne gidin. Avusturya için ÖIF B1 hazırlığına ihtiyacınız varsa ÖIF bölümünü kullanın. Her iki durumda da ücretsiz örnekle başlayıp sonra tam konuşma veya yazma kitabına geçebilirsiniz.</p>
+        <p class="eyebrow">{{ finalCta.eyebrow }}</p>
+        <h2>{{ finalCta.title }}</h2>
+        <p>{{ finalCta.intro }}</p>
       </div>
       <div class="button-row">
-        <a href="#dtz-b1-books" class="btn btn-secondary">DTZ B1 kitapları</a>
-        <a href="#oeif-b1-books" class="btn btn-secondary">ÖIF B1 kitapları</a>
+        <a href="#dtz-b1-books" class="btn btn-secondary">{{ heroButtonLabels.dtzShort }}</a>
+        <a href="#oeif-b1-books" class="btn btn-secondary">{{ heroButtonLabels.oeifShort }}</a>
+        <a href="#fide-a2-books" class="btn btn-secondary">{{ heroButtonLabels.fideShort }}</a>
       </div>
     </div>
   </div>

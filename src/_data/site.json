@@ -109,6 +109,43 @@
         "oeif-speaking",
         "oeif-writing"
       ]
+    },
+    "fide": {
+      "key": "fide",
+      "title": "fide A2",
+      "navLabel": "fide A2",
+      "anchor": "fide-a2",
+      "heroLabel": "Switzerland-focused fide A2 prep",
+      "heroTitle": "Prepare for fide A2 speaking and writing with practical Switzerland-based books.",
+      "heroPoints": [
+        "Speaking book with 43 practice sets and model answers",
+        "Writing book with 22 practice sets across the two main A2 formats",
+        "Free English sample PDFs for both books"
+      ],
+      "description": "The fide A2 exam is part of Switzerland's practical language system. This section helps learners understand the exam and choose the right fide A2 speaking book or fide A2 writing book.",
+      "facts": [
+        {
+          "title": "Speaking format",
+          "text": "The fide A2 speaking practice in these books covers three common task types: picture description, role-play, and conversation."
+        },
+        {
+          "title": "Writing format",
+          "text": "The fide A2 writing book focuses on the two key formats shown in the sample: Formular + Bemerkungen and Kurze E-Mail."
+        },
+        {
+          "title": "Swiss everyday focus",
+          "text": "The topics stay close to life in Switzerland, including work, housing, health, school, transport, and contact with authorities."
+        },
+        {
+          "title": "Why fide can matter",
+          "text": "fide certificates can be relevant in Switzerland when institutions ask for practical proof of language ability. Exact residence, integration, or naturalization requirements depend on your canton and current official rules, so always check the latest guidance for your case."
+        }
+      ],
+      "booksIntro": "Use these fide A2 books if you want focused Switzerland-based practice for speaking or writing, with a free sample available before you buy.",
+      "books": [
+        "fide-speaking",
+        "fide-writing"
+      ]
     }
   },
   "books": {
@@ -470,6 +507,132 @@
           "title": "Need the full ÖIF B1 writing book?",
           "text": "Train with 30 writing units, reusable redemittel, checklists, and mock tasks.",
           "label": "Buy ÖIF Writing Book"
+        }
+      }
+    },
+    "fide-speaking": {
+      "key": "fide-speaking",
+      "examKey": "fide",
+      "title": "fide A2 Speaking",
+      "shortTitle": "fide Speaking",
+      "localizedTitles": {
+        "en": "fide A2 Speaking"
+      },
+      "localizedShortTitles": {
+        "en": "fide Speaking"
+      },
+      "subtitle": "43 Switzerland-based speaking practice sets with model answers",
+      "language": "de-CH",
+      "examSection": "Speaking",
+      "formats": [
+        "Kindle",
+        "Paperback"
+      ],
+      "pageCount": 181,
+      "thumbnailPath": "/assets/book_thumbnails/thumbnail_fide_a2_speaking.jpeg",
+      "description": "A fide A2 speaking practice book with 43 Switzerland-based sets, model answers, and practical speaking support.",
+      "summary": "A fide A2 speaking book with 43 practice sets and model answers for picture description, role-play, and conversation. The topics follow typical everyday situations in Switzerland, including work, housing, health, school, transport, and authorities.",
+      "features": [
+        "43 practice sets with model answers for the main fide A2 speaking task types",
+        "Picture description, role-play, and conversation in one Switzerland-focused workbook",
+        "Everyday Swiss topics such as work, housing, health, school, transport, and authorities"
+      ],
+      "sample": {
+        "title": "Free sample with 1 fide speaking practice set",
+        "description": "A free English sample that shows one fide A2 speaking set with picture description, role-play, and conversation.",
+        "taskCount": 1,
+        "pageSlug": "fide-speaking",
+        "pdfPath": "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf"
+      },
+      "purchaseOptions": [
+        {
+          "key": "amazon-kindle",
+          "label": "Amazon Kindle",
+          "buttonLabel": "Amazon Kindle",
+          "url": "https://www.amazon.de/dp/B0H2NCY1Z9",
+          "trackingType": "amazon_kindle"
+        },
+        {
+          "key": "amazon-paperback",
+          "label": "Amazon Paperback",
+          "buttonLabel": "Amazon Paperback",
+          "url": "https://www.amazon.de/dp/B0H2PZBH9C",
+          "trackingType": "amazon_paperback"
+        }
+      ],
+      "cta": {
+        "freeSample": {
+          "title": "Open the free fide A2 speaking sample",
+          "text": "Preview one fide A2 speaking practice set before you buy the full book.",
+          "label": "Open Free Sample"
+        },
+        "fullBook": {
+          "title": "Need the full fide A2 speaking book?",
+          "text": "Practice picture description, role-play, and conversation with 43 Switzerland-based sets.",
+          "label": "Buy fide Speaking Book"
+        }
+      }
+    },
+    "fide-writing": {
+      "key": "fide-writing",
+      "examKey": "fide",
+      "title": "fide A2 Writing",
+      "shortTitle": "fide Writing",
+      "localizedTitles": {
+        "en": "fide A2 Writing"
+      },
+      "localizedShortTitles": {
+        "en": "fide Writing"
+      },
+      "subtitle": "22 Switzerland-based writing practice sets for the main A2 formats",
+      "language": "de-CH",
+      "examSection": "Writing",
+      "formats": [
+        "Kindle",
+        "Paperback"
+      ],
+      "pageCount": 89,
+      "thumbnailPath": "/assets/book_thumbnails/thumbnail_fide_a2_writing.jpeg",
+      "description": "A fide A2 writing practice book with 22 Switzerland-based sets for forms, remarks, and short emails.",
+      "summary": "A fide A2 writing book with 22 practice sets built around the two key writing formats: Formular + Bemerkungen and Kurze E-Mail. The tasks follow everyday situations in Switzerland such as work, authorities, health, housing, school, and transport.",
+      "features": [
+        "22 practice sets across the two key fide A2 writing formats",
+        "Focused on Formular + Bemerkungen and Kurze E-Mail",
+        "Swiss everyday situations such as work, authorities, health, housing, school, and transport"
+      ],
+      "sample": {
+        "title": "Free sample with 1 fide writing practice set",
+        "description": "A free English sample that shows one fide A2 writing set with a form task and a short email task.",
+        "taskCount": 1,
+        "pageSlug": "fide-writing",
+        "pdfPath": "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf"
+      },
+      "purchaseOptions": [
+        {
+          "key": "amazon-kindle",
+          "label": "Amazon Kindle",
+          "buttonLabel": "Amazon Kindle",
+          "url": "https://www.amazon.de/dp/B0GX31SKDY",
+          "trackingType": "amazon_kindle"
+        },
+        {
+          "key": "amazon-paperback",
+          "label": "Amazon Paperback",
+          "buttonLabel": "Amazon Paperback",
+          "url": "https://www.amazon.de/dp/B0H2RR2W51",
+          "trackingType": "amazon_paperback"
+        }
+      ],
+      "cta": {
+        "freeSample": {
+          "title": "Open the free fide A2 writing sample",
+          "text": "Preview one fide A2 writing practice set before you buy the full book.",
+          "label": "Open Free Sample"
+        },
+        "fullBook": {
+          "title": "Need the full fide A2 writing book?",
+          "text": "Practice forms, remarks, and short emails with 22 Switzerland-based sets.",
+          "label": "Buy fide Writing Book"
         }
       }
     }

@@ -1,4 +1,8 @@
 {% from "cta-helpers.njk" import ctaTrackingAttrs with context %}
+{% set headerExamOrder = pageExamOrder or site.examOrder %}
+{% set headerPrimaryExamKey = headerExamOrder[0] %}
+{% set headerPrimaryExam = site.exams[headerPrimaryExamKey] %}
+{% set headerPrimaryBookKey = headerPrimaryExam.books[0] %}
 <header class="site-header">
   <div class="container">
     <a href="{{ (homeUrl or '/') | pageUrl }}" class="logo">
@@ -14,12 +18,12 @@
     <div class="header-right">
       <nav class="main-nav">
         <a href="{{ (homeUrl or '/') | pageUrl }}">{{ ui.homeLabel or 'Home' }}</a>
-        {% for examKey in site.examOrder %}
+        {% for examKey in headerExamOrder %}
           {% set exam = site.exams[examKey] %}
           <a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}-books">{{ exam.navLabel }}</a>
         {% endfor %}
       </nav>
-      <a href="{{ (homeUrl or '/') | pageUrl }}#dtz-b1-books" class="btn btn-primary header-cta" {{ ctaTrackingAttrs('sample_section', 'dtz-speaking', 'header') }}>Sample book</a>
+      <a href="{{ (homeUrl or '/') | pageUrl }}#{{ headerPrimaryExam.anchor }}-books" class="btn btn-primary header-cta" {{ ctaTrackingAttrs('sample_section', headerPrimaryBookKey, 'header') }}>Sample book</a>
     </div>
   </div>
 </header>

@@ -274,6 +274,15 @@ main {
   list-style: none;
 }
 
+.footer-book-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer-book-columns--with-fide {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+}
+
 .footer-link-list li,
 .footer-book-list li {
   margin-bottom: 0.5rem;
@@ -286,6 +295,11 @@ main {
 .footer-book-title {
   display: block;
   color: white;
+}
+
+.footer-book-list--secondary {
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer-book-divider {
@@ -1102,7 +1116,6 @@ html[dir="rtl"] .hero.hero-dual::after {
   .hero-layout,
   .comparison-grid,
   .footer-shell,
-  .footer-content,
   .hero-book-grid,
   .path-grid,
   .feature-grid,
@@ -1110,6 +1123,18 @@ html[dir="rtl"] .hero.hero-dual::after {
   .sample-grid,
   .final-cta {
     grid-template-columns: 1fr;
+  }
+
+  .footer-content,
+  .footer-book-columns--with-fide {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-book-list--secondary {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1rem;
   }
 
   .main-nav {

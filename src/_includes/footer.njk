@@ -1,4 +1,23 @@
 {% from "cta-helpers.njk" import ctaLink, ctaTrackingAttrs with context %}
+{% set footerExamOrder = pageExamOrder or site.examOrder %}
+{% set footerBookOrder = pageBookOrder or site.bookOrder %}
+{% set hasFideBooks = false %}
+{% for bookKey in footerBookOrder %}
+  {% if site.books[bookKey].examKey == 'fide' %}
+    {% set hasFideBooks = true %}
+  {% endif %}
+{% endfor %}
+
+{% macro footerBookEntry(book) %}
+  {% set localizedShortTitle = (book.localizedShortTitles and book.localizedShortTitles[currentLang]) or book.shortTitle %}
+  {% set paperbackUrl = ((book.purchaseOptions and book.purchaseOptions[2] and book.purchaseOptions[2].key == 'amazon-paperback') and book.purchaseOptions[2].url) or ((book.purchaseOptions and book.purchaseOptions[1] and book.purchaseOptions[1].key == 'amazon-paperback') and book.purchaseOptions[1].url) or ((book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].key == 'amazon-paperback') and book.purchaseOptions[0].url) or ((book.purchaseOptions and book.purchaseOptions[0]) and book.purchaseOptions[0].url) or ((book.gumroad and book.gumroad.fullBook) or '') %}
+  <li>
+    <strong class="footer-book-title">{{ localizedShortTitle }}</strong>
+    <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'footer') }}>{{ ui.sampleLabel or 'Sample' }}</a>
+    <span class="footer-book-divider">·</span>
+    <a href="{{ ctaLink(paperbackUrl, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener" {{ ctaTrackingAttrs('amazon_paperback', book.key, 'footer') }}>{{ ui.fullBookLabel or 'Full Book' }}</a>
+  </li>
+{% endmacro %}
 <footer class="site-footer">
   <div class="container">
     <div class="footer-shell">
@@ -25,7 +44,7 @@
           </div>
         {% endif %}
         <div class="footer-quick-actions">
-          {% for examKey in site.examOrder %}
+          {% for examKey in footerExamOrder %}
             {% set exam = site.exams[examKey] %}
             <a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}-books" class="btn{% if loop.first %} btn-primary{% else %} btn-outline-light{% endif %}">{{ exam.navLabel }}</a>
           {% endfor %}
@@ -34,18 +53,26 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>{{ ui.booksLabel or 'Books' }}</h3>
-          <ul class="footer-book-list">
-            {% for bookKey in site.bookOrder %}
-              {% set book = site.books[bookKey] %}
-              {% set localizedShortTitle = (book.localizedShortTitles and book.localizedShortTitles[currentLang]) or book.shortTitle %}
-              <li>
-                <strong class="footer-book-title">{{ localizedShortTitle }}</strong>
-                <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: 'footer-' ~ book.key ~ '-sample' }) }}" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'footer') }}>{{ ui.sampleLabel or 'Sample' }}</a>
-                <span class="footer-book-divider">·</span>
-                <a href="{{ ctaLink(book.gumroad.fullBook, { content: 'footer-' ~ book.key ~ '-full' }) }}" target="_blank" rel="noopener" {{ ctaTrackingAttrs('full_book', book.key, 'footer') }}>{{ ui.fullBookLabel or 'Full Book' }}</a>
-              </li>
-            {% endfor %}
-          </ul>
+          <div class="footer-book-columns{% if hasFideBooks %} footer-book-columns--with-fide{% endif %}">
+            <ul class="footer-book-list">
+              {% for bookKey in footerBookOrder %}
+                {% set book = site.books[bookKey] %}
+                {% if book.examKey != 'fide' %}
+                  {{ footerBookEntry(book) }}
+                {% endif %}
+              {% endfor %}
+            </ul>
+            {% if hasFideBooks %}
+              <ul class="footer-book-list footer-book-list--secondary">
+                {% for bookKey in footerBookOrder %}
+                  {% set book = site.books[bookKey] %}
+                  {% if book.examKey == 'fide' %}
+                    {{ footerBookEntry(book) }}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>

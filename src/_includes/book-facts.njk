@@ -9,9 +9,11 @@
   "sr": { "kindleUnlimitedPrefix": "Besplatno uz Kindle Unlimited ili " }
 } %}
 {% set priceUi = priceUiByLang[currentLang or "en"] or priceUiByLang["en"] %}
+{% set purchaseUrl = (book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].url) or (book.gumroad and book.gumroad.fullBook) or '' %}
+{% set thumbnailUrl = ((book.purchaseOptions and book.purchaseOptions[2] and book.purchaseOptions[2].key == 'amazon-paperback') and book.purchaseOptions[2].url) or ((book.purchaseOptions and book.purchaseOptions[1] and book.purchaseOptions[1].key == 'amazon-paperback') and book.purchaseOptions[1].url) or ((book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].key == 'amazon-paperback') and book.purchaseOptions[0].url) or purchaseUrl %}
 {% if book.thumbnailPath %}
 <a
-  href="{{ ctaLink(book.gumroad.fullBook, { content: book.key ~ '-thumbnail-' ~ (currentLang or 'en') }) }}"
+  href="{{ ctaLink(thumbnailUrl, { content: book.key ~ '-thumbnail-' ~ (currentLang or 'en') }) }}"
   class="book-thumbnail"
   target="_blank"
   rel="noopener"
@@ -69,4 +71,6 @@
   </div>
 </div>
 <p class="book-note">{{ productUi.clickNote }}</p>
+{% if book.discountCode %}
 <p class="book-note book-note--accent">{{ productUi.discountPrefix }}{{ book.discountCode }}{{ productUi.discountSuffix }}</p>
+{% endif %}
