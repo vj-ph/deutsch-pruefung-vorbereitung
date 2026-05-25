@@ -549,6 +549,7 @@
           "key": "amazon-kindle",
           "label": "Amazon Kindle",
           "buttonLabel": "Amazon Kindle",
+          "priceDisplay": "€6.99",
           "url": "https://www.amazon.de/dp/B0H2NCY1Z9",
           "trackingType": "amazon_kindle"
         },
@@ -556,6 +557,7 @@
           "key": "amazon-paperback",
           "label": "Amazon Paperback",
           "buttonLabel": "Amazon Paperback",
+          "priceDisplay": "€10.99",
           "url": "https://www.amazon.de/dp/B0H2PZBH9C",
           "trackingType": "amazon_paperback"
         }
@@ -612,6 +614,7 @@
           "key": "amazon-kindle",
           "label": "Amazon Kindle",
           "buttonLabel": "Amazon Kindle",
+          "priceDisplay": "€5.99",
           "url": "https://www.amazon.de/dp/B0GX31SKDY",
           "trackingType": "amazon_kindle"
         },
@@ -619,6 +622,7 @@
           "key": "amazon-paperback",
           "label": "Amazon Paperback",
           "buttonLabel": "Amazon Paperback",
+          "priceDisplay": "€9.89",
           "url": "https://www.amazon.de/dp/B0H2RR2W51",
           "trackingType": "amazon_paperback"
         }
