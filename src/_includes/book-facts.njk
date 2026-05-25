@@ -1,14 +1,5 @@
 {% set book = site.books[bookKey] %}
 {% set displayBookTitle = bookDisplayTitle or book.title %}
-{% set priceUiByLang = {
-  "en": { "kindleUnlimitedPrefix": "Free with Kindle Unlimited or " },
-  "ar": { "kindleUnlimitedPrefix": "مجاني مع Kindle Unlimited أو " },
-  "ru": { "kindleUnlimitedPrefix": "Бесплатно с Kindle Unlimited или " },
-  "uk": { "kindleUnlimitedPrefix": "Безкоштовно з Kindle Unlimited або " },
-  "tr": { "kindleUnlimitedPrefix": "Kindle Unlimited ile ücretsiz veya " },
-  "sr": { "kindleUnlimitedPrefix": "Besplatno uz Kindle Unlimited ili " }
-} %}
-{% set priceUi = priceUiByLang[currentLang or "en"] or priceUiByLang["en"] %}
 {% set purchaseUrl = (book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].url) or (book.gumroad and book.gumroad.fullBook) or '' %}
 {% set thumbnailUrl = ((book.purchaseOptions and book.purchaseOptions[2] and book.purchaseOptions[2].key == 'amazon-paperback') and book.purchaseOptions[2].url) or ((book.purchaseOptions and book.purchaseOptions[1] and book.purchaseOptions[1].key == 'amazon-paperback') and book.purchaseOptions[1].url) or ((book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].key == 'amazon-paperback') and book.purchaseOptions[0].url) or purchaseUrl %}
 {% if book.thumbnailPath %}
@@ -39,13 +30,9 @@
   {% if book.purchaseOptions %}
     {% for option in book.purchaseOptions %}
   {% if option.priceDisplay %}
-  {% set optionPriceDisplay = option.priceDisplay %}
-  {% if option.key == "amazon-kindle" and option.priceDisplay %}
-    {% set optionPriceDisplay = priceUi.kindleUnlimitedPrefix ~ option.priceDisplay %}
-  {% endif %}
   <div class="book-fact">
     <span class="book-fact__label">{{ option.label }}</span>
-    <strong>{{ optionPriceDisplay }}</strong>
+    <strong>{{ option.priceDisplay }}</strong>
   </div>
   {% endif %}
     {% endfor %}
