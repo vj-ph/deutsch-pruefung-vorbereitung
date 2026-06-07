@@ -279,8 +279,20 @@ main {
   gap: 1.5rem;
 }
 
+.footer-book-columns--grouped {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .footer-book-columns--with-fide {
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+}
+
+.footer-book-group h4 {
+  margin: 0 0 0.85rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .footer-link-list li,
@@ -642,6 +654,7 @@ th {
 
 .hero-book-grid,
 .path-grid,
+.promo-grid,
 .feature-grid,
 .sample-grid {
   display: grid;
@@ -653,6 +666,10 @@ th {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
+}
+
+.promo-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .hero-book-grid {
@@ -687,6 +704,20 @@ th {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+}
+
+.book-panel__fit {
+  margin-bottom: 0.25rem;
+  color: var(--secondary-color);
+}
+
+.path-card-level {
+  display: flex;
+  flex-direction: column;
+}
+
+.path-card-level .btn {
+  margin-top: auto;
 }
 
 .review-card {
@@ -1118,6 +1149,7 @@ html[dir="rtl"] .hero.hero-dual::after {
   .footer-shell,
   .hero-book-grid,
   .path-grid,
+  .promo-grid,
   .feature-grid,
   .review-grid,
   .sample-grid,
@@ -1126,7 +1158,8 @@ html[dir="rtl"] .hero.hero-dual::after {
   }
 
   .footer-content,
-  .footer-book-columns--with-fide {
+  .footer-book-columns--with-fide,
+  .footer-book-columns--grouped {
     grid-template-columns: 1fr;
   }
 

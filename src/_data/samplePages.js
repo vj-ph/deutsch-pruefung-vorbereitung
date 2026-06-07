@@ -1,4 +1,4 @@
-const site = require("./site.json");
+const site = require("./site.js");
 
 const localizedFormatTerms = {
   en: {
@@ -75,7 +75,7 @@ const languages = [
     languageSwitcherLabel: "Language",
     ui: {
       homeLabel: "Home",
-      footerIntro: "Speaking and writing prep books for the DTZ B1 exam in Germany and the ÖIF B1 Integrationprüfung in Austria.",
+      footerIntro: "A2 and B1 speaking, writing, and combined books for DTZ, ÖIF, and fide, plus free sample PDFs for the separate speaking and writing books.",
       examSectionsLabel: "Exam Sections",
       booksLabel: "Books",
       sampleLabel: "Sample",
@@ -90,12 +90,14 @@ const languages = [
       free: "Free",
       discountPrefix: "Use discount code ",
       discountSuffix: " for 20% off on Gumroad.",
-      clickNote: "The sample button opens the PDF on this site. The purchase buttons open the selected store in a new tab."
+      clickNote: "The sample button opens the PDF on this site. The purchase buttons open Amazon in a new tab."
     },
     copy: {
       pageTitle: (bookTitle) => `${bookTitle} free sample | ${site.brand.shortName}`,
       pageDescription: (bookTitle, taskCount) =>
         `Open the free sample PDF for ${bookTitle} and preview ${taskCount} exam-style tasks before buying the full book.`,
+      pageDescriptionNoCount: (bookTitle) =>
+        `Open the free sample PDF for ${bookTitle} before buying the full book.`,
       eyebrow: "Free sample PDF",
       heroTitle: (bookTitle) => `Open the free sample PDF for ${bookTitle}.`,
       heroIntro:
@@ -109,6 +111,7 @@ const languages = [
       sampleIntro:
         "Use the sample to see whether the format, tone, and support feel right for you.",
       sampleTaskCount: (count) => `${count} exam-style tasks`,
+      samplePreviewOnly: "Preview the book layout and support before paying",
       sampleBonusStudyPlan: "Includes a 14-day study plan",
       sampleDirectAccess: "Opens directly from this site",
       samplePreview: "Lets you preview the structure and support before paying",
@@ -119,6 +122,7 @@ const languages = [
       fullCardIntro: (pageCount, format) =>
         `If the sample feels right, the full book gives you a much bigger practice set in the same practical style. You can get it in ${format}.`,
       fullCheckFormat: (pageCount, format) => `${pageCount} pages in ${format}`,
+      fullCheckFormatNoPages: (format) => `Available in ${format}`,
       fullCheckPractice: "Much more practice than the free sample",
       fullCheckDiscount: (discountCode) => `20% off on Gumroad with code ${discountCode}`,
       fullBookLabel: "Buy full book",
@@ -133,7 +137,7 @@ const languages = [
     languageSwitcherLabel: "اللغة",
     ui: {
       homeLabel: "الرئيسية",
-      footerIntro: "كتب تحضير للتحدث والكتابة لامتحان DTZ B1 في ألمانيا وامتحان ÖIF B1 Integrationprüfung في النمسا.",
+      footerIntro: "كتب A2 وB1 للتحدث والكتابة والنسخة المجمعة لامتحانات DTZ وÖIF وfide، مع عينات PDF مجانية لكتب التحدث والكتابة المنفصلة.",
       examSectionsLabel: "أقسام الامتحان",
       booksLabel: "الكتب",
       sampleLabel: "عينة مجانية",
@@ -148,12 +152,14 @@ const languages = [
       free: "مجاني",
       discountPrefix: "استخدم رمز الخصم ",
       discountSuffix: " للحصول على خصم 20% على Gumroad.",
-      clickNote: "زر العينة يفتح ملف PDF من هذا الموقع، وأزرار الشراء تفتح المتجر المحدد في علامة تبويب جديدة."
+      clickNote: "زر العينة يفتح ملف PDF من هذا الموقع، وأزرار الشراء تفتح Amazon في علامة تبويب جديدة."
     },
     copy: {
       pageTitle: (bookTitle) => `العينة المجانية لكتاب ${bookTitle} | ${site.brand.shortName}`,
       pageDescription: (bookTitle, taskCount) =>
         `افتح عينة PDF المجانية لكتاب ${bookTitle} وراجع ${taskCount} مهام بنمط الامتحان قبل شراء الكتاب الكامل.`,
+      pageDescriptionNoCount: (bookTitle) =>
+        `افتح عينة PDF المجانية لكتاب ${bookTitle} قبل شراء الكتاب الكامل.`,
       eyebrow: "عينة PDF مجانية",
       heroTitle: (bookTitle) => `افتح عينة PDF المجانية لكتاب ${bookTitle}.`,
       heroIntro:
@@ -167,6 +173,7 @@ const languages = [
       sampleIntro:
         "استخدم العينة لترى إن كان الأسلوب والشرح والدعم مناسبين لك.",
       sampleTaskCount: (count) => `${count} مهام بنمط الامتحان`,
+      samplePreviewOnly: "عاين بنية الكتاب ونوع الدعم قبل الدفع",
       sampleBonusStudyPlan: "يتضمن أيضًا خطة دراسة لمدة 14 يومًا",
       sampleDirectAccess: "يفتح مباشرة من هذا الموقع",
       samplePreview: "يساعدك على معاينة البنية والدعم قبل الدفع",
@@ -177,6 +184,7 @@ const languages = [
       fullCardIntro: (pageCount, format) =>
         `إذا ناسبتك العينة، فالكتاب الكامل يمنحك تدريبًا أكبر بكثير وبنفس الأسلوب العملي. يمكنك الحصول عليه بصيغة ${format}.`,
       fullCheckFormat: (pageCount, format) => `${pageCount} صفحة بصيغة ${format}`,
+      fullCheckFormatNoPages: (format) => `متاح بصيغة ${format}`,
       fullCheckPractice: "تدريب أكثر بكثير من العينة المجانية",
       fullCheckDiscount: (discountCode) => `خصم 20% على Gumroad باستخدام الرمز ${discountCode}`,
       fullBookLabel: "اشترِ الكتاب الكامل",
@@ -191,7 +199,7 @@ const languages = [
     languageSwitcherLabel: "Мова",
     ui: {
       homeLabel: "Головна",
-      footerIntro: "Книги для підготовки з говоріння та письма до іспиту DTZ B1 у Німеччині та ÖIF B1 Integrationprüfung в Австрії.",
+      footerIntro: "Книги A2 і B1 з говоріння, письма та комбіновані книги для DTZ, ÖIF і fide, а також безкоштовні PDF-зразки для окремих книг з говоріння й письма.",
       examSectionsLabel: "Розділи іспиту",
       booksLabel: "Книги",
       sampleLabel: "Безкоштовний зразок",
@@ -206,12 +214,14 @@ const languages = [
       free: "Безкоштовно",
       discountPrefix: "Використайте код знижки ",
       discountSuffix: " для знижки 20% на Gumroad.",
-      clickNote: "Кнопка зразка відкриває PDF на цьому сайті, а кнопки покупки відкривають вибраний магазин у новій вкладці."
+      clickNote: "Кнопка зразка відкриває PDF на цьому сайті, а кнопки покупки відкривають Amazon у новій вкладці."
     },
     copy: {
       pageTitle: (bookTitle) => `Безкоштовний зразок ${bookTitle} | ${site.brand.shortName}`,
       pageDescription: (bookTitle, taskCount) =>
         `Відкрийте безкоштовний PDF-зразок ${bookTitle} і перегляньте ${taskCount} завдань у форматі іспиту перед покупкою повної книги.`,
+      pageDescriptionNoCount: (bookTitle) =>
+        `Відкрийте безкоштовний PDF-зразок ${bookTitle} перед покупкою повної книги.`,
       eyebrow: "Безкоштовний зразок PDF",
       heroTitle: (bookTitle) => `Відкрийте безкоштовний PDF-зразок ${bookTitle}.`,
       heroIntro:
@@ -225,6 +235,7 @@ const languages = [
       sampleIntro:
         "Скористайтеся зразком, щоб зрозуміти, чи підходять вам формат, тон і підтримка.",
       sampleTaskCount: (count) => `${count} завдань у форматі іспиту`,
+      samplePreviewOnly: "Дає змогу переглянути структуру книги й підтримку до оплати",
       sampleBonusStudyPlan: "Також містить 14-денний план навчання",
       sampleDirectAccess: "Відкривається прямо з цього сайту",
       samplePreview: "Дає змогу побачити структуру й підтримку до оплати",
@@ -235,6 +246,7 @@ const languages = [
       fullCardIntro: (pageCount, format) =>
         `Якщо зразок вам підходить, повна книга дає значно більше практики в тому самому практичному стилі. Ви можете отримати її у форматі ${format}.`,
       fullCheckFormat: (pageCount, format) => `${pageCount} сторінок у форматі ${format}`,
+      fullCheckFormatNoPages: (format) => `Доступно у форматі ${format}`,
       fullCheckPractice: "Значно більше практики, ніж у безкоштовному зразку",
       fullCheckDiscount: (discountCode) => `Знижка 20% на Gumroad з кодом ${discountCode}`,
       fullBookLabel: "Купити повну книгу",
@@ -249,7 +261,7 @@ const languages = [
     languageSwitcherLabel: "Dil",
     ui: {
       homeLabel: "Ana sayfa",
-      footerIntro: "Almanya'daki DTZ B1 sınavı ve Avusturya'daki ÖIF B1 Integrationprüfung için konuşma ve yazma hazırlık kitapları.",
+      footerIntro: "DTZ, ÖIF ve fide için A2 ve B1 konuşma, yazma ve birleşik kitaplar ile ayrı konuşma ve yazma kitapları için ücretsiz PDF örnekleri.",
       examSectionsLabel: "Sınav bölümleri",
       booksLabel: "Kitaplar",
       sampleLabel: "Ücretsiz örnek",
@@ -264,12 +276,14 @@ const languages = [
       free: "Ücretsiz",
       discountPrefix: "Ödeme sırasında %20 indirim için ",
       discountSuffix: " kodunu Gumroad'da kullanın.",
-      clickNote: "Örnek düğmesi PDF'yi bu sitede açar; satın alma düğmeleri ise seçilen mağazayı yeni sekmede açar."
+      clickNote: "Örnek düğmesi PDF'yi bu sitede açar; satın alma düğmeleri Amazon'u yeni sekmede açar."
     },
     copy: {
       pageTitle: (bookTitle) => `${bookTitle} ücretsiz örnek | ${site.brand.shortName}`,
       pageDescription: (bookTitle, taskCount) =>
         `${bookTitle} için ücretsiz örnek PDF'yi açın ve tam kitabı satın almadan önce sınav tarzındaki ${taskCount} görevi inceleyin.`,
+      pageDescriptionNoCount: (bookTitle) =>
+        `${bookTitle} için ücretsiz örnek PDF'yi tam kitabı satın almadan önce açın.`,
       eyebrow: "Ücretsiz örnek PDF",
       heroTitle: (bookTitle) => `${bookTitle} için ücretsiz örnek PDF'yi açın.`,
       heroIntro:
@@ -283,6 +297,7 @@ const languages = [
       sampleIntro:
         "Biçimin, anlatımın ve desteğin size uygun olup olmadığını görmek için örneği kullanın.",
       sampleTaskCount: (count) => `Sınav tarzında ${count} görev`,
+      samplePreviewOnly: "Ödeme yapmadan önce kitabın yapısını ve desteğini görün",
       sampleBonusStudyPlan: "Ayrıca 14 günlük çalışma planı içerir",
       sampleDirectAccess: "Doğrudan bu siteden açılır",
       samplePreview: "Ödeme yapmadan önce yapıyı ve desteği görmenizi sağlar",
@@ -293,6 +308,7 @@ const languages = [
       fullCardIntro: (pageCount, format) =>
         `Örnek size uygunsa, tam kitap aynı pratik tarzda çok daha geniş bir çalışma seti sunar. ${format} olarak alabilirsiniz.`,
       fullCheckFormat: (pageCount, format) => `${format} olarak ${pageCount} sayfa`,
+      fullCheckFormatNoPages: (format) => `${format} olarak mevcut`,
       fullCheckPractice: "Ücretsiz örnekten çok daha fazla alıştırma",
       fullCheckDiscount: (discountCode) => `Gumroad'da ${discountCode} koduyla %20 indirim`,
       fullBookLabel: "Tam kitabı satın al",
@@ -307,7 +323,7 @@ const languages = [
     languageSwitcherLabel: "Jezik",
     ui: {
       homeLabel: "Početna",
-      footerIntro: "Knjige za pripremu govora i pisanja za DTZ B1 ispit u Nemačkoj i ÖIF B1 Integrationprüfung u Austriji.",
+      footerIntro: "A2 i B1 knjige za govor, pisanje i kombinovanu pripremu za DTZ, ÖIF i fide, plus besplatni PDF uzorci za odvojene knjige govora i pisanja.",
       examSectionsLabel: "Delovi ispita",
       booksLabel: "Knjige",
       sampleLabel: "Besplatan uzorak",
@@ -322,12 +338,14 @@ const languages = [
       free: "Besplatno",
       discountPrefix: "Koristite kod za popust ",
       discountSuffix: " za 20% popusta na Gumroad-u.",
-      clickNote: "Dugme za uzorak otvara PDF na ovom sajtu, a dugmad za kupovinu otvaraju izabranu prodavnicu u novoj kartici."
+      clickNote: "Dugme za uzorak otvara PDF na ovom sajtu, a dugmad za kupovinu otvaraju Amazon u novoj kartici."
     },
     copy: {
       pageTitle: (bookTitle) => `Besplatan uzorak za ${bookTitle} | ${site.brand.shortName}`,
       pageDescription: (bookTitle, taskCount) =>
         `Otvorite besplatan PDF uzorak za ${bookTitle} i pogledajte ${taskCount} zadataka u stilu ispita pre kupovine cele knjige.`,
+      pageDescriptionNoCount: (bookTitle) =>
+        `Otvorite besplatan PDF uzorak za ${bookTitle} pre kupovine cele knjige.`,
       eyebrow: "Besplatan PDF uzorak",
       heroTitle: (bookTitle) => `Otvorite besplatan PDF uzorak za ${bookTitle}.`,
       heroIntro:
@@ -341,6 +359,7 @@ const languages = [
       sampleIntro:
         "Iskoristite uzorak da vidite da li vam odgovaraju format, ton i podrška.",
       sampleTaskCount: (count) => `${count} zadataka u stilu ispita`,
+      samplePreviewOnly: "Pogledajte strukturu knjige i podršku pre plaćanja",
       sampleBonusStudyPlan: "Uključuje i plan učenja za 14 dana",
       sampleDirectAccess: "Otvara se direktno sa ovog sajta",
       samplePreview: "Omogućava da proverite strukturu i podršku pre plaćanja",
@@ -351,6 +370,7 @@ const languages = [
       fullCardIntro: (pageCount, format) =>
         `Ako vam uzorak odgovara, kompletna knjiga donosi mnogo više vežbe u istom praktičnom stilu. Možete je dobiti u formatu ${format}.`,
       fullCheckFormat: (pageCount, format) => `${pageCount} strana u formatu ${format}`,
+      fullCheckFormatNoPages: (format) => `Dostupno u formatu ${format}`,
       fullCheckPractice: "Mnogo više vežbe nego u besplatnom uzorku",
       fullCheckDiscount: (discountCode) => `20% popusta na Gumroad-u uz kod ${discountCode}`,
       fullBookLabel: "Kupi kompletnu knjigu",
@@ -365,7 +385,7 @@ const languages = [
     languageSwitcherLabel: "Язык",
     ui: {
       homeLabel: "Главная",
-      footerIntro: "Книги для подготовки к говорению и письму для экзамена DTZ B1 в Германии и ÖIF B1 Integrationprüfung в Австрии.",
+      footerIntro: "Книги A2 и B1 по говорению, письму и комбинированные книги для DTZ, ÖIF и fide, а также бесплатные PDF-образцы для отдельных книг по говорению и письму.",
       examSectionsLabel: "Разделы экзамена",
       booksLabel: "Книги",
       sampleLabel: "Бесплатный образец",
@@ -380,12 +400,14 @@ const languages = [
       free: "Бесплатно",
       discountPrefix: "Используйте код скидки ",
       discountSuffix: " для скидки 20% на Gumroad.",
-      clickNote: "Кнопка образца открывает PDF на этом сайте, а кнопки покупки открывают выбранный магазин в новой вкладке."
+      clickNote: "Кнопка образца открывает PDF на этом сайте, а кнопки покупки открывают Amazon в новой вкладке."
     },
     copy: {
       pageTitle: (bookTitle) => `Бесплатный образец ${bookTitle} | ${site.brand.shortName}`,
       pageDescription: (bookTitle, taskCount) =>
         `Откройте бесплатный PDF-образец ${bookTitle} и посмотрите ${taskCount} заданий в формате экзамена перед покупкой полной книги.`,
+      pageDescriptionNoCount: (bookTitle) =>
+        `Откройте бесплатный PDF-образец ${bookTitle} перед покупкой полной книги.`,
       eyebrow: "Бесплатный PDF-образец",
       heroTitle: (bookTitle) => `Откройте бесплатный PDF-образец ${bookTitle}.`,
       heroIntro:
@@ -399,6 +421,7 @@ const languages = [
       sampleIntro:
         "Используйте образец, чтобы понять, подходят ли вам формат, тон и поддержка.",
       sampleTaskCount: (count) => `${count} заданий в формате экзамена`,
+      samplePreviewOnly: "Позволяет посмотреть структуру книги и поддержку до оплаты",
       sampleBonusStudyPlan: "Также включает 14-дневный учебный план",
       sampleDirectAccess: "Открывается прямо с этого сайта",
       samplePreview: "Позволяет посмотреть структуру и поддержку до оплаты",
@@ -409,6 +432,7 @@ const languages = [
       fullCardIntro: (pageCount, format) =>
         `Если образец вам подходит, полная книга дает намного больше практики в том же практическом стиле. Вы можете получить ее в формате ${format}.`,
       fullCheckFormat: (pageCount, format) => `${pageCount} страниц в формате ${format}`,
+      fullCheckFormatNoPages: (format) => `Доступно в формате ${format}`,
       fullCheckPractice: "Намного больше практики, чем в бесплатном образце",
       fullCheckDiscount: (discountCode) => `Скидка 20% на Gumroad с кодом ${discountCode}`,
       fullBookLabel: "Купить полную книгу",
@@ -438,8 +462,13 @@ function buildPage(language, book) {
   const hasStudyPlan = book.sample.bonusKey === "study-plan";
   const localizedBookTitle = getLocalizedBookTitle(book, language.code);
   const formatDisplay = getBookFormatDisplay(language.code, book);
+  const taskCount = book.sample.taskCount;
+  const exam = site.exams[book.examKey];
+  const formatCheck = book.pageCount
+    ? language.copy.fullCheckFormat(book.pageCount, formatDisplay)
+    : language.copy.fullCheckFormatNoPages(formatDisplay);
   const sampleChecks = [
-    language.copy.sampleTaskCount(book.sample.taskCount),
+    taskCount ? language.copy.sampleTaskCount(taskCount) : language.copy.samplePreviewOnly,
     hasStudyPlan ? language.copy.sampleBonusStudyPlan : language.copy.sampleDirectAccess,
     language.copy.samplePreview
   ];
@@ -448,7 +477,9 @@ function buildPage(language, book) {
     bookKey: book.key,
     permalink: samplePermalink(language.code, pageSlug),
     title: language.copy.pageTitle(localizedBookTitle),
-    description: language.copy.pageDescription(localizedBookTitle, book.sample.taskCount),
+    description: taskCount
+      ? language.copy.pageDescription(localizedBookTitle, taskCount)
+      : language.copy.pageDescriptionNoCount(localizedBookTitle),
     lang: language.code,
     dir: language.dir,
     currentLang: language.code,
@@ -471,16 +502,19 @@ function buildPage(language, book) {
     fullCardLabel: language.copy.fullCardLabel,
     fullCardIntro: language.copy.fullCardIntro(book.pageCount, formatDisplay),
     fullBookChecks: [
-      language.copy.fullCheckFormat(book.pageCount, formatDisplay),
+      formatCheck,
       language.copy.fullCheckPractice,
-      language.copy.fullCheckDiscount(book.discountCode)
-    ],
+      book.discountCode ? language.copy.fullCheckDiscount(book.discountCode) : null
+    ].filter(Boolean),
     fullBookLabel: language.copy.fullBookLabel,
-    backLabel: language.copy.backLabel(site.exams[book.examKey].title),
-    backAnchor: site.exams[book.examKey].anchor
+    backLabel: language.copy.backLabel(exam.title),
+    backUrl: `${language.code === "en" ? "" : `/${language.code}`}/${book.levelKey}/#${exam.anchor}-books`
   };
 }
 
 module.exports = languages.flatMap((language) =>
-  site.bookOrder.map((bookKey) => buildPage(language, site.books[bookKey]))
+  site.bookOrder
+    .map((bookKey) => site.books[bookKey])
+    .filter((book) => book.sample)
+    .map((book) => buildPage(language, book))
 );

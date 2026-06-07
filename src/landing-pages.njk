@@ -1,0 +1,180 @@
+{% from "cta-helpers.njk" import ctaLink, ctaTrackingAttrs with context %}
+
+<section class="hero hero-dual">
+  <div class="container">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">{{ landingPage.heroEyebrow }}</p>
+        <h1>{{ landingPage.heroTitle }}</h1>
+        <p class="hero-intro">{{ landingPage.heroIntro }}</p>
+        {% set switcherClass = 'language-switcher--hero' %}
+        {% include "language-switcher.njk" %}
+        <div class="button-row hero-actions">
+          {% for heroButton in (landingPage.heroButtons or landingPage.levelButtons) %}
+            <a href="{{ heroButton.url | pageUrl }}" class="btn {% if landingPage.pageType == 'home' and heroButton.key == 'samples' %}btn-primary{% elseif landingPage.levelKey == heroButton.key %}btn-primary{% else %}btn-outline btn-outline-light{% endif %}">{{ heroButton.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if landingPage.pageType == 'home' %}
+  {% if landingPage.reviewsSection %}
+    {% set reviewsSection = landingPage.reviewsSection %}
+    {% include "book-reviews.njk" %}
+  {% endif %}
+
+  <section id="featured-books" class="home-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>{{ landingPage.featuredSectionTitle }}</h2>
+        <p>{{ landingPage.featuredSectionIntro }}</p>
+      </div>
+      <div class="hero-book-grid">
+        {% for bookKey in landingPage.featuredBookKeys %}
+          {% set book = site.books[bookKey] %}
+          {% set bookDisplayTitle = (book.localizedTitles and book.localizedTitles[currentLang]) or book.title %}
+          {% set paperbackOption = book.purchaseOptions and book.purchaseOptions[0] %}
+          {% set kindleOption = book.purchaseOptions and book.purchaseOptions[1] %}
+          <article class="book-panel{% if loop.first %} book-panel-accent{% endif %}">
+            <p class="book-panel__label">{{ (book.localizedBookLabels and book.localizedBookLabels[currentLang]) or (book.examSection ~ ' book') }}</p>
+            <h2>{{ bookDisplayTitle }}</h2>
+            <p class="book-panel__fit"><strong>{{ landingPage.bestForLabel }}:</strong> {{ (book.localizedFit and book.localizedFit[currentLang]) or '' }}</p>
+            <ul class="check-list">
+              {% for feature in ((book.localizedFeatures and book.localizedFeatures[currentLang]) or book.features) %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+            {% include "book-facts.njk" %}
+            <div class="button-row">
+              {% if paperbackOption %}
+                <a
+                  href="{{ ctaLink(paperbackOption.url, { content: book.key ~ '-' ~ paperbackOption.key ~ '-home-featured-' ~ (currentLang or 'en') }) }}"
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noopener"
+                  {{ ctaTrackingAttrs(paperbackOption.trackingType or 'amazon_paperback', book.key, 'home-featured') }}
+                >{{ (paperbackOption.localizedButtonLabels and paperbackOption.localizedButtonLabels[currentLang]) or paperbackOption.buttonLabel }}</a>
+              {% endif %}
+              {% if book.sample %}
+                <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: book.key ~ '-home-featured-sample' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'home-featured') }}>{{ landingPage.sampleCtaLabel }}</a>
+              {% endif %}
+              {% if kindleOption %}
+                <a
+                  href="{{ ctaLink(kindleOption.url, { content: book.key ~ '-' ~ kindleOption.key ~ '-home-featured-' ~ (currentLang or 'en') }) }}"
+                  class="btn btn-outline"
+                  target="_blank"
+                  rel="noopener"
+                  {{ ctaTrackingAttrs(kindleOption.trackingType or 'amazon_kindle', book.key, 'home-featured') }}
+                >{{ (kindleOption.localizedButtonLabels and kindleOption.localizedButtonLabels[currentLang]) or kindleOption.buttonLabel }}</a>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>{{ landingPage.startSectionTitle }}</h2>
+        <p>{{ landingPage.startSectionIntro }}</p>
+      </div>
+      <div class="path-grid">
+        {% for levelCard in landingPage.levelCards %}
+          <article class="path-card path-card-level">
+            <p class="book-panel__label">{{ levelCard.title }}</p>
+            <h3>{{ levelCard.title }}</h3>
+            <p>{{ levelCard.intro }}</p>
+            <ul class="check-list">
+              {% for bullet in levelCard.bullets %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+            <a href="{{ levelCard.url | pageUrl }}" class="btn btn-primary">{{ levelCard.buttonLabel }}</a>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <h2>{{ landingPage.examSectionTitle }}</h2>
+        <p>{{ landingPage.examSectionIntro }}</p>
+      </div>
+      <div class="promo-grid">
+        {% for examCard in landingPage.examCards %}
+          <article class="path-card path-card-level">
+            <p class="book-panel__label">{{ examCard.title }}</p>
+            <h3>{{ examCard.title }}</h3>
+            <p>{{ examCard.intro }}</p>
+            <div class="button-row">
+              {% for link in examCard.links %}
+                <a href="{{ link.url }}" class="btn {% if loop.first %}btn-primary{% else %}btn-outline{% endif %}">{{ link.label }}</a>
+              {% endfor %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% else %}
+  {% for examKey in landingPage.pageExamOrder %}
+    {% set exam = site.exams[examKey] %}
+    <section id="{{ exam.anchor }}-books" class="home-section{% if loop.index % 2 == 0 %} home-section-alt{% endif %}">
+      <div class="container">
+        <div class="section-heading">
+          <h2>{{ exam.title }} books</h2>
+          <p>{{ (exam.localizedBooksIntro and exam.localizedBooksIntro[currentLang]) or exam.booksIntro }}</p>
+        </div>
+        <div class="hero-book-grid">
+          {% for bookKey in exam.books %}
+            {% set book = site.books[bookKey] %}
+            {% set bookDisplayTitle = (book.localizedTitles and book.localizedTitles[currentLang]) or book.title %}
+            {% set paperbackOption = book.purchaseOptions and book.purchaseOptions[0] %}
+            {% set kindleOption = book.purchaseOptions and book.purchaseOptions[1] %}
+            <article class="book-panel{% if loop.first %} book-panel-accent{% endif %}">
+              <p class="book-panel__label">{{ (book.localizedBookLabels and book.localizedBookLabels[currentLang]) or (book.examSection ~ ' book') }}</p>
+              <h2>{{ bookDisplayTitle }}</h2>
+              <p class="book-panel__fit"><strong>{{ landingPage.bestForLabel }}:</strong> {{ (book.localizedFit and book.localizedFit[currentLang]) or '' }}</p>
+              <ul class="check-list">
+                {% for feature in ((book.localizedFeatures and book.localizedFeatures[currentLang]) or book.features) %}
+                  <li>{{ feature }}</li>
+                {% endfor %}
+              </ul>
+              {% include "book-facts.njk" %}
+              <div class="button-row">
+                {% if paperbackOption %}
+                  <a
+                    href="{{ ctaLink(paperbackOption.url, { content: book.key ~ '-' ~ paperbackOption.key ~ '-books-section-' ~ (currentLang or 'en') }) }}"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener"
+                    {{ ctaTrackingAttrs(paperbackOption.trackingType or 'amazon_paperback', book.key, 'books-section') }}
+                  >{{ (paperbackOption.localizedButtonLabels and paperbackOption.localizedButtonLabels[currentLang]) or paperbackOption.buttonLabel }}</a>
+                {% endif %}
+                {% if book.sample %}
+                  <a href="{{ ctaLink(book | samplePdfPath(currentLang), { content: book.key ~ '-sample-section' }) }}" class="btn btn-outline" target="_blank" rel="noopener" {{ ctaTrackingAttrs('sample_pdf', book.key, 'books-section') }}>{{ landingPage.sampleCtaLabel }}</a>
+                {% endif %}
+                {% if kindleOption %}
+                  <a
+                    href="{{ ctaLink(kindleOption.url, { content: book.key ~ '-' ~ kindleOption.key ~ '-books-section-' ~ (currentLang or 'en') }) }}"
+                    class="btn btn-outline"
+                    target="_blank"
+                    rel="noopener"
+                    {{ ctaTrackingAttrs(kindleOption.trackingType or 'amazon_kindle', book.key, 'books-section') }}
+                  >{{ (kindleOption.localizedButtonLabels and kindleOption.localizedButtonLabels[currentLang]) or kindleOption.buttonLabel }}</a>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endfor %}
+{% endif %}

@@ -9,7 +9,7 @@
     target="_blank"
     rel="noopener"
     {{ ctaTrackingAttrs(option.trackingType or 'full_book', book.key, purchaseLocation) }}
-  >{{ option.buttonLabel or option.label }}</a>
+  >{{ (option.localizedButtonLabels and option.localizedButtonLabels[currentLang]) or option.buttonLabel or (option.localizedLabels and option.localizedLabels[currentLang]) or option.label }}</a>
   {% endfor %}
 {% else %}
   <a

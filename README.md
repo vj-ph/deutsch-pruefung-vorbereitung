@@ -38,7 +38,7 @@ website-repo/
 
 ### Site Settings
 
-Edit `src/_data/site.json`:
+Edit `src/_data/site.js`:
 
 ```json
 {
@@ -54,7 +54,7 @@ Edit `src/_data/site.json`:
 
 ### UTM Parameters
 
-All CTA links are auto-tagged. Sample-page links stay on-site, and full-book links still go to Gumroad. Configure the shared tracking values in `src/_data/site.json`:
+All CTA links are auto-tagged. Sample-page links stay on-site, and full-book links open Amazon. Configure the shared tracking values in `src/_data/site.js`:
 
 ```json
 {
@@ -98,9 +98,9 @@ See **[.squad/decisions.md](.squad/decisions.md)** for approved product, UX, and
 
 ## Pre-Launch Checklist
 
-- [ ] Update `site.url` in `src/_data/site.json`
+- [ ] Update `site.url` in `src/_data/site.js`
 - [ ] Add GA4 Measurement ID and enable tracking
-- [ ] Verify on-site sample pages and Gumroad full-book links are live
+- [ ] Verify on-site sample pages and Amazon full-book links are live
 - [ ] Test GA4 firing (use Google Analytics Debugger)
 - [ ] Run Lighthouse audit (target >85)
 - [ ] Verify sitemap generates (`/sitemap.xml`)

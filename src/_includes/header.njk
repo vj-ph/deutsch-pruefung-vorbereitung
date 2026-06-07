@@ -1,8 +1,4 @@
-{% from "cta-helpers.njk" import ctaTrackingAttrs with context %}
-{% set headerExamOrder = pageExamOrder or site.examOrder %}
-{% set headerPrimaryExamKey = headerExamOrder[0] %}
-{% set headerPrimaryExam = site.exams[headerPrimaryExamKey] %}
-{% set headerPrimaryBookKey = headerPrimaryExam.books[0] %}
+{% set navLinks = pageNavLinks or [] %}
 <header class="site-header">
   <div class="container">
     <a href="{{ (homeUrl or '/') | pageUrl }}" class="logo">
@@ -18,12 +14,13 @@
     <div class="header-right">
       <nav class="main-nav">
         <a href="{{ (homeUrl or '/') | pageUrl }}">{{ ui.homeLabel or 'Home' }}</a>
-        {% for examKey in headerExamOrder %}
-          {% set exam = site.exams[examKey] %}
-          <a href="{{ (homeUrl or '/') | pageUrl }}#{{ exam.anchor }}-books">{{ exam.navLabel }}</a>
+        {% for link in navLinks %}
+          <a href="{{ link.url | pageUrl }}">{{ link.label }}</a>
         {% endfor %}
       </nav>
-      <a href="{{ (homeUrl or '/') | pageUrl }}#{{ headerPrimaryExam.anchor }}-books" class="btn btn-primary header-cta" {{ ctaTrackingAttrs('sample_section', headerPrimaryBookKey, 'header') }}>Sample book</a>
+      {% if primaryCta %}
+        <a href="{{ primaryCta.url | pageUrl }}" class="btn btn-primary header-cta">{{ primaryCta.label }}</a>
+      {% endif %}
     </div>
   </div>
 </header>

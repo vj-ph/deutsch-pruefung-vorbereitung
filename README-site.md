@@ -31,7 +31,7 @@ npm run clean
 ```
 src/
 ├── _data/               # Global data files
-│   ├── site.json        # Site metadata, URLs, UTM parameters
+│   ├── site.js          # Site metadata, catalog, URLs, UTM parameters
 │   └── analytics.json   # GA4 configuration
 ├── _includes/           # Reusable components
 │   ├── header.njk       # Site navigation
@@ -68,7 +68,7 @@ Each article follows the book structure:
 
 - **Free sample** (ungated, positioned in-article after value demonstration)
 - **Full book** (positioned as depth upgrade after trust-building)
-- On-site sample pages and Gumroad full-book links include UTM parameters for tracking
+- On-site sample pages and Amazon full-book links include UTM parameters for tracking
 
 ## Analytics Setup
 
@@ -105,11 +105,11 @@ Visit `http://localhost:8080` to preview locally.
 
 ## Pre-Launch Checklist
 
-- [ ] Update `src/_data/site.json` with production URL
+- [ ] Update `src/_data/site.js` with production URL
 - [ ] Configure GA4 in `src/_data/analytics.json`
 - [ ] Test all internal links
 - [ ] Verify mobile responsiveness (Lighthouse >85)
-- [ ] Ensure sample CTAs open on-site sample pages and full-book CTAs open the correct Gumroad products
+- [ ] Ensure sample CTAs open on-site sample pages and full-book CTAs open the correct Amazon products
 - [ ] Generate and submit sitemap to Google Search Console
 
 ## Deployment

@@ -1,7 +1,7 @@
 {% set book = site.books[bookKey] %}
 {% set displayBookTitle = bookDisplayTitle or book.title %}
 {% set purchaseUrl = (book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].url) or (book.gumroad and book.gumroad.fullBook) or '' %}
-{% set thumbnailUrl = ((book.purchaseOptions and book.purchaseOptions[2] and book.purchaseOptions[2].key == 'amazon-paperback') and book.purchaseOptions[2].url) or ((book.purchaseOptions and book.purchaseOptions[1] and book.purchaseOptions[1].key == 'amazon-paperback') and book.purchaseOptions[1].url) or ((book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].key == 'amazon-paperback') and book.purchaseOptions[0].url) or purchaseUrl %}
+{% set thumbnailUrl = ((book.purchaseOptions and book.purchaseOptions[1] and book.purchaseOptions[1].key == 'amazon-paperback') and book.purchaseOptions[1].url) or ((book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].key == 'amazon-paperback') and book.purchaseOptions[0].url) or purchaseUrl %}
 {% if book.thumbnailPath %}
 <a
   href="{{ ctaLink(thumbnailUrl, { content: book.key ~ '-thumbnail-' ~ (currentLang or 'en') }) }}"
@@ -31,7 +31,7 @@
     {% for option in book.purchaseOptions %}
   {% if option.priceDisplay %}
   <div class="book-fact">
-    <span class="book-fact__label">{{ option.label }}</span>
+    <span class="book-fact__label">{{ (option.localizedLabels and option.localizedLabels[currentLang]) or option.label }}</span>
     <strong>{{ option.priceDisplay }}</strong>
   </div>
   {% endif %}
@@ -44,7 +44,7 @@
   {% endif %}
   <div class="book-fact">
     <span class="book-fact__label">{{ productUi.freeSample }}</span>
-    <strong>{{ productUi.free }}</strong>
+    <strong>{{ productUi.free if book.sample else (productUi.notAvailable or 'Not available') }}</strong>
   </div>
   {% if not book.purchaseOptions %}
     <div class="book-fact">
@@ -52,12 +52,13 @@
       <strong>{{ book.format or site.sales.format }}</strong>
     </div>
   {% endif %}
-  <div class="book-fact">
-    <span class="book-fact__label">{{ productUi.pages }}</span>
-    <strong>{{ book.pageCount }}</strong>
-  </div>
+  {% if book.pageCount %}
+    <div class="book-fact">
+      <span class="book-fact__label">{{ productUi.pages }}</span>
+      <strong>{{ book.pageCount }}</strong>
+    </div>
+  {% endif %}
 </div>
-<p class="book-note">{{ productUi.clickNote }}</p>
 {% if book.discountCode %}
 <p class="book-note book-note--accent">{{ productUi.discountPrefix }}{{ book.discountCode }}{{ productUi.discountSuffix }}</p>
 {% endif %}

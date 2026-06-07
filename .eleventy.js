@@ -1,4 +1,4 @@
-const site = require("./src/_data/site.json");
+const site = require("./src/_data/site.js");
 
 const pathPrefix = site.pathPrefix || "/";
 const absoluteUrlPattern = /^(?:[a-zA-Z][a-zA-Z\d+\-.]*:)?\/\//;
@@ -12,7 +12,23 @@ const sampleBookLocaleMap = {
   sr: "bcs"
 };
 const localizedSamplePdfPaths = {
-  "dtz-speaking": {
+  "dtz-a2-speaking": {
+    en: "/assets/sample-books/dtz_a2/dtz_a2_speaking_sample.pdf",
+    ar: "/assets/sample-books/dtz_a2/dtz_a2_speaking_sample.pdf",
+    ru: "/assets/sample-books/dtz_a2/dtz_a2_speaking_sample.pdf",
+    uk: "/assets/sample-books/dtz_a2/dtz_a2_speaking_sample.pdf",
+    tr: "/assets/sample-books/dtz_a2/dtz_a2_speaking_sample.pdf",
+    sr: "/assets/sample-books/dtz_a2/dtz_a2_speaking_sample.pdf"
+  },
+  "dtz-a2-writing": {
+    en: "/assets/sample-books/dtz_a2/dtz_a2_writing_sample.pdf",
+    ar: "/assets/sample-books/dtz_a2/dtz_a2_writing_sample.pdf",
+    ru: "/assets/sample-books/dtz_a2/dtz_a2_writing_sample.pdf",
+    uk: "/assets/sample-books/dtz_a2/dtz_a2_writing_sample.pdf",
+    tr: "/assets/sample-books/dtz_a2/dtz_a2_writing_sample.pdf",
+    sr: "/assets/sample-books/dtz_a2/dtz_a2_writing_sample.pdf"
+  },
+  "dtz-b1-speaking": {
     en: "/assets/sample-books/dtz_b1/dtz-speaking-sample-english.pdf",
     ar: "/assets/sample-books/dtz_b1/dtz-speaking-sample-arabic.pdf",
     ru: "/assets/sample-books/dtz_b1/dtz-speaking-sample-russian.pdf",
@@ -20,7 +36,7 @@ const localizedSamplePdfPaths = {
     tr: "/assets/sample-books/dtz_b1/dtz-speaking-sample-turkish.pdf",
     sr: "/assets/sample-books/dtz_b1/dtz-speaking-sample-bcs.pdf"
   },
-  "dtz-writing": {
+  "dtz-b1-writing": {
     en: "/assets/sample-books/dtz_b1/dtz-writing-sample-english.pdf",
     ar: "/assets/sample-books/dtz_b1/dtz-writing-sample-arabic.pdf",
     ru: "/assets/sample-books/dtz_b1/dtz-writing-sample-russian.pdf",
@@ -28,7 +44,23 @@ const localizedSamplePdfPaths = {
     tr: "/assets/sample-books/dtz_b1/dtz-writing-sample-turkish.pdf",
     sr: "/assets/sample-books/dtz_b1/dtz-writing-sample-bcs.pdf"
   },
-  "oeif-speaking": {
+  "oeif-a2-speaking": {
+    en: "/assets/sample-books/oeif_a2/oeif_a2_speaking_sample.pdf",
+    ar: "/assets/sample-books/oeif_a2/oeif_a2_speaking_sample.pdf",
+    ru: "/assets/sample-books/oeif_a2/oeif_a2_speaking_sample.pdf",
+    uk: "/assets/sample-books/oeif_a2/oeif_a2_speaking_sample.pdf",
+    tr: "/assets/sample-books/oeif_a2/oeif_a2_speaking_sample.pdf",
+    sr: "/assets/sample-books/oeif_a2/oeif_a2_speaking_sample.pdf"
+  },
+  "oeif-a2-writing": {
+    en: "/assets/sample-books/oeif_a2/oeif_a2_writing_sample.pdf",
+    ar: "/assets/sample-books/oeif_a2/oeif_a2_writing_sample.pdf",
+    ru: "/assets/sample-books/oeif_a2/oeif_a2_writing_sample.pdf",
+    uk: "/assets/sample-books/oeif_a2/oeif_a2_writing_sample.pdf",
+    tr: "/assets/sample-books/oeif_a2/oeif_a2_writing_sample.pdf",
+    sr: "/assets/sample-books/oeif_a2/oeif_a2_writing_sample.pdf"
+  },
+  "oeif-b1-speaking": {
     en: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-english.pdf",
     ar: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-arabic.pdf",
     ru: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-russian.pdf",
@@ -36,7 +68,7 @@ const localizedSamplePdfPaths = {
     tr: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-turkish.pdf",
     sr: "/assets/sample-books/oeif_b1/oeif-b1-speaking-sample-bcs.pdf"
   },
-  "oeif-writing": {
+  "oeif-b1-writing": {
     en: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-english.pdf",
     ar: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-arabic.pdf",
     ru: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-russian.pdf",
@@ -44,7 +76,7 @@ const localizedSamplePdfPaths = {
     tr: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-turkish.pdf",
     sr: "/assets/sample-books/oeif_b1/oeif-b1-writing-sample-bcs.pdf"
   },
-  "fide-speaking": {
+  "fide-a2-speaking": {
     en: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
     ar: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
     ru: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
@@ -52,13 +84,29 @@ const localizedSamplePdfPaths = {
     tr: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf",
     sr: "/assets/sample-books/fide_a2/fide_a2_speaking_sample.pdf"
   },
-  "fide-writing": {
+  "fide-a2-writing": {
     en: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
     ar: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
     ru: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
     uk: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
     tr: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf",
     sr: "/assets/sample-books/fide_a2/fide_a2_writing_sample.pdf"
+  },
+  "fide-b1-speaking": {
+    en: "/assets/sample-books/fide_b1/fide_b1_speaking_sample.pdf",
+    ar: "/assets/sample-books/fide_b1/fide_b1_speaking_sample.pdf",
+    ru: "/assets/sample-books/fide_b1/fide_b1_speaking_sample.pdf",
+    uk: "/assets/sample-books/fide_b1/fide_b1_speaking_sample.pdf",
+    tr: "/assets/sample-books/fide_b1/fide_b1_speaking_sample.pdf",
+    sr: "/assets/sample-books/fide_b1/fide_b1_speaking_sample.pdf"
+  },
+  "fide-b1-writing": {
+    en: "/assets/sample-books/fide_b1/fide_b1_writing_sample.pdf",
+    ar: "/assets/sample-books/fide_b1/fide_b1_writing_sample.pdf",
+    ru: "/assets/sample-books/fide_b1/fide_b1_writing_sample.pdf",
+    uk: "/assets/sample-books/fide_b1/fide_b1_writing_sample.pdf",
+    tr: "/assets/sample-books/fide_b1/fide_b1_writing_sample.pdf",
+    sr: "/assets/sample-books/fide_b1/fide_b1_writing_sample.pdf"
   }
 };
 

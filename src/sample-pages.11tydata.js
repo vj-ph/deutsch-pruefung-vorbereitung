@@ -17,6 +17,7 @@ module.exports = {
     languageSwitcherLabel: (data) => data.samplePage.languageSwitcherLabel,
     languageLinks: (data) => data.samplePage.languageLinks,
     ui: (data) => data.samplePage.ui,
-    productUi: (data) => data.samplePage.productUi
+    productUi: (data) => data.samplePage.productUi,
+    pageBookOrder: (data) => [data.samplePage.bookKey]
   }
 };

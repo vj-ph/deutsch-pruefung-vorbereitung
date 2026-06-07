@@ -20,25 +20,25 @@
           "@type": "Organization",
           "name": "{{ site.author.name }}",
           "url": "{{ site.author.url }}"
-        }{% for bookKey in structuredBookOrder %}{% set book = site.books[bookKey] %}{% set localizedBookTitle = (book.localizedTitles and book.localizedTitles[pageLang]) or book.title %}{% set structuredBookUrl = (book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].url) or (book.gumroad and book.gumroad.fullBook) or '' %},
+        }{% for bookKey in structuredBookOrder %}{% set book = site.books[bookKey] %}{% set localizedBookTitle = (book.localizedTitles and book.localizedTitles[pageLang]) or book.title %}{% set localizedBookDescription = (book.localizedDescriptions and book.localizedDescriptions[pageLang]) or book.description %}{% set structuredBookUrl = (book.purchaseOptions and book.purchaseOptions[0] and book.purchaseOptions[0].url) or (book.gumroad and book.gumroad.fullBook) or '' %},
         {
           "@type": "Book",
           "name": "{{ localizedBookTitle }}",
           {% if book.subtitle %}"alternateName": "{{ book.subtitle }}",{% endif %}
-          "description": "{{ book.description }}",
+          "description": "{{ localizedBookDescription }}",
           "inLanguage": "{{ book.language or site.language }}",
           "author": {
             "@type": "Organization",
             "name": "{{ site.author.name }}",
             "url": "{{ site.author.url }}"
           },
-          "url": "{{ structuredBookUrl }}",
+          "url": "{{ structuredBookUrl }}"{% if book.sample %},
           "workExample": {
             "@type": "CreativeWork",
             "name": "{{ book.sample.title }}",
             "description": "{{ book.sample.description }}",
             "url": "{{ book | samplePdfPath(pageLang or 'en') | pageUrl | absoluteUrl(site.url) }}"
-          }
+          }{% endif %}
         }{% endfor %}
       ]
     }
