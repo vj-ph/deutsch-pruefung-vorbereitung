@@ -1,0 +1,121 @@
+---
+layout: base.njk
+title: "fide A2 Hören Audio"
+description: "Audio tracks for the fide A2 Hören practice book by Deutsch Kompass."
+permalink: "/fide-a2-listening-audio/"
+lang: "de-CH"
+---
+
+{% set audioBase = "/assets/audio/fide-a2-listening/" %}
+{% set einheiten = [
+  "einheit_01.mp3", "einheit_02.mp3", "einheit_03.mp3", "einheit_04.mp3", "einheit_05.mp3", "einheit_06.mp3", "einheit_07.mp3", "einheit_08.mp3", "einheit_09.mp3", "einheit_10.mp3", "einheit_11.mp3", "einheit_12.mp3", "einheit_13.mp3", "einheit_14.mp3", "einheit_15.mp3", "einheit_16.mp3", "einheit_17.mp3"
+] %}
+{% set uebungssaetze = [
+  "uebungssatz_01_aufgabe_01.mp3", "uebungssatz_01_aufgabe_02.mp3", "uebungssatz_01_aufgabe_03.mp3", "uebungssatz_01_aufgabe_04.mp3", "uebungssatz_01_aufgabe_05.mp3", "uebungssatz_01_aufgabe_06.mp3",
+  "uebungssatz_02_aufgabe_01.mp3", "uebungssatz_02_aufgabe_02.mp3", "uebungssatz_02_aufgabe_03.mp3", "uebungssatz_02_aufgabe_04.mp3", "uebungssatz_02_aufgabe_05.mp3", "uebungssatz_02_aufgabe_06.mp3",
+  "uebungssatz_03_aufgabe_01.mp3", "uebungssatz_03_aufgabe_02.mp3", "uebungssatz_03_aufgabe_03.mp3", "uebungssatz_03_aufgabe_04.mp3", "uebungssatz_03_aufgabe_05.mp3", "uebungssatz_03_aufgabe_06.mp3",
+  "uebungssatz_04_aufgabe_01.mp3", "uebungssatz_04_aufgabe_02.mp3", "uebungssatz_04_aufgabe_03.mp3", "uebungssatz_04_aufgabe_04.mp3", "uebungssatz_04_aufgabe_05.mp3", "uebungssatz_04_aufgabe_06.mp3",
+  "uebungssatz_05_aufgabe_01.mp3", "uebungssatz_05_aufgabe_02.mp3", "uebungssatz_05_aufgabe_03.mp3", "uebungssatz_05_aufgabe_04.mp3", "uebungssatz_05_aufgabe_05.mp3", "uebungssatz_05_aufgabe_06.mp3",
+  "uebungssatz_06_aufgabe_01.mp3", "uebungssatz_06_aufgabe_02.mp3", "uebungssatz_06_aufgabe_03.mp3", "uebungssatz_06_aufgabe_04.mp3", "uebungssatz_06_aufgabe_05.mp3", "uebungssatz_06_aufgabe_06.mp3",
+  "uebungssatz_07_aufgabe_01.mp3", "uebungssatz_07_aufgabe_02.mp3", "uebungssatz_07_aufgabe_03.mp3", "uebungssatz_07_aufgabe_04.mp3", "uebungssatz_07_aufgabe_05.mp3", "uebungssatz_07_aufgabe_06.mp3",
+  "uebungssatz_08_aufgabe_01.mp3", "uebungssatz_08_aufgabe_02.mp3", "uebungssatz_08_aufgabe_03.mp3", "uebungssatz_08_aufgabe_04.mp3", "uebungssatz_08_aufgabe_05.mp3", "uebungssatz_08_aufgabe_06.mp3",
+  "uebungssatz_09_aufgabe_01.mp3", "uebungssatz_09_aufgabe_02.mp3", "uebungssatz_09_aufgabe_03.mp3", "uebungssatz_09_aufgabe_04.mp3", "uebungssatz_09_aufgabe_05.mp3", "uebungssatz_09_aufgabe_06.mp3",
+  "uebungssatz_10_aufgabe_01.mp3", "uebungssatz_10_aufgabe_02.mp3", "uebungssatz_10_aufgabe_03.mp3", "uebungssatz_10_aufgabe_04.mp3", "uebungssatz_10_aufgabe_05.mp3", "uebungssatz_10_aufgabe_06.mp3"
+] %}
+{% set modelltests = [
+  "modelltest_01_aufgabe_01.mp3", "modelltest_01_aufgabe_02.mp3", "modelltest_01_aufgabe_03.mp3", "modelltest_01_aufgabe_04.mp3", "modelltest_01_aufgabe_05.mp3", "modelltest_01_aufgabe_06.mp3",
+  "modelltest_02_aufgabe_01.mp3", "modelltest_02_aufgabe_02.mp3", "modelltest_02_aufgabe_03.mp3", "modelltest_02_aufgabe_04.mp3", "modelltest_02_aufgabe_05.mp3", "modelltest_02_aufgabe_06.mp3",
+  "modelltest_03_aufgabe_01.mp3", "modelltest_03_aufgabe_02.mp3", "modelltest_03_aufgabe_03.mp3", "modelltest_03_aufgabe_04.mp3", "modelltest_03_aufgabe_05.mp3", "modelltest_03_aufgabe_06.mp3"
+] %}
+
+{% macro trackList(files) %}
+  <div class="audio-track-list">
+    {% for file in files %}
+      {% set url = audioBase ~ file %}
+      <article class="audio-track">
+        <div>
+          <h3>{{ file | replace("_", " ") | replace(".mp3", "") | title }}</h3>
+          <p>{{ file }}</p>
+        </div>
+        <audio controls preload="none" src="{{ url | url }}"></audio>
+        <a class="btn btn-outline" href="{{ url | url }}" download>MP3 herunterladen</a>
+      </article>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+<section class="hero hero-dual">
+  <div class="container">
+    <p class="eyebrow">Audio zum Buch</p>
+    <h1>fide A2 Hören Audio</h1>
+    <p class="hero-intro">Hier finden Sie alle MP3-Dateien zum Übungsbuch. Sie können die Audios direkt abspielen oder einzeln herunterladen.</p>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="book-panel book-panel-accent audio-help-card">
+      <p class="book-panel__label">Hinweis</p>
+      <h2>So nutzen Sie die Audios</h2>
+      <ul class="check-list">
+        <li>Öffnen Sie diese Seite auf dem Smartphone, Tablet oder Computer.</li>
+        <li>Wählen Sie die passende Einheit, den Übungssatz oder den Modelltest aus.</li>
+        <li>Hören Sie zuerst ohne Transkript und kontrollieren Sie danach im Buch.</li>
+      </ul>
+    </div>
+
+    <div class="promo-grid audio-section-links">
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Training im Buch</p>
+        <h3>Einheiten</h3>
+        <p>Audio-Dateien für die Trainingseinheiten.</p>
+        <a href="#einheiten" class="btn btn-primary">Zu den Einheiten</a>
+      </article>
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Prüfungstraining</p>
+        <h3>Übungssätze</h3>
+        <p>Prüfungsnahe Übungssätze mit sechs Aufgaben.</p>
+        <a href="#uebungssaetze" class="btn btn-primary">Zu den Übungssätzen</a>
+      </article>
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Simulation</p>
+        <h3>Modelltests</h3>
+        <p>Vollständige Modelltests für die Prüfungssimulation.</p>
+        <a href="#modelltests" class="btn btn-primary">Zu den Modelltests</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="einheiten" class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Training im Buch</p>
+      <h2>Einheiten</h2>
+      <p>Audio-Dateien für die Trainingseinheiten im Buch.</p>
+    </div>
+    {{ trackList(einheiten) }}
+  </div>
+</section>
+
+<section id="uebungssaetze" class="home-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Prüfungstraining</p>
+      <h2>Übungssätze</h2>
+      <p>Audio-Dateien für die Übungssätze. Jeder Übungssatz enthält sechs Aufgaben.</p>
+    </div>
+    {{ trackList(uebungssaetze) }}
+  </div>
+</section>
+
+<section id="modelltests" class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Simulation</p>
+      <h2>Modelltests</h2>
+      <p>Audio-Dateien für die vollständigen Modelltests.</p>
+    </div>
+    {{ trackList(modelltests) }}
+  </div>
+</section>

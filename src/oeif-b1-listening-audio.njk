@@ -65,34 +65,58 @@ lang: "de-AT"
         <li>Hören Sie zuerst ohne Transkript und kontrollieren Sie danach im Buch.</li>
       </ul>
     </div>
+
+    <div class="promo-grid audio-section-links">
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Teil 1 &amp; 2 im Buch</p>
+        <h3>Einheiten</h3>
+        <p>Trainingseinheiten und Skill Practice.</p>
+        <a href="#einheiten" class="btn btn-primary">Zu den Einheiten</a>
+      </article>
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Teil 3 im Buch</p>
+        <h3>Übungstests</h3>
+        <p>Prüfungsnahe Übungstests mit vier Hörteilen.</p>
+        <a href="#uebungstests" class="btn btn-primary">Zu den Übungstests</a>
+      </article>
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Teil 4 im Buch</p>
+        <h3>Mock Exams</h3>
+        <p>Vollständige Mock Exams für die Prüfungssimulation.</p>
+        <a href="#mock-exams" class="btn btn-primary">Zu den Mock Exams</a>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="home-section home-section-alt">
+<section id="einheiten" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
+      <p class="eyebrow">Teil 1 &amp; 2 im Buch</p>
       <h2>Einheiten</h2>
-      <p>Audio-Dateien für die Trainingseinheiten im Buch.</p>
+      <p>Audio-Dateien für die Trainingseinheiten und Skill Practice im ersten und zweiten Teil des Buches.</p>
     </div>
     {{ trackList(einheiten) }}
   </div>
 </section>
 
-<section class="home-section">
+<section id="uebungstests" class="home-section">
   <div class="container">
     <div class="section-heading">
+      <p class="eyebrow">Teil 3 im Buch</p>
       <h2>Übungstests</h2>
-      <p>Vier Hörteile pro Übungstest.</p>
+      <p>Audio-Dateien für die Übungstests im dritten Teil des Buches. Jeder Übungstest enthält vier Hörteile.</p>
     </div>
     {{ trackList(uebungstests) }}
   </div>
 </section>
 
-<section class="home-section home-section-alt">
+<section id="mock-exams" class="home-section home-section-alt">
   <div class="container">
     <div class="section-heading">
+      <p class="eyebrow">Teil 4 im Buch</p>
       <h2>Mock Exams</h2>
-      <p>Vollständige prüfungsnahe Hörtests.</p>
+      <p>Audio-Dateien für die vollständigen Mock Exams im vierten Teil des Buches.</p>
     </div>
     {{ trackList(mockExams) }}
   </div>
