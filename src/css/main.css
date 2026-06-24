@@ -711,6 +711,10 @@ th {
   margin: 0 auto;
 }
 
+.audio-section-links {
+  margin-top: 2rem;
+}
+
 .promo-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
