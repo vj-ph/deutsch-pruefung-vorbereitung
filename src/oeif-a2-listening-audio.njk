@@ -1,0 +1,96 @@
+---
+layout: base.njk
+title: "ÖIF A2 Hören Audio"
+description: "Audio tracks for the ÖIF A2 Hören practice book by Deutsch Kompass."
+permalink: "/oeif-a2-listening-audio/"
+lang: "de-AT"
+---
+
+{% set audioBase = "/assets/audio/oeif-a2-listening/" %}
+{% set einheiten = [
+  "einheit_01.mp3", "einheit_02.mp3", "einheit_03.mp3", "einheit_04.mp3", "einheit_05.mp3", "einheit_06.mp3", "einheit_07.mp3", "einheit_08.mp3", "einheit_09.mp3", "einheit_10.mp3", "einheit_11.mp3", "einheit_12.mp3",
+  "einheit_13.mp3", "einheit_14.mp3", "einheit_15.mp3", "einheit_16.mp3", "einheit_17.mp3", "einheit_18.mp3", "einheit_19.mp3", "einheit_20.mp3", "einheit_21.mp3", "einheit_22.mp3", "einheit_23.mp3", "einheit_24.mp3"
+] %}
+{% set uebungstests = [
+  "uebungstest_01_teil_01.mp3", "uebungstest_01_teil_02.mp3", "uebungstest_01_teil_03.mp3", "uebungstest_01_teil_04.mp3",
+  "uebungstest_02_teil_01.mp3", "uebungstest_02_teil_02.mp3", "uebungstest_02_teil_03.mp3", "uebungstest_02_teil_04.mp3",
+  "uebungstest_03_teil_01.mp3", "uebungstest_03_teil_02.mp3", "uebungstest_03_teil_03.mp3", "uebungstest_03_teil_04.mp3",
+  "uebungstest_04_teil_01.mp3", "uebungstest_04_teil_02.mp3", "uebungstest_04_teil_03.mp3", "uebungstest_04_teil_04.mp3",
+  "uebungstest_05_teil_01.mp3", "uebungstest_05_teil_02.mp3", "uebungstest_05_teil_03.mp3", "uebungstest_05_teil_04.mp3",
+  "uebungstest_06_teil_01.mp3", "uebungstest_06_teil_02.mp3", "uebungstest_06_teil_03.mp3", "uebungstest_06_teil_04.mp3"
+] %}
+
+{% macro trackList(files) %}
+  <div class="audio-track-list">
+    {% for file in files %}
+      {% set url = audioBase ~ file %}
+      <article class="audio-track">
+        <div>
+          <h3>{{ file | replace("_", " ") | replace(".mp3", "") | title }}</h3>
+          <p>{{ file }}</p>
+        </div>
+        <audio controls preload="none" src="{{ url | url }}"></audio>
+        <a class="btn btn-outline" href="{{ url | url }}" download>MP3 herunterladen</a>
+      </article>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+<section class="hero hero-dual">
+  <div class="container">
+    <p class="eyebrow">Audio zum Buch</p>
+    <h1>ÖIF A2 Hören Audio</h1>
+    <p class="hero-intro">Hier finden Sie alle MP3-Dateien zum Übungsbuch. Sie können die Audios direkt abspielen oder einzeln herunterladen.</p>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="book-panel book-panel-accent audio-help-card">
+      <p class="book-panel__label">Hinweis</p>
+      <h2>So nutzen Sie die Audios</h2>
+      <ul class="check-list">
+        <li>Öffnen Sie diese Seite auf dem Smartphone, Tablet oder Computer.</li>
+        <li>Wählen Sie die passende Einheit oder den passenden Übungstest aus.</li>
+        <li>Hören Sie zuerst ohne Transkript und kontrollieren Sie danach im Buch.</li>
+      </ul>
+    </div>
+
+    <div class="promo-grid audio-section-links">
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Teil 1 &amp; 2 im Buch</p>
+        <h3>Einheiten</h3>
+        <p>Trainingseinheiten und Skill Practice.</p>
+        <a href="#einheiten" class="btn btn-primary">Zu den Einheiten</a>
+      </article>
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Teil 3 im Buch</p>
+        <h3>Übungstests</h3>
+        <p>Prüfungsnahe Übungstests mit vier Hörteilen.</p>
+        <a href="#uebungstests" class="btn btn-primary">Zu den Übungstests</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="einheiten" class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Teil 1 &amp; 2 im Buch</p>
+      <h2>Einheiten</h2>
+      <p>Audio-Dateien für die Trainingseinheiten und Skill Practice im ersten und zweiten Teil des Buches.</p>
+    </div>
+    {{ trackList(einheiten) }}
+  </div>
+</section>
+
+<section id="uebungstests" class="home-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Teil 3 im Buch</p>
+      <h2>Übungstests</h2>
+      <p>Audio-Dateien für die Übungstests im dritten Teil des Buches. Jeder Übungstest enthält vier Hörteile.</p>
+    </div>
+    {{ trackList(uebungstests) }}
+  </div>
+</section>
