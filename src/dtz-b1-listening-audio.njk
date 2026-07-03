@@ -1,0 +1,103 @@
+---
+layout: base.njk
+title: "DTZ B1 Hören Audio"
+description: "Audio tracks for the DTZ B1 Hören practice book by Deutsch Kompass."
+permalink: "/dtz-b1-listening-audio/"
+lang: "de-DE"
+---
+
+{% set audioBase = "/assets/audio/dtz-b1-listening/" %}
+{% set uebungssets = [
+  "uebungsset_01_teil_01.mp3", "uebungsset_01_teil_02.mp3", "uebungsset_01_teil_03.mp3", "uebungsset_01_teil_04.mp3",
+  "uebungsset_02_teil_01.mp3", "uebungsset_02_teil_02.mp3", "uebungsset_02_teil_03.mp3", "uebungsset_02_teil_04.mp3",
+  "uebungsset_03_teil_01.mp3", "uebungsset_03_teil_02.mp3", "uebungsset_03_teil_03.mp3", "uebungsset_03_teil_04.mp3",
+  "uebungsset_04_teil_01.mp3", "uebungsset_04_teil_02.mp3", "uebungsset_04_teil_03.mp3", "uebungsset_04_teil_04.mp3",
+  "uebungsset_05_teil_01.mp3", "uebungsset_05_teil_02.mp3", "uebungsset_05_teil_03.mp3", "uebungsset_05_teil_04.mp3",
+  "uebungsset_06_teil_01.mp3", "uebungsset_06_teil_02.mp3", "uebungsset_06_teil_03.mp3", "uebungsset_06_teil_04.mp3",
+  "uebungsset_07_teil_01.mp3", "uebungsset_07_teil_02.mp3", "uebungsset_07_teil_03.mp3", "uebungsset_07_teil_04.mp3",
+  "uebungsset_08_teil_01.mp3", "uebungsset_08_teil_02.mp3", "uebungsset_08_teil_03.mp3", "uebungsset_08_teil_04.mp3",
+  "uebungsset_09_teil_01.mp3", "uebungsset_09_teil_02.mp3", "uebungsset_09_teil_03.mp3", "uebungsset_09_teil_04.mp3",
+  "uebungsset_10_teil_01.mp3", "uebungsset_10_teil_02.mp3", "uebungsset_10_teil_03.mp3", "uebungsset_10_teil_04.mp3",
+  "uebungsset_11_teil_01.mp3", "uebungsset_11_teil_02.mp3", "uebungsset_11_teil_03.mp3", "uebungsset_11_teil_04.mp3",
+  "uebungsset_12_teil_01.mp3", "uebungsset_12_teil_02.mp3", "uebungsset_12_teil_03.mp3", "uebungsset_12_teil_04.mp3"
+] %}
+{% set mockExams = [
+  "mock_exam_01_teil_01.mp3", "mock_exam_01_teil_02.mp3", "mock_exam_01_teil_03.mp3", "mock_exam_01_teil_04.mp3",
+  "mock_exam_02_teil_01.mp3", "mock_exam_02_teil_02.mp3", "mock_exam_02_teil_03.mp3", "mock_exam_02_teil_04.mp3",
+  "mock_exam_03_teil_01.mp3", "mock_exam_03_teil_02.mp3", "mock_exam_03_teil_03.mp3", "mock_exam_03_teil_04.mp3"
+] %}
+
+{% macro trackList(files) %}
+  <div class="audio-track-list">
+    {% for file in files %}
+      {% set url = audioBase ~ file %}
+      <article class="audio-track">
+        <div>
+          <h3>{{ file | replace("_", " ") | replace(".mp3", "") | title }}</h3>
+          <p>{{ file }}</p>
+        </div>
+        <audio controls preload="none" src="{{ url | url }}"></audio>
+        <a class="btn btn-outline" href="{{ url | url }}" download>MP3 herunterladen</a>
+      </article>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+<section class="hero hero-dual">
+  <div class="container">
+    <p class="eyebrow">Audio zum Buch</p>
+    <h1>DTZ B1 Hören Audio</h1>
+    <p class="hero-intro">Hier finden Sie alle MP3-Dateien zum Übungsbuch. Sie können die Audios direkt abspielen oder einzeln herunterladen.</p>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="book-panel book-panel-accent audio-help-card">
+      <p class="book-panel__label">Hinweis</p>
+      <h2>So nutzen Sie die Audios</h2>
+      <ul class="check-list">
+        <li>Öffnen Sie diese Seite auf dem Smartphone, Tablet oder Computer.</li>
+        <li>Wählen Sie das passende Übungsset oder Mock Exam aus.</li>
+        <li>Hören Sie zuerst ohne Transkript und kontrollieren Sie danach im Buch.</li>
+      </ul>
+    </div>
+
+    <div class="promo-grid audio-section-links">
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Prüfungstraining</p>
+        <h3>Übungssets</h3>
+        <p>Prüfungsnahe Übungssets mit vier Hörteilen.</p>
+        <a href="#uebungssets" class="btn btn-primary">Zu den Übungssets</a>
+      </article>
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Simulation</p>
+        <h3>Mock Exams</h3>
+        <p>Vollständige Mock Exams für die Prüfungssimulation.</p>
+        <a href="#mock-exams" class="btn btn-primary">Zu den Mock Exams</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="uebungssets" class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Prüfungstraining</p>
+      <h2>Übungssets</h2>
+      <p>Audio-Dateien für die Übungssets. Jedes Übungsset enthält vier Hörteile.</p>
+    </div>
+    {{ trackList(uebungssets) }}
+  </div>
+</section>
+
+<section id="mock-exams" class="home-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Simulation</p>
+      <h2>Mock Exams</h2>
+      <p>Audio-Dateien für die vollständigen Mock Exams.</p>
+    </div>
+    {{ trackList(mockExams) }}
+  </div>
+</section>
