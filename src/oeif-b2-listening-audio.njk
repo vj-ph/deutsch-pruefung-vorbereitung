@@ -1,0 +1,98 @@
+---
+layout: base.njk
+title: "ÖIF B2 Hören Audio"
+description: "Audio tracks for the ÖIF B2 Hören practice book by Deutsch Kompass."
+permalink: "/oeif-b2-listening-audio/"
+lang: "de-AT"
+---
+
+{% set audioBase = "/assets/audio/" %}
+{% set einheiten = [
+  "einheit_01.mp3", "einheit_02.mp3", "einheit_03.mp3", "einheit_04.mp3", "einheit_05.mp3", "einheit_06.mp3",
+  "einheit_07.mp3", "einheit_08.mp3", "einheit_09.mp3", "einheit_10.mp3", "einheit_11.mp3", "einheit_12.mp3",
+  "einheit_13.mp3", "einheit_14.mp3", "einheit_15.mp3", "einheit_16.mp3", "einheit_17.mp3", "einheit_18.mp3",
+  "einheit_19.mp3", "einheit_20.mp3", "einheit_21.mp3", "einheit_22.mp3", "einheit_23.mp3", "einheit_24.mp3"
+] %}
+{% set pruefungen = [
+  "pruefung_01_teil_01.mp3", "pruefung_01_teil_02.mp3", "pruefung_01_teil_03.mp3",
+  "pruefung_02_teil_01.mp3", "pruefung_02_teil_02.mp3", "pruefung_02_teil_03.mp3",
+  "pruefung_03_teil_01.mp3", "pruefung_03_teil_02.mp3", "pruefung_03_teil_03.mp3",
+  "pruefung_04_teil_01.mp3", "pruefung_04_teil_02.mp3", "pruefung_04_teil_03.mp3",
+  "pruefung_05_teil_01.mp3", "pruefung_05_teil_02.mp3", "pruefung_05_teil_03.mp3",
+  "pruefung_06_teil_01.mp3", "pruefung_06_teil_02.mp3", "pruefung_06_teil_03.mp3"
+] %}
+
+{% macro trackList(files) %}
+  <div class="audio-track-list">
+    {% for file in files %}
+      {% set url = audioBase ~ file %}
+      <article class="audio-track">
+        <div>
+          <h3>{{ file | replace("_", " ") | replace(".mp3", "") | title }}</h3>
+          <p>{{ file }}</p>
+        </div>
+        <audio controls preload="none" src="{{ url | url }}"></audio>
+        <a class="btn btn-outline" href="{{ url | url }}" download>MP3 herunterladen</a>
+      </article>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+<section class="hero hero-dual">
+  <div class="container">
+    <p class="eyebrow">Audio zum Buch</p>
+    <h1>ÖIF B2 Hören Audio</h1>
+    <p class="hero-intro">Hier finden Sie alle MP3-Dateien zum Übungsbuch. Sie können die Audios direkt abspielen oder einzeln herunterladen.</p>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="book-panel book-panel-accent audio-help-card">
+      <p class="book-panel__label">Hinweis</p>
+      <h2>So nutzen Sie die Audios</h2>
+      <ul class="check-list">
+        <li>Öffnen Sie diese Seite auf dem Smartphone, Tablet oder Computer.</li>
+        <li>Wählen Sie die passende Einheit oder Prüfung aus.</li>
+        <li>Hören Sie zuerst ohne Transkript und kontrollieren Sie danach im Buch.</li>
+      </ul>
+    </div>
+
+    <div class="promo-grid audio-section-links">
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Übungen im Buch</p>
+        <h3>Einheiten</h3>
+        <p>Audio-Dateien für alle Trainingseinheiten.</p>
+        <a href="#einheiten" class="btn btn-primary">Zu den Einheiten</a>
+      </article>
+      <article class="path-card path-card-level">
+        <p class="book-panel__label">Prüfungstraining im Buch</p>
+        <h3>Prüfungen</h3>
+        <p>Prüfungsnahe Hörübungen mit drei Teilen.</p>
+        <a href="#pruefungen" class="btn btn-primary">Zu den Prüfungen</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="einheiten" class="home-section home-section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Übungen im Buch</p>
+      <h2>Einheiten</h2>
+      <p>Audio-Dateien für alle Trainingseinheiten im Buch.</p>
+    </div>
+    {{ trackList(einheiten) }}
+  </div>
+</section>
+
+<section id="pruefungen" class="home-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Prüfungstraining im Buch</p>
+      <h2>Prüfungen</h2>
+      <p>Audio-Dateien für sechs Prüfungen. Jede Prüfung enthält drei Hörteile.</p>
+    </div>
+    {{ trackList(pruefungen) }}
+  </div>
+</section>
