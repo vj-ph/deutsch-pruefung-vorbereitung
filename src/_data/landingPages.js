@@ -593,7 +593,7 @@ function buildExamCards(language) {
   const localeCopy = marketingCopy[language.code];
   const examKeys = [
     { key: "dtz", anchor: "dtz", levels: ["a2", "b1"] },
-    { key: "oeif", anchor: "oeif", levels: ["a2", "b1"] },
+    { key: "oeif", anchor: "oeif", levels: ["a2", "b1", "b2"] },
     { key: "fide", anchor: "fide", levels: ["a2", "b1"] }
   ];
 
@@ -634,6 +634,11 @@ function buildHomePage(language) {
       key: "b1",
       label: language.copy.levelButtonLabel("B1"),
       url: levelPermalink(language.code, "b1")
+    },
+    {
+      key: "b2",
+      label: language.copy.levelButtonLabel("B2"),
+      url: levelPermalink(language.code, "b2")
     }
   ];
 
@@ -683,7 +688,6 @@ function buildHomePage(language) {
 }
 
 function buildLevelPage(language, levelKey) {
-  const otherLevelKey = levelKey === "a2" ? "b1" : "a2";
   const localeCopy = marketingCopy[language.code];
   const navLinks = site.levels[levelKey].exams.map((examKey) => ({
     label: site.exams[examKey].navLabel,
@@ -707,10 +711,12 @@ function buildLevelPage(language, levelKey) {
     pageExamOrder: site.levels[levelKey].exams,
     pageBookOrder: site.levels[levelKey].books,
     pageNavLinks: navLinks,
-    primaryCta: {
-      label: language.copy.switchLevelLabel(site.levels[otherLevelKey].title),
-      url: levelPermalink(language.code, otherLevelKey)
-    },
+    primaryCtas: site.levelOrder
+      .filter((otherLevelKey) => otherLevelKey !== levelKey)
+      .map((otherLevelKey) => ({
+        label: language.copy.switchLevelLabel(site.levels[otherLevelKey].title),
+        url: levelPermalink(language.code, otherLevelKey)
+      })),
     heroEyebrow: language.copy.levelEyebrow(site.levels[levelKey].title),
     heroTitle: language.copy.levelTitle(site.levels[levelKey].title),
     heroIntro: language.copy.levelIntro(site.levels[levelKey].title),
