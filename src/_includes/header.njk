@@ -18,9 +18,9 @@
           <a href="{{ link.url | pageUrl }}">{{ link.label }}</a>
         {% endfor %}
       </nav>
-      {% if primaryCta %}
+      {% for primaryCta in primaryCtas or [] %}
         <a href="{{ primaryCta.url | pageUrl }}" class="btn btn-primary header-cta">{{ primaryCta.label }}</a>
-      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </header>
