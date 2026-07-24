@@ -21,6 +21,6 @@ module.exports = {
     pageBookOrder: (data) => data.landingPage.pageBookOrder,
     pageExamOrder: (data) => data.landingPage.pageExamOrder,
     pageNavLinks: (data) => data.landingPage.pageNavLinks,
-    primaryCta: (data) => data.landingPage.primaryCta
+    primaryCtas: (data) => data.landingPage.primaryCtas
   }
 };
