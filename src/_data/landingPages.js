@@ -42,10 +42,10 @@ const languages = [
       clickNote: "Sample buttons open PDFs on this site. Purchase buttons open Amazon in a new tab."
     },
     copy: {
-      homeTitle: "Pass DTZ, ÖIF, and fide with practical speaking and writing books for A2 and B1.",
-      homeDescription: "Exam preparation books for DTZ, ÖIF, and fide across A2 and B1, with free sample PDFs for selected speaking and writing titles.",
-      homeEyebrow: "A2 and B1 exam prep books",
-      homeIntro: "Practice with focused books for speaking, writing, or both - made for learners preparing for exams in Germany, Austria, and Switzerland.",
+      homeTitle: "Pass DTZ, ÖIF, and fide with practical speaking, writing, and listening books for A2, B1, and B2.",
+      homeDescription: "Exam preparation books for DTZ, ÖIF, and fide across A2, B1, and B2, with free sample PDFs for selected speaking and writing titles.",
+      homeEyebrow: "A2, B1, and B2 exam prep books",
+      homeIntro: "Practice with focused books for speaking, writing, listening, or combined skills - made for learners preparing for exams in Germany, Austria, and Switzerland.",
       homeCardTitle: (level) => `${level} books`,
       homeCardIntro: (level) => `Open the ${level} page to compare DTZ, ÖIF, and fide ${level} speaking, writing, and combined books in one place.`,
       homeCardBullets: (level) => [
@@ -88,10 +88,10 @@ const languages = [
       clickNote: "أزرار العينة تفتح ملفات PDF على هذا الموقع، وأزرار الشراء تفتح Amazon في علامة تبويب جديدة."
     },
     copy: {
-      homeTitle: "اجتز امتحانات DTZ وÖIF وfide بكتب عملية للتحدث والكتابة لمستويي A2 وB1.",
-      homeDescription: "كتب تحضير لامتحانات DTZ وÖIF وfide عبر مستويي A2 وB1، مع عينات PDF مجانية لبعض كتب التحدث والكتابة.",
-      homeEyebrow: "كتب تحضير A2 وB1",
-      homeIntro: "تدرّب بكتب مركزة للتحدث أو الكتابة أو للمهارتين معًا، ومصممة للمتعلمين الذين يستعدون للامتحانات في ألمانيا والنمسا وسويسرا.",
+      homeTitle: "اجتز امتحانات DTZ وÖIF وfide بكتب عملية للتحدث والكتابة والاستماع لمستويات A2 وB1 وB2.",
+      homeDescription: "كتب تحضير لامتحانات DTZ وÖIF وfide عبر مستويات A2 وB1 وB2، مع عينات PDF مجانية لبعض كتب التحدث والكتابة.",
+      homeEyebrow: "كتب تحضير A2 وB1 وB2",
+      homeIntro: "تدرّب بكتب مركزة للتحدث أو الكتابة أو الاستماع أو للمهارات المجمعة، ومصممة للمتعلمين الذين يستعدون للامتحانات في ألمانيا والنمسا وسويسرا.",
       homeCardTitle: (level) => `كتب ${level}`,
       homeCardIntro: (level) => `افتح صفحة ${level} لمقارنة كتب DTZ وÖIF وfide الخاصة بالتحدث والكتابة والنسخة المجمعة في مكان واحد.`,
       homeCardBullets: () => [
@@ -134,10 +134,10 @@ const languages = [
       clickNote: "Кнопки зразка відкривають PDF на цьому сайті. Кнопки покупки відкривають Amazon у новій вкладці."
     },
     copy: {
-      homeTitle: "Складіть DTZ, ÖIF і fide з практичними книгами з говоріння та письма для A2 і B1.",
-      homeDescription: "Книги для підготовки до DTZ, ÖIF і fide для рівнів A2 і B1 з безкоштовними PDF-зразками для окремих книг з говоріння та письма.",
-      homeEyebrow: "Книги для підготовки A2 і B1",
-      homeIntro: "Практикуйтеся з цільовими книгами з говоріння, письма або обох навичок - створеними для тих, хто готується до іспитів у Німеччині, Австрії та Швейцарії.",
+      homeTitle: "Складіть DTZ, ÖIF і fide з практичними книгами з говоріння, письма й аудіювання для A2, B1 і B2.",
+      homeDescription: "Книги для підготовки до DTZ, ÖIF і fide для рівнів A2, B1 і B2 з безкоштовними PDF-зразками для окремих книг з говоріння й письма.",
+      homeEyebrow: "Книги для підготовки A2, B1 і B2",
+      homeIntro: "Практикуйтеся з цільовими книгами з говоріння, письма, аудіювання або комбінованих навичок - створеними для тих, хто готується до іспитів у Німеччині, Австрії та Швейцарії.",
       homeCardTitle: (level) => `Книги ${level}`,
       homeCardIntro: (level) => `Відкрийте сторінку ${level}, щоб порівняти книги DTZ, ÖIF і fide з говоріння, письма та комбіновані видання в одному місці.`,
       homeCardBullets: () => [
@@ -180,10 +180,10 @@ const languages = [
       clickNote: "Örnek düğmeleri PDF'leri bu sitede açar. Satın alma düğmeleri Amazon'u yeni sekmede açar."
     },
     copy: {
-      homeTitle: "DTZ, ÖIF ve fide sınavlarını A2 ve B1 için pratik konuşma ve yazma kitaplarıyla geçin.",
-      homeDescription: "DTZ, ÖIF ve fide için A2 ve B1 hazırlık kitapları; seçili konuşma ve yazma kitaplarında ücretsiz PDF örnekleriyle.",
-      homeEyebrow: "A2 ve B1 hazırlık kitapları",
-      homeIntro: "Almanya, Avusturya ve İsviçre'deki sınavlara hazırlananlar için hazırlanmış konuşma, yazma veya her iki beceriye yönelik odaklı kitaplarla çalışın.",
+      homeTitle: "DTZ, ÖIF ve fide sınavlarını A2, B1 ve B2 için pratik konuşma, yazma ve dinleme kitaplarıyla geçin.",
+      homeDescription: "DTZ, ÖIF ve fide için A2, B1 ve B2 hazırlık kitapları; seçili konuşma ve yazma kitaplarında ücretsiz PDF örnekleriyle.",
+      homeEyebrow: "A2, B1 ve B2 hazırlık kitapları",
+      homeIntro: "Almanya, Avusturya ve İsviçre'deki sınavlara hazırlananlar için hazırlanmış konuşma, yazma, dinleme veya birleşik becerilere yönelik odaklı kitaplarla çalışın.",
       homeCardTitle: (level) => `${level} kitapları`,
       homeCardIntro: (level) => `${level} sayfasını açarak DTZ, ÖIF ve fide konuşma, yazma ve birleşik kitaplarını tek yerde karşılaştırın.`,
       homeCardBullets: () => [
@@ -226,10 +226,10 @@ const languages = [
       clickNote: "Dugmad za uzorak otvaraju PDF na ovom sajtu. Dugmad za kupovinu otvaraju Amazon u novoj kartici."
     },
     copy: {
-      homeTitle: "Položite DTZ, ÖIF i fide uz praktične knjige za govor i pisanje za A2 i B1.",
-      homeDescription: "Knjige za pripremu DTZ, ÖIF i fide ispita za nivoe A2 i B1, uz besplatne PDF uzorke za odabrane knjige govora i pisanja.",
-      homeEyebrow: "Knjige za pripremu A2 i B1",
-      homeIntro: "Vežbajte uz fokusirane knjige za govor, pisanje ili obe veštine - napravljene za polaznike koji se pripremaju za ispite u Nemačkoj, Austriji i Švajcarskoj.",
+      homeTitle: "Položite DTZ, ÖIF i fide uz praktične knjige za govor, pisanje i slušanje za A2, B1 i B2.",
+      homeDescription: "Knjige za pripremu DTZ, ÖIF i fide ispita za nivoe A2, B1 i B2, uz besplatne PDF uzorke za odabrane knjige govora i pisanja.",
+      homeEyebrow: "Knjige za pripremu A2, B1 i B2",
+      homeIntro: "Vežbajte uz fokusirane knjige za govor, pisanje, slušanje ili kombinovane veštine - napravljene za polaznike koji se pripremaju za ispite u Nemačkoj, Austriji i Švajcarskoj.",
       homeCardTitle: (level) => `${level} knjige`,
       homeCardIntro: (level) => `Otvorite stranicu ${level} da uporedite DTZ, ÖIF i fide knjige za govor, pisanje i kombinovanu pripremu na jednom mestu.`,
       homeCardBullets: () => [
@@ -272,10 +272,10 @@ const languages = [
       clickNote: "Кнопки образца открывают PDF на этом сайте. Кнопки покупки открывают Amazon в новой вкладке."
     },
     copy: {
-      homeTitle: "Сдайте DTZ, ÖIF и fide с практическими книгами по говорению и письму для A2 и B1.",
-      homeDescription: "Книги для подготовки к DTZ, ÖIF и fide для уровней A2 и B1, с бесплатными PDF-образцами для отдельных книг по говорению и письму.",
-      homeEyebrow: "Книги для подготовки A2 и B1",
-      homeIntro: "Готовьтесь с книгами по говорению, письму или сразу по обоим навыкам - созданными для тех, кто сдает экзамены в Германии, Австрии и Швейцарии.",
+      homeTitle: "Сдайте DTZ, ÖIF и fide с практическими книгами по говорению, письму и аудированию для A2, B1 и B2.",
+      homeDescription: "Книги для подготовки к DTZ, ÖIF и fide для уровней A2, B1 и B2, с бесплатными PDF-образцами для отдельных книг по говорению и письму.",
+      homeEyebrow: "Книги для подготовки A2, B1 и B2",
+      homeIntro: "Готовьтесь с книгами по говорению, письму, аудированию или комбинированным навыкам - созданными для тех, кто сдает экзамены в Германии, Австрии и Швейцарии.",
       homeCardTitle: (level) => `Книги ${level}`,
       homeCardIntro: (level) => `Откройте страницу ${level}, чтобы сравнить книги DTZ, ÖIF и fide по говорению, письму и комбинированные издания в одном месте.`,
       homeCardBullets: () => [
