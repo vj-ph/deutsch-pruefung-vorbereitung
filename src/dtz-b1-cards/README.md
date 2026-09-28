@@ -9,7 +9,7 @@ This folder is a self-contained static website containing 57 pages:
 - `002/index.html` through `053/index.html`: exercise supplements with
   clean public URLs such as `/dtz-b1-cards/002/`
 - `assets/styles.css`: shared responsive styling
-- `assets/practice.js`: prompt copying and ChatGPT opening
+- `assets/practice.js`: prompt copying with a manual fallback
 - `assets/logo.png`: DeutschKompass logo
 - `assets/images/`: web-optimized Teil 2 exercise images
 - `assets/audio/`: 52 Modellantwort and Modelldialog MP3 files
@@ -27,9 +27,9 @@ All links and assets use relative paths, so the folder can be hosted:
 - locally by opening `index.html`.
 
 Each page includes a card-specific DTZ practice prompt. The primary button
-copies that prompt and follows a normal HTTPS link to ChatGPT. No OpenAI API,
-API key, server integration, automatic prompt submission, or microphone access
-is included.
+copies the prompt without navigating. A separate normal HTTPS link opens
+ChatGPT in the browser. No Smart App Banner, OpenAI API, API key, server
+integration, automatic prompt submission, or microphone access is included.
 
 ## Regeneration
 

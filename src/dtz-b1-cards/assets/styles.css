@@ -210,8 +210,8 @@ main { width: min(100% - 32px, 1080px); margin: 0 auto; }
   text-align: center;
   text-decoration: none;
 }
-.practice-launch { color: #fff; background: var(--accent); }
-.practice-copy { color: var(--accent); background: #fff; }
+.practice-primary { color: #fff; background: var(--accent); }
+.practice-browser { color: var(--accent); background: #fff; }
 .practice-actions button:hover, .practice-actions a:hover { transform: translateY(-1px); }
 .practice-actions button:focus-visible, .practice-details summary:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);

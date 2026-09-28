@@ -61,7 +61,6 @@
       
     <section class="content-panel practice-panel"
       data-practice-panel
-      data-success-open="Prompt copied. Sign in if necessary, start Voice Mode first and then paste the prompt into that chat."
       data-success-copy="The prompt was copied."
       data-copy-error="Automatic copying was not possible. The prompt is selected; please copy it manually.">
       <p class="eyebrow">Interactive speaking practice</p>
@@ -72,14 +71,14 @@
         <p>Sign in to your own ChatGPT account so that Voice Mode and the chat work reliably. A free ChatGPT account is sufficient, but Voice Mode usage limits vary by account, device and region.</p>
       </aside>
       <ol class="practice-steps">
-        <li>Tap the button. The practice prompt is copied and ChatGPT opens. Sign in to your ChatGPT account if necessary.</li><li>Start Voice Mode in ChatGPT first.</li><li>Paste the copied prompt into the Voice Mode chat and send it.</li><li>Then begin the speaking exercise.</li>
+        <li>Tap “Copy prompt”.</li><li>Then open the ChatGPT app or use the browser link.</li><li>Sign in if necessary and start Voice Mode in ChatGPT first.</li><li>Paste the copied prompt into the Voice Mode chat and send it.</li><li>Then begin the speaking exercise.</li>
         <li>When you want to finish the exercise and receive feedback, say: <q lang="de">Die Übung ist beendet. Bitte gib mir jetzt Feedback.</q></li>
       </ol>
       <div class="practice-actions">
-        <a class="practice-launch" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
-          Copy prompt &amp; open ChatGPT
+        <button class="practice-copy practice-primary" type="button">Copy prompt</button>
+        <a class="practice-browser" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
+          Open ChatGPT in browser
         </a>
-        <button class="practice-copy" type="button">Copy prompt only</button>
       </div>
       <p class="practice-status" role="status" aria-live="polite"></p>
       <details class="practice-details">
