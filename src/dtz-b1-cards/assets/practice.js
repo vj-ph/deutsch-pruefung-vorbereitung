@@ -20,18 +20,13 @@
     status.classList.toggle("is-error", isError);
   }
 
-  async function handleCopy(panel, shouldOpen) {
+  async function handleCopy(panel) {
     const textarea = panel.querySelector(".practice-prompt");
 
     try {
       const copied = await copyPrompt(textarea);
       if (!copied) throw new Error("copy failed");
-      setStatus(
-        panel,
-        shouldOpen
-          ? panel.dataset.successOpen
-          : panel.dataset.successCopy,
-      );
+      setStatus(panel, panel.dataset.successCopy);
     } catch {
       panel.querySelector(".practice-details").open = true;
       textarea.focus();
@@ -45,11 +40,8 @@
   }
 
   document.querySelectorAll("[data-practice-panel]").forEach((panel) => {
-    panel.querySelector(".practice-launch").addEventListener("click", () => {
-      handleCopy(panel, true);
-    });
     panel.querySelector(".practice-copy").addEventListener("click", () => {
-      handleCopy(panel, false);
+      handleCopy(panel);
     });
   });
 })();
