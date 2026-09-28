@@ -150,6 +150,7 @@ module.exports = function(eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/dtz-b1-cards");
   
   // Copy favicon if present
   eleventyConfig.addPassthroughCopy({"src/favicon.ico": "favicon.ico"});
