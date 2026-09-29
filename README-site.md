@@ -103,6 +103,21 @@ npm run dev
 
 Visit `http://localhost:8080` to preview locally.
 
+## DTZ B1 speaking book materials
+
+The German-language exercise directory is at `/dtz-b1-speaking/`. It contains
+52 exercises from the speaking book, arranged by the book's Teil and Übung
+numbers; eight exercises from Teil 1 without matching card audio are omitted.
+The exercise pages use the existing audio and optimized images in
+`src/dtz-b1-cards/assets/` rather than copying those files. Each exercise also
+has a book-specific ChatGPT speaking prompt with a copy button; the copy
+behavior reuses the cards' practice script.
+
+The generated Markdown exercises and directory data are committed, so normal
+site builds do not need the book repository. To update them when the book
+changes, place `german_exam_books` alongside this repository and run
+`node scripts/generate-dtz-b1-speaking.js` from the project root before building.
+
 ## Pre-Launch Checklist
 
 - [ ] Update `src/_data/site.js` with production URL
