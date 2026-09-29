@@ -11,6 +11,12 @@
   <meta name="description" content="{{ description or site.description }}">
   <link rel="icon" href="{{ '/favicon.ico' | url }}">
   <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+  {% if extraStylesheet %}
+  <link rel="stylesheet" href="{{ extraStylesheet | url }}">
+  {% endif %}
+  {% if extraScript %}
+  <script src="{{ extraScript | url }}" defer></script>
+  {% endif %}
   {% if structuredBookOrder and site.books %}
   <script type="application/ld+json">
     {
