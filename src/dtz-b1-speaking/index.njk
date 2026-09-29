@@ -1,0 +1,43 @@
+---
+layout: base.njk
+title: "DTZ B1 Sprechen · Online-Material zum Buch"
+description: "Modell-Audio und ergänzendes Übungsmaterial für 52 Übungen aus dem Buch DTZ B1 Sprechen."
+permalink: "/dtz-b1-speaking/"
+lang: "de-DE"
+extraStylesheet: "/css/dtz-b1-speaking.css"
+---
+<div class="dtz-book">
+  <header class="dtz-book__hero">
+    <div class="container">
+      <p class="dtz-book__kicker">DeutschKompass · Online-Material zum Buch</p>
+      <h1>DTZ B1 Sprechen</h1>
+      <p>Üben Sie mit dem Buch und hören Sie die Modellantworten und Dialoge direkt hier an. Finden Sie Ihre Übung anhand von Teil und Übungsnummer im Buch.</p>
+      <a class="dtz-book__hero-link" href="#teil-1">Übung auswählen <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+  <div class="container dtz-book__body">
+    <aside class="dtz-book__notice">
+      <strong>So üben Sie:</strong> Lesen Sie die Aufgabe im Buch, sprechen Sie zuerst selbst oder üben Sie mit dem ChatGPT-Sprachmodus. Hören Sie danach das Modell und bearbeiten Sie das Schnelltraining. Hier finden Sie Online-Material zu 52 Übungen; acht weitere Übungen aus Teil 1 sind nur im Buch enthalten.
+    </aside>
+    {% set partNames = ["Sich vorstellen", "Bild und eigene Erfahrungen", "Gemeinsam etwas planen"] %}
+    {% for part in [1, 2, 3] %}
+    <section id="teil-{{ part }}" class="dtz-book__section">
+      <div class="dtz-book__section-heading">
+        <p class="dtz-book__kicker">Teil {{ part }} · {{ "12 Übungen" if part == 1 else "20 Übungen" }}</p>
+        <h2>{{ partNames[part - 1] }}</h2>
+      </div>
+      <div class="dtz-book__list">
+        {% for exercise in dtzB1SpeakingExercises %}
+        {% if exercise.part == part %}
+        <a class="dtz-book__list-item" href="{{ exercise.url | url }}">
+          <span class="dtz-book__number">{{ "0" if exercise.number < 10 else "" }}{{ exercise.number }}</span>
+          <span><small>Übung {{ exercise.number }}</small><strong>{{ exercise.title }}</strong></span>
+          <span class="dtz-book__arrow" aria-hidden="true">→</span>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</div>
