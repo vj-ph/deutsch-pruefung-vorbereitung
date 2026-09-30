@@ -23,12 +23,19 @@
   async function handleCopy(panel) {
     const textarea = panel.querySelector(".practice-prompt");
 
+    if (panel.dataset.emptyError && !textarea.value.trim()) {
+      setStatus(panel, panel.dataset.emptyError, true);
+      textarea.focus();
+      return;
+    }
+
     try {
       const copied = await copyPrompt(textarea);
       if (!copied) throw new Error("copy failed");
       setStatus(panel, panel.dataset.successCopy);
     } catch {
-      panel.querySelector(".practice-details").open = true;
+      const details = panel.querySelector(".practice-details");
+      if (details) details.open = true;
       textarea.focus();
       textarea.select();
       setStatus(
