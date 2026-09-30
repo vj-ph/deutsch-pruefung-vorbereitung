@@ -1,0 +1,44 @@
+---
+layout: base.njk
+title: "DTZ B1 Schreiben · Online-Material zum Buch"
+description: "Schreiben und mit ChatGPT überarbeiten: 30 Einheiten zum Buch DTZ B1 Schreiben."
+permalink: "/dtz-b1-writing/"
+lang: "de-DE"
+extraStylesheet: "/css/dtz-b1-writing.css"
+---
+<div class="dtz-book dtz-book--writing">
+  <header class="dtz-book__hero">
+    <div class="container">
+      <p class="dtz-book__kicker">DeutschKompass · Online-Material zum Buch</p>
+      <h1>DTZ B1 Schreiben</h1>
+      <p>Schreiben Sie Ihren eigenen Text zum Buch und holen Sie gezieltes Feedback ein. Wählen Sie die Einheit, die Sie gerade üben.</p>
+      <a class="dtz-book__hero-link" href="#kapitel-1">Einheit auswählen <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+  <div class="container dtz-book__body">
+    <aside class="dtz-book__notice">
+      <strong>So üben Sie:</strong> Lesen Sie die Aufgabe im Buch. Schreiben Sie Ihren Entwurf auf der passenden Seite, kopieren Sie ihn und anschließend den Feedback-Prompt in dieselbe ChatGPT-Nachricht. Überarbeiten Sie danach Ihren Text selbst. Die Aufgaben und Beispieltexte bleiben im Buch.
+    </aside>
+    {% set chapterNames = ["Persönliche Nachrichten und Kursalltag", "Formelle Nachrichten in Alltag und Integration", "Beschwerden, Klärungen und Entschuldigungen", "Transfertraining"] %}
+    {% for chapter in [1, 2, 3, 4] %}
+    <section class="dtz-book__section" id="kapitel-{{ chapter }}">
+      <div class="dtz-book__section-heading">
+        <p class="dtz-book__kicker">{{ "Kapitel " ~ chapter if chapter < 4 else "Anhang" }} · {{ "8 Einheiten" if chapter < 4 else "6 Einheiten" }}</p>
+        <h2>{{ chapterNames[chapter - 1] }}</h2>
+        {% if chapter == 4 %}<p>Zusätzliche Schreibpraxis außerhalb der typischen DTZ-Kernaufgabe.</p>{% endif %}
+      </div>
+      <div class="dtz-book__list">
+        {% for unit in dtzB1WritingUnits %}
+        {% if unit.chapter == chapter %}
+        <a class="dtz-book__list-item" href="{{ unit.url | url }}">
+          <span class="dtz-book__number">{{ "0" if unit.number < 10 else "" }}{{ unit.number }}</span>
+          <span><small>Einheit {{ unit.number }}</small><strong>{{ unit.title }}</strong></span>
+          <span class="dtz-book__arrow" aria-hidden="true">→</span>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</div>

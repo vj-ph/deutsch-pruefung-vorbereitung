@@ -1,0 +1,11 @@
+@import url("./dtz-b1-speaking.css");
+
+.dtz-book--writing { --book-accent: #614c8c; }
+.dtz-book--writing .dtz-book__practice { background: linear-gradient(125deg, #f3f0f9, #fff 64%); }
+.dtz-writing__label { display: block; margin-top: 22px; font-weight: 700; }
+.dtz-book__practice textarea.dtz-writing__draft {
+  min-height: 320px;
+  margin: 10px 0 14px;
+  font: inherit;
+  line-height: 1.6;
+}

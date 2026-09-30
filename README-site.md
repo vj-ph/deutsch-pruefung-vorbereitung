@@ -120,6 +120,21 @@ site builds do not need the book repository. To update them when the book
 changes, place `german_exam_books` alongside this repository and run
 `node scripts/generate-dtz-b1-speaking.js` from the project root before building.
 
+## DTZ B1 writing book materials
+
+The companion directory at `/dtz-b1-writing/` contains one page for each of
+the 30 numbered units in the writing book (including six transfer units, which
+are labeled as practice outside the typical DTZ core task). Learners draft in
+an on-page text area, copy their text, then copy a task-specific feedback prompt
+under it in the same unsent ChatGPT message. Each prompt includes the four
+content points from the book and requests targeted feedback and self-revision
+instead of a complete rewritten answer. Drafts are not sent or stored by the
+site; copying uses the same script as the speaking pages.
+
+The pages and prompt data are checked in so regular builds need no book source.
+To regenerate after changes to the book, place `german_exam_books` alongside
+this repository and run `node scripts/generate-dtz-b1-writing.js` before building.
+
 ## Pre-Launch Checklist
 
 - [ ] Update `src/_data/site.js` with production URL
