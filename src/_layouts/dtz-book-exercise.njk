@@ -11,6 +11,11 @@ layout: base.njk
     </div>
   </header>
   <div class="container dtz-book__body">
+    {% if imageUrl %}
+    <figure class="dtz-book__image">
+      <img src="{{ imageUrl | url }}" alt="Bildimpuls zu {{ exerciseTitle }}">
+    </figure>
+    {% endif %}
     <section class="dtz-book__practice" aria-label="Interaktives Sprechtraining"
       data-practice-panel
       data-success-copy="Prompt wurde kopiert."
@@ -48,9 +53,6 @@ layout: base.njk
       <audio controls preload="none" src="{{ audioUrl | url }}">Ihr Browser unterstützt die Audiowiedergabe nicht.</audio>
       <a href="{{ audioUrl | url }}" download>MP3 herunterladen ↓</a>
     </section>
-    <article class="dtz-book__exercise">
-      {{ content | safe }}
-    </article>
     <nav class="dtz-book__navigation" aria-label="Weitere Übungen">
       {% if previousExercise %}
       <a href="{{ previousExercise.url | url }}"><small>← Vorherige Übung</small><strong>Teil {{ previousExercise.part }}, Übung {{ previousExercise.number }}: {{ previousExercise.title }}</strong></a>
