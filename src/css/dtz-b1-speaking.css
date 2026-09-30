@@ -32,7 +32,7 @@
 }
 .dtz-book__breadcrumb { margin: 0 0 30px; }
 .dtz-book__body { padding-top: 44px; padding-bottom: 80px; }
-.dtz-book__notice, .dtz-book__audio, .dtz-book__exercise, .dtz-book__navigation a {
+.dtz-book__notice, .dtz-book__audio, .dtz-book__image, .dtz-book__navigation a {
   border: 1px solid #dce6e1;
   border-radius: 18px;
   background: #fff;
@@ -61,6 +61,8 @@
 .dtz-book__list-item small { color: var(--book-muted); }
 .dtz-book__list-item strong { line-height: 1.35; }
 .dtz-book__arrow { margin-left: auto; color: var(--book-accent); }
+.dtz-book__image { margin: 0 0 24px; padding: clamp(16px, 3vw, 26px); }
+.dtz-book__image img { display: block; width: 100%; max-width: 720px; height: auto; margin: auto; border-radius: 12px; }
 .dtz-book__practice {
   margin-bottom: 24px;
   padding: clamp(24px, 4vw, 34px);
@@ -121,21 +123,6 @@
 .dtz-book__audio p:not(.dtz-book__kicker) { margin: 0; }
 .dtz-book__audio audio { width: 100%; }
 .dtz-book__audio a { width: fit-content; color: var(--book-accent); font-weight: 700; }
-.dtz-book__exercise { margin-top: 24px; padding: clamp(24px, 5vw, 48px); line-height: 1.7; }
-.dtz-book__exercise h3 {
-  margin: 36px 0 12px;
-  padding-top: 18px;
-  border-top: 1px solid #dce6e1;
-  color: var(--book-accent);
-  font-size: 1.4rem;
-}
-.dtz-book__exercise h3:first-child { margin-top: 0; padding-top: 0; border: 0; }
-.dtz-book__exercise img { display: block; width: 100%; max-width: 720px; height: auto; margin: 0 auto 26px; border-radius: 12px; }
-.dtz-book__exercise ul, .dtz-book__exercise ol { padding-left: 1.5em; }
-.dtz-book__exercise li { margin: 6px 0; }
-.dtz-book__exercise table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
-.dtz-book__exercise th, .dtz-book__exercise td { padding: 8px 16px; border: 1px solid #dce6e1; text-align: left; }
-.dtz-book__exercise th { background: #eff5f1; }
 .dtz-book__navigation { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
 .dtz-book__navigation a { display: block; padding: 18px 22px; color: var(--book-ink); text-decoration: none; }
 .dtz-book__navigation a:hover { border-color: var(--book-accent); }

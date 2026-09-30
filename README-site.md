@@ -108,10 +108,12 @@ Visit `http://localhost:8080` to preview locally.
 The German-language exercise directory is at `/dtz-b1-speaking/`. It contains
 52 exercises from the speaking book, arranged by the book's Teil and Übung
 numbers; eight exercises from Teil 1 without matching card audio are omitted.
-The exercise pages use the existing audio and optimized images in
-`src/dtz-b1-cards/assets/` rather than copying those files. Each exercise also
-has a book-specific ChatGPT speaking prompt with a copy button; the copy
-behavior reuses the cards' practice script.
+The exercise pages offer ChatGPT speaking practice and model audio; Teil 2
+also displays its exercise image. Tasks, model texts, vocabulary and
+Schnelltraining stay in the book rather than being repeated online. Pages
+reference the existing audio and optimized Teil 2 images in
+`src/dtz-b1-cards/assets/` instead of copying them. The book-specific prompts
+use the cards' practice script for the copy button.
 
 The generated Markdown exercises and directory data are committed, so normal
 site builds do not need the book repository. To update them when the book
