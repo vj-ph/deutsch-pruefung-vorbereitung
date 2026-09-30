@@ -9,17 +9,11 @@ const book = fs.readFileSync(bookPath, "utf8");
 const headings = [...book.matchAll(/^## Übung (\d+): (.+?) \{#teil-(\d)-[^}]+\}\s*$/gm)];
 const exercises = [];
 
-for (let index = 0; index < headings.length; index++) {
-  const heading = headings[index];
+for (const heading of headings) {
   const number = Number(heading[1]);
   const title = heading[2];
   const part = Number(heading[3]);
-  const end = headings[index + 1]?.index ?? book.length;
-  const content = book.slice(heading.index + heading[0].length, end)
-    .split(/^## Kurz-Checkliste|^# (?:Teil |Anhang )/m)[0]
-    .replace(/\\newpage\s*$/g, "")
-    .trim();
-  exercises.push({ part, number, title, content });
+  exercises.push({ part, number, title });
 }
 
 if (exercises.length !== 60 || [1, 2, 3].some(part => exercises.filter(e => e.part === part).length !== 20)) {
@@ -67,12 +61,10 @@ for (const [index, exercise] of cards.entries()) {
   if (image && !fs.existsSync(path.join(root, "src", image.slice(1)))) {
     throw new Error(`Missing image for Teil 2, Übung ${number}`);
   }
-  const content = exercise.content.replace(/^!\[\]\(images\/\d+\.jpg\)/m,
-    `![Bildimpuls: ${title}](${image})`);
   const frontMatter = {
     layout: "dtz-book-exercise.njk",
     title: `Teil ${part}, Übung ${number}: ${title} · DTZ B1 Sprechen`,
-    description: `Online-Übung zum Buch DTZ B1 Sprechen: ${title}. Mit Modell-Audio, Aufgaben und Schnelltraining.`,
+    description: `Online-Material zum Buch DTZ B1 Sprechen: ${title}. Mit ChatGPT-Sprechtraining und Modell-Audio.`,
     permalink: url(exercise),
     lang: "de-DE",
     extraStylesheet: "/css/dtz-b1-speaking.css",
@@ -82,6 +74,7 @@ for (const [index, exercise] of cards.entries()) {
     exerciseTitle: title,
     cardNumber: card,
     audioUrl: `/dtz-b1-cards/assets/audio/${audio}`,
+    ...(image ? { imageUrl: image } : {}),
     previousExercise: index ? metadata[index - 1] : null,
     nextExercise: metadata[index + 1] || null
   };
@@ -89,7 +82,7 @@ for (const [index, exercise] of cards.entries()) {
   fs.mkdirSync(directory, { recursive: true });
   fs.writeFileSync(path.join(directory, `uebung-${String(number).padStart(2, "0")}.md`),
     `---\n${Object.entries(frontMatter).map(([key, value]) =>
-      `${key}: ${JSON.stringify(value)}`).join("\n")}\n---\n\n${content}\n`);
+      `${key}: ${JSON.stringify(value)}`).join("\n")}\n---\n`);
 }
 
 console.log(`Generated ${cards.length} book exercise pages from ${bookPath}`);
