@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 13: Bei der Stadtbibliothek um eine Verlängerung bitten · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Bei der Stadtbibliothek um eine Verlängerung bitten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-13/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 13"
+exerciseTitle: "Bei der Stadtbibliothek um eine Verlängerung bitten"
+sectionTitle: "Formelle und funktionale Nachrichten"
+exerciseNote: ""
+promptKey: "b1-unit-13"
+previousExercise: "/oeif-b1-writing/einheit-12/"
+nextExercise: "/oeif-b1-writing/einheit-14/"
+---

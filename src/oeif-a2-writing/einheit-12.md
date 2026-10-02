@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 12: Sich nach einer Verspätung entschuldigen · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Sich nach einer Verspätung entschuldigen. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-12/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 12"
+exerciseTitle: "Sich nach einer Verspätung entschuldigen"
+sectionTitle: "Bitten, Entschuldigungen und Änderungen"
+exerciseNote: ""
+promptKey: "a2-unit-12"
+previousExercise: "/oeif-a2-writing/einheit-11/"
+nextExercise: "/oeif-a2-writing/einheit-13/"
+---

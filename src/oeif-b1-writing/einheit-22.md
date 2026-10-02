@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 22: Um Zugang zum Fahrradraum bitten · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Um Zugang zum Fahrradraum bitten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-22/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 22"
+exerciseTitle: "Um Zugang zum Fahrradraum bitten"
+sectionTitle: "Beschwerden, Bitten und Entschuldigungen"
+exerciseNote: ""
+promptKey: "b1-unit-22"
+previousExercise: "/oeif-b1-writing/einheit-21/"
+nextExercise: "/oeif-b1-writing/einheit-23/"
+---

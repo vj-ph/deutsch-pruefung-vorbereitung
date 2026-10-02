@@ -1,0 +1,508 @@
+{
+  "a2": {
+    "level": "A2",
+    "slug": "oeif-a2-writing",
+    "sections": [
+      {
+        "id": "gruppe-1",
+        "title": "Persönliche Nachrichten",
+        "label": "Kapitel 1",
+        "note": "",
+        "items": [
+          {
+            "label": "Einheit 1",
+            "title": "Eine Freundin zu einem Treffen einladen",
+            "url": "/oeif-a2-writing/einheit-01/",
+            "badge": "01"
+          },
+          {
+            "label": "Einheit 2",
+            "title": "Geburtstag absagen und neuen Termin vorschlagen",
+            "url": "/oeif-a2-writing/einheit-02/",
+            "badge": "02"
+          },
+          {
+            "label": "Einheit 3",
+            "title": "Die Schwester um Kinderbetreuung bitten",
+            "url": "/oeif-a2-writing/einheit-03/",
+            "badge": "03"
+          },
+          {
+            "label": "Einheit 4",
+            "title": "Ein Lerntreffen in der Bibliothek organisieren",
+            "url": "/oeif-a2-writing/einheit-04/",
+            "badge": "04"
+          }
+        ]
+      },
+      {
+        "id": "gruppe-2",
+        "title": "Formelle Nachrichten im Alltag",
+        "label": "Kapitel 2",
+        "note": "",
+        "items": [
+          {
+            "label": "Einheit 5",
+            "title": "An die Volkshochschule schreiben",
+            "url": "/oeif-a2-writing/einheit-05/",
+            "badge": "05"
+          },
+          {
+            "label": "Einheit 6",
+            "title": "Der Hausverwaltung wegen der Heizung schreiben",
+            "url": "/oeif-a2-writing/einheit-06/",
+            "badge": "06"
+          },
+          {
+            "label": "Einheit 7",
+            "title": "Termin beim Gemeindeamt verschieben",
+            "url": "/oeif-a2-writing/einheit-07/",
+            "badge": "07"
+          },
+          {
+            "label": "Einheit 8",
+            "title": "An die Lehrerin Ihres Kindes schreiben",
+            "url": "/oeif-a2-writing/einheit-08/",
+            "badge": "08"
+          }
+        ]
+      },
+      {
+        "id": "gruppe-3",
+        "title": "Bitten, Entschuldigungen und Änderungen",
+        "label": "Kapitel 3",
+        "note": "",
+        "items": [
+          {
+            "label": "Einheit 9",
+            "title": "Den Arbeitgeber um einen Diensttausch bitten",
+            "url": "/oeif-a2-writing/einheit-09/",
+            "badge": "09"
+          },
+          {
+            "label": "Einheit 10",
+            "title": "Einen Arzttermin verschieben",
+            "url": "/oeif-a2-writing/einheit-10/",
+            "badge": "10"
+          },
+          {
+            "label": "Einheit 11",
+            "title": "Eine Nachbarin wegen eines Pakets um Hilfe bitten",
+            "url": "/oeif-a2-writing/einheit-11/",
+            "badge": "11"
+          },
+          {
+            "label": "Einheit 12",
+            "title": "Sich nach einer Verspätung entschuldigen",
+            "url": "/oeif-a2-writing/einheit-12/",
+            "badge": "12"
+          }
+        ]
+      },
+      {
+        "id": "gruppe-4",
+        "title": "Österreichischer Alltag",
+        "label": "Kapitel 4",
+        "note": "",
+        "items": [
+          {
+            "label": "Einheit 13",
+            "title": "Beim AMS nach einem neuen Termin fragen",
+            "url": "/oeif-a2-writing/einheit-13/",
+            "badge": "13"
+          },
+          {
+            "label": "Einheit 14",
+            "title": "Informationen zu einer Wohnung anfragen",
+            "url": "/oeif-a2-writing/einheit-14/",
+            "badge": "14"
+          },
+          {
+            "label": "Einheit 15",
+            "title": "Bei der Stadtbibliothek um eine Verlängerung bitten",
+            "url": "/oeif-a2-writing/einheit-15/",
+            "badge": "15"
+          },
+          {
+            "label": "Einheit 16",
+            "title": "Eine Reklamation an ein Elektrogeschäft schreiben",
+            "url": "/oeif-a2-writing/einheit-16/",
+            "badge": "16"
+          }
+        ]
+      }
+    ]
+  },
+  "b1": {
+    "level": "B1",
+    "slug": "oeif-b1-writing",
+    "sections": [
+      {
+        "id": "gruppe-1",
+        "title": "Informelle Nachrichten",
+        "label": "Kapitel 1",
+        "note": "",
+        "items": [
+          {
+            "label": "Einheit 1",
+            "title": "Einer Freundin beim Umzug helfen",
+            "url": "/oeif-b1-writing/einheit-01/",
+            "badge": "01"
+          },
+          {
+            "label": "Einheit 2",
+            "title": "Geburtstag absagen und neuen Termin vorschlagen",
+            "url": "/oeif-b1-writing/einheit-02/",
+            "badge": "02"
+          },
+          {
+            "label": "Einheit 3",
+            "title": "Besuch der Schwester organisieren",
+            "url": "/oeif-b1-writing/einheit-03/",
+            "badge": "03"
+          },
+          {
+            "label": "Einheit 4",
+            "title": "Nachbarin um Kinderbetreuung bitten",
+            "url": "/oeif-b1-writing/einheit-04/",
+            "badge": "04"
+          },
+          {
+            "label": "Einheit 5",
+            "title": "Freundin zu einem Grillabend einladen",
+            "url": "/oeif-b1-writing/einheit-05/",
+            "badge": "05"
+          },
+          {
+            "label": "Einheit 6",
+            "title": "Einen Freund um Hilfe mit Pflanzen bitten",
+            "url": "/oeif-b1-writing/einheit-06/",
+            "badge": "06"
+          },
+          {
+            "label": "Einheit 7",
+            "title": "Einen Cousin vom Bahnhof abholen",
+            "url": "/oeif-b1-writing/einheit-07/",
+            "badge": "07"
+          },
+          {
+            "label": "Einheit 8",
+            "title": "Ein Lerntreffen in der Bibliothek vorschlagen",
+            "url": "/oeif-b1-writing/einheit-08/",
+            "badge": "08"
+          }
+        ]
+      },
+      {
+        "id": "gruppe-2",
+        "title": "Formelle und funktionale Nachrichten",
+        "label": "Kapitel 2",
+        "note": "",
+        "items": [
+          {
+            "label": "Einheit 9",
+            "title": "An die Volkshochschule schreiben",
+            "url": "/oeif-b1-writing/einheit-09/",
+            "badge": "09"
+          },
+          {
+            "label": "Einheit 10",
+            "title": "Der Hausverwaltung wegen der Heizung schreiben",
+            "url": "/oeif-b1-writing/einheit-10/",
+            "badge": "10"
+          },
+          {
+            "label": "Einheit 11",
+            "title": "Termin beim Gemeindeamt verschieben",
+            "url": "/oeif-b1-writing/einheit-11/",
+            "badge": "11"
+          },
+          {
+            "label": "Einheit 12",
+            "title": "Informationen zu einer Wohnung anfragen",
+            "url": "/oeif-b1-writing/einheit-12/",
+            "badge": "12"
+          },
+          {
+            "label": "Einheit 13",
+            "title": "Bei der Stadtbibliothek um eine Verlängerung bitten",
+            "url": "/oeif-b1-writing/einheit-13/",
+            "badge": "13"
+          },
+          {
+            "label": "Einheit 14",
+            "title": "Informationen zur Sommerbetreuung im Kindergarten anfragen",
+            "url": "/oeif-b1-writing/einheit-14/",
+            "badge": "14"
+          },
+          {
+            "label": "Einheit 15",
+            "title": "Den Arbeitgeber um einen Diensttausch bitten",
+            "url": "/oeif-b1-writing/einheit-15/",
+            "badge": "15"
+          },
+          {
+            "label": "Einheit 16",
+            "title": "Informationen zu einem Musikkurs anfragen",
+            "url": "/oeif-b1-writing/einheit-16/",
+            "badge": "16"
+          }
+        ]
+      },
+      {
+        "id": "gruppe-3",
+        "title": "Beschwerden, Bitten und Entschuldigungen",
+        "label": "Kapitel 3",
+        "note": "",
+        "items": [
+          {
+            "label": "Einheit 17",
+            "title": "Beschwerde wegen eines beschädigten Pakets",
+            "url": "/oeif-b1-writing/einheit-17/",
+            "badge": "17"
+          },
+          {
+            "label": "Einheit 18",
+            "title": "Entschuldigung an die Lehrerin Ihres Kindes",
+            "url": "/oeif-b1-writing/einheit-18/",
+            "badge": "18"
+          },
+          {
+            "label": "Einheit 19",
+            "title": "Bitte an die Nachbarn wegen Ruhe im Stiegenhaus",
+            "url": "/oeif-b1-writing/einheit-19/",
+            "badge": "19"
+          },
+          {
+            "label": "Einheit 20",
+            "title": "Entschuldigung bei einer Freundin nach einer Verspätung",
+            "url": "/oeif-b1-writing/einheit-20/",
+            "badge": "20"
+          },
+          {
+            "label": "Einheit 21",
+            "title": "Beschwerde wegen einer verspäteten Reparatur",
+            "url": "/oeif-b1-writing/einheit-21/",
+            "badge": "21"
+          },
+          {
+            "label": "Einheit 22",
+            "title": "Um Zugang zum Fahrradraum bitten",
+            "url": "/oeif-b1-writing/einheit-22/",
+            "badge": "22"
+          },
+          {
+            "label": "Einheit 23",
+            "title": "Sich bei der Kursleitung für eine verpasste Präsentation entschuldigen",
+            "url": "/oeif-b1-writing/einheit-23/",
+            "badge": "23"
+          },
+          {
+            "label": "Einheit 24",
+            "title": "Sich bei den Nachbarn nach einer lauten Feier entschuldigen",
+            "url": "/oeif-b1-writing/einheit-24/",
+            "badge": "24"
+          }
+        ]
+      },
+      {
+        "id": "gruppe-4",
+        "title": "Transfertraining – kurze Meinungen und Alltagstexte",
+        "label": "Kapitel 4",
+        "note": "Zusätzliches Transfertraining, nicht die typische ÖIF-B1-Kernaufgabe.",
+        "items": [
+          {
+            "label": "Einheit 25",
+            "title": "Kurze Meinung zum Online-Lernen",
+            "url": "/oeif-b1-writing/einheit-25/",
+            "badge": "25"
+          },
+          {
+            "label": "Einheit 26",
+            "title": "Kurzer Text für eine Kursgruppe",
+            "url": "/oeif-b1-writing/einheit-26/",
+            "badge": "26"
+          },
+          {
+            "label": "Einheit 27",
+            "title": "Kurze Meinung zum Homeoffice",
+            "url": "/oeif-b1-writing/einheit-27/",
+            "badge": "27"
+          },
+          {
+            "label": "Einheit 28",
+            "title": "Kurze Meinung zu Öffis oder Auto in der Stadt",
+            "url": "/oeif-b1-writing/einheit-28/",
+            "badge": "28"
+          },
+          {
+            "label": "Einheit 29",
+            "title": "Einen kurzen Aushang für einen Kleidertausch schreiben",
+            "url": "/oeif-b1-writing/einheit-29/",
+            "badge": "29"
+          },
+          {
+            "label": "Einheit 30",
+            "title": "Einen motivierenden Text für eine Laufgruppe schreiben",
+            "url": "/oeif-b1-writing/einheit-30/",
+            "badge": "30"
+          }
+        ]
+      }
+    ]
+  },
+  "b2": {
+    "level": "B2",
+    "slug": "oeif-b2-writing",
+    "sections": [
+      {
+        "id": "gruppe-1",
+        "title": "Übungsaufsätze",
+        "label": "Kapitel 3",
+        "note": "",
+        "items": [
+          {
+            "label": "Thema 1",
+            "title": "Soll man im Alltag öfter auf soziale Medien verzichten?",
+            "url": "/oeif-b2-writing/thema-01/",
+            "badge": "01"
+          },
+          {
+            "label": "Thema 2",
+            "title": "Soll Homeoffice ein normaler Teil der Arbeitswelt sein?",
+            "url": "/oeif-b2-writing/thema-02/",
+            "badge": "02"
+          },
+          {
+            "label": "Thema 3",
+            "title": "Soll Weiterbildung im Erwachsenenleben wichtiger werden?",
+            "url": "/oeif-b2-writing/thema-03/",
+            "badge": "03"
+          },
+          {
+            "label": "Thema 4",
+            "title": "Soll man regionale Produkte stärker bevorzugen?",
+            "url": "/oeif-b2-writing/thema-04/",
+            "badge": "04"
+          },
+          {
+            "label": "Thema 5",
+            "title": "Sollte künstliche Intelligenz im Alltag stärker genutzt werden?",
+            "url": "/oeif-b2-writing/thema-05/",
+            "badge": "05"
+          },
+          {
+            "label": "Thema 6",
+            "title": "Soll die Stadt mehr Platz für Fahrräder schaffen?",
+            "url": "/oeif-b2-writing/thema-06/",
+            "badge": "06"
+          },
+          {
+            "label": "Thema 7",
+            "title": "Sind kurze Urlaube eine gute Erholung?",
+            "url": "/oeif-b2-writing/thema-07/",
+            "badge": "07"
+          },
+          {
+            "label": "Thema 8",
+            "title": "Soll ehrenamtliches Engagement stärker anerkannt werden?",
+            "url": "/oeif-b2-writing/thema-08/",
+            "badge": "08"
+          },
+          {
+            "label": "Thema 9",
+            "title": "Soll man im Alltag weniger konsumieren?",
+            "url": "/oeif-b2-writing/thema-09/",
+            "badge": "09"
+          },
+          {
+            "label": "Thema 10",
+            "title": "Soll Lernen im Erwachsenenalter digitaler werden?",
+            "url": "/oeif-b2-writing/thema-10/",
+            "badge": "10"
+          },
+          {
+            "label": "Thema 11",
+            "title": "Soll man in Städten stärker auf öffentliche Verkehrsmittel setzen?",
+            "url": "/oeif-b2-writing/thema-11/",
+            "badge": "11"
+          },
+          {
+            "label": "Thema 12",
+            "title": "Soll Medienkompetenz ein eigenes Schulfach sein?",
+            "url": "/oeif-b2-writing/thema-12/",
+            "badge": "12"
+          },
+          {
+            "label": "Thema 13",
+            "title": "Soll ehrenamtliche Arbeit bei Bewerbungen stärker zählen?",
+            "url": "/oeif-b2-writing/thema-13/",
+            "badge": "13"
+          },
+          {
+            "label": "Thema 14",
+            "title": "Soll man Freizeit stärker planen oder spontan gestalten?",
+            "url": "/oeif-b2-writing/thema-14/",
+            "badge": "14"
+          },
+          {
+            "label": "Thema 15",
+            "title": "Sollen Unternehmen stärker auf psychische Gesundheit achten?",
+            "url": "/oeif-b2-writing/thema-15/",
+            "badge": "15"
+          },
+          {
+            "label": "Thema 16",
+            "title": "Soll künstliche Intelligenz beim Lernen selbstverständlich werden?",
+            "url": "/oeif-b2-writing/thema-16/",
+            "badge": "16"
+          }
+        ]
+      },
+      {
+        "id": "gruppe-2",
+        "title": "Mock Exams – Thema A oder B",
+        "label": "Kapitel 4",
+        "note": "",
+        "items": [
+          {
+            "label": "Mock Exam 1 · Thema A",
+            "title": "Soll kulturelle Teilhabe für alle Menschen leichter möglich sein?",
+            "url": "/oeif-b2-writing/mock-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Mock Exam 1 · Thema B",
+            "title": "Soll die Vier-Tage-Woche in mehr Unternehmen erprobt werden?",
+            "url": "/oeif-b2-writing/mock-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Mock Exam 2 · Thema A",
+            "title": "Soll Mehrsprachigkeit im Alltag stärker gefördert werden?",
+            "url": "/oeif-b2-writing/mock-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Mock Exam 2 · Thema B",
+            "title": "Soll gesundes Essen an Schulen stärker unterstützt werden?",
+            "url": "/oeif-b2-writing/mock-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Mock Exam 3 · Thema A",
+            "title": "Soll Bargeld im Alltag weiterhin geschützt werden?",
+            "url": "/oeif-b2-writing/mock-3-a/",
+            "badge": "3A"
+          },
+          {
+            "label": "Mock Exam 3 · Thema B",
+            "title": "Soll Wohnen in Städten stärker reguliert werden?",
+            "url": "/oeif-b2-writing/mock-3-b/",
+            "badge": "3B"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 14: Soll man Freizeit stärker planen oder spontan gestalten? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll man Freizeit stärker planen oder spontan gestalten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-14/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 14"
+exerciseTitle: "Soll man Freizeit stärker planen oder spontan gestalten?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-14"
+previousExercise: "/oeif-b2-writing/thema-13/"
+nextExercise: "/oeif-b2-writing/thema-15/"
+---

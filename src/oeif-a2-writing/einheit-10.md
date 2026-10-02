@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 10: Einen Arzttermin verschieben · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Einen Arzttermin verschieben. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-10/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 10"
+exerciseTitle: "Einen Arzttermin verschieben"
+sectionTitle: "Bitten, Entschuldigungen und Änderungen"
+exerciseNote: ""
+promptKey: "a2-unit-10"
+previousExercise: "/oeif-a2-writing/einheit-09/"
+nextExercise: "/oeif-a2-writing/einheit-11/"
+---

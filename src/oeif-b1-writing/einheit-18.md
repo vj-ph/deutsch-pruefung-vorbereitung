@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 18: Entschuldigung an die Lehrerin Ihres Kindes · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Entschuldigung an die Lehrerin Ihres Kindes. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-18/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 18"
+exerciseTitle: "Entschuldigung an die Lehrerin Ihres Kindes"
+sectionTitle: "Beschwerden, Bitten und Entschuldigungen"
+exerciseNote: ""
+promptKey: "b1-unit-18"
+previousExercise: "/oeif-b1-writing/einheit-17/"
+nextExercise: "/oeif-b1-writing/einheit-19/"
+---

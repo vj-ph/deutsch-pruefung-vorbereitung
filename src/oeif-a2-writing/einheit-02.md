@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 2: Geburtstag absagen und neuen Termin vorschlagen · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Geburtstag absagen und neuen Termin vorschlagen. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-02/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 2"
+exerciseTitle: "Geburtstag absagen und neuen Termin vorschlagen"
+sectionTitle: "Persönliche Nachrichten"
+exerciseNote: ""
+promptKey: "a2-unit-2"
+previousExercise: "/oeif-a2-writing/einheit-01/"
+nextExercise: "/oeif-a2-writing/einheit-03/"
+---
