@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 6: Der Hausverwaltung wegen der Heizung schreiben · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Der Hausverwaltung wegen der Heizung schreiben. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-06/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 6"
+exerciseTitle: "Der Hausverwaltung wegen der Heizung schreiben"
+sectionTitle: "Formelle Nachrichten im Alltag"
+exerciseNote: ""
+promptKey: "a2-unit-6"
+previousExercise: "/oeif-a2-writing/einheit-05/"
+nextExercise: "/oeif-a2-writing/einheit-07/"
+---

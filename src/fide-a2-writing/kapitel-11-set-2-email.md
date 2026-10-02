@@ -1,0 +1,20 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Übungsset 2 · E-Mail: E-Mail: Weiterbildung · fide A2 Schreiben"
+description: "Online-Material zum fide-A2-Schreibbuch: E-Mail: Weiterbildung. Eigenen Text verfassen und mit Feedback selbst überarbeiten."
+permalink: "/fide-a2-writing/kapitel-11-set-2-email/"
+lang: "de-CH"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+writingCompanionSlug: "fide-a2-writing"
+writingCompanionName: "fide"
+writingPracticeGuidance: "Schreiben Sie eine kurze Antwort auf das E-Mail im Buch (Orientierung: 40–60 Wörter). Achten Sie auf passende Anrede und Schlussformel."
+exerciseLabel: "Übungsset 2 · E-Mail"
+exerciseTitle: "E-Mail: Weiterbildung · Set 2"
+sectionTitle: "Weiterbildung"
+exerciseNote: ""
+promptKey: "a2-k11-s2-email"
+previousExercise: "/fide-a2-writing/kapitel-11-set-2-form/"
+nextExercise: null
+---

@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 10: Soll Lernen im Erwachsenenalter digitaler werden? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll Lernen im Erwachsenenalter digitaler werden. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-10/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 10"
+exerciseTitle: "Soll Lernen im Erwachsenenalter digitaler werden?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-10"
+previousExercise: "/oeif-b2-writing/thema-09/"
+nextExercise: "/oeif-b2-writing/thema-11/"
+---

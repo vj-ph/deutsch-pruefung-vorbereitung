@@ -1,0 +1,14 @@
+@import url("./dtz-b1-writing.css");
+
+.oeif-book { --book-accent: #286478; }
+.oeif-book .dtz-book__practice { background: linear-gradient(125deg, #edf6f7, #fff 64%); }
+.oeif-book .dtz-book__number { font-size: 1.4rem; white-space: nowrap; }
+.oeif-book .dtz-book__notice p { margin-bottom: 0; }
+.oeif-book .dtz-book__practice { margin-top: 24px; }
+.oeif-book .dtz-book__practice:first-of-type { margin-top: 0; }
+
+.fide-book { --book-accent: #a63143; }
+.fide-book .dtz-book__practice { background: linear-gradient(125deg, #fff0f1, #fff 64%); margin-top: 24px; }
+.fide-book .dtz-book__number { font-size: 1.4rem; white-space: nowrap; }
+.fide-book .dtz-book__notice p { margin-bottom: 0; }
+.fide-book .dtz-book__practice:first-of-type { margin-top: 0; }

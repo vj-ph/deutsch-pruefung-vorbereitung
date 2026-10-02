@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 9: Den Arbeitgeber um einen Diensttausch bitten · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Den Arbeitgeber um einen Diensttausch bitten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-09/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 9"
+exerciseTitle: "Den Arbeitgeber um einen Diensttausch bitten"
+sectionTitle: "Bitten, Entschuldigungen und Änderungen"
+exerciseNote: ""
+promptKey: "a2-unit-9"
+previousExercise: "/oeif-a2-writing/einheit-08/"
+nextExercise: "/oeif-a2-writing/einheit-10/"
+---

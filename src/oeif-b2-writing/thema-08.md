@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 8: Soll ehrenamtliches Engagement stärker anerkannt werden? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll ehrenamtliches Engagement stärker anerkannt werden. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-08/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 8"
+exerciseTitle: "Soll ehrenamtliches Engagement stärker anerkannt werden?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-8"
+previousExercise: "/oeif-b2-writing/thema-07/"
+nextExercise: "/oeif-b2-writing/thema-09/"
+---

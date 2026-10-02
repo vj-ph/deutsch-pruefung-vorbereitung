@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Mock Exam 1 · Thema A: Soll kulturelle Teilhabe für alle Menschen leichter möglich sein? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll kulturelle Teilhabe für alle Menschen leichter möglich sein. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/mock-1-a/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Mock Exam 1 · Thema A"
+exerciseTitle: "Soll kulturelle Teilhabe für alle Menschen leichter möglich sein?"
+sectionTitle: "Mock Exams – Thema A oder B"
+exerciseNote: "Wählen Sie im Mock Exam nur eines der beiden Themen. Schreiben Sie zuerst ohne Hilfe."
+promptKey: "b2-mock-1-a"
+previousExercise: "/oeif-b2-writing/thema-16/"
+nextExercise: "/oeif-b2-writing/mock-1-b/"
+---
