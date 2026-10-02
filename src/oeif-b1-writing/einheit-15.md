@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 15: Den Arbeitgeber um einen Diensttausch bitten · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Den Arbeitgeber um einen Diensttausch bitten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-15/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 15"
+exerciseTitle: "Den Arbeitgeber um einen Diensttausch bitten"
+sectionTitle: "Formelle und funktionale Nachrichten"
+exerciseNote: ""
+promptKey: "b1-unit-15"
+previousExercise: "/oeif-b1-writing/einheit-14/"
+nextExercise: "/oeif-b1-writing/einheit-16/"
+---

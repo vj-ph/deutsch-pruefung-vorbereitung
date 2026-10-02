@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 11: Termin beim Gemeindeamt verschieben · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Termin beim Gemeindeamt verschieben. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-11/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 11"
+exerciseTitle: "Termin beim Gemeindeamt verschieben"
+sectionTitle: "Formelle und funktionale Nachrichten"
+exerciseNote: ""
+promptKey: "b1-unit-11"
+previousExercise: "/oeif-b1-writing/einheit-10/"
+nextExercise: "/oeif-b1-writing/einheit-12/"
+---

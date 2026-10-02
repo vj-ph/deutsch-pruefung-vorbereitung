@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 17: Beschwerde wegen eines beschädigten Pakets · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Beschwerde wegen eines beschädigten Pakets. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-17/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 17"
+exerciseTitle: "Beschwerde wegen eines beschädigten Pakets"
+sectionTitle: "Beschwerden, Bitten und Entschuldigungen"
+exerciseNote: ""
+promptKey: "b1-unit-17"
+previousExercise: "/oeif-b1-writing/einheit-16/"
+nextExercise: "/oeif-b1-writing/einheit-18/"
+---

@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 3: Soll Weiterbildung im Erwachsenenleben wichtiger werden? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll Weiterbildung im Erwachsenenleben wichtiger werden. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-03/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 3"
+exerciseTitle: "Soll Weiterbildung im Erwachsenenleben wichtiger werden?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-3"
+previousExercise: "/oeif-b2-writing/thema-02/"
+nextExercise: "/oeif-b2-writing/thema-04/"
+---

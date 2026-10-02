@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 4: Ein Lerntreffen in der Bibliothek organisieren · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Ein Lerntreffen in der Bibliothek organisieren. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-04/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 4"
+exerciseTitle: "Ein Lerntreffen in der Bibliothek organisieren"
+sectionTitle: "Persönliche Nachrichten"
+exerciseNote: ""
+promptKey: "a2-unit-4"
+previousExercise: "/oeif-a2-writing/einheit-03/"
+nextExercise: "/oeif-a2-writing/einheit-05/"
+---

@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 6: Einen Freund um Hilfe mit Pflanzen bitten · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Einen Freund um Hilfe mit Pflanzen bitten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-06/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 6"
+exerciseTitle: "Einen Freund um Hilfe mit Pflanzen bitten"
+sectionTitle: "Informelle Nachrichten"
+exerciseNote: ""
+promptKey: "b1-unit-6"
+previousExercise: "/oeif-b1-writing/einheit-05/"
+nextExercise: "/oeif-b1-writing/einheit-07/"
+---

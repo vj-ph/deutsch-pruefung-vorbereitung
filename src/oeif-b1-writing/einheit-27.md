@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 27: Kurze Meinung zum Homeoffice · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Kurze Meinung zum Homeoffice. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-27/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 27"
+exerciseTitle: "Kurze Meinung zum Homeoffice"
+sectionTitle: "Transfertraining – kurze Meinungen und Alltagstexte"
+exerciseNote: "Zusätzliches Transfertraining, keine typische ÖIF-B1-Kernaufgabe."
+promptKey: "b1-unit-27"
+previousExercise: "/oeif-b1-writing/einheit-26/"
+nextExercise: "/oeif-b1-writing/einheit-28/"
+---

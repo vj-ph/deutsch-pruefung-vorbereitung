@@ -1,0 +1,20 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Kapitel 1 · Übungsset 1 · Aufgabe A: E-Mail-Antwort: Arbeit · fide B1 Schreiben"
+description: "Online-Material zum fide-B1-Schreibbuch: E-Mail-Antwort: Arbeit. Eigenen Text verfassen und mit Feedback selbst überarbeiten."
+permalink: "/fide-b1-writing/kapitel-01-set-1-a/"
+lang: "de-CH"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+writingCompanionSlug: "fide-b1-writing"
+writingCompanionName: "fide"
+writingPracticeGuidance: "Antworten Sie auf das E-Mail im Buch mit mindestens 30 Wörtern. Schreiben Sie mit passender Anrede und Schlussformel."
+exerciseLabel: "Kapitel 1 · Übungsset 1 · Aufgabe A"
+exerciseTitle: "E-Mail-Antwort: Arbeit · Set 1"
+sectionTitle: "Arbeit"
+exerciseNote: ""
+promptKey: "b1-k1-s1-a"
+previousExercise: null
+nextExercise: "/fide-b1-writing/kapitel-01-set-1-b/"
+---

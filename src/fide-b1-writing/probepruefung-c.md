@@ -1,0 +1,20 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Probeprüfung · Aufgabe C: Informelles E-Mail: Probeprüfung · fide B1 Schreiben"
+description: "Online-Material zum fide-B1-Schreibbuch: Informelles E-Mail: Probeprüfung. Eigenen Text verfassen und mit Feedback selbst überarbeiten."
+permalink: "/fide-b1-writing/probepruefung-c/"
+lang: "de-CH"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+writingCompanionSlug: "fide-b1-writing"
+writingCompanionName: "fide"
+writingPracticeGuidance: "Schreiben Sie ein informelles E-Mail mit mindestens 50 Wörtern und passender Anrede und Schlussformel."
+exerciseLabel: "Probeprüfung · Aufgabe C"
+exerciseTitle: "Informelles E-Mail: Probeprüfung · Aufgabe C"
+sectionTitle: "Probeprüfung"
+exerciseNote: "Im fide A2–B1-Modul gelten die 60 Minuten für Lesen und Schreiben zusammen, nicht für diese einzelne Schreibaufgabe."
+promptKey: "b1-mock-c"
+previousExercise: "/fide-b1-writing/probepruefung-b/"
+nextExercise: null
+---

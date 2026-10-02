@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 13: Beim AMS nach einem neuen Termin fragen · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Beim AMS nach einem neuen Termin fragen. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-13/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 13"
+exerciseTitle: "Beim AMS nach einem neuen Termin fragen"
+sectionTitle: "Österreichischer Alltag"
+exerciseNote: ""
+promptKey: "a2-unit-13"
+previousExercise: "/oeif-a2-writing/einheit-12/"
+nextExercise: "/oeif-a2-writing/einheit-14/"
+---

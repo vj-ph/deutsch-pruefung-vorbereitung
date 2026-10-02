@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 7: Sind kurze Urlaube eine gute Erholung? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Sind kurze Urlaube eine gute Erholung. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-07/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 7"
+exerciseTitle: "Sind kurze Urlaube eine gute Erholung?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-7"
+previousExercise: "/oeif-b2-writing/thema-06/"
+nextExercise: "/oeif-b2-writing/thema-08/"
+---

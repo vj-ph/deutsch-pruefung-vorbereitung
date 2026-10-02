@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 20: Entschuldigung bei einer Freundin nach einer Verspätung · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Entschuldigung bei einer Freundin nach einer Verspätung. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-20/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 20"
+exerciseTitle: "Entschuldigung bei einer Freundin nach einer Verspätung"
+sectionTitle: "Beschwerden, Bitten und Entschuldigungen"
+exerciseNote: ""
+promptKey: "b1-unit-20"
+previousExercise: "/oeif-b1-writing/einheit-19/"
+nextExercise: "/oeif-b1-writing/einheit-21/"
+---

@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 15: Bei der Stadtbibliothek um eine Verlängerung bitten · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Bei der Stadtbibliothek um eine Verlängerung bitten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-15/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 15"
+exerciseTitle: "Bei der Stadtbibliothek um eine Verlängerung bitten"
+sectionTitle: "Österreichischer Alltag"
+exerciseNote: ""
+promptKey: "a2-unit-15"
+previousExercise: "/oeif-a2-writing/einheit-14/"
+nextExercise: "/oeif-a2-writing/einheit-16/"
+---

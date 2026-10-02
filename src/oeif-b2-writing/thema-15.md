@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 15: Sollen Unternehmen stärker auf psychische Gesundheit achten? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Sollen Unternehmen stärker auf psychische Gesundheit achten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-15/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 15"
+exerciseTitle: "Sollen Unternehmen stärker auf psychische Gesundheit achten?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-15"
+previousExercise: "/oeif-b2-writing/thema-14/"
+nextExercise: "/oeif-b2-writing/thema-16/"
+---

@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 14: Informationen zu einer Wohnung anfragen · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Informationen zu einer Wohnung anfragen. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-14/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 14"
+exerciseTitle: "Informationen zu einer Wohnung anfragen"
+sectionTitle: "Österreichischer Alltag"
+exerciseNote: ""
+promptKey: "a2-unit-14"
+previousExercise: "/oeif-a2-writing/einheit-13/"
+nextExercise: "/oeif-a2-writing/einheit-15/"
+---

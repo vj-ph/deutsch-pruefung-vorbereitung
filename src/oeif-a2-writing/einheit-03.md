@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 3: Die Schwester um Kinderbetreuung bitten · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: Die Schwester um Kinderbetreuung bitten. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-03/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 3"
+exerciseTitle: "Die Schwester um Kinderbetreuung bitten"
+sectionTitle: "Persönliche Nachrichten"
+exerciseNote: ""
+promptKey: "a2-unit-3"
+previousExercise: "/oeif-a2-writing/einheit-02/"
+nextExercise: "/oeif-a2-writing/einheit-04/"
+---

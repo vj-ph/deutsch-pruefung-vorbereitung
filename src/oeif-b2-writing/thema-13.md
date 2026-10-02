@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 13: Soll ehrenamtliche Arbeit bei Bewerbungen stärker zählen? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll ehrenamtliche Arbeit bei Bewerbungen stärker zählen. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-13/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 13"
+exerciseTitle: "Soll ehrenamtliche Arbeit bei Bewerbungen stärker zählen?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-13"
+previousExercise: "/oeif-b2-writing/thema-12/"
+nextExercise: "/oeif-b2-writing/thema-14/"
+---

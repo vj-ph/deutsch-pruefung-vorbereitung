@@ -1,0 +1,876 @@
+{
+  "a2": {
+    "level": "A2",
+    "slug": "fide-a2-writing",
+    "sections": [
+      {
+        "id": "kapitel-1",
+        "label": "Kapitel 1",
+        "title": "Arbeit",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Arbeit",
+            "url": "/fide-a2-writing/kapitel-01-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Arbeit",
+            "url": "/fide-a2-writing/kapitel-01-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Arbeit",
+            "url": "/fide-a2-writing/kapitel-01-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Arbeit",
+            "url": "/fide-a2-writing/kapitel-01-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-2",
+        "label": "Kapitel 2",
+        "title": "Arbeitssuche",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Arbeitssuche",
+            "url": "/fide-a2-writing/kapitel-02-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Arbeitssuche",
+            "url": "/fide-a2-writing/kapitel-02-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Arbeitssuche",
+            "url": "/fide-a2-writing/kapitel-02-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Arbeitssuche",
+            "url": "/fide-a2-writing/kapitel-02-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-3",
+        "label": "Kapitel 3",
+        "title": "Behörden",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Behörden",
+            "url": "/fide-a2-writing/kapitel-03-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Behörden",
+            "url": "/fide-a2-writing/kapitel-03-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Behörden",
+            "url": "/fide-a2-writing/kapitel-03-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Behörden",
+            "url": "/fide-a2-writing/kapitel-03-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-4",
+        "label": "Kapitel 4",
+        "title": "Gesundheit",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Gesundheit",
+            "url": "/fide-a2-writing/kapitel-04-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Gesundheit",
+            "url": "/fide-a2-writing/kapitel-04-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Gesundheit",
+            "url": "/fide-a2-writing/kapitel-04-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Gesundheit",
+            "url": "/fide-a2-writing/kapitel-04-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-5",
+        "label": "Kapitel 5",
+        "title": "Wohnen",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Wohnen",
+            "url": "/fide-a2-writing/kapitel-05-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Wohnen",
+            "url": "/fide-a2-writing/kapitel-05-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Wohnen",
+            "url": "/fide-a2-writing/kapitel-05-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Wohnen",
+            "url": "/fide-a2-writing/kapitel-05-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-6",
+        "label": "Kapitel 6",
+        "title": "Kinder und Schule",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Kinder und Schule",
+            "url": "/fide-a2-writing/kapitel-06-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Kinder und Schule",
+            "url": "/fide-a2-writing/kapitel-06-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Kinder und Schule",
+            "url": "/fide-a2-writing/kapitel-06-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Kinder und Schule",
+            "url": "/fide-a2-writing/kapitel-06-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-7",
+        "label": "Kapitel 7",
+        "title": "Einkaufen",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Einkaufen",
+            "url": "/fide-a2-writing/kapitel-07-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Einkaufen",
+            "url": "/fide-a2-writing/kapitel-07-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Einkaufen",
+            "url": "/fide-a2-writing/kapitel-07-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Einkaufen",
+            "url": "/fide-a2-writing/kapitel-07-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-8",
+        "label": "Kapitel 8",
+        "title": "Verkehr",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Verkehr",
+            "url": "/fide-a2-writing/kapitel-08-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Verkehr",
+            "url": "/fide-a2-writing/kapitel-08-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Verkehr",
+            "url": "/fide-a2-writing/kapitel-08-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Verkehr",
+            "url": "/fide-a2-writing/kapitel-08-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-9",
+        "label": "Kapitel 9",
+        "title": "Post, Bank und Versicherung",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Post, Bank und Versicherung",
+            "url": "/fide-a2-writing/kapitel-09-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Post, Bank und Versicherung",
+            "url": "/fide-a2-writing/kapitel-09-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Post, Bank und Versicherung",
+            "url": "/fide-a2-writing/kapitel-09-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Post, Bank und Versicherung",
+            "url": "/fide-a2-writing/kapitel-09-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-10",
+        "label": "Kapitel 10",
+        "title": "Medien und Freizeit",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Medien und Freizeit",
+            "url": "/fide-a2-writing/kapitel-10-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Medien und Freizeit",
+            "url": "/fide-a2-writing/kapitel-10-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Medien und Freizeit",
+            "url": "/fide-a2-writing/kapitel-10-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Medien und Freizeit",
+            "url": "/fide-a2-writing/kapitel-10-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-11",
+        "label": "Kapitel 11",
+        "title": "Weiterbildung",
+        "note": "",
+        "items": [
+          {
+            "label": "Übungsset 1 · Formular",
+            "title": "Formular: Weiterbildung",
+            "url": "/fide-a2-writing/kapitel-11-set-1-form/",
+            "badge": "1F"
+          },
+          {
+            "label": "Übungsset 1 · E-Mail",
+            "title": "E-Mail: Weiterbildung",
+            "url": "/fide-a2-writing/kapitel-11-set-1-email/",
+            "badge": "1E"
+          },
+          {
+            "label": "Übungsset 2 · Formular",
+            "title": "Formular: Weiterbildung",
+            "url": "/fide-a2-writing/kapitel-11-set-2-form/",
+            "badge": "2F"
+          },
+          {
+            "label": "Übungsset 2 · E-Mail",
+            "title": "E-Mail: Weiterbildung",
+            "url": "/fide-a2-writing/kapitel-11-set-2-email/",
+            "badge": "2E"
+          }
+        ]
+      }
+    ]
+  },
+  "b1": {
+    "level": "B1",
+    "slug": "fide-b1-writing",
+    "sections": [
+      {
+        "id": "kapitel-1",
+        "label": "Kapitel 1",
+        "title": "Arbeit",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 1 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Arbeit",
+            "url": "/fide-b1-writing/kapitel-01-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 1 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Arbeit",
+            "url": "/fide-b1-writing/kapitel-01-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 1 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Arbeit",
+            "url": "/fide-b1-writing/kapitel-01-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 1 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Arbeit",
+            "url": "/fide-b1-writing/kapitel-01-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 1 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Arbeit",
+            "url": "/fide-b1-writing/kapitel-01-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 1 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Arbeit",
+            "url": "/fide-b1-writing/kapitel-01-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-2",
+        "label": "Kapitel 2",
+        "title": "Arbeitssuche",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 2 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Arbeitssuche",
+            "url": "/fide-b1-writing/kapitel-02-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 2 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Arbeitssuche",
+            "url": "/fide-b1-writing/kapitel-02-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 2 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Arbeitssuche",
+            "url": "/fide-b1-writing/kapitel-02-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 2 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Arbeitssuche",
+            "url": "/fide-b1-writing/kapitel-02-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 2 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Arbeitssuche",
+            "url": "/fide-b1-writing/kapitel-02-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 2 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Arbeitssuche",
+            "url": "/fide-b1-writing/kapitel-02-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-3",
+        "label": "Kapitel 3",
+        "title": "Behörden",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 3 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Behörden",
+            "url": "/fide-b1-writing/kapitel-03-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 3 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Behörden",
+            "url": "/fide-b1-writing/kapitel-03-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 3 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Behörden",
+            "url": "/fide-b1-writing/kapitel-03-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 3 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Behörden",
+            "url": "/fide-b1-writing/kapitel-03-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 3 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Behörden",
+            "url": "/fide-b1-writing/kapitel-03-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 3 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Behörden",
+            "url": "/fide-b1-writing/kapitel-03-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-4",
+        "label": "Kapitel 4",
+        "title": "Gesundheit",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 4 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Gesundheit",
+            "url": "/fide-b1-writing/kapitel-04-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 4 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Gesundheit",
+            "url": "/fide-b1-writing/kapitel-04-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 4 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Gesundheit",
+            "url": "/fide-b1-writing/kapitel-04-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 4 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Gesundheit",
+            "url": "/fide-b1-writing/kapitel-04-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 4 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Gesundheit",
+            "url": "/fide-b1-writing/kapitel-04-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 4 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Gesundheit",
+            "url": "/fide-b1-writing/kapitel-04-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-5",
+        "label": "Kapitel 5",
+        "title": "Wohnen",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 5 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Wohnen",
+            "url": "/fide-b1-writing/kapitel-05-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 5 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Wohnen",
+            "url": "/fide-b1-writing/kapitel-05-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 5 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Wohnen",
+            "url": "/fide-b1-writing/kapitel-05-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 5 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Wohnen",
+            "url": "/fide-b1-writing/kapitel-05-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 5 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Wohnen",
+            "url": "/fide-b1-writing/kapitel-05-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 5 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Wohnen",
+            "url": "/fide-b1-writing/kapitel-05-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-6",
+        "label": "Kapitel 6",
+        "title": "Kinder und Schule",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 6 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Kinder und Schule",
+            "url": "/fide-b1-writing/kapitel-06-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 6 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Kinder und Schule",
+            "url": "/fide-b1-writing/kapitel-06-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 6 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Kinder und Schule",
+            "url": "/fide-b1-writing/kapitel-06-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 6 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Kinder und Schule",
+            "url": "/fide-b1-writing/kapitel-06-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 6 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Kinder und Schule",
+            "url": "/fide-b1-writing/kapitel-06-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 6 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Kinder und Schule",
+            "url": "/fide-b1-writing/kapitel-06-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-7",
+        "label": "Kapitel 7",
+        "title": "Einkaufen",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 7 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Einkaufen",
+            "url": "/fide-b1-writing/kapitel-07-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 7 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Einkaufen",
+            "url": "/fide-b1-writing/kapitel-07-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 7 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Einkaufen",
+            "url": "/fide-b1-writing/kapitel-07-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 7 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Einkaufen",
+            "url": "/fide-b1-writing/kapitel-07-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 7 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Einkaufen",
+            "url": "/fide-b1-writing/kapitel-07-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 7 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Einkaufen",
+            "url": "/fide-b1-writing/kapitel-07-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-8",
+        "label": "Kapitel 8",
+        "title": "Verkehr",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 8 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Verkehr",
+            "url": "/fide-b1-writing/kapitel-08-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 8 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Verkehr",
+            "url": "/fide-b1-writing/kapitel-08-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 8 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Verkehr",
+            "url": "/fide-b1-writing/kapitel-08-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 8 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Verkehr",
+            "url": "/fide-b1-writing/kapitel-08-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 8 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Verkehr",
+            "url": "/fide-b1-writing/kapitel-08-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 8 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Verkehr",
+            "url": "/fide-b1-writing/kapitel-08-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-9",
+        "label": "Kapitel 9",
+        "title": "Post, Bank und Versicherung",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 9 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Post, Bank und Versicherung",
+            "url": "/fide-b1-writing/kapitel-09-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 9 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Post, Bank und Versicherung",
+            "url": "/fide-b1-writing/kapitel-09-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 9 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Post, Bank und Versicherung",
+            "url": "/fide-b1-writing/kapitel-09-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 9 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Post, Bank und Versicherung",
+            "url": "/fide-b1-writing/kapitel-09-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 9 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Post, Bank und Versicherung",
+            "url": "/fide-b1-writing/kapitel-09-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 9 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Post, Bank und Versicherung",
+            "url": "/fide-b1-writing/kapitel-09-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-10",
+        "label": "Kapitel 10",
+        "title": "Medien und Freizeit",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 10 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Medien und Freizeit",
+            "url": "/fide-b1-writing/kapitel-10-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 10 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Medien und Freizeit",
+            "url": "/fide-b1-writing/kapitel-10-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 10 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Medien und Freizeit",
+            "url": "/fide-b1-writing/kapitel-10-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 10 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Medien und Freizeit",
+            "url": "/fide-b1-writing/kapitel-10-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 10 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Medien und Freizeit",
+            "url": "/fide-b1-writing/kapitel-10-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 10 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Medien und Freizeit",
+            "url": "/fide-b1-writing/kapitel-10-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "kapitel-11",
+        "label": "Kapitel 11",
+        "title": "Weiterbildung",
+        "note": "",
+        "items": [
+          {
+            "label": "Kapitel 11 · Übungsset 1 · Aufgabe A",
+            "title": "E-Mail-Antwort: Weiterbildung",
+            "url": "/fide-b1-writing/kapitel-11-set-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Kapitel 11 · Übungsset 1 · Aufgabe B",
+            "title": "Formeller Brief: Weiterbildung",
+            "url": "/fide-b1-writing/kapitel-11-set-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Kapitel 11 · Übungsset 1 · Aufgabe C",
+            "title": "Informelles E-Mail: Weiterbildung",
+            "url": "/fide-b1-writing/kapitel-11-set-1-c/",
+            "badge": "1C"
+          },
+          {
+            "label": "Kapitel 11 · Übungsset 2 · Aufgabe A",
+            "title": "E-Mail-Antwort: Weiterbildung",
+            "url": "/fide-b1-writing/kapitel-11-set-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Kapitel 11 · Übungsset 2 · Aufgabe B",
+            "title": "Formeller Brief: Weiterbildung",
+            "url": "/fide-b1-writing/kapitel-11-set-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Kapitel 11 · Übungsset 2 · Aufgabe C",
+            "title": "Informelles E-Mail: Weiterbildung",
+            "url": "/fide-b1-writing/kapitel-11-set-2-c/",
+            "badge": "2C"
+          }
+        ]
+      },
+      {
+        "id": "probepruefung",
+        "label": "Probeprüfung",
+        "title": "Drei Schreibaufgaben",
+        "note": "Lösen Sie alle drei Aufgaben und lesen Sie auch die Leseaufgaben im Buch.",
+        "items": [
+          {
+            "label": "Probeprüfung · Aufgabe A",
+            "title": "E-Mail-Antwort: Probeprüfung",
+            "url": "/fide-b1-writing/probepruefung-a/",
+            "badge": "A"
+          },
+          {
+            "label": "Probeprüfung · Aufgabe B",
+            "title": "Formeller Brief: Probeprüfung",
+            "url": "/fide-b1-writing/probepruefung-b/",
+            "badge": "B"
+          },
+          {
+            "label": "Probeprüfung · Aufgabe C",
+            "title": "Informelles E-Mail: Probeprüfung",
+            "url": "/fide-b1-writing/probepruefung-c/",
+            "badge": "C"
+          }
+        ]
+      }
+    ]
+  }
+}

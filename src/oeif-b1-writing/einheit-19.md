@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 19: Bitte an die Nachbarn wegen Ruhe im Stiegenhaus · ÖIF B1 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B1-Buch: Bitte an die Nachbarn wegen Ruhe im Stiegenhaus. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b1-writing/einheit-19/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b1"
+exerciseLabel: "Einheit 19"
+exerciseTitle: "Bitte an die Nachbarn wegen Ruhe im Stiegenhaus"
+sectionTitle: "Beschwerden, Bitten und Entschuldigungen"
+exerciseNote: ""
+promptKey: "b1-unit-19"
+previousExercise: "/oeif-b1-writing/einheit-18/"
+nextExercise: "/oeif-b1-writing/einheit-20/"
+---

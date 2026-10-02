@@ -1,0 +1,74 @@
+---
+layout: base.njk
+---
+{% set companionSlug = writingCompanionSlug or ('oeif-' ~ bookLevel ~ '-writing') %}
+{% set companionName = writingCompanionName or 'ÖIF' %}
+{% set promptText = fideWritingPrompts[promptKey] if writingCompanionSlug else oeifWritingPrompts[promptKey] %}
+<div class="dtz-book dtz-book--writing {{ 'fide-book' if writingCompanionSlug else 'oeif-book' }}">
+  <header class="dtz-book__hero">
+    <div class="container">
+      <a class="dtz-book__breadcrumb" href="{{ ('/' ~ companionSlug ~ '/') | url }}">← Alle Übungen</a>
+      <p class="dtz-book__kicker">{{ companionName }} {{ bookLevel | upper }} Schreiben · {{ exerciseLabel }}</p>
+      <h1>{{ exerciseTitle }}</h1>
+      <p>{{ sectionTitle }} · Online-Material zum Buch</p>
+    </div>
+  </header>
+  <div class="container dtz-book__body">
+    {% if exerciseNote %}
+    <aside class="dtz-book__notice">{{ exerciseNote }}</aside>
+    {% endif %}
+    <section class="dtz-book__practice" data-practice-panel
+      data-success-copy="Ihr Text wurde kopiert."
+      data-copy-error="Automatisches Kopieren war nicht möglich. Ihr Text ist markiert; kopieren Sie ihn bitte manuell."
+      data-empty-error="Schreiben Sie zuerst Ihren Text, bevor Sie ihn kopieren.">
+      <p class="dtz-book__kicker">Schritt 1 · Ihr Entwurf</p>
+      <h2>Schreiben Sie Ihren Text</h2>
+      <p>Lesen Sie die Aufgabe im Buch. Schreiben Sie Ihren eigenen {{ "Absatz oder Text" if bookLevel == "b2" else "Text" }} hier; kopieren Sie ihn anschließend.</p>
+      {% if writingPracticeGuidance %}
+      <p>{{ writingPracticeGuidance }}</p>
+      {% elif bookLevel == "a2" %}
+      <p>Trainieren Sie mit 25 Minuten Schreibzeit und mindestens 50 Wörtern; peilen Sie etwa 80 Wörter an. Schreiben Sie eine passende Anrede und Grußformel.</p>
+      {% elif bookLevel == "b1" %}
+      <p>Trainieren Sie mit 30 Minuten Schreibzeit und mindestens 100 Wörtern. Bei Nachrichten und E-Mails: passende Anrede und Grußformel; bei anderen Textsorten: passender Einstieg und Schluss.</p>
+      {% else %}
+      <p>Trainieren Sie mit 40 Minuten Schreibzeit und mindestens 200 Wörtern. Schreiben Sie einen Aufsatz mit Überschrift, Einleitung, Hauptteil und Schluss; entwickeln Sie mindestens drei der vier Aspekte aus dem Buch.</p>
+      {% endif %}
+      <label class="dtz-writing__label" for="writing-draft">Mein Text zu {{ exerciseLabel }}</label>
+      <textarea id="writing-draft" class="practice-prompt dtz-writing__draft" placeholder="Schreiben Sie hier Ihren Text zur Aufgabe im Buch …" spellcheck="true"></textarea>
+      <div class="dtz-book__practice-actions"><button class="practice-copy" type="button">Meinen Text kopieren</button></div>
+      <p class="practice-status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="dtz-book__practice" data-practice-panel
+      data-success-copy="Feedback-Prompt wurde kopiert."
+      data-copy-error="Automatisches Kopieren war nicht möglich. Der Prompt ist markiert; kopieren Sie ihn bitte manuell.">
+      <p class="dtz-book__kicker">Schritt 2 · Feedback</p>
+      <h2>Mit ChatGPT Ihren Text verbessern</h2>
+      <p>Der Prompt bezieht sich auf diese Übung aus Ihrem Buch und hilft Ihnen, Ihren eigenen Entwurf zu überarbeiten.</p>
+      <ol class="dtz-book__practice-steps">
+        <li>Kopieren Sie zuerst Ihren Text oben und öffnen Sie ChatGPT.</li>
+        <li>Fügen Sie den Text in eine neue Nachricht ein, <strong>ohne sie schon zu senden</strong>.</li>
+        <li>Kommen Sie hierher zurück, kopieren Sie den Feedback-Prompt und fügen Sie ihn unter Ihren Text in <strong>dieselbe Nachricht</strong> ein. Senden Sie beides zusammen.</li>
+        <li>Lesen Sie das Feedback und überarbeiten Sie Ihren Entwurf selbst.</li>
+      </ol>
+      <div class="dtz-book__practice-actions">
+        <button class="practice-copy" type="button">Feedback-Prompt kopieren</button>
+        <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT im Browser öffnen</a>
+      </div>
+      <p class="practice-status" role="status" aria-live="polite"></p>
+      <details class="practice-details">
+        <summary>Feedback-Prompt anzeigen oder manuell kopieren</summary>
+        <textarea class="practice-prompt" readonly spellcheck="false" dir="ltr" aria-label="ChatGPT-Feedback-Prompt">{{ promptText }}</textarea>
+      </details>
+      <p class="dtz-book__practice-note">ChatGPT ist ein externer Dienst. Teilen Sie keine persönlichen Daten. Ihr Entwurf wird von unserer Website nicht gespeichert oder automatisch gesendet; beim Neuladen geht er verloren. Das Feedback ersetzt keine offizielle Prüfungsbewertung.</p>
+    </section>
+    <nav class="dtz-book__navigation" aria-label="Weitere Übungen">
+      {% if previousExercise %}
+      <a href="{{ previousExercise | url }}"><small>← Vorherige Übung</small><strong>Zurück</strong></a>
+      {% else %}<span></span>{% endif %}
+      {% if nextExercise %}
+      <a href="{{ nextExercise | url }}"><small>Nächste Übung →</small><strong>Weiter</strong></a>
+      {% endif %}
+    </nav>
+    <p class="dtz-book__back"><a href="{{ ('/' ~ companionSlug ~ '/') | url }}">Alle Übungen im Überblick</a></p>
+  </div>
+</div>

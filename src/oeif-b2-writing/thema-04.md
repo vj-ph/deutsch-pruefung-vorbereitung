@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 4: Soll man regionale Produkte stärker bevorzugen? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll man regionale Produkte stärker bevorzugen. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-04/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 4"
+exerciseTitle: "Soll man regionale Produkte stärker bevorzugen?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-4"
+previousExercise: "/oeif-b2-writing/thema-03/"
+nextExercise: "/oeif-b2-writing/thema-05/"
+---

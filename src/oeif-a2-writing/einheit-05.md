@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Einheit 5: An die Volkshochschule schreiben · ÖIF A2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-A2-Buch: An die Volkshochschule schreiben. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-a2-writing/einheit-05/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+exerciseLabel: "Einheit 5"
+exerciseTitle: "An die Volkshochschule schreiben"
+sectionTitle: "Formelle Nachrichten im Alltag"
+exerciseNote: ""
+promptKey: "a2-unit-5"
+previousExercise: "/oeif-a2-writing/einheit-04/"
+nextExercise: "/oeif-a2-writing/einheit-06/"
+---

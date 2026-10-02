@@ -1,0 +1,20 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Übungsset 1 · Formular: Formular: Arbeit · fide A2 Schreiben"
+description: "Online-Material zum fide-A2-Schreibbuch: Formular: Arbeit. Eigenen Text verfassen und mit Feedback selbst überarbeiten."
+permalink: "/fide-a2-writing/kapitel-01-set-1-form/"
+lang: "de-CH"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "a2"
+writingCompanionSlug: "fide-a2-writing"
+writingCompanionName: "fide"
+writingPracticeGuidance: "Übertragen Sie die Formularangaben aus dem Buch und schreiben Sie die drei Punkte unter «Fragen und Bemerkungen» in dasselbe Textfeld. Orientieren Sie sich für die Bemerkungen an 30–50 Wörtern. Verwenden Sie nur fiktive Angaben, keine echten persönlichen Daten."
+exerciseLabel: "Übungsset 1 · Formular"
+exerciseTitle: "Formular: Arbeit · Set 1"
+sectionTitle: "Arbeit"
+exerciseNote: ""
+promptKey: "a2-k1-s1-form"
+previousExercise: null
+nextExercise: "/fide-a2-writing/kapitel-01-set-1-email/"
+---

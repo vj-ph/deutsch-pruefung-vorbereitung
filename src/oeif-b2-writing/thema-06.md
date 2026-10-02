@@ -1,0 +1,17 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Thema 6: Soll die Stadt mehr Platz für Fahrräder schaffen? · ÖIF B2 Schreiben"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll die Stadt mehr Platz für Fahrräder schaffen. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing/thema-06/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+exerciseLabel: "Thema 6"
+exerciseTitle: "Soll die Stadt mehr Platz für Fahrräder schaffen?"
+sectionTitle: "Übungsaufsätze"
+exerciseNote: ""
+promptKey: "b2-essay-6"
+previousExercise: "/oeif-b2-writing/thema-05/"
+nextExercise: "/oeif-b2-writing/thema-07/"
+---
