@@ -1,0 +1,68 @@
+---
+layout: base.njk
+---
+{% set book = speakingCompanionCatalog[speakingBookKey] %}
+<div class="dtz-book speaking-companion speaking-companion--{{ 'oeif' if book.exam == 'ÖIF' else 'fide' }}">
+  <header class="dtz-book__hero">
+    <div class="container">
+      <a class="dtz-book__breadcrumb" href="{{ ('/' ~ speakingBookKey ~ '/') | url }}">← Alle Übungen</a>
+      <p class="dtz-book__kicker">{{ book.exam }} {{ book.level }} Sprechen · {{ sectionTitle }} · Übung {{ exerciseNumber }}</p>
+      <h1>{{ exerciseTitle }}</h1>
+      <p>Online-Material zum Buch</p>
+    </div>
+  </header>
+  <div class="container dtz-book__body">
+    {% if imageUrl %}
+    <figure class="dtz-book__image">
+      <img src="{{ imageUrl | url }}" alt="Bildimpuls zu {{ exerciseTitle }}">
+    </figure>
+    {% endif %}
+    <section class="dtz-book__practice" aria-label="Interaktives Sprechtraining" data-practice-panel
+      data-success-copy="Prompt wurde kopiert."
+      data-copy-error="Automatisches Kopieren war nicht möglich. Der Prompt ist markiert; kopieren Sie ihn bitte manuell.">
+      <p class="dtz-book__kicker">Interaktives Sprechtraining</p>
+      <h2>Mit ChatGPT sprechen üben</h2>
+      <p>Lesen Sie die Aufgabe im Buch. Kopieren Sie den passenden Prompt und üben Sie als Gespräch.</p>
+      <aside class="dtz-book__account">
+        <strong>Eigenes ChatGPT-Konto empfohlen</strong>
+        <p>Für den Sprachmodus können je nach Konto, Gerät und Region unterschiedliche Nutzungsgrenzen gelten.</p>
+      </aside>
+      <ol class="dtz-book__practice-steps">
+        <li>Tippen Sie auf „Prompt kopieren“.</li>
+        <li>Öffnen Sie die ChatGPT-App oder den Browser-Link und starten Sie dort den Sprachmodus (Voice Mode).</li>
+        <li>Fügen Sie den kopierten Prompt in den Chat des Sprachmodus ein, senden Sie ihn ab und beginnen Sie die Übung.</li>
+        <li>Wenn Sie fertig sind, sagen Sie: <q>Die Übung ist beendet. Bitte gib mir jetzt Feedback.</q></li>
+      </ol>
+      <div class="dtz-book__practice-actions">
+        <button class="practice-copy" type="button">Prompt kopieren</button>
+        <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT im Browser öffnen</a>
+      </div>
+      <p class="practice-status" role="status" aria-live="polite"></p>
+      <details class="practice-details">
+        <summary>Prompt anzeigen oder manuell kopieren</summary>
+        <textarea class="practice-prompt" readonly spellcheck="false" dir="ltr" aria-label="ChatGPT-Übungsprompt">{{ speakingCompanionPrompts[promptKey] }}</textarea>
+      </details>
+      <p class="dtz-book__practice-note">ChatGPT ist ein externer Dienst. Für den Sprachmodus sind möglicherweise Anmeldung und Mikrofonzugriff nötig. Die Übung ersetzt keine offizielle Prüfungsbewertung.</p>
+    </section>
+    {% for audio in audios %}
+    <section class="dtz-book__audio" aria-label="{{ audio.label }}">
+      <div>
+        <p class="dtz-book__kicker">Hören &amp; nachsprechen</p>
+        <h2>{{ audio.label }} anhören</h2>
+        <p>Sprechen Sie zuerst selbst. Hören Sie danach das Modell und vergleichen Sie Ihre Antwort.</p>
+      </div>
+      <audio controls preload="none" src="{{ audio.url | url }}">Ihr Browser unterstützt die Audiowiedergabe nicht.</audio>
+      <a href="{{ audio.url | url }}" download>MP3 herunterladen ↓</a>
+    </section>
+    {% endfor %}
+    <nav class="dtz-book__navigation" aria-label="Weitere Übungen">
+      {% if previousExercise %}
+      <a href="{{ previousExercise.url | url }}"><small>← Vorherige Übung</small><strong>{{ previousExercise.title }}</strong></a>
+      {% else %}<span></span>{% endif %}
+      {% if nextExercise %}
+      <a href="{{ nextExercise.url | url }}"><small>Nächste Übung →</small><strong>{{ nextExercise.title }}</strong></a>
+      {% endif %}
+    </nav>
+    <p class="dtz-book__back"><a href="{{ ('/' ~ speakingBookKey ~ '/') | url }}">Alle Übungen im Überblick</a></p>
+  </div>
+</div>

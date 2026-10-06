@@ -1,0 +1,2150 @@
+{
+  "oeif-a2-speaking": {
+    "exam": "ÖIF",
+    "level": "A2",
+    "sections": [
+      {
+        "title": "Kontaktgespräch",
+        "number": 1,
+        "label": "Abschnitt 1",
+        "items": [
+          {
+            "section": 0,
+            "number": 1,
+            "title": "Kontaktgespräch 1: Über mich",
+            "url": "/oeif-a2-speaking/abschnitt-1/uebung-01/"
+          },
+          {
+            "section": 0,
+            "number": 2,
+            "title": "Kontaktgespräch 2: Familie und Alltag",
+            "url": "/oeif-a2-speaking/abschnitt-1/uebung-02/"
+          },
+          {
+            "section": 0,
+            "number": 3,
+            "title": "Kontaktgespräch 3: Arbeit und Beruf",
+            "url": "/oeif-a2-speaking/abschnitt-1/uebung-03/"
+          },
+          {
+            "section": 0,
+            "number": 4,
+            "title": "Kontaktgespräch 4: Lernen und Deutsch",
+            "url": "/oeif-a2-speaking/abschnitt-1/uebung-04/"
+          },
+          {
+            "section": 0,
+            "number": 5,
+            "title": "Kontaktgespräch 5: Leben in Österreich",
+            "url": "/oeif-a2-speaking/abschnitt-1/uebung-05/"
+          }
+        ]
+      },
+      {
+        "title": "Dialog / Alltagssituationen",
+        "number": 2,
+        "label": "Abschnitt 2",
+        "items": [
+          {
+            "section": 1,
+            "number": 1,
+            "title": "Einen Arzttermin ausmachen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-01/"
+          },
+          {
+            "section": 1,
+            "number": 2,
+            "title": "In der Apotheke nachfragen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-02/"
+          },
+          {
+            "section": 1,
+            "number": 3,
+            "title": "Eine Fahrkarte kaufen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-03/"
+          },
+          {
+            "section": 1,
+            "number": 4,
+            "title": "Im Supermarkt etwas suchen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-04/"
+          },
+          {
+            "section": 1,
+            "number": 5,
+            "title": "Mit dem Nachbarn über Lärm sprechen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-05/"
+          },
+          {
+            "section": 1,
+            "number": 6,
+            "title": "Bei der Arbeit frei fragen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-06/"
+          },
+          {
+            "section": 1,
+            "number": 7,
+            "title": "Einen Sprachkurs anmelden",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-07/"
+          },
+          {
+            "section": 1,
+            "number": 8,
+            "title": "Ein Paket bei der Post abholen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-08/"
+          },
+          {
+            "section": 1,
+            "number": 9,
+            "title": "Einen Termin beim Gemeindeamt fragen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-09/"
+          },
+          {
+            "section": 1,
+            "number": 10,
+            "title": "Einen kleinen Ausflug planen",
+            "url": "/oeif-a2-speaking/abschnitt-2/uebung-10/"
+          }
+        ]
+      },
+      {
+        "title": "Kurze Meinung / Gespräch",
+        "number": 3,
+        "label": "Abschnitt 3",
+        "items": [
+          {
+            "section": 2,
+            "number": 1,
+            "title": "Öffis oder Auto?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-01/"
+          },
+          {
+            "section": 2,
+            "number": 2,
+            "title": "Deutsch lernen: Kurs oder allein?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-02/"
+          },
+          {
+            "section": 2,
+            "number": 3,
+            "title": "Markt oder Supermarkt?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-03/"
+          },
+          {
+            "section": 2,
+            "number": 4,
+            "title": "In der Stadt oder ruhiger wohnen?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-04/"
+          },
+          {
+            "section": 2,
+            "number": 5,
+            "title": "Sport zu Hause oder im Fitnessstudio?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-05/"
+          },
+          {
+            "section": 2,
+            "number": 6,
+            "title": "Handy im Alltag",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-06/"
+          },
+          {
+            "section": 2,
+            "number": 7,
+            "title": "Urlaub in Österreich oder im Ausland?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-07/"
+          },
+          {
+            "section": 2,
+            "number": 8,
+            "title": "Zu Hause essen oder im Restaurant?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-08/"
+          },
+          {
+            "section": 2,
+            "number": 9,
+            "title": "Im Team oder allein arbeiten?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-09/"
+          },
+          {
+            "section": 2,
+            "number": 10,
+            "title": "Lernen mit Buch oder App?",
+            "url": "/oeif-a2-speaking/abschnitt-3/uebung-10/"
+          }
+        ]
+      },
+      {
+        "title": "Bildbeschreibung",
+        "number": 4,
+        "label": "Abschnitt 4",
+        "items": [
+          {
+            "section": 3,
+            "number": 1,
+            "title": "Familie beim Essen",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-01/"
+          },
+          {
+            "section": 3,
+            "number": 2,
+            "title": "Menschen beim Einkaufen",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-02/"
+          },
+          {
+            "section": 3,
+            "number": 3,
+            "title": "Arztpraxis / Wartezimmer",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-03/"
+          },
+          {
+            "section": 3,
+            "number": 4,
+            "title": "Apotheke",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-04/"
+          },
+          {
+            "section": 3,
+            "number": 5,
+            "title": "Büro / Arbeitsplatz",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-05/"
+          },
+          {
+            "section": 3,
+            "number": 6,
+            "title": "Handwerker in einer Wohnung",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-06/"
+          },
+          {
+            "section": 3,
+            "number": 7,
+            "title": "Umzug / Kartons tragen",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-07/"
+          },
+          {
+            "section": 3,
+            "number": 8,
+            "title": "Nachbarn im Stiegenhaus",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-08/"
+          },
+          {
+            "section": 3,
+            "number": 9,
+            "title": "Schule / Elternabend / Kurs",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-09/"
+          },
+          {
+            "section": 3,
+            "number": 10,
+            "title": "Kinderspielplatz",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-10/"
+          },
+          {
+            "section": 3,
+            "number": 11,
+            "title": "Café / Restaurant",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-11/"
+          },
+          {
+            "section": 3,
+            "number": 12,
+            "title": "Handy-Geschäft",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-12/"
+          },
+          {
+            "section": 3,
+            "number": 13,
+            "title": "Bahnhof / Bus / Öffis",
+            "url": "/oeif-a2-speaking/abschnitt-4/uebung-13/"
+          }
+        ]
+      }
+    ]
+  },
+  "oeif-b1-speaking": {
+    "exam": "ÖIF",
+    "level": "B1",
+    "sections": [
+      {
+        "title": "Über sich sprechen",
+        "number": 1,
+        "label": "Abschnitt 1",
+        "items": [
+          {
+            "section": 0,
+            "number": 1,
+            "title": "Modellantwort 1: Alltag, Lernen und Freizeit",
+            "url": "/oeif-b1-speaking/abschnitt-1/uebung-01/"
+          },
+          {
+            "section": 0,
+            "number": 2,
+            "title": "Modellantwort 2: Wohnen, Kontakte und ein Plan",
+            "url": "/oeif-b1-speaking/abschnitt-1/uebung-02/"
+          },
+          {
+            "section": 0,
+            "number": 3,
+            "title": "Modellantwort 3: Arbeit und Organisation",
+            "url": "/oeif-b1-speaking/abschnitt-1/uebung-03/"
+          },
+          {
+            "section": 0,
+            "number": 4,
+            "title": "Modellantwort 4: Sprachen und Lernen",
+            "url": "/oeif-b1-speaking/abschnitt-1/uebung-04/"
+          },
+          {
+            "section": 0,
+            "number": 5,
+            "title": "Modellantwort 5: Freizeit und Zukunft",
+            "url": "/oeif-b1-speaking/abschnitt-1/uebung-05/"
+          }
+        ]
+      },
+      {
+        "title": "Bild, Erfahrung und Nachfragen",
+        "number": 2,
+        "label": "Abschnitt 2",
+        "items": [
+          {
+            "section": 1,
+            "number": 1,
+            "title": "Familie beim Essen / in der Küche",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-01/"
+          },
+          {
+            "section": 1,
+            "number": 2,
+            "title": "Menschen im Supermarkt",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-02/"
+          },
+          {
+            "section": 1,
+            "number": 3,
+            "title": "Arztpraxis / Wartezimmer",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-03/"
+          },
+          {
+            "section": 1,
+            "number": 4,
+            "title": "Apotheke",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-04/"
+          },
+          {
+            "section": 1,
+            "number": 5,
+            "title": "Büro/Arbeitsplatz",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-05/"
+          },
+          {
+            "section": 1,
+            "number": 6,
+            "title": "Bewerbungsgespräch",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-06/"
+          },
+          {
+            "section": 1,
+            "number": 7,
+            "title": "Handwerker in einer Wohnung",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-07/"
+          },
+          {
+            "section": 1,
+            "number": 8,
+            "title": "Umzug / Kartons tragen",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-08/"
+          },
+          {
+            "section": 1,
+            "number": 9,
+            "title": "Putzen / Hausarbeit",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-09/"
+          },
+          {
+            "section": 1,
+            "number": 10,
+            "title": "Nachbarn im Stiegenhaus",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-10/"
+          },
+          {
+            "section": 1,
+            "number": 11,
+            "title": "Schule / Elternabend",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-11/"
+          },
+          {
+            "section": 1,
+            "number": 12,
+            "title": "Kinderspielplatz",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-12/"
+          },
+          {
+            "section": 1,
+            "number": 13,
+            "title": "Sport im Park / Fitnessstudio",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-13/"
+          },
+          {
+            "section": 1,
+            "number": 14,
+            "title": "Café/Restaurant",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-14/"
+          },
+          {
+            "section": 1,
+            "number": 15,
+            "title": "Bus-/Bahnhof / öffentliche Verkehrsmittel",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-15/"
+          },
+          {
+            "section": 1,
+            "number": 16,
+            "title": "Fahrrad/Autoverkehr in der Stadt",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-16/"
+          },
+          {
+            "section": 1,
+            "number": 17,
+            "title": "Reise/Urlaub (Koffer, Hotel)",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-17/"
+          },
+          {
+            "section": 1,
+            "number": 18,
+            "title": "Wetter: Regen/Schnee/Hitze-Situation",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-18/"
+          },
+          {
+            "section": 1,
+            "number": 19,
+            "title": "Mülltrennung/Recycling",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-19/"
+          },
+          {
+            "section": 1,
+            "number": 20,
+            "title": "Smartphone/Computer (Technik im Alltag)",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-20/"
+          },
+          {
+            "section": 1,
+            "number": 21,
+            "title": "Bank/ATM (Geld abheben)",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-21/"
+          },
+          {
+            "section": 1,
+            "number": 22,
+            "title": "Polizei/Notfall (Hilfe holen)",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-22/"
+          },
+          {
+            "section": 1,
+            "number": 23,
+            "title": "Kulturveranstaltung (Kino/Konzert)",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-23/"
+          },
+          {
+            "section": 1,
+            "number": 24,
+            "title": "Freundetreffen",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-24/"
+          },
+          {
+            "section": 1,
+            "number": 25,
+            "title": "Markt/Flohmarkt (Second-hand)",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-25/"
+          },
+          {
+            "section": 1,
+            "number": 26,
+            "title": "Praktische Hilfe nach einer Behandlung",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-26/"
+          },
+          {
+            "section": 1,
+            "number": 27,
+            "title": "Musikwerkstatt im Nachbarschaftshaus",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-27/"
+          },
+          {
+            "section": 1,
+            "number": 28,
+            "title": "Winterspaziergang und Vorbereitungen",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-28/"
+          },
+          {
+            "section": 1,
+            "number": 29,
+            "title": "Orientierung im Nachbarschaftsbüro",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-29/"
+          },
+          {
+            "section": 1,
+            "number": 30,
+            "title": "Kleine Fahrradpanne am Radweg",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-30/"
+          },
+          {
+            "section": 1,
+            "number": 31,
+            "title": "Lesekreis im Gemeinschaftsraum",
+            "url": "/oeif-b1-speaking/abschnitt-2/uebung-31/"
+          }
+        ]
+      },
+      {
+        "title": "Gemeinsam planen und entscheiden",
+        "number": 3,
+        "label": "Abschnitt 3",
+        "items": [
+          {
+            "section": 2,
+            "number": 1,
+            "title": "Ein Treffen verabreden (Zeit/Ort, Einladung, was mitbringen)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-01/"
+          },
+          {
+            "section": 2,
+            "number": 2,
+            "title": "Einen Ausflug planen (Wohin? Wie hinfahren? Kosten? Wetter?)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-02/"
+          },
+          {
+            "section": 2,
+            "number": 3,
+            "title": "Einen Einkauf planen (Einkaufsliste, Angebote, wer kauft was)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-03/"
+          },
+          {
+            "section": 2,
+            "number": 4,
+            "title": "Eine Party/Feier organisieren (Gäste, Essen/Trinken, Musik, Regeln)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-04/"
+          },
+          {
+            "section": 2,
+            "number": 5,
+            "title": "Ein Wochenende planen (Programm, Budget, Zeiten)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-05/"
+          },
+          {
+            "section": 2,
+            "number": 6,
+            "title": "Zusatzdialog: Einen Arzttermin vereinbaren (Zeit, Beschwerden, Unterlagen)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-06/"
+          },
+          {
+            "section": 2,
+            "number": 7,
+            "title": "Zusatzdialog: In der Apotheke um Rat fragen (Symptome, Medikamente, Allergien)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-07/"
+          },
+          {
+            "section": 2,
+            "number": 8,
+            "title": "Eine Wohnung suchen (Lage, Preis, Größe, Besichtigung)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-08/"
+          },
+          {
+            "section": 2,
+            "number": 9,
+            "title": "Ein Gespräch mit Nachbarn (Lärm, Müll, höflich lösen)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-09/"
+          },
+          {
+            "section": 2,
+            "number": 10,
+            "title": "Einen Umzug organisieren (Helfer, Kartons, Transport, Zeitplan)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-10/"
+          },
+          {
+            "section": 2,
+            "number": 11,
+            "title": "Zusatzdialog: Einen Handwerker bestellen (Problem erklären, Termin, Kosten)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-11/"
+          },
+          {
+            "section": 2,
+            "number": 12,
+            "title": "Internet/Handyvertrag auswählen (Preis, Laufzeit, Datenvolumen)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-12/"
+          },
+          {
+            "section": 2,
+            "number": 13,
+            "title": "Einen Sprachkurs auswählen (Zeiten, Niveau, Kosten, Anmeldung)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-13/"
+          },
+          {
+            "section": 2,
+            "number": 14,
+            "title": "Lernplan für die Prüfung machen (Themen, Zeiten, Ziele)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-14/"
+          },
+          {
+            "section": 2,
+            "number": 15,
+            "title": "Bewerbung vorbereiten (Lebenslauf, Unterlagen, Termin, Fragen)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-15/"
+          },
+          {
+            "section": 2,
+            "number": 16,
+            "title": "Ein Bewerbungsgespräch üben (Stärken / Schwächen, Fragen, Vorbereitung)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-16/"
+          },
+          {
+            "section": 2,
+            "number": 17,
+            "title": "Schulausflug/Elternabend planen (Zeit, Ort, Fragen, Organisation)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-17/"
+          },
+          {
+            "section": 2,
+            "number": 18,
+            "title": "Kinderbetreuung organisieren (Kita, Babysitter, Zeiten, Notfall)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-18/"
+          },
+          {
+            "section": 2,
+            "number": 19,
+            "title": "Zusatzdialog: Im Restaurant reservieren und bestellen (Wünsche, Allergien, Rechnung)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-19/"
+          },
+          {
+            "section": 2,
+            "number": 20,
+            "title": "Zusatzdialog: Eine Reklamation im Geschäft (Umtausch, Beleg, Lösung)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-20/"
+          },
+          {
+            "section": 2,
+            "number": 21,
+            "title": "Urlaub planen (Reiseziel, Unterkunft, Transport, Budget)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-21/"
+          },
+          {
+            "section": 2,
+            "number": 22,
+            "title": "Zusatzdialog: Hotel/Unterkunft buchen (Ausstattung, Storno, Anreise)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-22/"
+          },
+          {
+            "section": 2,
+            "number": 23,
+            "title": "Zusatzdialog: Fahrkarte kaufen und Verbindung planen (Umsteigen, Zeiten, Preis)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-23/"
+          },
+          {
+            "section": 2,
+            "number": 24,
+            "title": "Ein neues Hobby anfangen (Verein, Kosten, Ausrüstung)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-24/"
+          },
+          {
+            "section": 2,
+            "number": 25,
+            "title": "Sportplan erstellen (Ziele, Training, Motivation)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-25/"
+          },
+          {
+            "section": 2,
+            "number": 26,
+            "title": "Gesund kochen für eine Woche (Einkauf, Rezepte, Zeit)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-26/"
+          },
+          {
+            "section": 2,
+            "number": 27,
+            "title": "Mülltrennung im Haushalt organisieren (Behälter, Regeln, Routine)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-27/"
+          },
+          {
+            "section": 2,
+            "number": 28,
+            "title": "Einen wichtigen Termin koordinieren (Kalender, Verspätung, Plan B)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-28/"
+          },
+          {
+            "section": 2,
+            "number": 29,
+            "title": "Zusatzdialog: Ein Problem mit einem Vertrag lösen (kündigen, wechseln, Reklamation)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-29/"
+          },
+          {
+            "section": 2,
+            "number": 30,
+            "title": "Ein Geschenk organisieren (Idee, Budget, wo kaufen, Verpackung)",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-30/"
+          },
+          {
+            "section": 2,
+            "number": 31,
+            "title": "Infostand für sichere Übergänge planen",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-31/"
+          },
+          {
+            "section": 2,
+            "number": 32,
+            "title": "Einen kleinen Second-hand-Verkauf für ein Gemeinschaftsprojekt planen",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-32/"
+          },
+          {
+            "section": 2,
+            "number": 33,
+            "title": "Die gemeinsame Küche vor Besuch verbessern",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-33/"
+          },
+          {
+            "section": 2,
+            "number": 34,
+            "title": "Willkommensrunde im Haus organisieren",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-34/"
+          },
+          {
+            "section": 2,
+            "number": 35,
+            "title": "Geschichtenzeit für Familien planen",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-35/"
+          },
+          {
+            "section": 2,
+            "number": 36,
+            "title": "Eine sichere Fahrradrunde im Viertel planen",
+            "url": "/oeif-b1-speaking/abschnitt-3/uebung-36/"
+          }
+        ]
+      }
+    ]
+  },
+  "oeif-b2-speaking": {
+    "exam": "ÖIF",
+    "level": "B2",
+    "sections": [
+      {
+        "title": "Präsentation",
+        "number": 1,
+        "label": "Abschnitt 1",
+        "items": [
+          {
+            "section": 0,
+            "number": 1,
+            "title": "Ein Buch, das Sie beeindruckt hat",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-01/"
+          },
+          {
+            "section": 0,
+            "number": 2,
+            "title": "Einen Film oder eine Serie vorstellen",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-02/"
+          },
+          {
+            "section": 0,
+            "number": 3,
+            "title": "Eine Reise, die Ihnen in Erinnerung geblieben ist",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-03/"
+          },
+          {
+            "section": 0,
+            "number": 4,
+            "title": "Ein Konzert oder eine Kulturveranstaltung",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-04/"
+          },
+          {
+            "section": 0,
+            "number": 5,
+            "title": "Eine Begegnung, die Ihre Sichtweise verändert hat",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-05/"
+          },
+          {
+            "section": 0,
+            "number": 6,
+            "title": "Mehrsprachig leben in Österreich",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-06/"
+          },
+          {
+            "section": 0,
+            "number": 7,
+            "title": "Ein Ort mit persönlicher oder historischer Bedeutung",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-07/"
+          },
+          {
+            "section": 0,
+            "number": 8,
+            "title": "Ein Sportereignis oder sportliches Erlebnis",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-08/"
+          },
+          {
+            "section": 0,
+            "number": 9,
+            "title": "Eine Ausstellung oder ein Museum",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-09/"
+          },
+          {
+            "section": 0,
+            "number": 10,
+            "title": "Verschiedene Generationen im Alltag",
+            "url": "/oeif-b2-speaking/abschnitt-1/uebung-10/"
+          }
+        ]
+      },
+      {
+        "title": "Diskussion",
+        "number": 2,
+        "label": "Abschnitt 2",
+        "items": [
+          {
+            "section": 1,
+            "number": 1,
+            "title": "Soll die Sommerzeit abgeschafft werden?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-01/"
+          },
+          {
+            "section": 1,
+            "number": 2,
+            "title": "Soll die doppelte Staatsbürgerschaft leichter möglich sein?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-02/"
+          },
+          {
+            "section": 1,
+            "number": 3,
+            "title": "Soll bei einer Heirat ein gemeinsamer Familienname die Regel sein?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-03/"
+          },
+          {
+            "section": 1,
+            "number": 4,
+            "title": "Soll privates Feuerwerk stärker eingeschränkt werden?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-04/"
+          },
+          {
+            "section": 1,
+            "number": 5,
+            "title": "Soll man als Zugezogene:r österreichische Dialekte aktiv lernen?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-05/"
+          },
+          {
+            "section": 1,
+            "number": 6,
+            "title": "Ist Teilzeit die bessere Lebensform?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-06/"
+          },
+          {
+            "section": 1,
+            "number": 7,
+            "title": "Soll ein zusätzlicher gesetzlicher Feiertag eingeführt werden?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-07/"
+          },
+          {
+            "section": 1,
+            "number": 8,
+            "title": "Soll der Krampuslauf stärker altersgerecht gestaltet werden?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-08/"
+          },
+          {
+            "section": 1,
+            "number": 9,
+            "title": "Soll es für Hundehalter:innen einen verpflichtenden Sachkundenachweis geben?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-09/"
+          },
+          {
+            "section": 1,
+            "number": 10,
+            "title": "Soll die österreichische Gebärdensprache im Alltag sichtbarer werden?",
+            "url": "/oeif-b2-speaking/abschnitt-2/uebung-10/"
+          }
+        ]
+      },
+      {
+        "title": "Problemlösung",
+        "number": 3,
+        "label": "Abschnitt 3",
+        "items": [
+          {
+            "section": 2,
+            "number": 1,
+            "title": "Vom Stichwort zur gemeinsamen Lösung",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-01/"
+          },
+          {
+            "section": 2,
+            "number": 2,
+            "title": "Betriebsausflug organisieren",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-02/"
+          },
+          {
+            "section": 2,
+            "number": 3,
+            "title": "Ein Nachbarschaftsfest planen",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-03/"
+          },
+          {
+            "section": 2,
+            "number": 4,
+            "title": "Eine Mitfahrbank im ländlichen Raum einrichten",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-04/"
+          },
+          {
+            "section": 2,
+            "number": 5,
+            "title": "Eine Notfallübung im Vereinsheim vorbereiten",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-05/"
+          },
+          {
+            "section": 2,
+            "number": 6,
+            "title": "Eine Vereinsfahrt für 40 Personen",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-06/"
+          },
+          {
+            "section": 2,
+            "number": 7,
+            "title": "Eine Spendenaktion in der Schule oder im Kurs",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-07/"
+          },
+          {
+            "section": 2,
+            "number": 8,
+            "title": "Eine Sprachpatenschaft für neu zugezogene Erwachsene aufbauen",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-08/"
+          },
+          {
+            "section": 2,
+            "number": 9,
+            "title": "Eine sichere Abholzone vor einer Volksschule planen",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-09/"
+          },
+          {
+            "section": 2,
+            "number": 10,
+            "title": "Eine Kleiderausgabe für eine Wärmestube organisieren",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-10/"
+          },
+          {
+            "section": 2,
+            "number": 11,
+            "title": "Eine gemeinsame Abschiedsfeier planen",
+            "url": "/oeif-b2-speaking/abschnitt-3/uebung-11/"
+          }
+        ]
+      },
+      {
+        "title": "Prüfungssimulationen",
+        "number": 5,
+        "label": "Kapitel 7",
+        "items": [
+          {
+            "section": 4,
+            "number": 1,
+            "title": "Prüfungssatz 1: Arbeitswelt · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-01/"
+          },
+          {
+            "section": 4,
+            "number": 2,
+            "title": "Prüfungssatz 1: Arbeitswelt · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-02/"
+          },
+          {
+            "section": 4,
+            "number": 3,
+            "title": "Prüfungssatz 1: Arbeitswelt · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-03/"
+          },
+          {
+            "section": 4,
+            "number": 4,
+            "title": "Prüfungssatz 2: Wohnen · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-04/"
+          },
+          {
+            "section": 4,
+            "number": 5,
+            "title": "Prüfungssatz 2: Wohnen · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-05/"
+          },
+          {
+            "section": 4,
+            "number": 6,
+            "title": "Prüfungssatz 2: Wohnen · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-06/"
+          },
+          {
+            "section": 4,
+            "number": 7,
+            "title": "Prüfungssatz 3: Gesundheit und Alltag · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-07/"
+          },
+          {
+            "section": 4,
+            "number": 8,
+            "title": "Prüfungssatz 3: Gesundheit und Alltag · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-08/"
+          },
+          {
+            "section": 4,
+            "number": 9,
+            "title": "Prüfungssatz 3: Gesundheit und Alltag · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-09/"
+          },
+          {
+            "section": 4,
+            "number": 10,
+            "title": "Prüfungssatz 4: Medien und Bildung · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-10/"
+          },
+          {
+            "section": 4,
+            "number": 11,
+            "title": "Prüfungssatz 4: Medien und Bildung · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-11/"
+          },
+          {
+            "section": 4,
+            "number": 12,
+            "title": "Prüfungssatz 4: Medien und Bildung · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-12/"
+          },
+          {
+            "section": 4,
+            "number": 13,
+            "title": "Prüfungssatz 5: Umwelt und Konsum · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-13/"
+          },
+          {
+            "section": 4,
+            "number": 14,
+            "title": "Prüfungssatz 5: Umwelt und Konsum · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-14/"
+          },
+          {
+            "section": 4,
+            "number": 15,
+            "title": "Prüfungssatz 5: Umwelt und Konsum · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-15/"
+          },
+          {
+            "section": 4,
+            "number": 16,
+            "title": "Prüfungssatz 6: Freizeit und Zusammenleben · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-16/"
+          },
+          {
+            "section": 4,
+            "number": 17,
+            "title": "Prüfungssatz 6: Freizeit und Zusammenleben · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-17/"
+          },
+          {
+            "section": 4,
+            "number": 18,
+            "title": "Prüfungssatz 6: Freizeit und Zusammenleben · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-18/"
+          },
+          {
+            "section": 4,
+            "number": 19,
+            "title": "Prüfungssatz 7: Tourismus und regionale Entwicklung · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-19/"
+          },
+          {
+            "section": 4,
+            "number": 20,
+            "title": "Prüfungssatz 7: Tourismus und regionale Entwicklung · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-20/"
+          },
+          {
+            "section": 4,
+            "number": 21,
+            "title": "Prüfungssatz 7: Tourismus und regionale Entwicklung · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-21/"
+          },
+          {
+            "section": 4,
+            "number": 22,
+            "title": "Prüfungssatz 8: Mitreden und öffentliche Dienstleistungen · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-22/"
+          },
+          {
+            "section": 4,
+            "number": 23,
+            "title": "Prüfungssatz 8: Mitreden und öffentliche Dienstleistungen · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-23/"
+          },
+          {
+            "section": 4,
+            "number": 24,
+            "title": "Prüfungssatz 8: Mitreden und öffentliche Dienstleistungen · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-24/"
+          },
+          {
+            "section": 4,
+            "number": 25,
+            "title": "Prüfungssatz 9: Geld im Alltag und Verbraucherschutz · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-25/"
+          },
+          {
+            "section": 4,
+            "number": 26,
+            "title": "Prüfungssatz 9: Geld im Alltag und Verbraucherschutz · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-26/"
+          },
+          {
+            "section": 4,
+            "number": 27,
+            "title": "Prüfungssatz 9: Geld im Alltag und Verbraucherschutz · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking/abschnitt-5/uebung-27/"
+          }
+        ]
+      }
+    ]
+  },
+  "fide-a2-speaking": {
+    "exam": "fide",
+    "level": "A2",
+    "sections": [
+      {
+        "title": "Arbeit",
+        "number": 1,
+        "label": "Abschnitt 1",
+        "items": [
+          {
+            "section": 0,
+            "number": 1,
+            "title": "Set 1: Arbeitsanweisungen verstehen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-1/uebung-01/"
+          },
+          {
+            "section": 0,
+            "number": 2,
+            "title": "Set 1: Arbeitsanweisungen verstehen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-1/uebung-02/"
+          },
+          {
+            "section": 0,
+            "number": 3,
+            "title": "Set 2: Krank melden · Bild",
+            "url": "/fide-a2-speaking/abschnitt-1/uebung-03/"
+          },
+          {
+            "section": 0,
+            "number": 4,
+            "title": "Set 2: Krank melden · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-1/uebung-04/"
+          },
+          {
+            "section": 0,
+            "number": 5,
+            "title": "Set 3: Frei nehmen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-1/uebung-05/"
+          },
+          {
+            "section": 0,
+            "number": 6,
+            "title": "Set 3: Frei nehmen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-1/uebung-06/"
+          },
+          {
+            "section": 0,
+            "number": 7,
+            "title": "Set 4: Mit Kolleginnen und Kollegen sprechen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-1/uebung-07/"
+          },
+          {
+            "section": 0,
+            "number": 8,
+            "title": "Set 4: Mit Kolleginnen und Kollegen sprechen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-1/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Arbeitssuche",
+        "number": 2,
+        "label": "Abschnitt 2",
+        "items": [
+          {
+            "section": 1,
+            "number": 1,
+            "title": "Set 1: Stellenanzeige verstehen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-2/uebung-01/"
+          },
+          {
+            "section": 1,
+            "number": 2,
+            "title": "Set 1: Stellenanzeige verstehen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-2/uebung-02/"
+          },
+          {
+            "section": 1,
+            "number": 3,
+            "title": "Set 2: Termin beim RAV · Bild",
+            "url": "/fide-a2-speaking/abschnitt-2/uebung-03/"
+          },
+          {
+            "section": 1,
+            "number": 4,
+            "title": "Set 2: Termin beim RAV · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-2/uebung-04/"
+          },
+          {
+            "section": 1,
+            "number": 5,
+            "title": "Set 3: Bewerbung schicken · Bild",
+            "url": "/fide-a2-speaking/abschnitt-2/uebung-05/"
+          },
+          {
+            "section": 1,
+            "number": 6,
+            "title": "Set 3: Bewerbung schicken · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-2/uebung-06/"
+          },
+          {
+            "section": 1,
+            "number": 7,
+            "title": "Set 4: Vorstellungsgespräch · Bild",
+            "url": "/fide-a2-speaking/abschnitt-2/uebung-07/"
+          },
+          {
+            "section": 1,
+            "number": 8,
+            "title": "Set 4: Vorstellungsgespräch · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-2/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Behörden",
+        "number": 3,
+        "label": "Abschnitt 3",
+        "items": [
+          {
+            "section": 2,
+            "number": 1,
+            "title": "Set 1: Anmeldung bei der Gemeinde · Bild",
+            "url": "/fide-a2-speaking/abschnitt-3/uebung-01/"
+          },
+          {
+            "section": 2,
+            "number": 2,
+            "title": "Set 1: Anmeldung bei der Gemeinde · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-3/uebung-02/"
+          },
+          {
+            "section": 2,
+            "number": 3,
+            "title": "Set 2: Adressänderung melden · Bild",
+            "url": "/fide-a2-speaking/abschnitt-3/uebung-03/"
+          },
+          {
+            "section": 2,
+            "number": 4,
+            "title": "Set 2: Adressänderung melden · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-3/uebung-04/"
+          },
+          {
+            "section": 2,
+            "number": 5,
+            "title": "Set 3: Formular ausfüllen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-3/uebung-05/"
+          },
+          {
+            "section": 2,
+            "number": 6,
+            "title": "Set 3: Formular ausfüllen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-3/uebung-06/"
+          },
+          {
+            "section": 2,
+            "number": 7,
+            "title": "Set 4: Termin bei einer Behörde · Bild",
+            "url": "/fide-a2-speaking/abschnitt-3/uebung-07/"
+          },
+          {
+            "section": 2,
+            "number": 8,
+            "title": "Set 4: Termin bei einer Behörde · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-3/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Gesundheit",
+        "number": 4,
+        "label": "Abschnitt 4",
+        "items": [
+          {
+            "section": 3,
+            "number": 1,
+            "title": "Set 1: Beim Hausarzt · Bild",
+            "url": "/fide-a2-speaking/abschnitt-4/uebung-01/"
+          },
+          {
+            "section": 3,
+            "number": 2,
+            "title": "Set 1: Beim Hausarzt · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-4/uebung-02/"
+          },
+          {
+            "section": 3,
+            "number": 3,
+            "title": "Set 2: In der Apotheke · Bild",
+            "url": "/fide-a2-speaking/abschnitt-4/uebung-03/"
+          },
+          {
+            "section": 3,
+            "number": 4,
+            "title": "Set 2: In der Apotheke · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-4/uebung-04/"
+          },
+          {
+            "section": 3,
+            "number": 5,
+            "title": "Set 3: Termin verschieben · Bild",
+            "url": "/fide-a2-speaking/abschnitt-4/uebung-05/"
+          },
+          {
+            "section": 3,
+            "number": 6,
+            "title": "Set 3: Termin verschieben · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-4/uebung-06/"
+          },
+          {
+            "section": 3,
+            "number": 7,
+            "title": "Set 4: Kleiner Notfall · Bild",
+            "url": "/fide-a2-speaking/abschnitt-4/uebung-07/"
+          },
+          {
+            "section": 3,
+            "number": 8,
+            "title": "Set 4: Kleiner Notfall · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-4/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Wohonung",
+        "number": 5,
+        "label": "Abschnitt 5",
+        "items": [
+          {
+            "section": 4,
+            "number": 1,
+            "title": "Set 1: Wohnungsbesichtigung · Bild",
+            "url": "/fide-a2-speaking/abschnitt-5/uebung-01/"
+          },
+          {
+            "section": 4,
+            "number": 2,
+            "title": "Set 1: Wohnungsbesichtigung · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-5/uebung-02/"
+          },
+          {
+            "section": 4,
+            "number": 3,
+            "title": "Set 2: Umzug in eine neue Wohnung · Bild",
+            "url": "/fide-a2-speaking/abschnitt-5/uebung-03/"
+          },
+          {
+            "section": 4,
+            "number": 4,
+            "title": "Set 2: Umzug in eine neue Wohnung · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-5/uebung-04/"
+          },
+          {
+            "section": 4,
+            "number": 5,
+            "title": "Set 3: Problem in der Wohnung · Bild",
+            "url": "/fide-a2-speaking/abschnitt-5/uebung-05/"
+          },
+          {
+            "section": 4,
+            "number": 6,
+            "title": "Set 3: Problem in der Wohnung · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-5/uebung-06/"
+          }
+        ]
+      },
+      {
+        "title": "Kinder und Schule",
+        "number": 6,
+        "label": "Abschnitt 6",
+        "items": [
+          {
+            "section": 5,
+            "number": 1,
+            "title": "Set 1: Kind in der Schule krank melden · Bild",
+            "url": "/fide-a2-speaking/abschnitt-6/uebung-01/"
+          },
+          {
+            "section": 5,
+            "number": 2,
+            "title": "Set 1: Kind in der Schule krank melden · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-6/uebung-02/"
+          },
+          {
+            "section": 5,
+            "number": 3,
+            "title": "Set 2: Elternabend · Bild",
+            "url": "/fide-a2-speaking/abschnitt-6/uebung-03/"
+          },
+          {
+            "section": 5,
+            "number": 4,
+            "title": "Set 2: Elternabend · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-6/uebung-04/"
+          },
+          {
+            "section": 5,
+            "number": 5,
+            "title": "Set 3: Hort oder Krippe organisieren · Bild",
+            "url": "/fide-a2-speaking/abschnitt-6/uebung-05/"
+          },
+          {
+            "section": 5,
+            "number": 6,
+            "title": "Set 3: Hort oder Krippe organisieren · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-6/uebung-06/"
+          },
+          {
+            "section": 5,
+            "number": 7,
+            "title": "Set 4: Gespräch mit der Lehrerin · Bild",
+            "url": "/fide-a2-speaking/abschnitt-6/uebung-07/"
+          },
+          {
+            "section": 5,
+            "number": 8,
+            "title": "Set 4: Gespräch mit der Lehrerin · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-6/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Einkaufen",
+        "number": 7,
+        "label": "Abschnitt 7",
+        "items": [
+          {
+            "section": 6,
+            "number": 1,
+            "title": "Set 1: Im Supermarkt · Bild",
+            "url": "/fide-a2-speaking/abschnitt-7/uebung-01/"
+          },
+          {
+            "section": 6,
+            "number": 2,
+            "title": "Set 1: Im Supermarkt · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-7/uebung-02/"
+          },
+          {
+            "section": 6,
+            "number": 3,
+            "title": "Set 2: Kleidung kaufen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-7/uebung-03/"
+          },
+          {
+            "section": 6,
+            "number": 4,
+            "title": "Set 2: Kleidung kaufen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-7/uebung-04/"
+          },
+          {
+            "section": 6,
+            "number": 5,
+            "title": "Set 3: Rückgabe oder Umtausch · Bild",
+            "url": "/fide-a2-speaking/abschnitt-7/uebung-05/"
+          },
+          {
+            "section": 6,
+            "number": 6,
+            "title": "Set 3: Rückgabe oder Umtausch · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-7/uebung-06/"
+          },
+          {
+            "section": 6,
+            "number": 7,
+            "title": "Set 4: Problem an der Kasse · Bild",
+            "url": "/fide-a2-speaking/abschnitt-7/uebung-07/"
+          },
+          {
+            "section": 6,
+            "number": 8,
+            "title": "Set 4: Problem an der Kasse · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-7/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Verkehr",
+        "number": 8,
+        "label": "Abschnitt 8",
+        "items": [
+          {
+            "section": 7,
+            "number": 1,
+            "title": "Set 1: Billette am Bahnhof · Bild",
+            "url": "/fide-a2-speaking/abschnitt-8/uebung-01/"
+          },
+          {
+            "section": 7,
+            "number": 2,
+            "title": "Set 1: Billette am Bahnhof · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-8/uebung-02/"
+          },
+          {
+            "section": 7,
+            "number": 3,
+            "title": "Set 2: Verspätung und Anschluss · Bild",
+            "url": "/fide-a2-speaking/abschnitt-8/uebung-03/"
+          },
+          {
+            "section": 7,
+            "number": 4,
+            "title": "Set 2: Verspätung und Anschluss · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-8/uebung-04/"
+          },
+          {
+            "section": 7,
+            "number": 5,
+            "title": "Set 3: Abonnement für den Alltag · Bild",
+            "url": "/fide-a2-speaking/abschnitt-8/uebung-05/"
+          },
+          {
+            "section": 7,
+            "number": 6,
+            "title": "Set 3: Abonnement für den Alltag · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-8/uebung-06/"
+          },
+          {
+            "section": 7,
+            "number": 7,
+            "title": "Set 4: Nach dem Weg fragen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-8/uebung-07/"
+          },
+          {
+            "section": 7,
+            "number": 8,
+            "title": "Set 4: Nach dem Weg fragen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-8/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Post, Bank und Versicherung",
+        "number": 9,
+        "label": "Abschnitt 9",
+        "items": [
+          {
+            "section": 8,
+            "number": 1,
+            "title": "Set 1: Paket auf der Post · Bild",
+            "url": "/fide-a2-speaking/abschnitt-9/uebung-01/"
+          },
+          {
+            "section": 8,
+            "number": 2,
+            "title": "Set 1: Paket auf der Post · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-9/uebung-02/"
+          },
+          {
+            "section": 8,
+            "number": 3,
+            "title": "Set 2: Konto bei der Bank · Bild",
+            "url": "/fide-a2-speaking/abschnitt-9/uebung-03/"
+          },
+          {
+            "section": 8,
+            "number": 4,
+            "title": "Set 2: Konto bei der Bank · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-9/uebung-04/"
+          },
+          {
+            "section": 8,
+            "number": 5,
+            "title": "Set 3: Geld überweisen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-9/uebung-05/"
+          },
+          {
+            "section": 8,
+            "number": 6,
+            "title": "Set 3: Geld überweisen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-9/uebung-06/"
+          },
+          {
+            "section": 8,
+            "number": 7,
+            "title": "Set 4: Krankenkasse und Serviceanfrage · Bild",
+            "url": "/fide-a2-speaking/abschnitt-9/uebung-07/"
+          },
+          {
+            "section": 8,
+            "number": 8,
+            "title": "Set 4: Krankenkasse und Serviceanfrage · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-9/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Medien und Freizeit",
+        "number": 10,
+        "label": "Abschnitt 10",
+        "items": [
+          {
+            "section": 9,
+            "number": 1,
+            "title": "Set 1: In der Bibliothek · Bild",
+            "url": "/fide-a2-speaking/abschnitt-10/uebung-01/"
+          },
+          {
+            "section": 9,
+            "number": 2,
+            "title": "Set 1: In der Bibliothek · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-10/uebung-02/"
+          },
+          {
+            "section": 9,
+            "number": 3,
+            "title": "Set 2: Mit Freunden etwas planen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-10/uebung-03/"
+          },
+          {
+            "section": 9,
+            "number": 4,
+            "title": "Set 2: Mit Freunden etwas planen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-10/uebung-04/"
+          },
+          {
+            "section": 9,
+            "number": 5,
+            "title": "Set 3: Im Verein anmelden · Bild",
+            "url": "/fide-a2-speaking/abschnitt-10/uebung-05/"
+          },
+          {
+            "section": 9,
+            "number": 6,
+            "title": "Set 3: Im Verein anmelden · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-10/uebung-06/"
+          },
+          {
+            "section": 9,
+            "number": 7,
+            "title": "Set 4: Freizeit am Wochenende · Bild",
+            "url": "/fide-a2-speaking/abschnitt-10/uebung-07/"
+          },
+          {
+            "section": 9,
+            "number": 8,
+            "title": "Set 4: Freizeit am Wochenende · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-10/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Weiterbildung",
+        "number": 11,
+        "label": "Abschnitt 11",
+        "items": [
+          {
+            "section": 10,
+            "number": 1,
+            "title": "Set 1: Anmeldung für einen Sprachkurs · Bild",
+            "url": "/fide-a2-speaking/abschnitt-11/uebung-01/"
+          },
+          {
+            "section": 10,
+            "number": 2,
+            "title": "Set 1: Anmeldung für einen Sprachkurs · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-11/uebung-02/"
+          },
+          {
+            "section": 10,
+            "number": 3,
+            "title": "Set 2: Informationen zu einem Kurs fragen · Bild",
+            "url": "/fide-a2-speaking/abschnitt-11/uebung-03/"
+          },
+          {
+            "section": 10,
+            "number": 4,
+            "title": "Set 2: Informationen zu einem Kurs fragen · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-11/uebung-04/"
+          },
+          {
+            "section": 10,
+            "number": 5,
+            "title": "Set 3: Im Kurs fehlen oder Termin ändern · Bild",
+            "url": "/fide-a2-speaking/abschnitt-11/uebung-05/"
+          },
+          {
+            "section": 10,
+            "number": 6,
+            "title": "Set 3: Im Kurs fehlen oder Termin ändern · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-11/uebung-06/"
+          },
+          {
+            "section": 10,
+            "number": 7,
+            "title": "Set 4: Weiterbildung im Alltag · Bild",
+            "url": "/fide-a2-speaking/abschnitt-11/uebung-07/"
+          },
+          {
+            "section": 10,
+            "number": 8,
+            "title": "Set 4: Weiterbildung im Alltag · Rollenspiel",
+            "url": "/fide-a2-speaking/abschnitt-11/uebung-08/"
+          }
+        ]
+      }
+    ]
+  },
+  "fide-b1-speaking": {
+    "exam": "fide",
+    "level": "B1",
+    "sections": [
+      {
+        "title": "Wohnen und Nachbarschaft",
+        "number": 1,
+        "label": "Abschnitt 1",
+        "items": [
+          {
+            "section": 0,
+            "number": 1,
+            "title": "Set 1 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-1/uebung-01/"
+          },
+          {
+            "section": 0,
+            "number": 2,
+            "title": "Set 1 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-1/uebung-02/"
+          },
+          {
+            "section": 0,
+            "number": 3,
+            "title": "Set 1 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-1/uebung-03/"
+          },
+          {
+            "section": 0,
+            "number": 4,
+            "title": "Set 1 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-1/uebung-04/"
+          },
+          {
+            "section": 0,
+            "number": 5,
+            "title": "Set 2 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-1/uebung-05/"
+          },
+          {
+            "section": 0,
+            "number": 6,
+            "title": "Set 2 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-1/uebung-06/"
+          },
+          {
+            "section": 0,
+            "number": 7,
+            "title": "Set 2 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-1/uebung-07/"
+          },
+          {
+            "section": 0,
+            "number": 8,
+            "title": "Set 2 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-1/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Arbeit und Arbeitssuche",
+        "number": 2,
+        "label": "Abschnitt 2",
+        "items": [
+          {
+            "section": 1,
+            "number": 1,
+            "title": "Set 1 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-2/uebung-01/"
+          },
+          {
+            "section": 1,
+            "number": 2,
+            "title": "Set 1 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-2/uebung-02/"
+          },
+          {
+            "section": 1,
+            "number": 3,
+            "title": "Set 1 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-2/uebung-03/"
+          },
+          {
+            "section": 1,
+            "number": 4,
+            "title": "Set 1 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-2/uebung-04/"
+          },
+          {
+            "section": 1,
+            "number": 5,
+            "title": "Set 2 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-2/uebung-05/"
+          },
+          {
+            "section": 1,
+            "number": 6,
+            "title": "Set 2 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-2/uebung-06/"
+          },
+          {
+            "section": 1,
+            "number": 7,
+            "title": "Set 2 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-2/uebung-07/"
+          },
+          {
+            "section": 1,
+            "number": 8,
+            "title": "Set 2 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-2/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Gesundheit und Alltag",
+        "number": 3,
+        "label": "Abschnitt 3",
+        "items": [
+          {
+            "section": 2,
+            "number": 1,
+            "title": "Set 1 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-3/uebung-01/"
+          },
+          {
+            "section": 2,
+            "number": 2,
+            "title": "Set 1 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-3/uebung-02/"
+          },
+          {
+            "section": 2,
+            "number": 3,
+            "title": "Set 1 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-3/uebung-03/"
+          },
+          {
+            "section": 2,
+            "number": 4,
+            "title": "Set 1 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-3/uebung-04/"
+          },
+          {
+            "section": 2,
+            "number": 5,
+            "title": "Set 2 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-3/uebung-05/"
+          },
+          {
+            "section": 2,
+            "number": 6,
+            "title": "Set 2 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-3/uebung-06/"
+          },
+          {
+            "section": 2,
+            "number": 7,
+            "title": "Set 2 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-3/uebung-07/"
+          },
+          {
+            "section": 2,
+            "number": 8,
+            "title": "Set 2 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-3/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Weiterbildung und Lernen",
+        "number": 4,
+        "label": "Abschnitt 4",
+        "items": [
+          {
+            "section": 3,
+            "number": 1,
+            "title": "Set 1 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-4/uebung-01/"
+          },
+          {
+            "section": 3,
+            "number": 2,
+            "title": "Set 1 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-4/uebung-02/"
+          },
+          {
+            "section": 3,
+            "number": 3,
+            "title": "Set 1 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-4/uebung-03/"
+          },
+          {
+            "section": 3,
+            "number": 4,
+            "title": "Set 1 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-4/uebung-04/"
+          },
+          {
+            "section": 3,
+            "number": 5,
+            "title": "Set 2 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-4/uebung-05/"
+          },
+          {
+            "section": 3,
+            "number": 6,
+            "title": "Set 2 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-4/uebung-06/"
+          },
+          {
+            "section": 3,
+            "number": 7,
+            "title": "Set 2 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-4/uebung-07/"
+          },
+          {
+            "section": 3,
+            "number": 8,
+            "title": "Set 2 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-4/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Verkehr und Mobilität",
+        "number": 5,
+        "label": "Abschnitt 5",
+        "items": [
+          {
+            "section": 4,
+            "number": 1,
+            "title": "Set 1 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-5/uebung-01/"
+          },
+          {
+            "section": 4,
+            "number": 2,
+            "title": "Set 1 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-5/uebung-02/"
+          },
+          {
+            "section": 4,
+            "number": 3,
+            "title": "Set 1 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-5/uebung-03/"
+          },
+          {
+            "section": 4,
+            "number": 4,
+            "title": "Set 1 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-5/uebung-04/"
+          },
+          {
+            "section": 4,
+            "number": 5,
+            "title": "Set 2 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-5/uebung-05/"
+          },
+          {
+            "section": 4,
+            "number": 6,
+            "title": "Set 2 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-5/uebung-06/"
+          },
+          {
+            "section": 4,
+            "number": 7,
+            "title": "Set 2 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-5/uebung-07/"
+          },
+          {
+            "section": 4,
+            "number": 8,
+            "title": "Set 2 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-5/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Familie, Kinder und Schule",
+        "number": 6,
+        "label": "Abschnitt 6",
+        "items": [
+          {
+            "section": 5,
+            "number": 1,
+            "title": "Set 1 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-6/uebung-01/"
+          },
+          {
+            "section": 5,
+            "number": 2,
+            "title": "Set 1 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-6/uebung-02/"
+          },
+          {
+            "section": 5,
+            "number": 3,
+            "title": "Set 1 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-6/uebung-03/"
+          },
+          {
+            "section": 5,
+            "number": 4,
+            "title": "Set 1 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-6/uebung-04/"
+          },
+          {
+            "section": 5,
+            "number": 5,
+            "title": "Set 2 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-6/uebung-05/"
+          },
+          {
+            "section": 5,
+            "number": 6,
+            "title": "Set 2 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-6/uebung-06/"
+          },
+          {
+            "section": 5,
+            "number": 7,
+            "title": "Set 2 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-6/uebung-07/"
+          },
+          {
+            "section": 5,
+            "number": 8,
+            "title": "Set 2 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-6/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Digitale Medien und Information",
+        "number": 7,
+        "label": "Abschnitt 7",
+        "items": [
+          {
+            "section": 6,
+            "number": 1,
+            "title": "Set 1 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-7/uebung-01/"
+          },
+          {
+            "section": 6,
+            "number": 2,
+            "title": "Set 1 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-7/uebung-02/"
+          },
+          {
+            "section": 6,
+            "number": 3,
+            "title": "Set 1 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-7/uebung-03/"
+          },
+          {
+            "section": 6,
+            "number": 4,
+            "title": "Set 1 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-7/uebung-04/"
+          },
+          {
+            "section": 6,
+            "number": 5,
+            "title": "Set 2 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-7/uebung-05/"
+          },
+          {
+            "section": 6,
+            "number": 6,
+            "title": "Set 2 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-7/uebung-06/"
+          },
+          {
+            "section": 6,
+            "number": 7,
+            "title": "Set 2 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-7/uebung-07/"
+          },
+          {
+            "section": 6,
+            "number": 8,
+            "title": "Set 2 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-7/uebung-08/"
+          }
+        ]
+      },
+      {
+        "title": "Behörden, Geld und Versicherung",
+        "number": 8,
+        "label": "Abschnitt 8",
+        "items": [
+          {
+            "section": 7,
+            "number": 1,
+            "title": "Set 1 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-8/uebung-01/"
+          },
+          {
+            "section": 7,
+            "number": 2,
+            "title": "Set 1 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-8/uebung-02/"
+          },
+          {
+            "section": 7,
+            "number": 3,
+            "title": "Set 1 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-8/uebung-03/"
+          },
+          {
+            "section": 7,
+            "number": 4,
+            "title": "Set 1 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-8/uebung-04/"
+          },
+          {
+            "section": 7,
+            "number": 5,
+            "title": "Set 2 · Frage 1",
+            "url": "/fide-b1-speaking/abschnitt-8/uebung-05/"
+          },
+          {
+            "section": 7,
+            "number": 6,
+            "title": "Set 2 · Frage 2",
+            "url": "/fide-b1-speaking/abschnitt-8/uebung-06/"
+          },
+          {
+            "section": 7,
+            "number": 7,
+            "title": "Set 2 · Frage 3",
+            "url": "/fide-b1-speaking/abschnitt-8/uebung-07/"
+          },
+          {
+            "section": 7,
+            "number": 8,
+            "title": "Set 2 · Frage 4",
+            "url": "/fide-b1-speaking/abschnitt-8/uebung-08/"
+          }
+        ]
+      }
+    ]
+  }
+}

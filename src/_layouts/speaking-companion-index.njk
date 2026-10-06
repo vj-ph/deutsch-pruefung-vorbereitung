@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+{% set book = speakingCompanionCatalog[speakingBookKey] %}
+<div class="dtz-book speaking-companion speaking-companion--{{ 'oeif' if book.exam == 'ÖIF' else 'fide' }}">
+  <header class="dtz-book__hero">
+    <div class="container">
+      <p class="dtz-book__kicker">DeutschKompass · Online-Material zum Buch</p>
+      <h1>{{ book.exam }} {{ book.level }} Sprechen</h1>
+      <p>Wählen Sie eine Übung aus Ihrem Buch, sprechen Sie zuerst selbst und hören Sie danach das passende Modell-Audio.</p>
+      <a class="dtz-book__hero-link" href="#abschnitt-1">Übung auswählen <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+  <div class="container dtz-book__body">
+    <aside class="dtz-book__notice">
+      <strong>So üben Sie:</strong> Lesen Sie die Aufgabe im Buch. Sprechen Sie selbst oder mit dem ChatGPT-Sprachmodus, hören Sie dann das Modell und vergleichen Sie Ihre Antwort. Aufgaben und Modelltexte bleiben im Buch.
+    </aside>
+    {% for section in book.sections %}
+    <section id="abschnitt-{{ section.number }}" class="dtz-book__section">
+      <div class="dtz-book__section-heading">
+        <p class="dtz-book__kicker">{{ section.label }} · {{ section.items | length }} Übungen</p>
+        <h2>{{ section.title }}</h2>
+      </div>
+      <div class="dtz-book__list">
+        {% for exercise in section.items %}
+        <a class="dtz-book__list-item" href="{{ exercise.url | url }}">
+          <span class="dtz-book__number">{{ "0" if exercise.number < 10 else "" }}{{ exercise.number }}</span>
+          <span><small>Übung {{ exercise.number }}</small><strong>{{ exercise.title }}</strong></span>
+          <span class="dtz-book__arrow" aria-hidden="true">→</span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</div>
