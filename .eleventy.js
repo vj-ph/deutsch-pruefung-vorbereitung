@@ -151,6 +151,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/dtz-b1-cards");
+  for (const book of ["oeif-a2-speaking", "oeif-b1-speaking", "oeif-b2-speaking", "fide-a2-speaking", "fide-b1-speaking"]) {
+    eleventyConfig.addPassthroughCopy(`src/${book}/audio`);
+    eleventyConfig.addPassthroughCopy(`src/${book}/images`);
+  }
   
   // Copy favicon if present
   eleventyConfig.addPassthroughCopy({"src/favicon.ico": "favicon.ico"});
