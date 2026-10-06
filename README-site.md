@@ -120,6 +120,36 @@ site builds do not need the book repository. To update them when the book
 changes, place `german_exam_books` alongside this repository and run
 `node scripts/generate-dtz-b1-speaking.js` from the project root before building.
 
+## ÖIF and fide speaking book materials
+
+`/oeif-a2-speaking/`, `/oeif-b1-speaking/`, `/oeif-b2-speaking/`,
+`/fide-a2-speaking/` and `/fide-b1-speaking/` are book companions with
+ChatGPT voice-practice prompts and locally copied model MP3s. Image exercises
+also include the book's picture where available. The pages leave task text,
+model transcripts, and vocabulary in the books. The copyable prompts contain
+the relevant situation, roles, speaking points and/or examiner questions from
+the book so ChatGPT can start the exercise without asking learners to
+transcribe the task. For B2 discussions the longer reading text stays in the
+book and is also included in the copyable prompt, along with the discussion
+goals, so ChatGPT can refer to the complete passage.
+
+The five books have 38, 72, 58, 86, and 64 exercise pages respectively.
+ÖIF A2 picture exercises group the picture-description and personal-experience
+clips on one page. The ÖIF B1 restaurant role-play has two dialogue clips on
+one page. ÖIF B2 simulation sets have one page for each of their three parts;
+their titles and prompts identify the presentation, discussion and joint
+problem-solving parts. The unscored contact-opening exercises are not included online.
+Skipped audio: ÖIF B1 track 001 and `-fragen`, ÖIF A2 `_fragen`,
+ÖIF B2 mini-drills, mini-dialogues, upgrades and contact reactions, fide B1
+track 001 and `-followups`, and fide A2 `-conversation`. The generated pages
+and copied MP3s/images are in `src/`, so ordinary builds need no sibling book
+repository.
+To regenerate after changing the source books or audio, run
+`node scripts/generate-speaking-companions.js` with `german_exam_books`
+alongside this repository, then run `npm run build`.
+Run `node --test scripts/test-speaking-companion-prompts.js` to check that
+all generated speaking prompts retain book-specific task context.
+
 ## DTZ B1 writing book materials
 
 The companion directory at `/dtz-b1-writing/` contains one page for each of
