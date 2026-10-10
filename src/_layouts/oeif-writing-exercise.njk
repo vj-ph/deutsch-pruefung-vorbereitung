@@ -1,14 +1,14 @@
 ---
 layout: base.njk
 ---
-{% set companionSlug = writingCompanionSlug or ('oeif-' ~ bookLevel ~ '-writing') %}
+{% set companionSlug = writingCompanionSlug or writingBookSlug or ('oeif-' ~ bookLevel ~ '-writing') %}
 {% set companionName = writingCompanionName or 'ÖIF' %}
 {% set promptText = fideWritingPrompts[promptKey] if writingCompanionSlug else oeifWritingPrompts[promptKey] %}
 <div class="dtz-book dtz-book--writing {{ 'fide-book' if writingCompanionSlug else 'oeif-book' }}">
   <header class="dtz-book__hero">
     <div class="container">
       <a class="dtz-book__breadcrumb" href="{{ ('/' ~ companionSlug ~ '/') | url }}">← Alle Übungen</a>
-      <p class="dtz-book__kicker">{{ companionName }} {{ bookLevel | upper }} Schreiben · {{ exerciseLabel }}</p>
+      <p class="dtz-book__kicker">{{ companionName }} {{ bookLevel | upper }} Schreiben{{ ' · ' ~ writingEditionLabel if writingEditionLabel else '' }} · {{ exerciseLabel }}</p>
       <h1>{{ exerciseTitle }}</h1>
       <p>{{ sectionTitle }} · Online-Material zum Buch</p>
     </div>
