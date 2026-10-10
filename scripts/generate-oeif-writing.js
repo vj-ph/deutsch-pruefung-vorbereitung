@@ -55,11 +55,11 @@ Gib mir kurzes, verständliches Feedback auf Deutsch (${level.toUpperCase()}-Niv
 ${level === "a2" ? "Für diese Übung sind 25 Minuten Schreibzeit vorgesehen." : "Für diese Übung sind 30 Minuten Schreibzeit vorgesehen."} Die benötigte Zeit lässt sich aus dem Entwurf nicht ablesen; behaupte nicht, ich hätte das Zeitlimit eingehalten. Wenn ich die überarbeitete Version schicke, vergleiche sie kurz mit meinem ersten Entwurf und prüfe die Inhaltspunkte erneut. Du bist ein Übungspartner, keine offizielle ÖIF-Bewertung.`;
 }
 
-function essayPrompt(label, title, situation, aspects, mock) {
+function essayPrompt(label, title, situation, aspects, mock, v2 = false) {
   return `Du bist mein Schreibcoach für einen ÖIF-B2-Aufsatz. Mein eigener Entwurf steht in derselben Nachricht vor dieser Anweisung. Beurteile nur diesen Entwurf. Wenn er fehlt, bitte mich zuerst darum.
 
 ${label}: ${title}
-${mock ? "Dies ist ein Thema aus einem Mock Exam: Man wählt nur eines der beiden Themen." : "Dies ist ein Übungsaufsatz aus dem Buch."} Üben Sie mit 40 Minuten Schreibzeit und mindestens 200 Wörtern.
+${mock ? `Dies ist ein Thema aus ${v2 ? "einer Probeprüfung" : "einem Mock Exam"}: Man wählt nur eines der beiden Themen.` : "Dies ist ein Übungsaufsatz aus dem Buch."} Üben Sie mit 40 Minuten Schreibzeit und mindestens 200 Wörtern.${v2 && !mock ? " Das Übungsziel im Buch sind 210–240 Wörter; dies ist keine Obergrenze." : ""}
 Situation: ${situation}
 Aufgabe: Schreiben Sie einen Aufsatz und gehen Sie auf mindestens drei der folgenden Aspekte ein:
 ${aspects.map((aspect, i) => `${i + 1}. ${aspect}`).join("\n")}
@@ -104,12 +104,13 @@ function numberedUnits(level, source) {
   });
 }
 
-function b2Exercises(source) {
+function b2Exercises(source, v2 = false) {
   const exercises = [];
   const essayStart = source.indexOf("# Kapitel 3: Übungsaufsätze");
-  const mockStart = source.indexOf("# Kapitel 4: Mock Exams", essayStart);
+  const mockStart = source.indexOf(v2 ? "# Kapitel 5: Probeprüfungen" : "# Kapitel 4: Mock Exams", essayStart);
   if (essayStart < 0 || mockStart < 0) throw new Error("Missing B2 essay or mock chapter");
   const essaySection = source.slice(essayStart, mockStart);
+  const slug = v2 ? "oeif-b2-writing-v2" : "oeif-b2-writing";
   const essayHeadings = [...essaySection.matchAll(/^## Thema (\d+): (.+)$/gm)];
   if (essayHeadings.length !== 16) throw new Error(`Expected 16 B2 essays, found ${essayHeadings.length}`);
   for (const [index, heading] of essayHeadings.entries()) {
@@ -120,15 +121,15 @@ function b2Exercises(source) {
     const aspects = pointsFrom(section(body, "Aufgabe", `B2 Thema ${number}`), 4, `B2 Thema ${number}`);
     exercises.push({
       key: `essay-${number}`, group: 1, label: `Thema ${number}`, title: heading[2],
-      url: `/oeif-b2-writing/thema-${String(number).padStart(2, "0")}/`,
-      prompt: essayPrompt(`Kapitel 3, Thema ${number}`, heading[2], situation, aspects, false)
+      url: `/${slug}/thema-${String(number).padStart(2, "0")}/`,
+      prompt: essayPrompt(`Kapitel 3, Thema ${number}`, heading[2], situation, aspects, false, v2)
     });
   }
 
-  const mockEnd = source.indexOf("# Lösungsvorschläge zu den Mock Exams", mockStart);
+  const mockEnd = source.indexOf(v2 ? "# Lösungsvorschläge zu den Probeprüfungen" : "# Lösungsvorschläge zu den Mock Exams", mockStart);
   if (mockEnd < 0) throw new Error("Missing end of B2 mock exams");
   const mockSection = source.slice(mockStart, mockEnd);
-  const mockHeadings = [...mockSection.matchAll(/^## Mock Exam (\d+)\s*$/gm)];
+  const mockHeadings = [...mockSection.matchAll(v2 ? /^## Probeprüfung (\d+)\s*$/gm : /^## Mock Exam (\d+)\s*$/gm)];
   if (mockHeadings.length !== 3) throw new Error(`Expected three B2 mock exams, found ${mockHeadings.length}`);
   for (const [index, heading] of mockHeadings.entries()) {
     const exam = Number(heading[1]);
@@ -144,11 +145,12 @@ function b2Exercises(source) {
       const assignment = task.match(/^\*\*Aufgabe:\*\*\s*(.+)$/m)?.[1];
       if (!situation || !assignment?.includes("Aufsatz")) throw new Error(`Missing B2 mock task ${exam}${topic[1]}`);
       const aspects = pointsFrom(task, 4, `B2 mock ${exam}${topic[1]}`);
+      const examLabel = `${v2 ? "Probeprüfung" : "Mock Exam"} ${exam}`;
       exercises.push({
-        key: `mock-${exam}-${topic[1].toLowerCase()}`, group: 2, label: `Mock Exam ${exam} · Thema ${topic[1]}`,
-        title: topic[2], url: `/oeif-b2-writing/mock-${exam}-${topic[1].toLowerCase()}/`,
-        prompt: essayPrompt(`Mock Exam ${exam}, Thema ${topic[1]}`, topic[2], situation, aspects, true),
-        note: "Wählen Sie im Mock Exam nur eines der beiden Themen. Schreiben Sie zuerst ohne Hilfe."
+        key: `mock-${exam}-${topic[1].toLowerCase()}`, group: 2, label: `${examLabel} · Thema ${topic[1]}`,
+        title: topic[2], url: `/${slug}/mock-${exam}-${topic[1].toLowerCase()}/`,
+        prompt: essayPrompt(`${examLabel}, Thema ${topic[1]}`, topic[2], situation, aspects, true, v2),
+        note: `Wählen Sie ${v2 ? "in der Probeprüfung" : "im Mock Exam"} nur eines der beiden Themen. Schreiben Sie zuerst ohne Hilfe.`
       });
     }
   }
@@ -158,14 +160,20 @@ function b2Exercises(source) {
 
 const catalog = {};
 const prompts = {};
-for (const level of ["a2", "b1", "b2"]) {
-  const source = readBook(level);
-  const items = level === "b2" ? b2Exercises(source) : numberedUnits(level, source);
-  const bookSlug = `oeif-${level}-writing`;
-  const sections = chapters[level].map((title, index) => ({
+for (const { level, v2 } of [
+  { level: "a2" }, { level: "b1" }, { level: "b2" }, { level: "b2", v2: true }
+]) {
+  const source = v2
+    ? fs.readFileSync(path.join(booksRoot, "b2/writing_oeif_gpt_v2/book_no_toc.md"), "utf8")
+    : readBook(level);
+  const items = level === "b2" ? b2Exercises(source, v2) : numberedUnits(level, source);
+  const bookSlug = v2 ? "oeif-b2-writing-v2" : `oeif-${level}-writing`;
+  const catalogKey = v2 ? "b2v2" : level;
+  const sectionTitles = v2 ? ["Übungsaufsätze", "Probeprüfungen – Thema A oder B"] : chapters[level];
+  const sections = sectionTitles.map((title, index) => ({
     id: `gruppe-${index + 1}`,
     title,
-    label: level === "b2" ? ["Kapitel 3", "Kapitel 4"][index] : `Kapitel ${index + 1}`,
+    label: level === "b2" ? ["Kapitel 3", v2 ? "Kapitel 5" : "Kapitel 4"][index] : `Kapitel ${index + 1}`,
     note: level === "b1" && index === 3
       ? "Zusätzliches Transfertraining, nicht die typische ÖIF-B1-Kernaufgabe." : "",
     items: items.filter(item => item.group === index + 1).map(({ key, label, title, url }) => ({
@@ -174,25 +182,33 @@ for (const level of ["a2", "b1", "b2"]) {
         : label.match(/\d+/)[0].padStart(2, "0")
     }))
   }));
-  catalog[level] = { level: level.toUpperCase(), slug: bookSlug, sections };
+  catalog[catalogKey] = { level: level.toUpperCase(), slug: bookSlug, sections };
   const directory = path.join(root, "src", bookSlug);
   fs.mkdirSync(directory, { recursive: true });
   for (const [index, item] of items.entries()) {
-    prompts[`${level}-${item.key}`] = item.prompt;
+    prompts[`${catalogKey}-${item.key}`] = item.prompt;
     const fields = {
       layout: "oeif-writing-exercise.njk",
-      title: `${item.label}: ${item.title} · ÖIF ${level.toUpperCase()} Schreiben`,
+      title: `${item.label}: ${item.title} · ÖIF ${level.toUpperCase()} Schreiben${v2 ? " · Version 2" : ""}`,
       description: `Online-Schreibtraining zum ÖIF-${level.toUpperCase()}-Buch: ${item.title.replace(/[?.!]$/, "")}. Eigenen Text schreiben und mit Feedback selbst überarbeiten.`,
       permalink: item.url,
       lang: "de-AT",
       extraStylesheet: "/css/oeif-writing.css",
       extraScript: "/dtz-b1-cards/assets/practice.js",
       bookLevel: level,
+      ...(v2 ? {
+        bookCatalogKey: catalogKey,
+        writingBookSlug: bookSlug,
+        writingEditionLabel: "Version 2",
+        ...(!item.key.startsWith("mock-") ? {
+          writingPracticeGuidance: "Trainieren Sie mit 40 Minuten Schreibzeit und mindestens 200 Wörtern; das Übungsziel im Buch sind 210–240 Wörter (keine Obergrenze). Schreiben Sie einen Aufsatz mit Überschrift, Einleitung, Hauptteil und Schluss; entwickeln Sie mindestens drei der vier Aspekte aus dem Buch."
+        } : {})
+      } : {}),
       exerciseLabel: item.label,
       exerciseTitle: item.title,
       sectionTitle: sections[item.group - 1].title,
       exerciseNote: item.note ?? "",
-      promptKey: `${level}-${item.key}`,
+      promptKey: `${catalogKey}-${item.key}`,
       previousExercise: items[index - 1]?.url ?? null,
       nextExercise: items[index + 1]?.url ?? null
     };
@@ -201,6 +217,10 @@ for (const level of ["a2", "b1", "b2"]) {
       `---\n${Object.entries(fields).map(([key, value]) => `${key}: ${JSON.stringify(value)}`).join("\n")}\n---\n`);
   }
   console.log(`${bookSlug}: ${items.length} exercise pages`);
+  if (v2) {
+    fs.writeFileSync(path.join(directory, "index.njk"),
+      `---\nlayout: oeif-writing-index.njk\ntitle: "ÖIF B2 Schreiben · Version 2 · Online-Material zum Buch"\ndescription: "Online-Schreibtraining zur Version 2: 16 Aufsatzthemen und sechs Themen aus drei Probeprüfungen im ÖIF B2 Schreibbuch."\npermalink: "/${bookSlug}/"\nlang: "de-AT"\nextraStylesheet: "/css/oeif-writing.css"\nbookLevel: "b2"\nbookCatalogKey: "${catalogKey}"\nwritingBookSlug: "${bookSlug}"\nwritingEditionLabel: "Version 2"\n---\n`);
+  }
 }
 fs.writeFileSync(path.join(dataRoot, "oeifWritingCatalog.json"), JSON.stringify(catalog, null, 2) + "\n");
 fs.writeFileSync(path.join(dataRoot, "oeifWritingPrompts.json"), JSON.stringify(prompts, null, 2) + "\n");

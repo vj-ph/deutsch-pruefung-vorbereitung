@@ -504,5 +504,159 @@
         ]
       }
     ]
+  },
+  "b2v2": {
+    "level": "B2",
+    "slug": "oeif-b2-writing-v2",
+    "sections": [
+      {
+        "id": "gruppe-1",
+        "title": "Übungsaufsätze",
+        "label": "Kapitel 3",
+        "note": "",
+        "items": [
+          {
+            "label": "Thema 1",
+            "title": "Soll man im Alltag öfter auf soziale Medien verzichten?",
+            "url": "/oeif-b2-writing-v2/thema-01/",
+            "badge": "01"
+          },
+          {
+            "label": "Thema 2",
+            "title": "Soll Homeoffice ein normaler Teil der Arbeitswelt sein?",
+            "url": "/oeif-b2-writing-v2/thema-02/",
+            "badge": "02"
+          },
+          {
+            "label": "Thema 3",
+            "title": "Soll Weiterbildung im Erwachsenenleben wichtiger werden?",
+            "url": "/oeif-b2-writing-v2/thema-03/",
+            "badge": "03"
+          },
+          {
+            "label": "Thema 4",
+            "title": "Soll man regionale Produkte stärker bevorzugen?",
+            "url": "/oeif-b2-writing-v2/thema-04/",
+            "badge": "04"
+          },
+          {
+            "label": "Thema 5",
+            "title": "Sollte künstliche Intelligenz im Alltag stärker genutzt werden?",
+            "url": "/oeif-b2-writing-v2/thema-05/",
+            "badge": "05"
+          },
+          {
+            "label": "Thema 6",
+            "title": "Soll die Stadt mehr Platz für Fahrräder schaffen?",
+            "url": "/oeif-b2-writing-v2/thema-06/",
+            "badge": "06"
+          },
+          {
+            "label": "Thema 7",
+            "title": "Sind kurze Urlaube eine gute Erholung?",
+            "url": "/oeif-b2-writing-v2/thema-07/",
+            "badge": "07"
+          },
+          {
+            "label": "Thema 8",
+            "title": "Soll ehrenamtliches Engagement stärker anerkannt werden?",
+            "url": "/oeif-b2-writing-v2/thema-08/",
+            "badge": "08"
+          },
+          {
+            "label": "Thema 9",
+            "title": "Soll man im Alltag weniger konsumieren?",
+            "url": "/oeif-b2-writing-v2/thema-09/",
+            "badge": "09"
+          },
+          {
+            "label": "Thema 10",
+            "title": "Soll Lernen im Erwachsenenalter digitaler werden?",
+            "url": "/oeif-b2-writing-v2/thema-10/",
+            "badge": "10"
+          },
+          {
+            "label": "Thema 11",
+            "title": "Soll man in Städten stärker auf öffentliche Verkehrsmittel setzen?",
+            "url": "/oeif-b2-writing-v2/thema-11/",
+            "badge": "11"
+          },
+          {
+            "label": "Thema 12",
+            "title": "Soll Medienkompetenz ein eigenes Schulfach sein?",
+            "url": "/oeif-b2-writing-v2/thema-12/",
+            "badge": "12"
+          },
+          {
+            "label": "Thema 13",
+            "title": "Soll man aus Fehlern offen lernen statt sie zu verbergen?",
+            "url": "/oeif-b2-writing-v2/thema-13/",
+            "badge": "13"
+          },
+          {
+            "label": "Thema 14",
+            "title": "Soll man Freizeit stärker planen oder spontan gestalten?",
+            "url": "/oeif-b2-writing-v2/thema-14/",
+            "badge": "14"
+          },
+          {
+            "label": "Thema 15",
+            "title": "Sollen Unternehmen stärker auf psychische Gesundheit achten?",
+            "url": "/oeif-b2-writing-v2/thema-15/",
+            "badge": "15"
+          },
+          {
+            "label": "Thema 16",
+            "title": "Sollen Haushalt und Betreuung gerechter verteilt werden?",
+            "url": "/oeif-b2-writing-v2/thema-16/",
+            "badge": "16"
+          }
+        ]
+      },
+      {
+        "id": "gruppe-2",
+        "title": "Probeprüfungen – Thema A oder B",
+        "label": "Kapitel 5",
+        "note": "",
+        "items": [
+          {
+            "label": "Probeprüfung 1 · Thema A",
+            "title": "Soll kulturelle Teilhabe für alle Menschen leichter möglich sein?",
+            "url": "/oeif-b2-writing-v2/mock-1-a/",
+            "badge": "1A"
+          },
+          {
+            "label": "Probeprüfung 1 · Thema B",
+            "title": "Soll die Vier-Tage-Woche in mehr Unternehmen erprobt werden?",
+            "url": "/oeif-b2-writing-v2/mock-1-b/",
+            "badge": "1B"
+          },
+          {
+            "label": "Probeprüfung 2 · Thema A",
+            "title": "Soll Mehrsprachigkeit im Alltag stärker gefördert werden?",
+            "url": "/oeif-b2-writing-v2/mock-2-a/",
+            "badge": "2A"
+          },
+          {
+            "label": "Probeprüfung 2 · Thema B",
+            "title": "Soll gesundes Essen an Schulen stärker unterstützt werden?",
+            "url": "/oeif-b2-writing-v2/mock-2-b/",
+            "badge": "2B"
+          },
+          {
+            "label": "Probeprüfung 3 · Thema A",
+            "title": "Soll Bargeld im Alltag weiterhin geschützt werden?",
+            "url": "/oeif-b2-writing-v2/mock-3-a/",
+            "badge": "3A"
+          },
+          {
+            "label": "Probeprüfung 3 · Thema B",
+            "title": "Soll Wohnen in Städten stärker reguliert werden?",
+            "url": "/oeif-b2-writing-v2/mock-3-b/",
+            "badge": "3B"
+          }
+        ]
+      }
+    ]
   }
 }

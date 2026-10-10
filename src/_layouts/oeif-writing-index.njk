@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 ---
-{% set book = fideWritingCatalog[bookLevel] if writingCompanionSlug else oeifWritingCatalog[bookLevel] %}
+{% set book = fideWritingCatalog[bookLevel] if writingCompanionSlug else oeifWritingCatalog[bookCatalogKey or bookLevel] %}
 <div class="dtz-book dtz-book--writing {{ 'fide-book' if writingCompanionSlug else 'oeif-book' }}">
   <header class="dtz-book__hero">
     <div class="container">
       <p class="dtz-book__kicker">DeutschKompass · Online-Material zum Buch</p>
-      <h1>{{ writingCompanionName or 'ÖIF' }} {{ book.level }} Schreiben</h1>
+      <h1>{{ writingCompanionName or 'ÖIF' }} {{ book.level }} Schreiben{{ ' · ' ~ writingEditionLabel if writingEditionLabel else '' }}</h1>
       <p>Schreiben Sie Ihre eigenen Texte zu den Aufgaben im Buch. Kopieren Sie Ihren Entwurf und holen Sie sich gezieltes Feedback, um ihn selbst zu überarbeiten.</p>
       <a class="dtz-book__hero-link" href="#{{ 'kapitel-1' if writingCompanionSlug else 'gruppe-1' }}">Übung auswählen <span aria-hidden="true">↓</span></a>
     </div>
@@ -14,7 +14,7 @@ layout: base.njk
   <div class="container dtz-book__body">
     <aside class="dtz-book__notice">
       <strong>So üben Sie:</strong> Lesen Sie die Aufgabe im Buch, schreiben Sie hier Ihren Text und kopieren Sie Entwurf und Feedback-Prompt in dieselbe ChatGPT-Nachricht. Überarbeiten Sie Ihren Text danach selbst. Aufgaben und Modelltexte bleiben im Buch.
-      {% if writingCompanionIntro %}<p>{{ writingCompanionIntro }}</p>{% elif bookLevel == "b2" %}<p>Hier finden Sie 16 Übungsaufsätze und drei Mock Exams mit je zwei Themen. Wählen Sie im Mock Exam nur eines der beiden Themen. Für jeden Aufsatz gilt: mindestens 200 Wörter.</p>{% endif %}
+      {% if writingCompanionIntro %}<p>{{ writingCompanionIntro }}</p>{% elif bookCatalogKey == "b2v2" %}<p>Hier finden Sie 16 Übungsaufsätze und drei Probeprüfungen mit je zwei Themen. Wählen Sie in jeder Probeprüfung nur eines der beiden Themen. Für jeden Aufsatz gilt: mindestens 200 Wörter.</p>{% elif bookLevel == "b2" %}<p>Hier finden Sie 16 Übungsaufsätze und drei Mock Exams mit je zwei Themen. Wählen Sie im Mock Exam nur eines der beiden Themen. Für jeden Aufsatz gilt: mindestens 200 Wörter.</p>{% endif %}
     </aside>
     {% for section in book.sections %}
     <section class="dtz-book__section" id="{{ section.id }}">

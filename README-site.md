@@ -167,26 +167,34 @@ this repository and run `node scripts/generate-dtz-b1-writing.js` before buildin
 
 ## ÖIF A2, B1 and B2 writing companions
 
-`/oeif-a2-writing/`, `/oeif-b1-writing/` and `/oeif-b2-writing/` offer the
-same draft/copy/ChatGPT-feedback workflow as the DTZ writing companion, using
-the shared copy script and responsive writing design. The generated pages
-follow the corresponding books: A2 has 16 units with three content points
-each; the website sets a 25-minute practice limit and a goal of at least
-50 words, aiming for around 80 (the book's guide), with a suitable greeting
-and closing. B1 has 30 units with four points each (units 25–30 are labeled
-as additional transfer training); the website sets a 30-minute practice
-limit and a 100-word minimum, although the book states no fixed word count.
-B2 has 16 essay topics and six individual topic choices from three mock
-exams. B2 practice sets 40 minutes and at least 200 words; feedback checks
-the heading and essay structure and whether three of four aspects are developed.
-The B2 book's five short technique drills are not included online. Each
-prompt asks the learner to revise their own text rather than receiving a
-replacement answer. Tasks and model texts remain in the books.
+`/oeif-a2-writing/`, `/oeif-b1-writing/`, `/oeif-b2-writing/` and
+`/oeif-b2-writing-v2/` offer the same draft/copy/ChatGPT-feedback workflow as
+the DTZ writing companion, using the shared copy script and responsive design.
+The B2 Version 2 companion is separate from the original. Its 16 essay
+topics and six choices from three probe
+exams use the revised situations and four aspects from Chapters 3 and 5.
+The v2 practice essays note the book's 210–240-word training target (not a
+maximum); all v2 tasks retain the 200-word minimum and 40-minute practice
+time. A2 has 16 units with three content points each; the website sets a
+25-minute practice limit and a goal of at least 50 words, aiming for around
+80 (the book's guide), with a suitable greeting and closing. B1 has 30
+units with four points each (units 25–30 are labeled as additional transfer
+training); the website sets a 30-minute practice limit and a 100-word
+minimum, although the book states no fixed word count. The original B2
+companion has 16 essay topics and six individual topic choices from three
+mock exams. B2 practice sets 40 minutes and at least 200 words; feedback
+checks the heading and essay structure and whether three of four aspects
+are developed. The B2 books' short technique drills and revision exercises
+are not included online. Each prompt asks the learner to revise their own
+text rather than receiving a replacement answer. Tasks and model texts
+remain in the books.
 
 Generated pages, directories and prompts are committed, so a regular site
 build does not depend on the book repository. After changing an ÖIF writing
 book in the sibling `german_exam_books` repository, run
 `node scripts/generate-oeif-writing.js` before `npm run build`.
+Run `node --test scripts/test-oeif-writing-v2.js` to verify the new edition's
+22 exercises against its source book.
 
 ## fide A2 and B1 writing companions
 
