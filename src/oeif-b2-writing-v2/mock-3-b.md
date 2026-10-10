@@ -1,0 +1,20 @@
+---
+layout: "oeif-writing-exercise.njk"
+title: "Probeprüfung 3 · Thema B: Soll Wohnen in Städten stärker reguliert werden? · ÖIF B2 Schreiben · Version 2"
+description: "Online-Schreibtraining zum ÖIF-B2-Buch: Soll Wohnen in Städten stärker reguliert werden. Eigenen Text schreiben und mit Feedback selbst überarbeiten."
+permalink: "/oeif-b2-writing-v2/mock-3-b/"
+lang: "de-AT"
+extraStylesheet: "/css/oeif-writing.css"
+extraScript: "/dtz-b1-cards/assets/practice.js"
+bookLevel: "b2"
+bookCatalogKey: "b2v2"
+writingBookSlug: "oeif-b2-writing-v2"
+writingEditionLabel: "Version 2"
+exerciseLabel: "Probeprüfung 3 · Thema B"
+exerciseTitle: "Soll Wohnen in Städten stärker reguliert werden?"
+sectionTitle: "Probeprüfungen – Thema A oder B"
+exerciseNote: "Wählen Sie in der Probeprüfung nur eines der beiden Themen. Schreiben Sie zuerst ohne Hilfe."
+promptKey: "b2v2-mock-3-b"
+previousExercise: "/oeif-b2-writing-v2/mock-3-a/"
+nextExercise: null
+---
