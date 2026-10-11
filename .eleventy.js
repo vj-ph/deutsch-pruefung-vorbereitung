@@ -155,6 +155,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy(`src/${book}/audio`);
     eleventyConfig.addPassthroughCopy(`src/${book}/images`);
   }
+  eleventyConfig.addPassthroughCopy("src/oeif-b2-speaking-v2/audio");
   
   // Copy favicon if present
   eleventyConfig.addPassthroughCopy({"src/favicon.ico": "favicon.ico"});

@@ -6,7 +6,7 @@ layout: base.njk
   <header class="dtz-book__hero">
     <div class="container">
       <a class="dtz-book__breadcrumb" href="{{ ('/' ~ speakingBookKey ~ '/') | url }}">← Alle Übungen</a>
-      <p class="dtz-book__kicker">{{ book.exam }} {{ book.level }} Sprechen · {{ sectionTitle }} · Übung {{ exerciseNumber }}</p>
+      <p class="dtz-book__kicker">{{ book.exam }} {{ book.level }} Sprechen{{ ' · ' ~ book.edition if book.edition else '' }} · {{ sectionTitle }} · Übung {{ exerciseNumber }}</p>
       <h1>{{ exerciseTitle }}</h1>
       <p>Online-Material zum Buch</p>
     </div>

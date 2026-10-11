@@ -1102,6 +1102,389 @@
       }
     ]
   },
+  "oeif-b2-speaking-v2": {
+    "exam": "ÖIF",
+    "level": "B2",
+    "sections": [
+      {
+        "title": "Präsentation",
+        "number": 1,
+        "label": "Kapitel 1",
+        "items": [
+          {
+            "section": 0,
+            "number": 1,
+            "title": "Ein Buch, das Sie beeindruckt hat",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-01/"
+          },
+          {
+            "section": 0,
+            "number": 2,
+            "title": "Einen Film oder eine Serie vorstellen",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-02/"
+          },
+          {
+            "section": 0,
+            "number": 3,
+            "title": "Eine Reise, die Ihnen in Erinnerung geblieben ist",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-03/"
+          },
+          {
+            "section": 0,
+            "number": 4,
+            "title": "Ein Konzert oder eine Kulturveranstaltung",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-04/"
+          },
+          {
+            "section": 0,
+            "number": 5,
+            "title": "Eine Begegnung, die Ihre Sichtweise verändert hat",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-05/"
+          },
+          {
+            "section": 0,
+            "number": 6,
+            "title": "Mehrsprachig leben in Österreich",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-06/"
+          },
+          {
+            "section": 0,
+            "number": 7,
+            "title": "Ein Ort mit persönlicher oder historischer Bedeutung",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-07/"
+          },
+          {
+            "section": 0,
+            "number": 8,
+            "title": "Ein Sportereignis oder sportliches Erlebnis",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-08/"
+          },
+          {
+            "section": 0,
+            "number": 9,
+            "title": "Eine Ausstellung oder ein Museum",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-09/"
+          },
+          {
+            "section": 0,
+            "number": 10,
+            "title": "Verschiedene Generationen im Alltag",
+            "url": "/oeif-b2-speaking-v2/abschnitt-1/uebung-10/"
+          }
+        ]
+      },
+      {
+        "title": "Diskussion",
+        "number": 2,
+        "label": "Kapitel 2",
+        "items": [
+          {
+            "section": 1,
+            "number": 1,
+            "title": "Soll die Sommerzeit abgeschafft werden?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-01/"
+          },
+          {
+            "section": 1,
+            "number": 2,
+            "title": "Soll die doppelte Staatsbürgerschaft leichter möglich sein?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-02/"
+          },
+          {
+            "section": 1,
+            "number": 3,
+            "title": "Soll bei einer Heirat ein gemeinsamer Familienname die Regel sein?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-03/"
+          },
+          {
+            "section": 1,
+            "number": 4,
+            "title": "Soll privates Feuerwerk stärker eingeschränkt werden?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-04/"
+          },
+          {
+            "section": 1,
+            "number": 5,
+            "title": "Soll man als Zugezogene:r österreichische Dialekte aktiv lernen?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-05/"
+          },
+          {
+            "section": 1,
+            "number": 6,
+            "title": "Ist Teilzeit die bessere Lebensform?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-06/"
+          },
+          {
+            "section": 1,
+            "number": 7,
+            "title": "Soll ein zusätzlicher gesetzlicher Feiertag eingeführt werden?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-07/"
+          },
+          {
+            "section": 1,
+            "number": 8,
+            "title": "Soll der Krampuslauf stärker altersgerecht gestaltet werden?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-08/"
+          },
+          {
+            "section": 1,
+            "number": 9,
+            "title": "Soll es für Hundehalter:innen einen verpflichtenden Sachkundenachweis geben?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-09/"
+          },
+          {
+            "section": 1,
+            "number": 10,
+            "title": "Soll die österreichische Gebärdensprache im Alltag sichtbarer werden?",
+            "url": "/oeif-b2-speaking-v2/abschnitt-2/uebung-10/"
+          }
+        ]
+      },
+      {
+        "title": "Problemlösung",
+        "number": 3,
+        "label": "Kapitel 3",
+        "items": [
+          {
+            "section": 2,
+            "number": 1,
+            "title": "Vom Stichwort zur gemeinsamen Lösung",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-01/"
+          },
+          {
+            "section": 2,
+            "number": 2,
+            "title": "Betriebsausflug organisieren",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-02/"
+          },
+          {
+            "section": 2,
+            "number": 3,
+            "title": "Ein Nachbarschaftsfest planen",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-03/"
+          },
+          {
+            "section": 2,
+            "number": 4,
+            "title": "Eine Mitfahrbank im ländlichen Raum einrichten",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-04/"
+          },
+          {
+            "section": 2,
+            "number": 5,
+            "title": "Eine Notfallübung im Vereinsheim vorbereiten",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-05/"
+          },
+          {
+            "section": 2,
+            "number": 6,
+            "title": "Eine Vereinsfahrt für 40 Personen",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-06/"
+          },
+          {
+            "section": 2,
+            "number": 7,
+            "title": "Eine Spendenaktion in der Schule oder im Kurs",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-07/"
+          },
+          {
+            "section": 2,
+            "number": 8,
+            "title": "Eine Sprachpatenschaft für neu zugezogene Erwachsene aufbauen",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-08/"
+          },
+          {
+            "section": 2,
+            "number": 9,
+            "title": "Eine sichere Abholzone vor einer Volksschule planen",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-09/"
+          },
+          {
+            "section": 2,
+            "number": 10,
+            "title": "Eine Kleiderausgabe für eine Wärmestube organisieren",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-10/"
+          },
+          {
+            "section": 2,
+            "number": 11,
+            "title": "Eine gemeinsame Abschiedsfeier planen",
+            "url": "/oeif-b2-speaking-v2/abschnitt-3/uebung-11/"
+          }
+        ]
+      },
+      {
+        "title": "Prüfungssimulationen",
+        "number": 5,
+        "label": "Kapitel 5",
+        "items": [
+          {
+            "section": 4,
+            "number": 1,
+            "title": "Prüfungssatz 1: Arbeitswelt · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-01/"
+          },
+          {
+            "section": 4,
+            "number": 2,
+            "title": "Prüfungssatz 1: Arbeitswelt · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-02/"
+          },
+          {
+            "section": 4,
+            "number": 3,
+            "title": "Prüfungssatz 1: Arbeitswelt · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-03/"
+          },
+          {
+            "section": 4,
+            "number": 4,
+            "title": "Prüfungssatz 2: Wohnen · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-04/"
+          },
+          {
+            "section": 4,
+            "number": 5,
+            "title": "Prüfungssatz 2: Wohnen · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-05/"
+          },
+          {
+            "section": 4,
+            "number": 6,
+            "title": "Prüfungssatz 2: Wohnen · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-06/"
+          },
+          {
+            "section": 4,
+            "number": 7,
+            "title": "Prüfungssatz 3: Gesundheit und Alltag · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-07/"
+          },
+          {
+            "section": 4,
+            "number": 8,
+            "title": "Prüfungssatz 3: Gesundheit und Alltag · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-08/"
+          },
+          {
+            "section": 4,
+            "number": 9,
+            "title": "Prüfungssatz 3: Gesundheit und Alltag · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-09/"
+          },
+          {
+            "section": 4,
+            "number": 10,
+            "title": "Prüfungssatz 4: Medien und Bildung · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-10/"
+          },
+          {
+            "section": 4,
+            "number": 11,
+            "title": "Prüfungssatz 4: Medien und Bildung · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-11/"
+          },
+          {
+            "section": 4,
+            "number": 12,
+            "title": "Prüfungssatz 4: Medien und Bildung · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-12/"
+          },
+          {
+            "section": 4,
+            "number": 13,
+            "title": "Prüfungssatz 5: Umwelt und Konsum · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-13/"
+          },
+          {
+            "section": 4,
+            "number": 14,
+            "title": "Prüfungssatz 5: Umwelt und Konsum · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-14/"
+          },
+          {
+            "section": 4,
+            "number": 15,
+            "title": "Prüfungssatz 5: Umwelt und Konsum · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-15/"
+          },
+          {
+            "section": 4,
+            "number": 16,
+            "title": "Prüfungssatz 6: Freizeit und Zusammenleben · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-16/"
+          },
+          {
+            "section": 4,
+            "number": 17,
+            "title": "Prüfungssatz 6: Freizeit und Zusammenleben · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-17/"
+          },
+          {
+            "section": 4,
+            "number": 18,
+            "title": "Prüfungssatz 6: Freizeit und Zusammenleben · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-18/"
+          },
+          {
+            "section": 4,
+            "number": 19,
+            "title": "Prüfungssatz 7: Tourismus und regionale Entwicklung · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-19/"
+          },
+          {
+            "section": 4,
+            "number": 20,
+            "title": "Prüfungssatz 7: Tourismus und regionale Entwicklung · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-20/"
+          },
+          {
+            "section": 4,
+            "number": 21,
+            "title": "Prüfungssatz 7: Tourismus und regionale Entwicklung · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-21/"
+          },
+          {
+            "section": 4,
+            "number": 22,
+            "title": "Prüfungssatz 8: Mitreden und öffentliche Dienstleistungen · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-22/"
+          },
+          {
+            "section": 4,
+            "number": 23,
+            "title": "Prüfungssatz 8: Mitreden und öffentliche Dienstleistungen · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-23/"
+          },
+          {
+            "section": 4,
+            "number": 24,
+            "title": "Prüfungssatz 8: Mitreden und öffentliche Dienstleistungen · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-24/"
+          },
+          {
+            "section": 4,
+            "number": 25,
+            "title": "Prüfungssatz 9: Geld im Alltag und Verbraucherschutz · Teil 1 – Präsentation",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-25/"
+          },
+          {
+            "section": 4,
+            "number": 26,
+            "title": "Prüfungssatz 9: Geld im Alltag und Verbraucherschutz · Teil 2 – Diskussion",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-26/"
+          },
+          {
+            "section": 4,
+            "number": 27,
+            "title": "Prüfungssatz 9: Geld im Alltag und Verbraucherschutz · Teil 3 – Problemlösung (gemeinsam planen)",
+            "url": "/oeif-b2-speaking-v2/abschnitt-5/uebung-27/"
+          }
+        ]
+      }
+    ],
+    "edition": "Version 2"
+  },
   "fide-a2-speaking": {
     "exam": "fide",
     "level": "A2",
