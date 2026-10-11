@@ -150,6 +150,15 @@ alongside this repository, then run `npm run build`.
 Run `node --test scripts/test-speaking-companion-prompts.js` to check that
 all generated speaking prompts retain book-specific task context.
 
+`/oeif-b2-speaking-v2/` is a separate companion for the ÖIF B2 speaking
+Version 2 book. Its 58 pages cover 10 presentations, 10 discussions, 11
+problem-solving exercises and the three parts of each of nine exam
+simulations (Chapter 5). The discussion prompts include the complete v2
+reading passages. Only the 58 corresponding v2 model MP3s are copied from
+`b2/speaking_oeif_gpt_v2/audio/qwen-1.7b/mp3`; reading recordings,
+presentation follow-ups, upgrades and unscored contact reactions are
+excluded. The original companion and its audio remain unchanged.
+
 ## DTZ B1 writing book materials
 
 The companion directory at `/dtz-b1-writing/` contains one page for each of

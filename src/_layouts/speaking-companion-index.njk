@@ -6,7 +6,7 @@ layout: base.njk
   <header class="dtz-book__hero">
     <div class="container">
       <p class="dtz-book__kicker">DeutschKompass · Online-Material zum Buch</p>
-      <h1>{{ book.exam }} {{ book.level }} Sprechen</h1>
+      <h1>{{ book.exam }} {{ book.level }} Sprechen{{ ' · ' ~ book.edition if book.edition else '' }}</h1>
       <p>Wählen Sie eine Übung aus Ihrem Buch, sprechen Sie zuerst selbst und hören Sie danach das passende Modell-Audio.</p>
       <a class="dtz-book__hero-link" href="#abschnitt-1">Übung auswählen <span aria-hidden="true">↓</span></a>
     </div>

@@ -1,4 +1,5 @@
 const assert = require("node:assert/strict");
+const crypto = require("node:crypto");
 const { test } = require("node:test");
 const fs = require("node:fs");
 const path = require("node:path");
@@ -9,6 +10,7 @@ const expected = {
   "oeif-a2-speaking": [5, 10, 10, 13],
   "oeif-b1-speaking": [5, 31, 36],
   "oeif-b2-speaking": [10, 10, 11, 27],
+  "oeif-b2-speaking-v2": [10, 10, 11, 27],
   "fide-a2-speaking": [8, 8, 8, 8, 6, 8, 8, 8, 8, 8, 8],
   "fide-b1-speaking": [8, 8, 8, 8, 8, 8, 8, 8]
 };
@@ -32,7 +34,7 @@ test("every speaking-book exercise has a context-rich, book-specific prompt", ()
     }
   }
   assert.equal(Object.keys(prompts).length, count);
-  assert.equal(count, 318);
+  assert.equal(count, 376);
 });
 
 test("B2 companion excludes unscored contact exercises and copied audio", () => {
@@ -54,18 +56,53 @@ test("every B2 prompt names the correct exam part, including mock simulations", 
     "Teil 2 – Diskussion",
     "Teil 3 – Problemlösung (gemeinsam planen)"
   ];
-  for (const section of catalog["oeif-b2-speaking"].sections) {
-    for (const item of section.items) {
-      const part = section.number === 5 ? (item.number - 1) % 3 : section.number - 1;
-      const label = labels[part];
-      const prompt = prompts[`oeif-b2-speaking-${section.number}-${item.number}`];
-      assert.ok(prompt.includes(`Prüfungsteil: ${label}.`), `${item.url}: missing exam part`);
-      if (section.number === 5) {
-        assert.ok(item.title.endsWith(label), `${item.url}: unclear mock-exam page title`);
-        assert.ok(prompt.includes("nur diesen Teil des Prüfungssatzes"), `${item.url}: unclear practice scope`);
+  for (const slug of ["oeif-b2-speaking", "oeif-b2-speaking-v2"]) {
+    for (const section of catalog[slug].sections) {
+      for (const item of section.items) {
+        const part = section.number === 5 ? (item.number - 1) % 3 : section.number - 1;
+        const label = labels[part];
+        const prompt = prompts[`${slug}-${section.number}-${item.number}`];
+        assert.ok(prompt.includes(`Prüfungsteil: ${label}.`), `${item.url}: missing exam part`);
+        if (section.number === 5) {
+          assert.ok(item.title.endsWith(label), `${item.url}: unclear mock-exam page title`);
+          assert.ok(prompt.includes("nur diesen Teil des Prüfungssatzes"), `${item.url}: unclear practice scope`);
+        }
       }
     }
   }
+});
+
+test("v2 pages use only the 58 copied model tracks from the v2 book", () => {
+  const slug = "oeif-b2-speaking-v2";
+  const source = path.resolve(__dirname, "../../german_exam_books/b2/speaking_oeif_gpt_v2/audio/qwen-1.7b/mp3");
+  const target = path.resolve(__dirname, `../src/${slug}/audio`);
+  const book = catalog[slug];
+  assert.equal(book.edition, "Version 2");
+  assert.deepEqual(book.sections.map(section => [section.number, section.label]),
+    [[1, "Kapitel 1"], [2, "Kapitel 2"], [3, "Kapitel 3"], [5, "Kapitel 5"]]);
+  const copied = fs.readdirSync(target).sort();
+  const expectedFiles = fs.readdirSync(source).filter(file =>
+    /-(?:praesentation|diskussion|planung|pruefung_praesentation|pruefung_dialog)\.mp3$/.test(file)).sort();
+  assert.equal(expectedFiles.length, 58);
+  assert.deepEqual(copied, expectedFiles);
+  const digest = file => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+  for (const filename of copied) {
+    assert.equal(digest(path.join(target, filename)), digest(path.join(source, filename)),
+      `Audio differs from v2 source: ${filename}`);
+  }
+  const items = book.sections.flatMap(section => section.items);
+  const used = items.flatMap(item => {
+    const filename = item.url.match(/abschnitt-(\d+)\/uebung-(\d+)\//);
+    const page = fs.readFileSync(path.resolve(__dirname,
+      `../src/${slug}/abschnitt-${filename[1]}/uebung-${filename[2]}.md`), "utf8");
+    assert.ok(page.includes(`promptKey: "${slug}-${filename[1]}-${Number(filename[2])}"`), item.url);
+    assert.ok(page.includes(`title: "${item.title} · ÖIF B2 Sprechen · Version 2"`), item.url);
+    const audio = JSON.parse(page.match(/^audios: (.+)$/m)?.[1] ?? "null");
+    assert.equal(audio?.length, 1, item.url);
+    return audio[0].url.split("/").at(-1);
+  });
+  assert.deepEqual(used.sort(), copied);
+  assert.ok(!fs.existsSync(path.resolve(__dirname, `../src/${slug}/abschnitt-4`)));
 });
 
 test("task-specific details are available without copying model answers", () => {
@@ -98,32 +135,37 @@ test("task-specific details are available without copying model answers", () => 
   }
 });
 
-test("all B2 discussion prompts include their complete book reading passages", () => {
-  const book = fs.readFileSync(path.resolve(__dirname,
-    "../../german_exam_books/b2/speaking_oeif_gpt_v1/book_no_toc.md"), "utf8");
-  const discussionChapter = book.split(/^# Kapitel 2: Diskussion\s*$/m)[1]
-    .split(/^# Kapitel 3:/m)[0];
-  const discussionHeadings = [...discussionChapter.matchAll(/^## (.+)$/gm)];
-  const standalone = discussionHeadings.map((heading, index) =>
-    discussionChapter.slice(heading.index + heading[0].length, discussionHeadings[index + 1]?.index))
-    .filter(body => body.includes("### Impulstext"));
-  assert.equal(standalone.length, 10);
-  standalone.forEach((body, index) => {
-    const passage = body.match(/^### Impulstext\s*\n([\s\S]*?)(?=^### Gestufter Diskussionsauftrag)/m)?.[1].trim();
-    assert.ok(passage?.length > 400, `Incomplete standalone passage ${index + 1}`);
-    assert.ok(prompts[`oeif-b2-speaking-2-${index + 1}`].includes(passage),
-      `Missing full standalone passage ${index + 1}`);
-  });
+test("all B2 discussion prompts include complete passages from the matching book version", () => {
+  for (const [slug, version, mockChapter] of [
+    ["oeif-b2-speaking", 1, 7], ["oeif-b2-speaking-v2", 2, 5]
+  ]) {
+    const book = fs.readFileSync(path.resolve(__dirname,
+      `../../german_exam_books/b2/speaking_oeif_gpt_v${version}/book_no_toc.md`), "utf8");
+    const discussionChapter = book.split(/^# Kapitel 2: Diskussion\s*$/m)[1]
+      .split(/^# Kapitel 3:/m)[0];
+    const discussionHeadings = [...discussionChapter.matchAll(/^## (.+)$/gm)];
+    const standalone = discussionHeadings.map((heading, index) =>
+      discussionChapter.slice(heading.index + heading[0].length, discussionHeadings[index + 1]?.index))
+      .filter(body => body.includes("### Impulstext"));
+    assert.equal(standalone.length, 10);
+    standalone.forEach((body, index) => {
+      const passage = body.match(/^### Impulstext\s*\n([\s\S]*?)(?=^### Gestufter Diskussionsauftrag)/m)?.[1].trim();
+      assert.ok(passage?.length > 400, `Incomplete standalone passage ${slug} ${index + 1}`);
+      assert.ok(prompts[`${slug}-2-${index + 1}`].includes(passage),
+        `Missing full standalone passage ${slug} ${index + 1}`);
+    });
 
-  const mockChapter = book.split(/^# Kapitel 7: /m)[1].split(/^# Kapitel 8:/m)[0];
-  const mockHeadings = [...mockChapter.matchAll(/^## Prüfungssatz \d+: (.+)$/gm)];
-  const mocks = mockHeadings.map((heading, index) =>
-    mockChapter.slice(heading.index + heading[0].length, mockHeadings[index + 1]?.index));
-  assert.equal(mocks.length, 9);
-  mocks.forEach((body, index) => {
-    const passage = body.match(/^\*\*Lesetext: [^*\n]+\*\*\s*\n([\s\S]*?)(?=^\*\*Stufe 1 –)/m)?.[1].trim();
-    assert.ok(passage?.length > 400, `Incomplete mock passage ${index + 1}`);
-    assert.ok(prompts[`oeif-b2-speaking-5-${index * 3 + 2}`].includes(passage),
-      `Missing full mock passage ${index + 1}`);
-  });
+    const mockSection = book.split(new RegExp(`^# Kapitel ${mockChapter}: `, "m"))[1]
+      .split(/^# Kapitel \d+:/m)[0];
+    const mockHeadings = [...mockSection.matchAll(/^## Prüfungssatz \d+: (.+)$/gm)];
+    const mocks = mockHeadings.map((heading, index) =>
+      mockSection.slice(heading.index + heading[0].length, mockHeadings[index + 1]?.index));
+    assert.equal(mocks.length, 9);
+    mocks.forEach((body, index) => {
+      const passage = body.match(/^\*\*Lesetext: [^*\n]+\*\*\s*\n([\s\S]*?)(?=^\*\*Stufe 1 –)/m)?.[1].trim();
+      assert.ok(passage?.length > 400, `Incomplete mock passage ${slug} ${index + 1}`);
+      assert.ok(prompts[`${slug}-5-${index * 3 + 2}`].includes(passage),
+        `Missing full mock passage ${slug} ${index + 1}`);
+    });
+  }
 });
