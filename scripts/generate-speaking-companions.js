@@ -33,9 +33,12 @@ function part(source, number) {
   return source.slice(match.index + match[0].length, end < 0 ? undefined : end);
 }
 
-function numberedAudio(directory) {
+function numberedAudio(directory, version = 1) {
   const files = fs.readdirSync(directory).filter(name => name.endsWith(".mp3")).sort();
-  files.forEach((name, index) => assert(name.startsWith(`${String(index + 1).padStart(3, "0")}-`),
+  files.forEach((name, index) => assert(version === 2
+    ? /^v2-\d{3}-.+\.mp3$/.test(name) && (index === 0 ||
+      Number(name.slice(3, 6)) > Number(files[index - 1].slice(3, 6)))
+    : name.startsWith(`${String(index + 1).padStart(3, "0")}-`),
     `Unexpected MP3 sequence ${directory}/${name}`));
   return files;
 }
@@ -176,13 +179,13 @@ const b2PartLabels = {
   planning: "Teil 3 – Problemlösung (gemeinsam planen)"
 };
 
-function oeifB2(source, audio) {
+function oeifB2(source, audio, mockChapter = 7) {
   const items = [];
   const presentation = sections(chapter(source, 1), /^## (.+)$/gm).filter(item => item.body.includes("### Aufgabe"));
   const discussion = sections(chapter(source, 2), /^## (.+)$/gm).filter(item => item.body.includes("### Impulstext"));
   const planning = sections(chapter(source, 3), /^## (.+)$/gm)
     .filter(item => item.body.includes("### Situation") || item.title === "Vom Stichwort zur gemeinsamen Lösung");
-  const mocks = sections(chapter(source, 7), /^## Prüfungssatz \d+: (.+)$/gm);
+  const mocks = sections(chapter(source, mockChapter), /^## Prüfungssatz \d+: (.+)$/gm);
   assert([presentation.length, discussion.length, planning.length, mocks.length].join() === "10,10,11,9",
     `ÖIF B2 book exercise structure changed: ${[presentation.length, discussion.length, planning.length, mocks.length]}`);
   const presAudio = group(audio, /-praesentation\.mp3$/, 10, "ÖIF B2 presentations");
@@ -315,7 +318,7 @@ function fideB1(source, audio) {
 }
 
 function practicePrompt(book, item) {
-  const bookName = `${book.exam === "oeif" ? "ÖIF" : "fide"} ${book.level.toUpperCase()}`;
+  const bookName = `${book.exam === "oeif" ? "ÖIF" : "fide"} ${book.level.toUpperCase()} Sprechen${book.version === 2 ? " · Version 2" : ""}`;
   const examPart = book.exam === "oeif" && book.level === "b2"
     ? `\nPrüfungsteil: ${b2PartLabels[item.mode]}. Übe mit mir nur diesen Teil${item.mock ? " des Prüfungssatzes" : ""}.`
     : "";
@@ -330,7 +333,7 @@ function practicePrompt(book, item) {
     discussion: "Du hast den vollständigen Lesetext im Prompt. Bitte mich um eine kurze Reaktion auf eine konkrete Textinformation und meinen Standpunkt. Diskutiere dann eine andere Perspektive, reagiere auf meine Argumente und stelle eine echte Nachfrage.",
     question: "Stelle mir die Prüferfrage. Warte, bis ich fertig bin, und stelle eine passende Rückfrage. Unterbrich mich nicht unnötig."
   };
-  return `Du bist mein freundlicher Gesprächspartner für das Sprechtraining zum Buch ${bookName} Sprechen. Wir üben „${item.title}“ im Abschnitt „${book.titles[item.section]}“. Sprich mit mir auf Deutsch (${book.level.toUpperCase()}-Niveau${book.exam === "fide" ? ", Schweizer Standarddeutsch" : ""}) und stelle immer nur eine Frage auf einmal.${examPart}
+  return `Du bist mein freundlicher Gesprächspartner für das Sprechtraining zum Buch ${bookName}. Wir üben „${item.title}“ im Abschnitt „${book.titles[item.section]}“. Sprich mit mir auf Deutsch (${book.level.toUpperCase()}-Niveau${book.exam === "fide" ? ", Schweizer Standarddeutsch" : ""}) und stelle immer nur eine Frage auf einmal.${examPart}
 
 Situation und Aufgabenpunkte aus dem Buch:
 ${item.context}
@@ -344,16 +347,19 @@ const definitions = [
   { exam: "oeif", level: "a2", parse: oeifA2, source: "book_no_toc.md", skip: /_fragen\.mp3$/ },
   { exam: "oeif", level: "b1", parse: oeifB1, source: "book.md", skip: file => file.startsWith("001-") || /-fragen\.mp3$/.test(file) },
   { exam: "oeif", level: "b2", parse: oeifB2, source: "book_no_toc.md", skip: /mini-drills|mini-dialog|upgrade-|kontaktreaktion/i },
+  { exam: "oeif", level: "b2", version: 2, parse: (source, audio) => oeifB2(source, audio, 5),
+    source: "book_no_toc.md",
+    skip: file => !/-(?:praesentation|diskussion|planung|pruefung_praesentation|pruefung_dialog)\.mp3$/.test(file) },
   { exam: "fide", level: "a2", parse: fideA2, source: null, skip: /-conversation\.mp3$/ },
   { exam: "fide", level: "b1", parse: fideB1, source: "book_no_toc.md", skip: file => file.startsWith("001-") || /-followups\.mp3$/.test(file) }
 ];
 
 for (const definition of definitions) {
-  const { exam, level } = definition;
-  const slug = `${exam}-${level}-speaking`;
-  const sourceDir = path.join(books, level, `speaking_${exam}_gpt_v1`);
+  const { exam, level, version = 1 } = definition;
+  const slug = `${exam}-${level}-speaking${version === 2 ? "-v2" : ""}`;
+  const sourceDir = path.join(books, level, `speaking_${exam}_gpt_v${version}`);
   const audioDir = path.join(sourceDir, "audio/qwen-1.7b/mp3");
-  const allAudio = numberedAudio(audioDir);
+  const allAudio = numberedAudio(audioDir, version);
   const included = allAudio.filter(file => !(typeof definition.skip === "function"
     ? definition.skip(file) : definition.skip.test(file)));
   const parsed = definition.parse(definition.source
@@ -362,6 +368,8 @@ for (const definition of definitions) {
   const used = items.flatMap(item => item.files.map(audio => audio.file));
   assert(used.length === included.length && new Set(used).size === included.length &&
     included.every(file => used.includes(file)), `${slug}: not every retained MP3 maps to exactly one exercise`);
+  if (version === 2) assert(included.length === 58 && allAudio.length === 89,
+    `${slug}: expected 58 relevant MP3s out of 89, found ${included.length} out of ${allAudio.length}`);
   const output = path.join(root, "src", slug);
   if (slug === "oeif-b2-speaking") {
     const oldPages = path.join(output, "abschnitt-4");
@@ -399,17 +407,19 @@ for (const definition of definitions) {
   catalog[slug] = { exam: exam === "oeif" ? "ÖIF" : "fide", level: level.toUpperCase(),
     sections: titles.map((title, index) => title && ({
       title, number: index + 1,
-      label: slug === "oeif-b2-speaking" && index === 4 ? "Kapitel 7" : `Abschnitt ${index + 1}`,
+      label: version === 2 ? `Kapitel ${index + 1}` :
+        level === "b2" && exam === "oeif" && index === 4 ? "Kapitel 7" : `Abschnitt ${index + 1}`,
       items: metadata.filter(item => item.section === index)
     })).filter(Boolean) };
+  if (version === 2) catalog[slug].edition = "Version 2";
   items.forEach((item, index) => {
     const page = metadata[index];
     const key = `${slug}-${item.section + 1}-${page.number}`;
     prompts[key] = practicePrompt({ ...definition, titles }, item);
     const data = {
       layout: "speaking-companion-exercise.njk",
-      title: `${item.title} · ${catalog[slug].exam} ${level.toUpperCase()} Sprechen`,
-      description: `Online-Material zum Buch ${catalog[slug].exam} ${level.toUpperCase()} Sprechen: ${item.title}. Mit Sprechtraining und Modell-Audio.`,
+      title: `${item.title} · ${catalog[slug].exam} ${level.toUpperCase()} Sprechen${version === 2 ? " · Version 2" : ""}`,
+      description: `Online-Material zum Buch ${catalog[slug].exam} ${level.toUpperCase()} Sprechen${version === 2 ? " Version 2" : ""}: ${item.title}. Mit Sprechtraining und Modell-Audio.`,
       permalink: page.url,
       lang: exam === "oeif" ? "de-AT" : "de-CH",
       extraStylesheet: "/css/dtz-b1-speaking.css",
@@ -430,7 +440,7 @@ for (const definition of definitions) {
       `---\n${Object.entries(data).map(([key, value]) => `${key}: ${JSON.stringify(value)}`).join("\n")}\n---\n`);
   });
   fs.writeFileSync(path.join(output, "index.njk"),
-    `---\nlayout: "speaking-companion-index.njk"\ntitle: "${catalog[slug].exam} ${level.toUpperCase()} Sprechen · Online-Material zum Buch"\ndescription: "ChatGPT-Sprechtraining und Modell-Audio zu ${items.length} Übungen aus dem Buch ${catalog[slug].exam} ${level.toUpperCase()} Sprechen."\npermalink: "/${slug}/"\nlang: "${exam === "oeif" ? "de-AT" : "de-CH"}"\nextraStylesheet: "/css/dtz-b1-speaking.css"\nspeakingBookKey: "${slug}"\n---\n`);
+    `---\nlayout: "speaking-companion-index.njk"\ntitle: "${catalog[slug].exam} ${level.toUpperCase()} Sprechen${version === 2 ? " · Version 2" : ""} · Online-Material zum Buch"\ndescription: "ChatGPT-Sprechtraining und Modell-Audio zu ${items.length} Übungen aus dem Buch ${catalog[slug].exam} ${level.toUpperCase()} Sprechen${version === 2 ? " Version 2" : ""}."\npermalink: "/${slug}/"\nlang: "${exam === "oeif" ? "de-AT" : "de-CH"}"\nextraStylesheet: "/css/dtz-b1-speaking.css"\nspeakingBookKey: "${slug}"\n---\n`);
   console.log(`${slug}: ${items.length} pages, ${included.length} MP3s, ${images.size} images`);
 }
 fs.writeFileSync(path.join(root, "src/_data/speakingCompanionCatalog.json"), JSON.stringify(catalog, null, 2) + "\n");
