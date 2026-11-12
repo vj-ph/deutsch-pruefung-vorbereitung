@@ -395,7 +395,7 @@ function euro(amount) {
 }
 
 function purchaseOptions(spec) {
-  return [
+  const options = [
     {
       key: "amazon-paperback",
       label: "Amazon Paperback",
@@ -405,8 +405,11 @@ function purchaseOptions(spec) {
       priceDisplay: euro(spec.paperbackPrice),
       url: spec.paperbackUrl,
       trackingType: "amazon_paperback"
-    },
-    {
+    }
+  ];
+
+  if (spec.kindleUrl && spec.kindlePrice) {
+    options.push({
       key: "amazon-kindle",
       label: "Amazon Kindle",
       buttonLabel: "Buy Kindle",
@@ -415,8 +418,10 @@ function purchaseOptions(spec) {
       priceDisplay: euro(spec.kindlePrice),
       url: spec.kindleUrl,
       trackingType: "amazon_kindle"
-    }
-  ];
+    });
+  }
+
+  return options;
 }
 
 function localizedTitles(examLabel, levelLabel, sectionKey) {
@@ -619,10 +624,8 @@ const bookSpecs = [
     level: "B1",
     section: "listening",
     thumbnailPath: "/assets/book_thumbnails/dtz_b1_hoeren.jpg",
-    paperbackUrl: "https://www.amazon.de/dp/B0H7KD9TV1",
-    kindleUrl: "https://www.amazon.de/dp/B0H7KBLB7P",
-    paperbackPrice: "7.19",
-    kindlePrice: "3.99"
+    paperbackUrl: "https://amzn.eu/d/03hygylV",
+    paperbackPrice: "7.19"
   },
   {
     key: "dtz-b1-speaking",
@@ -632,9 +635,7 @@ const bookSpecs = [
     thumbnailPath: "/assets/book_thumbnails/thumbnail_dtz_b1_speaking.jpeg",
     samplePath: "/assets/sample-books/dtz_b1/dtz-speaking-sample-english.pdf",
     paperbackUrl: "https://amzn.eu/d/0dqMZYuX",
-    kindleUrl: "https://amzn.eu/d/0jcGj4Dg",
     paperbackPrice: "6.99",
-    kindlePrice: "3.99",
     pageCount: 208
   },
   {
@@ -645,9 +646,7 @@ const bookSpecs = [
     thumbnailPath: "/assets/book_thumbnails/thumbnail_dtz_b1_writing.jpeg",
     samplePath: "/assets/sample-books/dtz_b1/dtz-writing-sample-english.pdf",
     paperbackUrl: "https://amzn.eu/d/0iNA4EWl",
-    kindleUrl: "https://amzn.eu/d/0hk4FrxZ",
     paperbackPrice: "5.49",
-    kindlePrice: "3.99",
     pageCount: 145
   },
   {
@@ -657,9 +656,7 @@ const bookSpecs = [
     section: "combined",
     thumbnailPath: "/assets/book_thumbnails/thumbnail_dtz_b1_speaking_writing.jpg",
     paperbackUrl: "https://www.amazon.de/dp/B0H3TMKZWV",
-    kindleUrl: "https://www.amazon.de/dp/B0H3PPK8VM",
-    paperbackPrice: "10.18",
-    kindlePrice: "4.99"
+    paperbackPrice: "10.18"
   },
   {
     key: "oeif-b1-listening",
@@ -750,8 +747,8 @@ const bookSpecs = [
     level: "B1",
     section: "combined",
     thumbnailPath: "/assets/book_thumbnails/thumbnail_fide_b1_speaking_writing.jpg",
-    paperbackUrl: "https://www.amazon.de/dp/B0H4CQJ2CL",
-    kindleUrl: "https://www.amazon.de/dp/B0H4BBD6CH",
+    paperbackUrl: "https://amzn.eu/d/058qtuT7",
+    kindleUrl: "https://amzn.eu/d/0gnxMIPR",
     paperbackPrice: "15.39",
     kindlePrice: "9.49"
   },
